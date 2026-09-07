@@ -1,0 +1,19 @@
+diff --git a/planning/plan_base.py b/planning/plan_base.py
+index dd5d069..616b681 100644
+--- a/planning/plan_base.py
++++ b/planning/plan_base.py
+@@ -134,10 +134,11 @@ class PlanBase:
+    
+             self.q_planner2gui.put(Planner2Gui(view_xyz,view_direction,points=points,color=color))
+ 
+-            # for debugging
++            # activebench 2026-07-17: was print + pdb.set_trace() ("for
++            # debugging") — a permanent hang in headless runs. Raise a
++            # contained error instead so the episode fails fast.
+             if np.isinf(wp_length):
+-                print("inf path length!!!!!!!")
+-                pdb.set_trace()
++                raise RuntimeError("selected NBV candidate is unreachable (inf path length)")
+ 
+             wp_indices = wp_list[nbv_id]
+             waypoints = voxel_map.index_2_xyz(wp_indices).cpu()

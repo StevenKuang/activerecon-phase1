@@ -1,0 +1,112 @@
+{
+  "habitat-sim": {
+    "url": "https://github.com/facebookresearch/habitat-sim.git",
+    "commit": "acbe6f4922e68145e401e55c30f9dfea460a3f24",
+    "local_source_patch": null,
+    "submodules": [
+      "-0e5161ff17ebf3550bbc0cc99ef81ad7b7d8f80e docs/m.css",
+      "-8f0c6b04b2257a520aaab38421b2e090204b69df src/deps/assimp",
+      "-2c204c49e56ed15ec5fcfa71d199ab6d6570b3f5 src/deps/bullet3",
+      "-9f09b71b15ee91cce454f827ba9e7a58e19a7bdf src/deps/corrade",
+      "-3147391d946bb4b6c68edd901f2add6ac1f31f8c src/deps/eigen",
+      "-0a49ef0a00baa3ab520ddc452f0e3b1e099c5589 src/deps/glfw",
+      "-fb2dc562e312d5499446a39cdd432746bcdbb666 src/deps/magnum",
+      "-c8824470c98eb91f8efea6e541e8ed9ddee7181e src/deps/magnum-bindings",
+      "-bc056f8800c88e21990e11461f75d409748f18a7 src/deps/magnum-integration",
+      "-d3c88a33189f1f5ba4b0801a323c43083a986f43 src/deps/magnum-plugins",
+      "-68d9e1e17620cef00e59b43fa42c97fbcf90e72b src/deps/openexr",
+      "-8a099e44b3d5f85b20f05828d919d2332a8de841 src/deps/pybind11",
+      "-73063f5002612c6bf64fe24f851cd5cc0d83eef9 src/deps/rapidjson",
+      "-8eef00be6003a6bf9c49cb4c126662e05e58d508 src/deps/recastnavigation",
+      "-4fd446b4abb5c71fb7a232a083bbddd65f25fc6f src/deps/rlr-audio-propagation",
+      "-e52dfdbecdf8893b161a65e508bc009746fa6042 src/deps/tinyobjloader",
+      "-a488ba114ec17ea1054b9057c26a046fc122b3b6 src/deps/zstd"
+    ]
+  },
+  "habitat-gs": {
+    "url": "https://github.com/zju3dv/habitat-gs.git",
+    "commit": "adbc83eba0a4993083d84c705476858477e92da6",
+    "local_source_patch": "habitat-gs.patch",
+    "submodules": [
+      "c8dafe0d2887242285c0080c6cbbea8c1f1c8094 src/deps/assimp (Release3.1_RC1-9277-gc8dafe0d2)",
+      " 2c204c49e56ed15ec5fcfa71d199ab6d6570b3f5 src/deps/bullet3 (3.25)",
+      " 451284cddcdc91300a59a194a11728e8124cb664 src/deps/corrade (v2020.06-1921-g451284cd)",
+      " 573f3d423e097739ebdf7fb32e72297d305b7a45 src/deps/corrade/toolchains (remotes/origin/next-29-g573f3d4)",
+      " 7b6aead9fb88b3623e3b3725ebb42670cbe4c579 src/deps/glfw (3.4)",
+      " 70b0d76fcbb5d6d0fe43b3119446b0045fef64e5 src/deps/magnum (v2020.06-3370-g70b0d76fc)",
+      " 573f3d423e097739ebdf7fb32e72297d305b7a45 src/deps/magnum/toolchains (remotes/origin/next-29-g573f3d4)",
+      " 45811bb52e749677d5bc43d62b384ec546ed93bc src/deps/magnum-bindings (v2020.06-419-g45811bb)",
+      " 6fca807891f05203fe5003275116b9854e918d87 src/deps/magnum-integration (v2020.06-294-g6fca807)",
+      " 573f3d423e097739ebdf7fb32e72297d305b7a45 src/deps/magnum-integration/toolchains (remotes/origin/next-29-g573f3d4)",
+      " 393b7cb0c098a261a79dbba3230520e008b414a0 src/deps/magnum-plugins (v2020.06-1629-g393b7cb0)",
+      " 573f3d423e097739ebdf7fb32e72297d305b7a45 src/deps/magnum-plugins/toolchains (remotes/origin/next-29-g573f3d4)",
+      " 68d9e1e17620cef00e59b43fa42c97fbcf90e72b src/deps/openexr (v2.1.0-1211-g68d9e1e1)",
+      " a2e59f0e7065404b44dfe92a28aca47ba1378dc4 src/deps/pybind11 (v2.11.0-182-ga2e59f0e)",
+      " 73063f5002612c6bf64fe24f851cd5cc0d83eef9 src/deps/rapidjson (v1.1.0-415-g73063f50)",
+      " 0a439623f75c029912728d80cb7f1b8b48739ca4 src/deps/rapidjson/thirdparty/gtest (release-1.8.0~5)",
+      " 6dc1667f580357e8a2154c28b7867bea7e8ad3a7 src/deps/recastnavigation (v1.6.0)",
+      " 4fd446b4abb5c71fb7a232a083bbddd65f25fc6f src/deps/rlr-audio-propagation (heads/main)",
+      " e52dfdbecdf8893b161a65e508bc009746fa6042 src/deps/tinyobjloader (v2.0.0-rc3-2-ge52dfdb)",
+      " f8745da6ff1ad1e7bab384bd1f9d742439278e99 src/deps/zstd (v1.5.7)"
+    ]
+  },
+  "R3CON": {
+    "url": "https://github.com/jkff00/R3CON.git",
+    "commit": "d980adcbd4a00c32942e4e1fbfa3c0a1857435a7",
+    "local_source_patch": "R3CON.patch",
+    "submodules": []
+  },
+  "MAGICIAN": {
+    "url": "https://github.com/shiyao-li/MAGICIAN.git",
+    "commit": "1aad178728910d0a514a7c69b09f339fa558223f",
+    "local_source_patch": "MAGICIAN.patch",
+    "submodules": [
+      "5f5cd3b0ecb329645bde45216fa826e9e85a7e1c RaDe-GS (5f5cd3b)",
+      " 5c46b9c07008ae65cb81ab79cd677ecc1934b903 RaDe-GS/submodules/diff-gaussian-rasterization/third_party/glm (0.9.5.3-2728-g5c46b9c0)",
+      " 44f764299fa305faf6ec5ebd99939e0508331503 RaDe-GS/submodules/simple-knn (44f7642)"
+    ]
+  },
+  "FisherRF": {
+    "url": "https://github.com/JiangWenPL/FisherRF",
+    "commit": "b74732812b295189f230a192418375f56cec3bd6",
+    "local_source_patch": null,
+    "submodules": [
+      "4eb3fe1d7d8fd407cc7ccfa801a0311bb7dd281c diff/third_party/glm (0.9.5.3-2846-g4eb3fe1d)",
+      " 59f5f77e3ddbac3ed9db93ec2cfe99ed6c5d121d submodules/diff-gaussian-rasterization (heads/main)",
+      " 5c46b9c07008ae65cb81ab79cd677ecc1934b903 submodules/diff-gaussian-rasterization/third_party/glm (0.9.5.3-2728-g5c46b9c0)",
+      " 44f764299fa305faf6ec5ebd99939e0508331503 submodules/simple-knn (44f7642)"
+    ]
+  },
+  "gavis": {
+    "url": "https://github.com/xsj01/gavis.git",
+    "commit": "85a7197ccc6dafd48feb6655706eb8dd9bef3eff",
+    "local_source_patch": null,
+    "submodules": []
+  },
+  "GLEAM": {
+    "url": "https://github.com/zjwzcx/GLEAM",
+    "commit": "1b46b1b13ff0ec3c344bf81d8b4bddf92713a05c",
+    "local_source_patch": null,
+    "submodules": []
+  },
+  "gavis-dgr": {
+    "url": "https://github.com/graphdeco-inria/diff-gaussian-rasterization",
+    "commit": "9c5c2028f6fbee2be239bc4c9421ff894fe4fbe0",
+    "local_source_patch": null,
+    "submodules": [
+      "5c46b9c07008ae65cb81ab79cd677ecc1934b903 third_party/glm (0.9.5.3-2728-g5c46b9c0)"
+    ]
+  },
+  "gavis-rasterizer": {
+    "url": "https://github.com/xsj01/gavis_rasterizer.git",
+    "commit": "9fe5f62ddc8fd9b26e206da0bbb2a912d2d2a329",
+    "local_source_patch": null,
+    "submodules": []
+  },
+  "r3con-glm": {
+    "url": "https://github.com/g-truc/glm.git",
+    "commit": "6f14f4792a0cde5d0cf2c910506724d61cb95834",
+    "local_source_patch": null,
+    "submodules": []
+  }
+}

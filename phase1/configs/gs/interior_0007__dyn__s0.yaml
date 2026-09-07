@@ -1,0 +1,124 @@
+habitat:
+  scene_path: ${HABITAT_GS_ROOT}/data/scene_datasets/gs_scenes/train/interior_0007_840137/interior_0007_840137.gs.ply
+  scene_dataset_config_file: ${HABITAT_GS_ROOT}/data/scene_datasets/gs_scenes/train_activebench_noncollide.scene_dataset_config.json
+  width: 640
+  height: 480
+  hfov: 75.1781789379499
+  enable_physics: true
+seed: 0
+trajectory_seed: 0
+start_pose:
+- 4.923
+- 1.2
+- 11.102
+- 168.0
+- 0.0
+motion:
+  speed: 0.5
+  yaw_rate_deg: 60.0
+  pitch_rate_deg: 60.0
+episode:
+  max_captures: 640
+  max_sim_time: 300.0
+  capture_cost: 0.0
+  capture_interval: null
+  reconstruction_interval: 1.0
+  stream_observations: true
+  provide_depth: true
+  collision: none
+campaign:
+  protocol: phase1-gs
+  scene: interior_0007
+  has_ceiling: true
+  difficulty: dyn
+distractors:
+- name: interior_0007_dyn_obj0
+  object_template: ${HABITAT_GS_ROOT}/data/test_assets/objects/chair.object_config.json
+  object_diag_m: 1.1
+  scale: 1.6
+  trajectory:
+    type: waypoint_patrol
+    waypoints:
+    - - 8.501538276672363
+      - 0.7000000029802322
+      - 10.434764862060547
+    - - 6.511147499084473
+      - 0.7000000029802322
+      - 11.023118019104004
+    speed: 0.35
+    mode: pingpong
+- name: interior_0007_dyn_obj1
+  object_template: ${HABITAT_GS_ROOT}/data/test_assets/objects/chair.object_config.json
+  object_diag_m: 1.1
+  scale: 1.6
+  trajectory:
+    type: waypoint_patrol
+    waypoints:
+    - - 5.027981758117676
+      - 0.7000000029802322
+      - 11.90046501159668
+    - - 6.964696407318115
+      - 0.7000000029802322
+      - 11.003872871398926
+    speed: 0.35
+    mode: pingpong
+- name: interior_0007_dyn_obj2
+  object_template: ${HABITAT_GS_ROOT}/data/test_assets/objects/chair.object_config.json
+  object_diag_m: 1.1
+  scale: 1.6
+  trajectory:
+    type: waypoint_patrol
+    waypoints:
+    - - 5.5832719802856445
+      - 0.7000000029802322
+      - 13.144518852233887
+    - - 8.67442512512207
+      - 0.7000000029802322
+      - 12.200569152832031
+    speed: 0.35
+    mode: pingpong
+- name: interior_0007_dyn_obj3
+  object_template: ${HABITAT_GS_ROOT}/data/test_assets/objects/chair.object_config.json
+  object_diag_m: 1.1
+  scale: 1.6
+  trajectory:
+    type: waypoint_patrol
+    waypoints:
+    - - 8.820955276489258
+      - 0.7000000029802322
+      - 11.671092987060547
+    - - 5.086516857147217
+      - 0.7000000029802322
+      - 11.516532897949219
+    speed: 0.35
+    mode: pingpong
+- name: interior_0007_dyn_obj4
+  object_template: ${HABITAT_GS_ROOT}/data/test_assets/objects/chair.object_config.json
+  object_diag_m: 1.1
+  scale: 1.6
+  trajectory:
+    type: waypoint_patrol
+    waypoints:
+    - - 4.666115760803223
+      - 0.7000000029802322
+      - 12.585692405700684
+    - - 7.234246730804443
+      - 0.7000000029802322
+      - 14.157369613647461
+    speed: 0.35
+    mode: pingpong
+- name: interior_0007_dyn_obj5
+  object_template: ${HABITAT_GS_ROOT}/data/test_assets/objects/chair.object_config.json
+  object_diag_m: 1.1
+  scale: 1.6
+  trajectory:
+    type: waypoint_patrol
+    waypoints:
+    - - 6.045948028564453
+      - 0.7000000029802322
+      - 11.577892303466797
+    - - 7.018618583679199
+      - 0.7000000029802322
+      - 9.968307495117188
+    speed: 0.35
+    mode: pingpong

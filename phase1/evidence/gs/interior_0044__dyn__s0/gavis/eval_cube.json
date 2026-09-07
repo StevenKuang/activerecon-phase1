@@ -1,0 +1,246 @@
+{
+  "episode_dir": "runs_campaign_v6/interior_0044__dyn__s0/gavis",
+  "train_transforms": "transforms_stream.json",
+  "config": {
+    "backend": "gsplat",
+    "run_name": "gsplat1600cube",
+    "train_iterations": 30000,
+    "use_masks": false,
+    "opacity_threshold": 0.5,
+    "seed": 0,
+    "require_lpips": false,
+    "lpips_available": true,
+    "lpips_error": null,
+    "evaluation_resolutions": [
+      [
+        1600,
+        1600
+      ]
+    ],
+    "backend_metadata": {
+      "backend": "gsplat",
+      "implementation": "gsplat rasterization + DefaultStrategy",
+      "initialization": "benchmark RGB-D point cloud (not COLMAP SfM)",
+      "gaussian_scale_initialization": "nearest-neighbor distance (vanilla 3DGS)",
+      "supervision": "RGB L1 + DSSIM",
+      "isotropic_loss": false,
+      "depth_supervision": false,
+      "iterations": 30000,
+      "initial_num_gaussians": 2710000,
+      "depth_init_pts_per_view": 10000,
+      "sh_degree": 3,
+      "lambda_dssim": 0.2,
+      "position_lr_init": 0.00016,
+      "position_lr_final": 1.6e-06,
+      "position_lr_max_steps": 30000,
+      "feature_lr": 0.0025,
+      "opacity_lr": 0.05,
+      "scaling_lr": 0.005,
+      "rotation_lr": 0.001,
+      "init_opacity": 0.1,
+      "densify_from": 500,
+      "densify_until": 15000,
+      "densification_interval": 100,
+      "opacity_reset_interval": 3000,
+      "densify_grad_threshold": 0.0002,
+      "prune_opacity": 0.005,
+      "max_gaussians": null
+    }
+  },
+  "num_train_views": 271,
+  "num_gaussians": 3315191,
+  "scored_artifact": null,
+  "train_resolution": [
+    1600,
+    1200
+  ],
+  "eval_resolution": [
+    1600,
+    1600
+  ],
+  "resource_usage": {
+    "train_wall_time_s": 1403.7282480529975,
+    "peak_cuda_allocated_bytes": 15521617408,
+    "peak_cuda_reserved_bytes": 18102616064
+  },
+  "appearance_per_stratum": {
+    "front": {
+      "psnr": 17.317926955562417,
+      "ssim": 0.6356883496046066,
+      "lpips": 0.5057626143097878,
+      "depth_mae": 1.1952946595847607,
+      "render_coverage": 0.9999409474638213,
+      "depth_mae_fixed": 1.195726428180933,
+      "depth_p50_fixed": 0.9105807555218538,
+      "depth_mae_zerofill": 1.1954161264002323
+    },
+    "right": {
+      "psnr": 17.879728395722925,
+      "ssim": 0.6543618192275366,
+      "lpips": 0.46275447867810726,
+      "depth_mae": 0.9257962095240752,
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.9257962095240752,
+      "depth_p50_fixed": 0.6377766095101833,
+      "depth_mae_zerofill": 0.9257962095240752
+    },
+    "back": {
+      "psnr": 18.978413091845837,
+      "ssim": 0.7206817542513212,
+      "lpips": 0.39652542397379875,
+      "depth_mae": 0.6919245490183433,
+      "render_coverage": 0.9999915852864584,
+      "depth_mae_fixed": 0.6919895640263954,
+      "depth_p50_fixed": 0.37146694026887417,
+      "depth_mae_zerofill": 0.6919618702183167
+    },
+    "left": {
+      "psnr": 17.58794392694713,
+      "ssim": 0.6887091770768166,
+      "lpips": 0.4452280675371488,
+      "depth_mae": 0.7002916789303223,
+      "render_coverage": 0.9995345338120609,
+      "depth_mae_fixed": 0.7038858402520418,
+      "depth_p50_fixed": 0.46103579737246037,
+      "depth_mae_zerofill": 0.7020265851169825
+    },
+    "up": {
+      "psnr": 17.2014909894539,
+      "ssim": 0.7417933369676272,
+      "lpips": 0.4772283248603344,
+      "depth_mae": 0.9212283982584873,
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.9212283982584873,
+      "depth_p50_fixed": 0.7968438317378362,
+      "depth_mae_zerofill": 0.9212283982584873
+    },
+    "down": {
+      "psnr": 17.484170163983194,
+      "ssim": 0.6795478065808614,
+      "lpips": 0.5482076207796732,
+      "depth_mae": 0.9777568330367407,
+      "render_coverage": 0.9995080077282514,
+      "depth_mae_fixed": 0.9811859329541525,
+      "depth_p50_fixed": 0.6087213940918446,
+      "depth_mae_zerofill": 0.9791261230905851
+    },
+    "all": {
+      "psnr": 17.741612253919232,
+      "ssim": 0.6867970406181283,
+      "lpips": 0.4726177550231417,
+      "depth_mae": 0.9020487213921216,
+      "render_coverage": 0.999829179048432,
+      "depth_mae_fixed": 0.9033020621993475,
+      "depth_p50_fixed": 0.631070888083842,
+      "depth_mae_zerofill": 0.9025925521014465
+    }
+  },
+  "appearance_by_resolution": {
+    "1600x1600": {
+      "front": {
+        "psnr": 17.317926955562417,
+        "ssim": 0.6356883496046066,
+        "lpips": 0.5057626143097878,
+        "depth_mae": 1.1952946595847607,
+        "render_coverage": 0.9999409474638213,
+        "depth_mae_fixed": 1.195726428180933,
+        "depth_p50_fixed": 0.9105807555218538,
+        "depth_mae_zerofill": 1.1954161264002323
+      },
+      "right": {
+        "psnr": 17.879728395722925,
+        "ssim": 0.6543618192275366,
+        "lpips": 0.46275447867810726,
+        "depth_mae": 0.9257962095240752,
+        "render_coverage": 1.0,
+        "depth_mae_fixed": 0.9257962095240752,
+        "depth_p50_fixed": 0.6377766095101833,
+        "depth_mae_zerofill": 0.9257962095240752
+      },
+      "back": {
+        "psnr": 18.978413091845837,
+        "ssim": 0.7206817542513212,
+        "lpips": 0.39652542397379875,
+        "depth_mae": 0.6919245490183433,
+        "render_coverage": 0.9999915852864584,
+        "depth_mae_fixed": 0.6919895640263954,
+        "depth_p50_fixed": 0.37146694026887417,
+        "depth_mae_zerofill": 0.6919618702183167
+      },
+      "left": {
+        "psnr": 17.58794392694713,
+        "ssim": 0.6887091770768166,
+        "lpips": 0.4452280675371488,
+        "depth_mae": 0.7002916789303223,
+        "render_coverage": 0.9995345338120609,
+        "depth_mae_fixed": 0.7038858402520418,
+        "depth_p50_fixed": 0.46103579737246037,
+        "depth_mae_zerofill": 0.7020265851169825
+      },
+      "up": {
+        "psnr": 17.2014909894539,
+        "ssim": 0.7417933369676272,
+        "lpips": 0.4772283248603344,
+        "depth_mae": 0.9212283982584873,
+        "render_coverage": 1.0,
+        "depth_mae_fixed": 0.9212283982584873,
+        "depth_p50_fixed": 0.7968438317378362,
+        "depth_mae_zerofill": 0.9212283982584873
+      },
+      "down": {
+        "psnr": 17.484170163983194,
+        "ssim": 0.6795478065808614,
+        "lpips": 0.5482076207796732,
+        "depth_mae": 0.9777568330367407,
+        "render_coverage": 0.9995080077282514,
+        "depth_mae_fixed": 0.9811859329541525,
+        "depth_p50_fixed": 0.6087213940918446,
+        "depth_mae_zerofill": 0.9791261230905851
+      },
+      "all": {
+        "psnr": 17.741612253919232,
+        "ssim": 0.6867970406181283,
+        "lpips": 0.4726177550231417,
+        "depth_mae": 0.9020487213921216,
+        "render_coverage": 0.999829179048432,
+        "depth_mae_fixed": 0.9033020621993475,
+        "depth_p50_fixed": 0.631070888083842,
+        "depth_mae_zerofill": 0.9025925521014465
+      }
+    }
+  },
+  "geometry": {
+    "num_recon_points": 2325008,
+    "bins": {
+      "up": {
+        "num_points": 708468,
+        "completeness@0.05": 0.21054161938153876,
+        "completeness@0.10": 0.33691147659456744
+      },
+      "down": {
+        "num_points": 1052341,
+        "completeness@0.05": 0.14255455218413043,
+        "completeness@0.10": 0.3079277534563416
+      },
+      "side": {
+        "num_points": 3363758,
+        "completeness@0.05": 0.17440404452401154,
+        "completeness@0.10": 0.31452322075488187
+      }
+    },
+    "completeness@0.05": 0.17285967770545296,
+    "completeness@0.10": 0.3162639887428538,
+    "accuracy": {
+      "mean": 0.06142083414399661,
+      "median": 0.03213388162121339,
+      "frac_within@0.05": 0.6879670951669844
+    },
+    "reused_from": "runs_campaign_v6/interior_0044__dyn__s0/gavis/reconstructions/gsplat1600cube/eval.json"
+  },
+  "eval_mode": {
+    "reloaded_npz": true,
+    "loaded_gaussians": 3315191,
+    "renderer": "npz-reload (gsplat rasterization)"
+  },
+  "eval_set": "eval_assets/cube_eval_gs_v6_1600/interior_0044__s0"
+}

@@ -1,0 +1,90 @@
+habitat:
+  scene_path: ${HABITAT_SIM_ROOT}/data/scene_datasets/mp3d_example/17DRP5sb8fy/17DRP5sb8fy.glb
+  scene_dataset_config_file: ${HABITAT_SIM_ROOT}/data/scene_datasets/mp3d_example/mp3d.scene_dataset_config.json
+  width: 640
+  height: 480
+  hfov: 75.1781789379499
+  enable_physics: true
+seed: 0
+trajectory_seed: 0
+start_pose:
+- 0.084
+- 1.472
+- 0.554
+- 0.0
+- 0.0
+distractors:
+- name: mp3d_17DRP5sb8fy_dyn_obj0
+  object_template: ${HABITAT_SIM_ROOT}/data/versioned_data/replica_cad_dataset/configs/objects/frl_apartment_chair_04.object_config.json
+  object_diag_m: 1.12
+  trajectory:
+    type: waypoint_patrol
+    waypoints:
+    - - -5.483
+      - 1.562
+      - -1.565
+    - - -4.13
+      - 1.562
+      - -1.958
+    speed: 0.568
+    mode: pingpong
+- name: mp3d_17DRP5sb8fy_dyn_obj1
+  object_template: ${HABITAT_SIM_ROOT}/data/versioned_data/replica_cad_dataset/configs/objects/frl_apartment_chair_04.object_config.json
+  object_diag_m: 1.12
+  trajectory:
+    type: waypoint_patrol
+    waypoints:
+    - - -5.483
+      - 1.416
+      - -1.565
+    - - -4.13
+      - 1.416
+      - -1.958
+    speed: 0.395
+    mode: pingpong
+- name: mp3d_17DRP5sb8fy_dyn_obj2
+  object_template: ${HABITAT_SIM_ROOT}/data/versioned_data/replica_cad_dataset/configs/objects/frl_apartment_mat.object_config.json
+  object_diag_m: 1.112
+  trajectory:
+    type: waypoint_patrol
+    waypoints:
+    - - -5.483
+      - 1.219
+      - -1.565
+    - - -4.13
+      - 1.219
+      - -1.958
+    speed: 0.301
+    mode: pingpong
+- name: mp3d_17DRP5sb8fy_dyn_obj3
+  object_template: ${HABITAT_SIM_ROOT}/data/versioned_data/replica_cad_dataset/configs/objects/frl_apartment_cloth_04.object_config.json
+  object_diag_m: 1.189
+  trajectory:
+    type: waypoint_patrol
+    waypoints:
+    - - -5.483
+      - 0.87
+      - -1.565
+    - - -4.13
+      - 0.87
+      - -1.958
+    speed: 0.648
+    mode: pingpong
+motion:
+  speed: 0.5
+  yaw_rate_deg: 60.0
+  pitch_rate_deg: 60.0
+episode:
+  max_captures: 640
+  max_sim_time: 300.0
+  capture_cost: 0.0
+  capture_interval: null
+  reconstruction_interval: 1.0
+  stream_observations: true
+  provide_depth: true
+  collision: navmesh
+campaign:
+  protocol: phase1-mesh
+  scene: mp3d_17DRP5sb8fy
+  difficulty: dyn
+  has_ceiling: true

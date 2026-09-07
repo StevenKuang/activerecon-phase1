@@ -1,0 +1,648 @@
+[
+  {
+    "cell": "gs/interior_0007__d0__s0/fisherrf",
+    "sim_time": 5.0,
+    "decision_captures": 3,
+    "reconstruction": {
+      "policy": "uniform-time",
+      "interval_s": 1.0,
+      "streamed_to_agent": true,
+      "num_frames": 6,
+      "frames": [
+        {
+          "index": 0,
+          "time": 0.0,
+          "pose": [
+            4.923,
+            1.2,
+            11.102,
+            168.0,
+            0.0
+          ],
+          "distractor_pixel_fraction": 0.0
+        },
+        {
+          "index": 1,
+          "time": 1.0,
+          "pose": [
+            5.396544529172928,
+            1.0576875992291013,
+            11.027819413070452,
+            -1.5102813289340595,
+            0.03185161301998843
+          ],
+          "distractor_pixel_fraction": 0.0
+        },
+        {
+          "index": 2,
+          "time": 2.0,
+          "pose": [
+            5.870089058345857,
+            0.9153751984582026,
+            10.953638826140903,
+            -1.3745593640192801,
+            0.06370322603997686
+          ],
+          "distractor_pixel_fraction": 0.0
+        },
+        {
+          "index": 3,
+          "time": 3.0,
+          "pose": [
+            6.197215388069287,
+            0.8757128743996414,
+            10.893499302864075,
+            -1.0958686539230378,
+            0.05612612521109132
+          ],
+          "distractor_pixel_fraction": 0.0
+        },
+        {
+          "index": 4,
+          "time": 4.0,
+          "pose": [
+            5.897215388069288,
+            1.2757128743996415,
+            10.893499302864075,
+            -0.20482603151045842,
+            -0.12032878380507624
+          ],
+          "distractor_pixel_fraction": 0.0
+        },
+        {
+          "index": 5,
+          "time": 5.0,
+          "pose": [
+            5.731012668994343,
+            1.5669945892320039,
+            10.849492088506747,
+            0.45843860482821075,
+            -0.30946440372637735
+          ],
+          "distractor_pixel_fraction": 0.0
+        }
+      ],
+      "transforms": "transforms_stream.json"
+    },
+    "requested_training_iterations": 20,
+    "trained_and_scored": false,
+    "manifest_sha256": "c50ce0c4f32f4def0614d7e7b8ed3ff0d44ff7c06c02f5c3ef3ef1c9d04625c7",
+    "evaluation_sha256": null
+  },
+  {
+    "cell": "gs/interior_0007__d0__s0/gavis",
+    "sim_time": 5.0,
+    "decision_captures": 2,
+    "reconstruction": {
+      "policy": "uniform-time",
+      "interval_s": 1.0,
+      "streamed_to_agent": true,
+      "num_frames": 6,
+      "frames": [
+        {
+          "index": 0,
+          "time": 0.0,
+          "pose": [
+            4.923,
+            1.2,
+            11.102,
+            168.0,
+            0.0
+          ],
+          "distractor_pixel_fraction": 0.0
+        },
+        {
+          "index": 1,
+          "time": 1.0,
+          "pose": [
+            5.310558782321363,
+            1.3164714559121387,
+            10.80834613879043,
+            -1.0427824071390326,
+            0.057095602387212105
+          ],
+          "distractor_pixel_fraction": 0.0
+        },
+        {
+          "index": 2,
+          "time": 2.0,
+          "pose": [
+            5.698117564642725,
+            1.4329429118242774,
+            10.51469227758086,
+            -0.43956152042925467,
+            0.11419120477442421
+          ],
+          "distractor_pixel_fraction": 0.0
+        },
+        {
+          "index": 3,
+          "time": 3.0,
+          "pose": [
+            6.085676346964087,
+            1.549414367736416,
+            10.22103841637129,
+            0.16365936628055167,
+            0.17128680716163633
+          ],
+          "distractor_pixel_fraction": 0.0
+        },
+        {
+          "index": 4,
+          "time": 4.0,
+          "pose": [
+            6.13339620415959,
+            1.4190942404358582,
+            10.274405062428217,
+            0.8687151507438209,
+            0.04774585469094361
+          ],
+          "distractor_pixel_fraction": 0.0
+        },
+        {
+          "index": 5,
+          "time": 5.0,
+          "pose": [
+            5.920195487803981,
+            1.0992931659024427,
+            10.594206136961633,
+            1.6519574464182964,
+            -0.21448372351726985
+          ],
+          "distractor_pixel_fraction": 0.0
+        }
+      ],
+      "transforms": "transforms_stream.json"
+    },
+    "requested_training_iterations": 20,
+    "trained_and_scored": false,
+    "manifest_sha256": "7d6c5e4eadddfeae0d7ca55adada61bb2368a344f14258528055471c821489a3",
+    "evaluation_sha256": null
+  },
+  {
+    "cell": "gs/interior_0007__d0__s0/gleam",
+    "sim_time": 5.0,
+    "decision_captures": 1,
+    "reconstruction": {
+      "policy": "uniform-time",
+      "interval_s": 1.0,
+      "streamed_to_agent": true,
+      "num_frames": 6,
+      "frames": [
+        {
+          "index": 0,
+          "time": 0.0,
+          "pose": [
+            4.923,
+            1.2,
+            11.102,
+            168.0,
+            0.0
+          ],
+          "distractor_pixel_fraction": 0.0
+        },
+        {
+          "index": 1,
+          "time": 1.0,
+          "pose": [
+            4.923,
+            1.2,
+            11.102,
+            -0.5988057426522353,
+            0.0
+          ],
+          "distractor_pixel_fraction": 0.0
+        },
+        {
+          "index": 2,
+          "time": 2.0,
+          "pose": [
+            4.923,
+            1.2,
+            11.102,
+            0.4483918085443599,
+            0.0
+          ],
+          "distractor_pixel_fraction": 0.0
+        },
+        {
+          "index": 3,
+          "time": 3.0,
+          "pose": [
+            4.923,
+            1.2,
+            11.102,
+            1.4955893597409435,
+            0.0
+          ],
+          "distractor_pixel_fraction": 0.0
+        },
+        {
+          "index": 4,
+          "time": 4.0,
+          "pose": [
+            4.923,
+            1.2,
+            11.102,
+            2.542786910937555,
+            0.0
+          ],
+          "distractor_pixel_fraction": 0.0
+        },
+        {
+          "index": 5,
+          "time": 5.0,
+          "pose": [
+            4.923,
+            1.2,
+            11.102,
+            -2.6932008450454337,
+            0.0
+          ],
+          "distractor_pixel_fraction": 0.0
+        }
+      ],
+      "transforms": "transforms_stream.json"
+    },
+    "requested_training_iterations": 20,
+    "trained_and_scored": false,
+    "manifest_sha256": "6e87e6faf9e2c314f7ce36636d8438603904348bd8f8b778ab07d59da44cf8d0",
+    "evaluation_sha256": null
+  },
+  {
+    "cell": "gs/interior_0007__d0__s0/magician",
+    "sim_time": 5.0,
+    "decision_captures": 2,
+    "reconstruction": {
+      "policy": "uniform-time",
+      "interval_s": 1.0,
+      "streamed_to_agent": true,
+      "num_frames": 6,
+      "frames": [
+        {
+          "index": 0,
+          "time": 0.0,
+          "pose": [
+            4.923,
+            1.2,
+            11.102,
+            168.0,
+            0.0
+          ],
+          "distractor_pixel_fraction": 0.0
+        },
+        {
+          "index": 1,
+          "time": 1.0,
+          "pose": [
+            4.939806586268955,
+            1.6409128100507187,
+            10.866811920814078,
+            -1.7390393891475249,
+            -0.06518440077170526
+          ],
+          "distractor_pixel_fraction": 0.0
+        },
+        {
+          "index": 2,
+          "time": 2.0,
+          "pose": [
+            4.95661317253791,
+            2.081825620101437,
+            10.631623841628159,
+            -1.8320754844462392,
+            -0.13036880154341052
+          ],
+          "distractor_pixel_fraction": 0.0
+        },
+        {
+          "index": 3,
+          "time": 3.0,
+          "pose": [
+            4.973419758806864,
+            2.522738430152156,
+            10.396435762442236,
+            -1.9251115797449252,
+            -0.19555320231511578
+          ],
+          "distractor_pixel_fraction": 0.0
+        },
+        {
+          "index": 4,
+          "time": 4.0,
+          "pose": [
+            4.990226345075819,
+            2.9636512402028745,
+            10.161247683256313,
+            -2.0181476750436396,
+            -0.26073760308682103
+          ],
+          "distractor_pixel_fraction": 0.0
+        },
+        {
+          "index": 5,
+          "time": 5.0,
+          "pose": [
+            5.004000127836399,
+            3.32499989035756,
+            9.968500062844628,
+            -1.9054248762921606,
+            -0.3141592653589793
+          ],
+          "distractor_pixel_fraction": 0.0
+        }
+      ],
+      "transforms": "transforms_stream.json"
+    },
+    "requested_training_iterations": 20,
+    "trained_and_scored": false,
+    "manifest_sha256": "f57f03052c7c24034881dcf374608e7df6b8fc4bab996dab7f3f8412b6ca1e2a",
+    "evaluation_sha256": null
+  },
+  {
+    "cell": "gs/interior_0007__d0__s0/r3con-pano",
+    "sim_time": 5.0,
+    "decision_captures": 4,
+    "reconstruction": {
+      "policy": "uniform-time",
+      "interval_s": 1.0,
+      "streamed_to_agent": true,
+      "num_frames": 6,
+      "frames": [
+        {
+          "index": 0,
+          "time": 0.0,
+          "pose": [
+            4.923,
+            1.2,
+            11.102,
+            168.0,
+            0.0
+          ],
+          "distractor_pixel_fraction": 0.0
+        },
+        {
+          "index": 1,
+          "time": 1.0,
+          "pose": [
+            5.192439400430263,
+            1.167307734489441,
+            11.06608772277832,
+            -0.7966071873799243,
+            0.24730486255781578
+          ],
+          "distractor_pixel_fraction": 0.0
+        },
+        {
+          "index": 2,
+          "time": 2.0,
+          "pose": [
+            5.410906464682335,
+            1.176623451341578,
+            11.075572550937368,
+            0.25059036381667354,
+            0.3185995605511621
+          ],
+          "distractor_pixel_fraction": 0.0
+        },
+        {
+          "index": 3,
+          "time": 3.0,
+          "pose": [
+            5.665096876905036,
+            1.4275132780493123,
+            11.35275792253802,
+            1.2977879150132718,
+            0.33759699480258265
+          ],
+          "distractor_pixel_fraction": 0.0
+        },
+        {
+          "index": 4,
+          "time": 4.0,
+          "pose": [
+            5.798431180172478,
+            1.5591162346047556,
+            11.653935968719637,
+            2.344985466209872,
+            0.020832980064660393
+          ],
+          "distractor_pixel_fraction": 0.0
+        },
+        {
+          "index": 5,
+          "time": 5.0,
+          "pose": [
+            6.139656924460594,
+            1.5586810781141298,
+            12.006910350750783,
+            2.7273360015603387,
+            0.11081943899752382
+          ],
+          "distractor_pixel_fraction": 0.0
+        }
+      ],
+      "transforms": "transforms_stream.json"
+    },
+    "requested_training_iterations": 20,
+    "trained_and_scored": false,
+    "manifest_sha256": "bcfbd8070937dae8d760bc02dff60d4047c77909388745809560b84aa07feeca",
+    "evaluation_sha256": null
+  },
+  {
+    "cell": "gs/interior_0007__d0__s0/random",
+    "sim_time": 5.0,
+    "decision_captures": 7,
+    "reconstruction": {
+      "policy": "uniform-time",
+      "interval_s": 1.0,
+      "streamed_to_agent": true,
+      "num_frames": 6,
+      "frames": [
+        {
+          "index": 0,
+          "time": 0.0,
+          "pose": [
+            4.923,
+            1.2,
+            11.102,
+            168.0,
+            0.0
+          ],
+          "distractor_pixel_fraction": 0.0
+        },
+        {
+          "index": 1,
+          "time": 1.0,
+          "pose": [
+            5.377850301964624,
+            1.2,
+            11.077354569815917,
+            -1.5685909169466068,
+            -0.10066166419762901
+          ],
+          "distractor_pixel_fraction": 0.0
+        },
+        {
+          "index": 2,
+          "time": 2.0,
+          "pose": [
+            5.747177779124481,
+            1.2,
+            11.303730964191216,
+            -2.089298279895137,
+            -0.17046498902241114
+          ],
+          "distractor_pixel_fraction": 0.0
+        },
+        {
+          "index": 3,
+          "time": 3.0,
+          "pose": [
+            6.244018962826527,
+            1.2,
+            11.296777827352695,
+            -1.5298765265584677,
+            -0.048802075755299795
+          ],
+          "distractor_pixel_fraction": 0.0
+        },
+        {
+          "index": 4,
+          "time": 4.0,
+          "pose": [
+            6.73438419904124,
+            1.2,
+            11.201438518714308,
+            -1.363199963373034,
+            0.08983107939601846
+          ],
+          "distractor_pixel_fraction": 0.0
+        },
+        {
+          "index": 5,
+          "time": 5.0,
+          "pose": [
+            7.043560388838092,
+            1.1999999999999997,
+            10.83863862383227,
+            -0.6115186088397015,
+            -0.054419758492195436
+          ],
+          "distractor_pixel_fraction": 0.0
+        }
+      ],
+      "transforms": "transforms_stream.json",
+      "resolution": {
+        "width": 1600,
+        "height": 1200
+      },
+      "planner_resolution": {
+        "width": 640,
+        "height": 480
+      }
+    },
+    "requested_training_iterations": 20,
+    "trained_and_scored": true,
+    "manifest_sha256": "e341a56ff067ee5b88927503e76dc798996b22410b8490ac03543c7d533da753",
+    "evaluation_sha256": "3a4795d974a2b9a3d5be5c3e85b3fe311143c6d9e39f6129bed9d5fa46f75547"
+  },
+  {
+    "cell": "mesh/apartment_1__d0__s0/r3con-pano",
+    "sim_time": 5.0,
+    "decision_captures": 3,
+    "reconstruction": {
+      "policy": "uniform-time",
+      "interval_s": 1.0,
+      "streamed_to_agent": true,
+      "num_frames": 6,
+      "frames": [
+        {
+          "index": 0,
+          "time": 0.0,
+          "pose": [
+            0.751,
+            -0.2,
+            0.329,
+            0.0,
+            0.0
+          ],
+          "distractor_pixel_fraction": 0.0
+        },
+        {
+          "index": 1,
+          "time": 1.0,
+          "pose": [
+            0.8487889444767267,
+            -0.23405328006218765,
+            -0.021698084724269776,
+            -0.8643313173155338,
+            0.009139336074115724
+          ],
+          "distractor_pixel_fraction": 0.0
+        },
+        {
+          "index": 2,
+          "time": 2.0,
+          "pose": [
+            1.2051277533003548,
+            -0.32650345815588966,
+            -0.2953522477909647,
+            -1.794993615052609,
+            0.0005564586927945948
+          ],
+          "distractor_pixel_fraction": 0.0
+        },
+        {
+          "index": 3,
+          "time": 3.0,
+          "pose": [
+            1.6008808319830377,
+            -0.2337464003432855,
+            -0.011348420277873361,
+            -2.281858084173581,
+            -0.04727209108490211
+          ],
+          "distractor_pixel_fraction": 0.0
+        },
+        {
+          "index": 4,
+          "time": 4.0,
+          "pose": [
+            1.9482862723135685,
+            -0.11832003340503558,
+            0.32915182243464974,
+            -2.710762759309191,
+            -0.08050494990101643
+          ],
+          "distractor_pixel_fraction": 0.0
+        },
+        {
+          "index": 5,
+          "time": 5.0,
+          "pose": [
+            2.28925399229001,
+            0.008246314274779431,
+            0.6721215005238935,
+            -3.1334189747147985,
+            -0.09897320740325276
+          ],
+          "distractor_pixel_fraction": 0.0
+        }
+      ],
+      "transforms": "transforms_stream.json",
+      "resolution": {
+        "width": 1600,
+        "height": 1200
+      },
+      "planner_resolution": {
+        "width": 640,
+        "height": 480
+      }
+    },
+    "requested_training_iterations": 20,
+    "trained_and_scored": true,
+    "manifest_sha256": "b8dda817e7fa18c2fceb94d19ddc0da4a746d79e3dacf9d54aeca408944055dd",
+    "evaluation_sha256": "0a358f76b4e62df8ffe1fc30ba99e47894298dd52c449db35fd91f695f2b8032"
+  }
+]

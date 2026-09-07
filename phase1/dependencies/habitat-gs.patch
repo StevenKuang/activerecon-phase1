@@ -1,0 +1,78 @@
+diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
+index 19da409..348b3b9 100644
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -28,7 +28,7 @@ if(BUILD_WITH_CUDA)
+   # Set default CUDA architectures for all CUDA targets
+   # Support common GPUs: Volta (70), Turing (75), Ampere (80, 86), Ada (89), Hopper (90)
+   if(NOT DEFINED CMAKE_CUDA_ARCHITECTURES)
+-    set(CMAKE_CUDA_ARCHITECTURES "70;75;80;86;90" CACHE STRING "CUDA architectures to build for")
++    set(CMAKE_CUDA_ARCHITECTURES "120" CACHE STRING "CUDA architectures to build for")
+   endif()
+ else()
+   project(esp LANGUAGES C CXX)
+diff --git a/src/esp/CMakeLists.txt b/src/esp/CMakeLists.txt
+index 2ed150a..fcdb2d8 100644
+--- a/src/esp/CMakeLists.txt
++++ b/src/esp/CMakeLists.txt
+@@ -600,7 +600,7 @@ if(BUILD_WITH_CUDA)
+   set_target_properties(gaussian_rasterizer_kernels PROPERTIES 
+     CUDA_SEPARABLE_COMPILATION ON
+     CUDA_RESOLVE_DEVICE_SYMBOLS ON
+-    CUDA_ARCHITECTURES "70;75;80;86;90"
++    CUDA_ARCHITECTURES "120"
+   )
+ 
+   target_link_libraries(habitat_sim PUBLIC noise_model_kernels gaussian_rasterizer_kernels ${CUDART_LIBRARY})
+diff --git a/src/esp/gfx/gaussian_cuda_rasterizer/flip_kernels.cu b/src/esp/gfx/gaussian_cuda_rasterizer/flip_kernels.cu
+index 76bab4b..1602369 100644
+--- a/src/esp/gfx/gaussian_cuda_rasterizer/flip_kernels.cu
++++ b/src/esp/gfx/gaussian_cuda_rasterizer/flip_kernels.cu
+@@ -1,6 +1,6 @@
+ #include "flip_kernels.h"
+ #include <cuda_runtime.h>
+-#include <surface_functions.h>
++#include <cuda_runtime.h>
+ #include <cstring>
+ 
+ // CUDA kernel to convert planar RGB to interleaved RGBA and write directly to
+diff --git a/src/esp/gfx_batch/cuda_helpers/HelperCuda.h b/src/esp/gfx_batch/cuda_helpers/HelperCuda.h
+index 752abf2..5c534fa 100644
+--- a/src/esp/gfx_batch/cuda_helpers/HelperCuda.h
++++ b/src/esp/gfx_batch/cuda_helpers/HelperCuda.h
+@@ -1056,7 +1056,7 @@ inline int gpuDeviceInit(int devID) {
+   cudaDeviceProp deviceProp;
+   checkCudaErrors(cudaGetDeviceProperties(&deviceProp, devID));
+ 
+-  if (deviceProp.computeMode == cudaComputeModeProhibited) {
++  if (false) {
+     fprintf(stderr,
+             "Error: device is running in <Compute Mode Prohibited>, no threads "
+             "can use ::cudaSetDevice().\n");
+@@ -1100,7 +1100,7 @@ inline int gpuGetMaxGflopsDeviceId() {
+ 
+     // If this GPU is not running on Compute Mode prohibited, then we can add it
+     // to the list
+-    if (deviceProp.computeMode != cudaComputeModeProhibited) {
++    if (true) {
+       if (deviceProp.major > 0 && deviceProp.major < 9999) {
+         best_SM_arch = MAX(best_SM_arch, deviceProp.major);
+       }
+@@ -1126,7 +1126,7 @@ inline int gpuGetMaxGflopsDeviceId() {
+ 
+     // If this GPU is not running on Compute Mode prohibited, then we can add it
+     // to the list
+-    if (deviceProp.computeMode != cudaComputeModeProhibited) {
++    if (true) {
+       if (deviceProp.major == 9999 && deviceProp.minor == 9999) {
+         sm_per_multiproc = 1;
+       } else {
+@@ -1136,7 +1136,7 @@ inline int gpuGetMaxGflopsDeviceId() {
+ 
+       unsigned long long compute_perf =
+           (unsigned long long)deviceProp.multiProcessorCount *
+-          sm_per_multiproc * deviceProp.clockRate;
++          sm_per_multiproc * 1;
+ 
+       if (compute_perf > max_compute_perf) {
+         // If we find GPU with SM major > 2, search only these

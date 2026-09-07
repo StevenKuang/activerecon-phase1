@@ -1,0 +1,246 @@
+{
+  "episode_dir": "runs_campaign_v6/interior_0044__dyn__s0/gleam",
+  "train_transforms": "transforms_stream.json",
+  "config": {
+    "backend": "gsplat",
+    "run_name": "gsplat1600cube",
+    "train_iterations": 30000,
+    "use_masks": false,
+    "opacity_threshold": 0.5,
+    "seed": 0,
+    "require_lpips": false,
+    "lpips_available": true,
+    "lpips_error": null,
+    "evaluation_resolutions": [
+      [
+        1600,
+        1600
+      ]
+    ],
+    "backend_metadata": {
+      "backend": "gsplat",
+      "implementation": "gsplat rasterization + DefaultStrategy",
+      "initialization": "benchmark RGB-D point cloud (not COLMAP SfM)",
+      "gaussian_scale_initialization": "nearest-neighbor distance (vanilla 3DGS)",
+      "supervision": "RGB L1 + DSSIM",
+      "isotropic_loss": false,
+      "depth_supervision": false,
+      "iterations": 30000,
+      "initial_num_gaussians": 2560000,
+      "depth_init_pts_per_view": 10000,
+      "sh_degree": 3,
+      "lambda_dssim": 0.2,
+      "position_lr_init": 0.00016,
+      "position_lr_final": 1.6e-06,
+      "position_lr_max_steps": 30000,
+      "feature_lr": 0.0025,
+      "opacity_lr": 0.05,
+      "scaling_lr": 0.005,
+      "rotation_lr": 0.001,
+      "init_opacity": 0.1,
+      "densify_from": 500,
+      "densify_until": 15000,
+      "densification_interval": 100,
+      "opacity_reset_interval": 3000,
+      "densify_grad_threshold": 0.0002,
+      "prune_opacity": 0.005,
+      "max_gaussians": null
+    }
+  },
+  "num_train_views": 256,
+  "num_gaussians": 3888184,
+  "scored_artifact": null,
+  "train_resolution": [
+    1600,
+    1200
+  ],
+  "eval_resolution": [
+    1600,
+    1600
+  ],
+  "resource_usage": {
+    "train_wall_time_s": 1575.7444001609983,
+    "peak_cuda_allocated_bytes": 16787863552,
+    "peak_cuda_reserved_bytes": 20157825024
+  },
+  "appearance_per_stratum": {
+    "front": {
+      "psnr": 20.006535067054596,
+      "ssim": 0.7408430899182955,
+      "lpips": 0.32262567058205605,
+      "depth_mae": 0.7893369346857071,
+      "render_coverage": 0.9999994532885342,
+      "depth_mae_fixed": 0.7893409704168638,
+      "depth_p50_fixed": 0.4448953370253245,
+      "depth_mae_zerofill": 0.7893393983443578
+    },
+    "right": {
+      "psnr": 19.000297118018143,
+      "ssim": 0.7004904846350352,
+      "lpips": 0.3693653692801793,
+      "depth_mae": 1.0091579866906006,
+      "render_coverage": 0.9997246890231658,
+      "depth_mae_fixed": 1.0111766022940476,
+      "depth_p50_fixed": 0.6687633010248343,
+      "depth_mae_zerofill": 1.010675948113203
+    },
+    "back": {
+      "psnr": 21.677129779234097,
+      "ssim": 0.7774944429596266,
+      "lpips": 0.2733511421829462,
+      "depth_mae": 0.6083904386808475,
+      "render_coverage": 0.9999656418961558,
+      "depth_mae_fixed": 0.6086363016317288,
+      "depth_p50_fixed": 0.3591655840476354,
+      "depth_mae_zerofill": 0.6085456206152836
+    },
+    "left": {
+      "psnr": 20.796067213609188,
+      "ssim": 0.7646420349677404,
+      "lpips": 0.2947864541783929,
+      "depth_mae": 0.5358160920441151,
+      "render_coverage": 0.9999903958095763,
+      "depth_mae_fixed": 0.5358919169132909,
+      "depth_p50_fixed": 0.3320734854787588,
+      "depth_mae_zerofill": 0.535846741249164
+    },
+    "up": {
+      "psnr": 17.182635878087893,
+      "ssim": 0.7018243173758189,
+      "lpips": 0.49684637412428856,
+      "depth_mae": 0.7624406615893046,
+      "render_coverage": 0.9997088704427083,
+      "depth_mae_fixed": 0.7645093848307928,
+      "depth_p50_fixed": 0.6187769547104836,
+      "depth_mae_zerofill": 0.7635322511196136
+    },
+    "down": {
+      "psnr": 19.380775962131025,
+      "ssim": 0.7044579324622949,
+      "lpips": 0.44343432535727817,
+      "depth_mae": 0.9980319514870644,
+      "render_coverage": 0.9997535528017495,
+      "depth_mae_fixed": 0.999816432595253,
+      "depth_p50_fixed": 0.596556463589271,
+      "depth_mae_zerofill": 0.9986721451083819
+    },
+    "all": {
+      "psnr": 19.673906836355822,
+      "ssim": 0.7316253837198019,
+      "lpips": 0.3667348892841902,
+      "depth_mae": 0.7838623441962732,
+      "render_coverage": 0.9998571005436483,
+      "depth_mae_fixed": 0.7848952681136628,
+      "depth_p50_fixed": 0.5033718543127179,
+      "depth_mae_zerofill": 0.784435350758334
+    }
+  },
+  "appearance_by_resolution": {
+    "1600x1600": {
+      "front": {
+        "psnr": 20.006535067054596,
+        "ssim": 0.7408430899182955,
+        "lpips": 0.32262567058205605,
+        "depth_mae": 0.7893369346857071,
+        "render_coverage": 0.9999994532885342,
+        "depth_mae_fixed": 0.7893409704168638,
+        "depth_p50_fixed": 0.4448953370253245,
+        "depth_mae_zerofill": 0.7893393983443578
+      },
+      "right": {
+        "psnr": 19.000297118018143,
+        "ssim": 0.7004904846350352,
+        "lpips": 0.3693653692801793,
+        "depth_mae": 1.0091579866906006,
+        "render_coverage": 0.9997246890231658,
+        "depth_mae_fixed": 1.0111766022940476,
+        "depth_p50_fixed": 0.6687633010248343,
+        "depth_mae_zerofill": 1.010675948113203
+      },
+      "back": {
+        "psnr": 21.677129779234097,
+        "ssim": 0.7774944429596266,
+        "lpips": 0.2733511421829462,
+        "depth_mae": 0.6083904386808475,
+        "render_coverage": 0.9999656418961558,
+        "depth_mae_fixed": 0.6086363016317288,
+        "depth_p50_fixed": 0.3591655840476354,
+        "depth_mae_zerofill": 0.6085456206152836
+      },
+      "left": {
+        "psnr": 20.796067213609188,
+        "ssim": 0.7646420349677404,
+        "lpips": 0.2947864541783929,
+        "depth_mae": 0.5358160920441151,
+        "render_coverage": 0.9999903958095763,
+        "depth_mae_fixed": 0.5358919169132909,
+        "depth_p50_fixed": 0.3320734854787588,
+        "depth_mae_zerofill": 0.535846741249164
+      },
+      "up": {
+        "psnr": 17.182635878087893,
+        "ssim": 0.7018243173758189,
+        "lpips": 0.49684637412428856,
+        "depth_mae": 0.7624406615893046,
+        "render_coverage": 0.9997088704427083,
+        "depth_mae_fixed": 0.7645093848307928,
+        "depth_p50_fixed": 0.6187769547104836,
+        "depth_mae_zerofill": 0.7635322511196136
+      },
+      "down": {
+        "psnr": 19.380775962131025,
+        "ssim": 0.7044579324622949,
+        "lpips": 0.44343432535727817,
+        "depth_mae": 0.9980319514870644,
+        "render_coverage": 0.9997535528017495,
+        "depth_mae_fixed": 0.999816432595253,
+        "depth_p50_fixed": 0.596556463589271,
+        "depth_mae_zerofill": 0.9986721451083819
+      },
+      "all": {
+        "psnr": 19.673906836355822,
+        "ssim": 0.7316253837198019,
+        "lpips": 0.3667348892841902,
+        "depth_mae": 0.7838623441962732,
+        "render_coverage": 0.9998571005436483,
+        "depth_mae_fixed": 0.7848952681136628,
+        "depth_p50_fixed": 0.5033718543127179,
+        "depth_mae_zerofill": 0.784435350758334
+      }
+    }
+  },
+  "geometry": {
+    "num_recon_points": 2509161,
+    "bins": {
+      "up": {
+        "num_points": 708468,
+        "completeness@0.05": 0.19659038940361456,
+        "completeness@0.10": 0.3027419728202262
+      },
+      "down": {
+        "num_points": 1052341,
+        "completeness@0.05": 0.12811341570840631,
+        "completeness@0.10": 0.26692298408975795
+      },
+      "side": {
+        "num_points": 3363758,
+        "completeness@0.05": 0.18367730377750124,
+        "completeness@0.10": 0.303605372324644
+      }
+    },
+    "completeness@0.05": 0.17405236383873993,
+    "completeness@0.10": 0.29595319955812854,
+    "accuracy": {
+      "mean": 0.04549499187116639,
+      "median": 0.02707322788132589,
+      "frac_within@0.05": 0.7991683275804143
+    },
+    "reused_from": "runs_campaign_v6/interior_0044__dyn__s0/gleam/reconstructions/gsplat1600cube/eval.json"
+  },
+  "eval_mode": {
+    "reloaded_npz": true,
+    "loaded_gaussians": 3888184,
+    "renderer": "npz-reload (gsplat rasterization)"
+  },
+  "eval_set": "eval_assets/cube_eval_gs_v6_1600/interior_0044__s0"
+}

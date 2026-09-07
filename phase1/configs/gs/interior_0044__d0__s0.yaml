@@ -1,0 +1,34 @@
+habitat:
+  scene_path: ${HABITAT_GS_ROOT}/data/scene_datasets/gs_scenes/train/interior_0044_839926/interior_0044_839926.gs.ply
+  scene_dataset_config_file: ${HABITAT_GS_ROOT}/data/scene_datasets/gs_scenes/train_activebench_noncollide.scene_dataset_config.json
+  width: 640
+  height: 480
+  hfov: 75.1781789379499
+  enable_physics: true
+seed: 0
+trajectory_seed: 0
+start_pose:
+- 12.156
+- 1.2
+- -11.651
+- -4.8
+- 0.0
+motion:
+  speed: 0.5
+  yaw_rate_deg: 60.0
+  pitch_rate_deg: 60.0
+episode:
+  max_captures: 640
+  max_sim_time: 300.0
+  capture_cost: 0.0
+  capture_interval: null
+  reconstruction_interval: 1.0
+  stream_observations: true
+  provide_depth: true
+  collision: none
+campaign:
+  protocol: phase1-gs
+  scene: interior_0044
+  has_ceiling: true
+  difficulty: d0
+distractors: []

@@ -1,0 +1,28 @@
+diff --git a/configs/test/test_in_default_scenes_config.json b/configs/test/test_in_default_scenes_config.json
+index 89645fa..7f31dee 100644
+--- a/configs/test/test_in_default_scenes_config.json
++++ b/configs/test/test_in_default_scenes_config.json
+@@ -1,21 +1,8 @@
+ {
+-  "numGPU": 1,
++  "numGPU": 0,
+   "dataset_path": "./data/Macarons++",
+   "test_scenes": [
+-    "neuschwanstein",
+-    "bridge",
+-    "eiffel",
+-    "alhambra",
+-    "dunnottar",
+-    "pisa",
+-    "bannerman",
+-    "redeemer",
+-    "pantheon",
+-    "fushimi",
+-    "liberty",
+-    "colosseum",
+-    "barts",
+-    "sestino_museum"
++    "neuschwanstein"
+   ],
+   "params_name": "macarons_default_training_config.json",
+   "model_name": "trained_macarons.pth",

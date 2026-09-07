@@ -1,0 +1,165 @@
+{
+  "episode_dir": "runs_campaign_v6/interior_0007__dyn__s0/gavis",
+  "train_transforms": "transforms_stream.json",
+  "config": {
+    "backend": "gsplat",
+    "run_name": "gsplat1600",
+    "train_iterations": 30000,
+    "use_masks": false,
+    "opacity_threshold": 0.5,
+    "seed": 0,
+    "require_lpips": false,
+    "lpips_available": true,
+    "lpips_error": null,
+    "evaluation_resolutions": [
+      [
+        1600,
+        1200
+      ]
+    ],
+    "backend_metadata": {
+      "backend": "gsplat",
+      "implementation": "gsplat rasterization + DefaultStrategy",
+      "initialization": "benchmark RGB-D point cloud (not COLMAP SfM)",
+      "gaussian_scale_initialization": "nearest-neighbor distance (vanilla 3DGS)",
+      "supervision": "RGB L1 + DSSIM",
+      "isotropic_loss": false,
+      "depth_supervision": false,
+      "iterations": 30000,
+      "initial_num_gaussians": 2710000,
+      "depth_init_pts_per_view": 10000,
+      "sh_degree": 3,
+      "lambda_dssim": 0.2,
+      "position_lr_init": 0.00016,
+      "position_lr_final": 1.6e-06,
+      "position_lr_max_steps": 30000,
+      "feature_lr": 0.0025,
+      "opacity_lr": 0.05,
+      "scaling_lr": 0.005,
+      "rotation_lr": 0.001,
+      "init_opacity": 0.1,
+      "densify_from": 500,
+      "densify_until": 15000,
+      "densification_interval": 100,
+      "opacity_reset_interval": 3000,
+      "densify_grad_threshold": 0.0002,
+      "prune_opacity": 0.005,
+      "max_gaussians": null
+    }
+  },
+  "num_train_views": 271,
+  "num_gaussians": 4491551,
+  "scored_artifact": null,
+  "train_resolution": [
+    1600,
+    1200
+  ],
+  "eval_resolution": [
+    1600,
+    1200
+  ],
+  "resource_usage": {
+    "train_wall_time_s": 1354.3496543719666,
+    "peak_cuda_allocated_bytes": 14494421504,
+    "peak_cuda_reserved_bytes": 17221812224
+  },
+  "appearance_per_stratum": {
+    "lookup": {
+      "psnr": 18.528071685873048,
+      "ssim": 0.689134822298701,
+      "lpips": 0.33615784633618134,
+      "depth_mae": 0.6502833263232157
+    },
+    "level": {
+      "psnr": 20.998864114606793,
+      "ssim": 0.8084984394637021,
+      "lpips": 0.2906618432819166,
+      "depth_mae": 0.760980902324346
+    },
+    "lookdown": {
+      "psnr": 17.684276058514662,
+      "ssim": 0.6753959003835917,
+      "lpips": 0.4248178079724312,
+      "depth_mae": 1.0973242223262787
+    },
+    "route": {
+      "psnr": 18.813274612172744,
+      "ssim": 0.694055475093223,
+      "lpips": 0.40334245562553406,
+      "depth_mae": 1.1850010221068923
+    },
+    "all": {
+      "psnr": 19.255066394452605,
+      "ssim": 0.7228617267450318,
+      "lpips": 0.36358532345620914,
+      "depth_mae": 0.9727361836237833
+    }
+  },
+  "appearance_by_resolution": {
+    "1600x1200": {
+      "lookup": {
+        "psnr": 18.528071685873048,
+        "ssim": 0.689134822298701,
+        "lpips": 0.33615784633618134,
+        "depth_mae": 0.6502833263232157
+      },
+      "level": {
+        "psnr": 20.998864114606793,
+        "ssim": 0.8084984394637021,
+        "lpips": 0.2906618432819166,
+        "depth_mae": 0.760980902324346
+      },
+      "lookdown": {
+        "psnr": 17.684276058514662,
+        "ssim": 0.6753959003835917,
+        "lpips": 0.4248178079724312,
+        "depth_mae": 1.0973242223262787
+      },
+      "route": {
+        "psnr": 18.813274612172744,
+        "ssim": 0.694055475093223,
+        "lpips": 0.40334245562553406,
+        "depth_mae": 1.1850010221068923
+      },
+      "all": {
+        "psnr": 19.255066394452605,
+        "ssim": 0.7228617267450318,
+        "lpips": 0.36358532345620914,
+        "depth_mae": 0.9727361836237833
+      }
+    }
+  },
+  "geometry": {
+    "num_recon_points": 1684160,
+    "bins": {
+      "up": {
+        "num_points": 880625,
+        "completeness@0.05": 0.10506628814762242,
+        "completeness@0.10": 0.24225748757984386
+      },
+      "down": {
+        "num_points": 894838,
+        "completeness@0.05": 0.1214901468198713,
+        "completeness@0.10": 0.24276125957994632
+      },
+      "side": {
+        "num_points": 3114941,
+        "completeness@0.05": 0.12063021418383206,
+        "completeness@0.10": 0.24700596255274176
+      }
+    },
+    "completeness@0.05": 0.11798493539593048,
+    "completeness@0.10": 0.24537420630279216,
+    "accuracy": {
+      "mean": 0.044466900597706645,
+      "median": 0.032315036446612364,
+      "frac_within@0.05": 0.7323995344860346
+    }
+  },
+  "eval_mode": {
+    "reloaded_npz": true,
+    "loaded_gaussians": 2743508,
+    "renderer": "npz-reload (gsplat rasterization)"
+  },
+  "eval_set": "eval_assets/shared_eval_gs_v6_1600x1200/interior_0007__s0"
+}

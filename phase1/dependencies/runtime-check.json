@@ -1,0 +1,42 @@
+{
+  "habitat": {
+    "ok": true,
+    "stdout": "{\"python\": \"3.9.19 | packaged by conda-forge | (main, Mar 20 2024, 12:50:21) \\n[GCC 12.3.0]\", \"imports\": [\"habitat_sim\", \"numpy\", \"PIL\", \"yaml\"]}",
+    "stderr": ""
+  },
+  "habitat-gs": {
+    "ok": true,
+    "stdout": "{\"python\": \"3.12.13 | packaged by conda-forge | (main, Mar  5 2026, 16:50:00) [GCC 14.3.0]\", \"imports\": [\"habitat_sim\", \"torch\", \"numpy\", \"PIL\", \"yaml\"]}",
+    "stderr": ""
+  },
+  "bencheval": {
+    "ok": true,
+    "stdout": "{\"python\": \"3.10.20 (main, Jun 11 2026, 15:17:37) [GCC 14.3.0]\", \"imports\": [\"torch\", \"gsplat\", \"PIL\", \"scipy\", \"lpips\"]}",
+    "stderr": ""
+  },
+  "r3con": {
+    "ok": true,
+    "stdout": "{\"python\": \"3.9.19 | packaged by conda-forge | (main, Mar 20 2024, 12:50:21) \\n[GCC 12.3.0]\", \"imports\": [\"torch\", \"diff_gauss\", \"diff_gaussian_rasterization_2d\", \"open3d\"]}",
+    "stderr": ""
+  },
+  "magician": {
+    "ok": true,
+    "stdout": "{\"python\": \"3.10.20 (main, Mar 11 2026, 17:46:40) [GCC 14.3.0]\", \"imports\": [\"torch\", \"pytorch3d\", \"diff_gaussian_rasterization\"]}",
+    "stderr": ""
+  },
+  "fisherrf": {
+    "ok": true,
+    "stdout": "{\"python\": \"3.10.20 | packaged by conda-forge | (main, Jun 11 2026, 03:31:56) [GCC 14.3.0]\", \"imports\": [\"torch\", \"modified_diff_gaussian_rasterization\", \"simple_knn\"]}",
+    "stderr": ""
+  },
+  "gavis": {
+    "ok": true,
+    "stdout": "{\"python\": \"3.10.20 | packaged by conda-forge | (main, Jun 11 2026, 03:31:56) [GCC 14.3.0]\", \"imports\": [\"torch\", \"diff_gaussian_rasterization\", \"gavis_rasterizer\", \"nerfacc\"]}",
+    "stderr": ""
+  },
+  "gleam": {
+    "ok": true,
+    "stdout": "{\"python\": \"3.12.0 | packaged by Anaconda, Inc. | (main, Oct  2 2023, 17:29:18) [GCC 11.2.0]\", \"imports\": [\"torch\", \"numpy\", \"PIL\"]}",
+    "stderr": ""
+  }
+}

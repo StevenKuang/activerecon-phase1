@@ -1,0 +1,232 @@
+{
+  "psnr": 30.03691747403328,
+  "n": 40,
+  "color_mode": "legacy",
+  "sh_degree": 3,
+  "views": [
+    {
+      "index": 0,
+      "psnr": 22.414079573435735,
+      "label": "clean"
+    },
+    {
+      "index": 1,
+      "psnr": 25.893727119534265,
+      "label": "clean"
+    },
+    {
+      "index": 2,
+      "psnr": 22.24856943948543,
+      "label": "clean"
+    },
+    {
+      "index": 3,
+      "psnr": 21.10521219373783,
+      "label": "clean"
+    },
+    {
+      "index": 4,
+      "psnr": 29.51947501064637,
+      "label": "clean"
+    },
+    {
+      "index": 5,
+      "psnr": 38.13055064449856,
+      "label": "severe"
+    },
+    {
+      "index": 6,
+      "psnr": 29.134735375140117,
+      "label": "clean"
+    },
+    {
+      "index": 7,
+      "psnr": 28.07962800858035,
+      "label": "clean"
+    },
+    {
+      "index": 8,
+      "psnr": 23.868085200734775,
+      "label": "clean"
+    },
+    {
+      "index": 9,
+      "psnr": 25.06482287141266,
+      "label": "clean"
+    },
+    {
+      "index": 10,
+      "psnr": 30.309451625048247,
+      "label": "clean"
+    },
+    {
+      "index": 11,
+      "psnr": 31.73254648492464,
+      "label": "severe"
+    },
+    {
+      "index": 12,
+      "psnr": 26.148257938884143,
+      "label": "severe"
+    },
+    {
+      "index": 13,
+      "psnr": 31.57948603321193,
+      "label": "severe"
+    },
+    {
+      "index": 14,
+      "psnr": 35.444542244574514,
+      "label": "clean"
+    },
+    {
+      "index": 15,
+      "psnr": 28.658646846072617,
+      "label": "severe"
+    },
+    {
+      "index": 16,
+      "psnr": 34.55306388431473,
+      "label": "clean"
+    },
+    {
+      "index": 17,
+      "psnr": 33.50699823624801,
+      "label": "severe"
+    },
+    {
+      "index": 18,
+      "psnr": 30.336328109420304,
+      "label": "clean"
+    },
+    {
+      "index": 19,
+      "psnr": 37.645553821959425,
+      "label": "clean"
+    },
+    {
+      "index": 20,
+      "psnr": 28.93625852214628,
+      "label": "clean"
+    },
+    {
+      "index": 21,
+      "psnr": 36.0860786685082,
+      "label": "severe"
+    },
+    {
+      "index": 22,
+      "psnr": 26.421090882660035,
+      "label": "severe"
+    },
+    {
+      "index": 23,
+      "psnr": 39.85487680598101,
+      "label": "clean"
+    },
+    {
+      "index": 24,
+      "psnr": 33.30815949390176,
+      "label": "severe"
+    },
+    {
+      "index": 25,
+      "psnr": 24.847313451080282,
+      "label": "clean"
+    },
+    {
+      "index": 26,
+      "psnr": 43.55952475372675,
+      "label": "clean"
+    },
+    {
+      "index": 27,
+      "psnr": 32.2176993633135,
+      "label": "clean"
+    },
+    {
+      "index": 28,
+      "psnr": 27.337782367931545,
+      "label": "severe"
+    },
+    {
+      "index": 29,
+      "psnr": 19.64449710473906,
+      "label": "clean"
+    },
+    {
+      "index": 30,
+      "psnr": 35.99656427736789,
+      "label": "severe"
+    },
+    {
+      "index": 31,
+      "psnr": 32.35427355416616,
+      "label": "severe"
+    },
+    {
+      "index": 32,
+      "psnr": 24.024698736986537,
+      "label": "severe"
+    },
+    {
+      "index": 33,
+      "psnr": 38.417338523426835,
+      "label": "severe"
+    },
+    {
+      "index": 34,
+      "psnr": 28.498877949540628,
+      "label": "severe"
+    },
+    {
+      "index": 35,
+      "psnr": 28.180487091115438,
+      "label": "severe"
+    },
+    {
+      "index": 36,
+      "psnr": 28.814768306132926,
+      "label": "severe"
+    },
+    {
+      "index": 37,
+      "psnr": 27.748903448918036,
+      "label": "severe"
+    },
+    {
+      "index": 38,
+      "psnr": 29.109070518810476,
+      "label": "severe"
+    },
+    {
+      "index": 39,
+      "psnr": 30.74467447901286,
+      "label": "severe"
+    }
+  ],
+  "class_psnr": {
+    "severe": {
+      "n": 20,
+      "psnr": 30.839962724115953
+    },
+    "clean": {
+      "n": 20,
+      "psnr": 29.233872223950584
+    }
+  },
+  "cell": "mesh/van_gogh_room__d0__s0/magician",
+  "catalog": "shared",
+  "inputs": {
+    "model_sha256": "8ee988319011e572c343b414174e77775dcb828c9648a3a1d6532d69935f856d",
+    "catalog_sha256": "20368cbc4102820eb7432d04e1cf32e5068bdd04814dac8c896aa59b1497a893",
+    "color_mode": "legacy",
+    "evaluator_sha256": "20e13955004ce9366e577b93d4168ea6aa9b0838fbd3e2cf1f397b9343e400d3",
+    "verifier_sha256": "b6a6e966dd80832b348121250498af3504d2b154a90963aa469f5171608ce702"
+  },
+  "wall_time_s": 15.380814205855131,
+  "recorded_psnr": 30.036917553102093,
+  "delta_from_recorded_db": -7.906881194230664e-08,
+  "matches_recorded_at_1e-5_db": true,
+  "recorded_scoring_path": "export_reload"
+}

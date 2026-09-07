@@ -1,0 +1,42 @@
+[
+  {
+    "cell": "mesh/mp3d_17DRP5sb8fy__d0__s0/fisherrf",
+    "recorded": 19.87280526024396,
+    "artifact_legacy": 19.881484415230933,
+    "delta_db": 0.008679154986971582,
+    "previous_color": "legacy",
+    "previous_scoring": "full_model"
+  },
+  {
+    "cell": "gs/interior_0007__d0__s0/gleam",
+    "recorded": 19.022975027185215,
+    "artifact_legacy": 18.993463557905542,
+    "delta_db": -0.029511469279672298,
+    "previous_color": "raw",
+    "previous_scoring": "export_reload"
+  },
+  {
+    "cell": "gs/interior_0007__dyn__s0/gleam",
+    "recorded": 18.468389276575,
+    "artifact_legacy": 18.445333496018495,
+    "delta_db": -0.023055780556504146,
+    "previous_color": "raw",
+    "previous_scoring": "export_reload"
+  },
+  {
+    "cell": "gs/interior_0044__d0__s0/gleam",
+    "recorded": 20.85551773174126,
+    "artifact_legacy": 20.86767604141668,
+    "delta_db": 0.012158309675420753,
+    "previous_color": "raw",
+    "previous_scoring": "export_reload"
+  },
+  {
+    "cell": "gs/interior_0044__dyn__s0/gleam",
+    "recorded": 18.539329707503647,
+    "artifact_legacy": 18.551115570314117,
+    "delta_db": 0.011785862810469894,
+    "previous_color": "raw",
+    "previous_scoring": "export_reload"
+  }
+]

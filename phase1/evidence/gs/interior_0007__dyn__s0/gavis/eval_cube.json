@@ -1,0 +1,246 @@
+{
+  "episode_dir": "runs_campaign_v6/interior_0007__dyn__s0/gavis",
+  "train_transforms": "transforms_stream.json",
+  "config": {
+    "backend": "gsplat",
+    "run_name": "gsplat1600cube",
+    "train_iterations": 30000,
+    "use_masks": false,
+    "opacity_threshold": 0.5,
+    "seed": 0,
+    "require_lpips": false,
+    "lpips_available": true,
+    "lpips_error": null,
+    "evaluation_resolutions": [
+      [
+        1600,
+        1600
+      ]
+    ],
+    "backend_metadata": {
+      "backend": "gsplat",
+      "implementation": "gsplat rasterization + DefaultStrategy",
+      "initialization": "benchmark RGB-D point cloud (not COLMAP SfM)",
+      "gaussian_scale_initialization": "nearest-neighbor distance (vanilla 3DGS)",
+      "supervision": "RGB L1 + DSSIM",
+      "isotropic_loss": false,
+      "depth_supervision": false,
+      "iterations": 30000,
+      "initial_num_gaussians": 2710000,
+      "depth_init_pts_per_view": 10000,
+      "sh_degree": 3,
+      "lambda_dssim": 0.2,
+      "position_lr_init": 0.00016,
+      "position_lr_final": 1.6e-06,
+      "position_lr_max_steps": 30000,
+      "feature_lr": 0.0025,
+      "opacity_lr": 0.05,
+      "scaling_lr": 0.005,
+      "rotation_lr": 0.001,
+      "init_opacity": 0.1,
+      "densify_from": 500,
+      "densify_until": 15000,
+      "densification_interval": 100,
+      "opacity_reset_interval": 3000,
+      "densify_grad_threshold": 0.0002,
+      "prune_opacity": 0.005,
+      "max_gaussians": null
+    }
+  },
+  "num_train_views": 271,
+  "num_gaussians": 4491551,
+  "scored_artifact": null,
+  "train_resolution": [
+    1600,
+    1200
+  ],
+  "eval_resolution": [
+    1600,
+    1600
+  ],
+  "resource_usage": {
+    "train_wall_time_s": 1354.3496543719666,
+    "peak_cuda_allocated_bytes": 14494421504,
+    "peak_cuda_reserved_bytes": 17221812224
+  },
+  "appearance_per_stratum": {
+    "front": {
+      "psnr": 18.501090610628708,
+      "ssim": 0.749577005704244,
+      "lpips": 0.3362485975958407,
+      "depth_mae": 0.9737871025378505,
+      "render_coverage": 0.9955101399739584,
+      "depth_mae_fixed": 0.9973320498441657,
+      "depth_p50_fixed": 0.6780676779647669,
+      "depth_mae_zerofill": 0.9628305220976472
+    },
+    "right": {
+      "psnr": 16.44492389854423,
+      "ssim": 0.6508179369072119,
+      "lpips": 0.3411236082514127,
+      "depth_mae": 0.8839696012437344,
+      "render_coverage": 0.9865487467447916,
+      "depth_mae_fixed": 0.9681667449573675,
+      "depth_p50_fixed": 0.4676249921321869,
+      "depth_mae_zerofill": 0.864983664204677
+    },
+    "back": {
+      "psnr": 17.162064225672392,
+      "ssim": 0.6520646899104273,
+      "lpips": 0.3794551510363817,
+      "depth_mae": 1.1364020378816695,
+      "render_coverage": 0.8749986255661195,
+      "depth_mae_fixed": 1.9943621009588242,
+      "depth_p50_fixed": 1.63499017059803,
+      "depth_mae_zerofill": 1.0571801948050659
+    },
+    "left": {
+      "psnr": 20.928880169293297,
+      "ssim": 0.8047759020701051,
+      "lpips": 0.2411453773578008,
+      "depth_mae": 0.9343044701963663,
+      "render_coverage": 0.9480061360677082,
+      "depth_mae_fixed": 1.2769095990806818,
+      "depth_p50_fixed": 1.157526595517993,
+      "depth_mae_zerofill": 0.8949819722523292
+    },
+    "up": {
+      "psnr": 18.60371031626599,
+      "ssim": 0.7281340416520834,
+      "lpips": 0.26904912820706767,
+      "depth_mae": 0.4008739873146017,
+      "render_coverage": 0.9874602213541667,
+      "depth_mae_fixed": 0.4920242903754115,
+      "depth_p50_fixed": 0.20440438079337278,
+      "depth_mae_zerofill": 0.3967093251024683
+    },
+    "down": {
+      "psnr": 18.78709594668607,
+      "ssim": 0.7483705139408509,
+      "lpips": 0.3725821084032456,
+      "depth_mae": 1.1309701316058636,
+      "render_coverage": 0.9809956380208332,
+      "depth_mae_fixed": 1.271639088789622,
+      "depth_p50_fixed": 0.9251036743323008,
+      "depth_mae_zerofill": 1.1345648032923539
+    },
+    "all": {
+      "psnr": 18.404627527848447,
+      "ssim": 0.7222900150308205,
+      "lpips": 0.32326732847529155,
+      "depth_mae": 0.9052352469863622,
+      "render_coverage": 0.9622532512879296,
+      "depth_mae_fixed": 1.166738979001012,
+      "depth_p50_fixed": 0.844619581889775,
+      "depth_mae_zerofill": 0.8852084136257569
+    }
+  },
+  "appearance_by_resolution": {
+    "1600x1600": {
+      "front": {
+        "psnr": 18.501090610628708,
+        "ssim": 0.749577005704244,
+        "lpips": 0.3362485975958407,
+        "depth_mae": 0.9737871025378505,
+        "render_coverage": 0.9955101399739584,
+        "depth_mae_fixed": 0.9973320498441657,
+        "depth_p50_fixed": 0.6780676779647669,
+        "depth_mae_zerofill": 0.9628305220976472
+      },
+      "right": {
+        "psnr": 16.44492389854423,
+        "ssim": 0.6508179369072119,
+        "lpips": 0.3411236082514127,
+        "depth_mae": 0.8839696012437344,
+        "render_coverage": 0.9865487467447916,
+        "depth_mae_fixed": 0.9681667449573675,
+        "depth_p50_fixed": 0.4676249921321869,
+        "depth_mae_zerofill": 0.864983664204677
+      },
+      "back": {
+        "psnr": 17.162064225672392,
+        "ssim": 0.6520646899104273,
+        "lpips": 0.3794551510363817,
+        "depth_mae": 1.1364020378816695,
+        "render_coverage": 0.8749986255661195,
+        "depth_mae_fixed": 1.9943621009588242,
+        "depth_p50_fixed": 1.63499017059803,
+        "depth_mae_zerofill": 1.0571801948050659
+      },
+      "left": {
+        "psnr": 20.928880169293297,
+        "ssim": 0.8047759020701051,
+        "lpips": 0.2411453773578008,
+        "depth_mae": 0.9343044701963663,
+        "render_coverage": 0.9480061360677082,
+        "depth_mae_fixed": 1.2769095990806818,
+        "depth_p50_fixed": 1.157526595517993,
+        "depth_mae_zerofill": 0.8949819722523292
+      },
+      "up": {
+        "psnr": 18.60371031626599,
+        "ssim": 0.7281340416520834,
+        "lpips": 0.26904912820706767,
+        "depth_mae": 0.4008739873146017,
+        "render_coverage": 0.9874602213541667,
+        "depth_mae_fixed": 0.4920242903754115,
+        "depth_p50_fixed": 0.20440438079337278,
+        "depth_mae_zerofill": 0.3967093251024683
+      },
+      "down": {
+        "psnr": 18.78709594668607,
+        "ssim": 0.7483705139408509,
+        "lpips": 0.3725821084032456,
+        "depth_mae": 1.1309701316058636,
+        "render_coverage": 0.9809956380208332,
+        "depth_mae_fixed": 1.271639088789622,
+        "depth_p50_fixed": 0.9251036743323008,
+        "depth_mae_zerofill": 1.1345648032923539
+      },
+      "all": {
+        "psnr": 18.404627527848447,
+        "ssim": 0.7222900150308205,
+        "lpips": 0.32326732847529155,
+        "depth_mae": 0.9052352469863622,
+        "render_coverage": 0.9622532512879296,
+        "depth_mae_fixed": 1.166738979001012,
+        "depth_p50_fixed": 0.844619581889775,
+        "depth_mae_zerofill": 0.8852084136257569
+      }
+    }
+  },
+  "geometry": {
+    "num_recon_points": 1684160,
+    "bins": {
+      "up": {
+        "num_points": 880625,
+        "completeness@0.05": 0.10506628814762242,
+        "completeness@0.10": 0.24225748757984386
+      },
+      "down": {
+        "num_points": 894838,
+        "completeness@0.05": 0.1214901468198713,
+        "completeness@0.10": 0.24276125957994632
+      },
+      "side": {
+        "num_points": 3114941,
+        "completeness@0.05": 0.12063021418383206,
+        "completeness@0.10": 0.24700596255274176
+      }
+    },
+    "completeness@0.05": 0.11798493539593048,
+    "completeness@0.10": 0.24537420630279216,
+    "accuracy": {
+      "mean": 0.044466900597706645,
+      "median": 0.032315036446612364,
+      "frac_within@0.05": 0.7323995344860346
+    },
+    "reused_from": "runs_campaign_v6/interior_0007__dyn__s0/gavis/reconstructions/gsplat1600cube/eval.json"
+  },
+  "eval_mode": {
+    "reloaded_npz": true,
+    "loaded_gaussians": 2743508,
+    "renderer": "npz-reload (gsplat rasterization)"
+  },
+  "eval_set": "eval_assets/cube_eval_gs_v6_1600/interior_0007__s0"
+}

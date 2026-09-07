@@ -1,0 +1,38 @@
+{
+  "params": {
+    "max_range": 6.0,
+    "min_range": 0.2,
+    "depth_tol_abs": 0.03,
+    "depth_tol_rel": 0.02,
+    "min_cos_incidence": 0.1,
+    "well_observed_cos": 0.5,
+    "bin_cos": 0.7
+  },
+  "num_frames": 301,
+  "bins": {
+    "up": {
+      "num_points": 217032,
+      "observed_frac": 0.5717774337424896,
+      "well_observed_frac": 0.23521876958236573,
+      "mean_best_cos_observed": 0.46032903088499033
+    },
+    "down": {
+      "num_points": 224577,
+      "observed_frac": 0.1510439626497816,
+      "well_observed_frac": 0.1285483375412442,
+      "mean_best_cos_observed": 0.6837335013769062
+    },
+    "side": {
+      "num_points": 631005,
+      "observed_frac": 0.250549520209824,
+      "well_observed_frac": 0.2204721040245323,
+      "mean_best_cos_observed": 0.7725079043822393
+    }
+  },
+  "overall": {
+    "num_points": 1072614,
+    "observed_frac": 0.2947127298357098,
+    "well_observed_frac": 0.20420952924351166
+  },
+  "episode_dir": "runs_campaign_v5/skokloster_castle__d0__s0/random"
+}

@@ -1,0 +1,232 @@
+{
+  "psnr": 30.280073851498848,
+  "n": 40,
+  "color_mode": "legacy",
+  "sh_degree": 3,
+  "views": [
+    {
+      "index": 0,
+      "psnr": 22.060303812061612,
+      "label": "clean"
+    },
+    {
+      "index": 1,
+      "psnr": 25.554186609463216,
+      "label": "clean"
+    },
+    {
+      "index": 2,
+      "psnr": 25.225348159505696,
+      "label": "clean"
+    },
+    {
+      "index": 3,
+      "psnr": 23.942953551339585,
+      "label": "clean"
+    },
+    {
+      "index": 4,
+      "psnr": 31.91634354455369,
+      "label": "clean"
+    },
+    {
+      "index": 5,
+      "psnr": 37.57435280781575,
+      "label": "severe"
+    },
+    {
+      "index": 6,
+      "psnr": 32.13038488318316,
+      "label": "clean"
+    },
+    {
+      "index": 7,
+      "psnr": 29.334237063971102,
+      "label": "clean"
+    },
+    {
+      "index": 8,
+      "psnr": 25.451483997828348,
+      "label": "clean"
+    },
+    {
+      "index": 9,
+      "psnr": 24.154171210088972,
+      "label": "clean"
+    },
+    {
+      "index": 10,
+      "psnr": 32.56082975927139,
+      "label": "clean"
+    },
+    {
+      "index": 11,
+      "psnr": 29.226797442189817,
+      "label": "severe"
+    },
+    {
+      "index": 12,
+      "psnr": 27.952365032512347,
+      "label": "severe"
+    },
+    {
+      "index": 13,
+      "psnr": 32.47940074508908,
+      "label": "severe"
+    },
+    {
+      "index": 14,
+      "psnr": 36.16240989232171,
+      "label": "clean"
+    },
+    {
+      "index": 15,
+      "psnr": 28.03649418324136,
+      "label": "severe"
+    },
+    {
+      "index": 16,
+      "psnr": 36.109268091852314,
+      "label": "clean"
+    },
+    {
+      "index": 17,
+      "psnr": 31.725674265994147,
+      "label": "severe"
+    },
+    {
+      "index": 18,
+      "psnr": 31.89925197687922,
+      "label": "clean"
+    },
+    {
+      "index": 19,
+      "psnr": 36.03496313355596,
+      "label": "clean"
+    },
+    {
+      "index": 20,
+      "psnr": 24.51678329467978,
+      "label": "clean"
+    },
+    {
+      "index": 21,
+      "psnr": 34.30436914875258,
+      "label": "severe"
+    },
+    {
+      "index": 22,
+      "psnr": 27.329436917149167,
+      "label": "severe"
+    },
+    {
+      "index": 23,
+      "psnr": 40.88596698065953,
+      "label": "clean"
+    },
+    {
+      "index": 24,
+      "psnr": 28.757964821066565,
+      "label": "severe"
+    },
+    {
+      "index": 25,
+      "psnr": 27.503406984649715,
+      "label": "clean"
+    },
+    {
+      "index": 26,
+      "psnr": 45.0871147019855,
+      "label": "clean"
+    },
+    {
+      "index": 27,
+      "psnr": 34.634671419588564,
+      "label": "clean"
+    },
+    {
+      "index": 28,
+      "psnr": 27.264840324767302,
+      "label": "severe"
+    },
+    {
+      "index": 29,
+      "psnr": 21.502003119875546,
+      "label": "clean"
+    },
+    {
+      "index": 30,
+      "psnr": 34.00456326964903,
+      "label": "severe"
+    },
+    {
+      "index": 31,
+      "psnr": 31.61319299958459,
+      "label": "severe"
+    },
+    {
+      "index": 32,
+      "psnr": 22.782570461397142,
+      "label": "severe"
+    },
+    {
+      "index": 33,
+      "psnr": 36.343785824068966,
+      "label": "severe"
+    },
+    {
+      "index": 34,
+      "psnr": 27.2287898863909,
+      "label": "severe"
+    },
+    {
+      "index": 35,
+      "psnr": 28.280301322231345,
+      "label": "severe"
+    },
+    {
+      "index": 36,
+      "psnr": 28.75113433582442,
+      "label": "severe"
+    },
+    {
+      "index": 37,
+      "psnr": 29.061464238365467,
+      "label": "severe"
+    },
+    {
+      "index": 38,
+      "psnr": 30.525590122324257,
+      "label": "severe"
+    },
+    {
+      "index": 39,
+      "psnr": 31.293783724225356,
+      "label": "severe"
+    }
+  ],
+  "class_psnr": {
+    "severe": {
+      "n": 20,
+      "psnr": 30.226843593631987
+    },
+    "clean": {
+      "n": 20,
+      "psnr": 30.33330410936573
+    }
+  },
+  "cell": "mesh/van_gogh_room__d0__s0/fisherrf",
+  "catalog": "shared",
+  "inputs": {
+    "model_sha256": "6ef77a15218b79493e775c9067d67513bc2486f38a1e1144eff617157cd4b0ae",
+    "catalog_sha256": "20368cbc4102820eb7432d04e1cf32e5068bdd04814dac8c896aa59b1497a893",
+    "color_mode": "legacy",
+    "evaluator_sha256": "20e13955004ce9366e577b93d4168ea6aa9b0838fbd3e2cf1f397b9343e400d3",
+    "verifier_sha256": "b6a6e966dd80832b348121250498af3504d2b154a90963aa469f5171608ce702"
+  },
+  "wall_time_s": 22.24660624191165,
+  "recorded_psnr": 30.280074036941166,
+  "delta_from_recorded_db": -1.8544231750183826e-07,
+  "matches_recorded_at_1e-5_db": true,
+  "recorded_scoring_path": "export_reload"
+}

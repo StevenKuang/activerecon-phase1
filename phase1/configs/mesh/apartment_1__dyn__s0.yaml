@@ -1,0 +1,90 @@
+habitat:
+  scene_path: ${HABITAT_SIM_ROOT}/data/scene_datasets/habitat-test-scenes/apartment_1.glb
+  scene_dataset_config_file: default
+  width: 640
+  height: 480
+  hfov: 75.1781789379499
+  enable_physics: true
+seed: 0
+trajectory_seed: 0
+start_pose:
+- 0.751
+- -0.2
+- 0.329
+- 0.0
+- 0.0
+distractors:
+- name: apartment_1_dyn_obj0
+  object_template: ${HABITAT_SIM_ROOT}/data/versioned_data/replica_cad_dataset/configs/objects/frl_apartment_cloth_03.object_config.json
+  object_diag_m: 0.955
+  trajectory:
+    type: waypoint_patrol
+    waypoints:
+    - - 2.004
+      - -0.451
+      - 6.155
+    - - 1.131
+      - -0.451
+      - 5.088
+    speed: 0.558
+    mode: pingpong
+- name: apartment_1_dyn_obj1
+  object_template: ${HABITAT_SIM_ROOT}/data/versioned_data/replica_cad_dataset/configs/objects/frl_apartment_chair_04.object_config.json
+  object_diag_m: 1.12
+  trajectory:
+    type: waypoint_patrol
+    waypoints:
+    - - 2.004
+      - -0.296
+      - 6.155
+    - - 1.131
+      - -0.296
+      - 5.088
+    speed: 0.417
+    mode: pingpong
+- name: apartment_1_dyn_obj2
+  object_template: ${HABITAT_SIM_ROOT}/data/versioned_data/replica_cad_dataset/configs/objects/frl_apartment_clothes_hanger_02.object_config.json
+  object_diag_m: 1.043
+  trajectory:
+    type: waypoint_patrol
+    waypoints:
+    - - 1.303
+      - -0.306
+      - 0.3
+    - - 0.149
+      - -0.306
+      - 1.296
+    speed: 0.706
+    mode: pingpong
+- name: apartment_1_dyn_obj3
+  object_template: ${HABITAT_SIM_ROOT}/data/versioned_data/replica_cad_dataset/configs/objects/frl_apartment_table_02.object_config.json
+  object_diag_m: 1.771
+  trajectory:
+    type: waypoint_patrol
+    waypoints:
+    - - 0.642
+      - -0.114
+      - 4.844
+    - - 1.119
+      - -0.114
+      - 3.659
+    speed: 0.298
+    mode: pingpong
+motion:
+  speed: 0.5
+  yaw_rate_deg: 60.0
+  pitch_rate_deg: 60.0
+episode:
+  max_captures: 640
+  max_sim_time: 300.0
+  capture_cost: 0.0
+  capture_interval: null
+  reconstruction_interval: 1.0
+  stream_observations: true
+  provide_depth: true
+  collision: navmesh
+campaign:
+  protocol: phase1-mesh
+  scene: apartment_1
+  difficulty: dyn
+  has_ceiling: true

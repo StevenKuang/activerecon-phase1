@@ -1,0 +1,109 @@
+{
+  "image_count": 14,
+  "figures": [
+    {
+      "alt": "Figure 1: figure-01-activebench-architecture",
+      "width": 614.390625,
+      "height": 512.90625,
+      "image_ok": true,
+      "caption": "Figure 1. ActiveBench information flow in the primary evaluation. The runner own"
+    },
+    {
+      "alt": "Figure 2: figure-02-decision-and-stream-sampling",
+      "width": 614.390625,
+      "height": 477.28125,
+      "image_ok": true,
+      "caption": "Figure 2. Decision captures and uniform-time reconstruction frames for the two r"
+    },
+    {
+      "alt": "Figure 3: figure-03-evaluation-catalogs",
+      "width": 614.390625,
+      "height": 640.078125,
+      "image_ok": true,
+      "caption": "Figure 3. Actual evaluation-camera layouts on both GS scenes. Cube symbols mark "
+    },
+    {
+      "alt": "Figure 4: figure-04-quality-and-planning-cost",
+      "width": 614.390625,
+      "height": 398.296875,
+      "image_ok": true,
+      "caption": "Figure 4. Shared-catalog image quality versus measured adapter act-call wall tim"
+    },
+    {
+      "alt": "Figure 5: figure-05-static-acquisition-paths",
+      "width": 614.390625,
+      "height": 402.640625,
+      "image_ok": true,
+      "caption": "Figure 5. Selected static acquisition traces on interior_0007, plotted at the sa"
+    },
+    {
+      "alt": "Figure 6: figure-06-disturbed-clean-mask",
+      "width": 614.390625,
+      "height": 572.125,
+      "image_ok": true,
+      "caption": "Figure 6. Paired simulator renders at the common initial camera, t = 0 s, on int"
+    },
+    {
+      "alt": "Figure 7: figure-07-regional-dynamic-response",
+      "width": 614.390625,
+      "height": 429.890625,
+      "image_ok": true,
+      "caption": "Figure 7. Severe- and clean-class PSNR changes, computed dynamic minus static se"
+    },
+    {
+      "alt": "Figure 8: Mesh-scene paired regional changes",
+      "width": 614.390625,
+      "height": 545.09375,
+      "image_ok": true,
+      "caption": "Figure 8. Recorded dynamic-minus-static class PSNR changes on four mesh scenes. "
+    },
+    {
+      "alt": "Figure 9: figure-09-spark-baseline-vs-random",
+      "width": 614.390625,
+      "height": 396.03125,
+      "image_ok": true,
+      "caption": "Figure 9. Actual Spark SH3/LoD display of the retained static R3-RECON and Rando"
+    },
+    {
+      "alt": "Figure 10: Spark interface overview",
+      "width": 614.390625,
+      "height": 489.140625,
+      "image_ok": true,
+      "caption": "Figure 10. The actual ActiveBench Spark interface on interior_0044, with R3-RECO"
+    },
+    {
+      "alt": "Figure 11: Spark operating controls",
+      "width": 614.390625,
+      "height": 704.5,
+      "image_ok": true,
+      "caption": "Figure 11. Enlarged, unmodified screenshot crops of the working interface: (a) i"
+    },
+    {
+      "alt": "Figure 12: Six methods at one fixed camera",
+      "width": 614.390625,
+      "height": 843.609375,
+      "image_ok": true,
+      "caption": "Figure 12. All six static reconstructions of interior_0044 at one fixed, elevate"
+    },
+    {
+      "alt": "Figure 13: Two methods with their recorded trajectories",
+      "width": 614.390625,
+      "height": 335.671875,
+      "image_ok": true,
+      "caption": "Figure 13. R3-RECON (left) and GLEAM (right) in the existing Spark split view on"
+    },
+    {
+      "alt": "Figure 14: One method under static and dynamic conditions",
+      "width": 614.390625,
+      "height": 335.671875,
+      "image_ok": true,
+      "caption": "Figure 14. R3-RECON on static (left) and dynamic (right) interior_0044, with the"
+    }
+  ],
+  "table_count": 11,
+  "overflowing_tables": 0,
+  "document_overflow": false,
+  "placeholder_present": false,
+  "errors": [],
+  "note": "HTML/Chromium reading-layout checks only; native Word or Google Docs pagination not validated."
+}

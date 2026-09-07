@@ -1,0 +1,194 @@
+{
+  "schema_version": 1,
+  "profile": "simulation-assets",
+  "files": {
+    "habitat-gs/data/scene_datasets/gs_scenes/train/interior_0007_840137/interior_0007_840137.gs.ply": {
+      "bytes": 347726548,
+      "sha256": "2624221fadb0cdf84041680853dc0549076c57ab20b12cab4bc2e85019a01baa"
+    },
+    "habitat-gs/data/scene_datasets/gs_scenes/train/interior_0007_840137/interior_0007_840137.navmesh": {
+      "bytes": 38832,
+      "sha256": "25f1008e50576f40726a14b263d3d16421c63d42fdc47b8d49d5a1e551d392ae"
+    },
+    "habitat-gs/data/scene_datasets/gs_scenes/train/interior_0044_839926/interior_0044_839926.gs.ply": {
+      "bytes": 406428148,
+      "sha256": "986dd9f8ca23acd4a6ac042ab19371c87aaa6d20f8827959d5348eec757587a9"
+    },
+    "habitat-gs/data/scene_datasets/gs_scenes/train/interior_0044_839926/interior_0044_839926.navmesh": {
+      "bytes": 45556,
+      "sha256": "df2f95c278543e1f960e1ae2197cfcd40a94589e59fe4c7b6159ca2051356b20"
+    },
+    "habitat-gs/data/scene_datasets/gs_scenes/train_activebench_noncollide.scene_dataset_config.json": {
+      "bytes": 7639,
+      "sha256": "2699589ffb3814dce17e39f01bbe57af8f8f3bc06fafbd6ad855a0f44a2c2e4d"
+    },
+    "habitat-gs/data/test_assets/objects/chair.glb": {
+      "bytes": 59716,
+      "sha256": "6d9bb8bd9d055a03de5105dfb0b8df829680ee00bb2ab524b140bd96e7a2ace8"
+    },
+    "habitat-gs/data/test_assets/objects/chair.object_config.json": {
+      "bytes": 836,
+      "sha256": "9df809a0937a23e064966cfbd85ffe2f6b868878f5e6ab03dbce8d7653ffa910"
+    },
+    "habitat-sim/data/scene_datasets/habitat-test-scenes/apartment_1.glb": {
+      "bytes": 50006356,
+      "sha256": "c0b1314d1b948170e4110d1cf1a001c54ef02788092d49586ad73591b871785e"
+    },
+    "habitat-sim/data/scene_datasets/habitat-test-scenes/apartment_1.navmesh": {
+      "bytes": 11880,
+      "sha256": "3694bf3909ca9668e0506b07e20d932c8243adb2654dffb4f27f8fa8bd9b3c4b"
+    },
+    "habitat-sim/data/scene_datasets/habitat-test-scenes/skokloster-castle.glb": {
+      "bytes": 38295764,
+      "sha256": "b14e29e17f5e31d86a1002eefd77b7d345b265006481739ae480a847e6623f56"
+    },
+    "habitat-sim/data/scene_datasets/habitat-test-scenes/skokloster-castle.navmesh": {
+      "bytes": 28192,
+      "sha256": "1a9a5bd123af8001f0ea2c5c8d326cb3fd39808ca771fc766856af8f0772391d"
+    },
+    "habitat-sim/data/scene_datasets/habitat-test-scenes/van-gogh-room.glb": {
+      "bytes": 21835724,
+      "sha256": "24570d71c3ca9802e8642aa7ecd2479eb7fdda5b925259e27d9aa59760f39e84"
+    },
+    "habitat-sim/data/scene_datasets/habitat-test-scenes/van-gogh-room.navmesh": {
+      "bytes": 1784,
+      "sha256": "0d0b50ceb92882aca27e02a4f3db2a0d0d10ed5271de075f04bf6bcb56ab15ab"
+    },
+    "habitat-sim/data/scene_datasets/mp3d_example/17DRP5sb8fy/17DRP5sb8fy.glb": {
+      "bytes": 18728832,
+      "sha256": "334456925e056c83a9a7a5c768b3d37cdd23425d8ca20743bfce015be3f56b04"
+    },
+    "habitat-sim/data/scene_datasets/mp3d_example/17DRP5sb8fy/17DRP5sb8fy.navmesh": {
+      "bytes": 21900,
+      "sha256": "0f36abb98ee3545d7e1f5103882269206feaaea05dcb54014333290b1d2b00c8"
+    },
+    "habitat-sim/data/scene_datasets/mp3d_example/mp3d.scene_dataset_config.json": {
+      "bytes": 809,
+      "sha256": "b56050135d429839ca7066f335de51897d27e9741810bff8e13972fe539b0f5f"
+    },
+    "habitat-sim/data/versioned_data/replica_cad_dataset/configs/objects/frl_apartment_chair_04.object_config.json": {
+      "bytes": 250,
+      "sha256": "7312f6d5bd23b130de6237bb95b1c258f2b9a05fd10bd4a461a0cbe4e641e43b"
+    },
+    "habitat-sim/data/versioned_data/replica_cad_dataset/configs/objects/frl_apartment_chair_05.object_config.json": {
+      "bytes": 253,
+      "sha256": "6e73b8d8d5c9d4eddae98f9155c00c96e5ca06f0cbc2c2656a16acd7d991bbfb"
+    },
+    "habitat-sim/data/versioned_data/replica_cad_dataset/configs/objects/frl_apartment_cloth_03.object_config.json": {
+      "bytes": 252,
+      "sha256": "dfdebf2709e4b97dea31ff5d1d7de060408eae812c182d9afa67e89c2d994315"
+    },
+    "habitat-sim/data/versioned_data/replica_cad_dataset/configs/objects/frl_apartment_cloth_04.object_config.json": {
+      "bytes": 250,
+      "sha256": "7c6944a5c5d5618ab71a506c70bbbd719bf2456875d905aa6260d3f36622ae72"
+    },
+    "habitat-sim/data/versioned_data/replica_cad_dataset/configs/objects/frl_apartment_clothes_hanger_02.object_config.json": {
+      "bytes": 221,
+      "sha256": "7bf2bbc4ea966ff9b8b8e74716329c62c566a190bbb4a0dd5a60df6b872c59b5"
+    },
+    "habitat-sim/data/versioned_data/replica_cad_dataset/configs/objects/frl_apartment_indoor_plant_01.object_config.json": {
+      "bytes": 265,
+      "sha256": "ffc3be636ae44bbf4037e35a41f3bc3a2934c005d55e197e0423177600ca8027"
+    },
+    "habitat-sim/data/versioned_data/replica_cad_dataset/configs/objects/frl_apartment_mat.object_config.json": {
+      "bytes": 205,
+      "sha256": "0eb11817c3891af46c1a32151799d4ce130bc06d975c464b4a090957e47aa690"
+    },
+    "habitat-sim/data/versioned_data/replica_cad_dataset/configs/objects/frl_apartment_monitor.object_config.json": {
+      "bytes": 249,
+      "sha256": "d2f4bad701fa019120948bd00276b23b0211c544074c40be9cbbae546e0d50dc"
+    },
+    "habitat-sim/data/versioned_data/replica_cad_dataset/configs/objects/frl_apartment_monitor_stand.object_config.json": {
+      "bytes": 247,
+      "sha256": "db0873059acbfb4a959bf9c436fb71c590551dc0311f36810a37ba7b720a9ecd"
+    },
+    "habitat-sim/data/versioned_data/replica_cad_dataset/configs/objects/frl_apartment_table_02.object_config.json": {
+      "bytes": 1490,
+      "sha256": "de0df936cd8226f64ad6af447b67029d8c86de34331f6c72ee64c157996ea1cf"
+    },
+    "habitat-sim/data/versioned_data/replica_cad_dataset/configs/objects/frl_apartment_wall_cabinet_03.object_config.json": {
+      "bytes": 743,
+      "sha256": "0a939aee0ed315a569e3e75b743ab9eea8b1664172db7e7a54c7d79b2cc86bbc"
+    },
+    "habitat-sim/data/versioned_data/replica_cad_dataset/objects/convex/frl_apartment_chair_04_cv_decomp.glb": {
+      "bytes": 31848,
+      "sha256": "95dd5682cb08e59be6649b384f3ff16262132f8fed56958abe2df35ff81c114a"
+    },
+    "habitat-sim/data/versioned_data/replica_cad_dataset/objects/convex/frl_apartment_chair_05_cv_decomp.glb": {
+      "bytes": 52616,
+      "sha256": "43c040777825fe47623c8befa02a851d4a92f31ad1ac1ad92697706de3a0a3c5"
+    },
+    "habitat-sim/data/versioned_data/replica_cad_dataset/objects/convex/frl_apartment_cloth_03_cv_decomp.glb": {
+      "bytes": 82820,
+      "sha256": "c5cf5f0eeef5b50b3b6d306a39ba672b75333a376e9a436815a1ce85db295aab"
+    },
+    "habitat-sim/data/versioned_data/replica_cad_dataset/objects/convex/frl_apartment_cloth_04_cv_decomp.glb": {
+      "bytes": 245432,
+      "sha256": "66ed32afbc4f9f49600c9cdcfab883f7a2693df3990d064994a0c28cf8ab3be5"
+    },
+    "habitat-sim/data/versioned_data/replica_cad_dataset/objects/convex/frl_apartment_indoor_plant_01_cv_decomp.glb": {
+      "bytes": 145736,
+      "sha256": "8af6fb6daa54748b706f90e18a32bcc93c84c2397c45b73008de0fa74a07361a"
+    },
+    "habitat-sim/data/versioned_data/replica_cad_dataset/objects/convex/frl_apartment_monitor_cv_decomp.glb": {
+      "bytes": 8124,
+      "sha256": "8e5b9a11e675a773745fb9f336de6dc3a2779c26e39f9ab0f0ea4a98a48ba7a4"
+    },
+    "habitat-sim/data/versioned_data/replica_cad_dataset/objects/convex/frl_apartment_monitor_stand_cv_decomp.glb": {
+      "bytes": 23256,
+      "sha256": "473727fc39ee3a87d86a5c1264a29ee195441980efd5d213a6d61286827d761b"
+    },
+    "habitat-sim/data/versioned_data/replica_cad_dataset/objects/convex/frl_apartment_table_02_cv_decomp.glb": {
+      "bytes": 50592,
+      "sha256": "813d76f176799296a9ce7034886c0e1b75803dd7ab14103eb9992296a4cefb43"
+    },
+    "habitat-sim/data/versioned_data/replica_cad_dataset/objects/convex/frl_apartment_wall_cabinet_03_cv_decomp.glb": {
+      "bytes": 115532,
+      "sha256": "af8a1be43dc199daacc3c9bd802f38d85cfee896089685c196eaf3872fef8b0f"
+    },
+    "habitat-sim/data/versioned_data/replica_cad_dataset/objects/frl_apartment_chair_04.glb": {
+      "bytes": 63640,
+      "sha256": "5fe9b45f8def27e246de938d034d3df8a1f811112ec71d10e00c3fae52f008c3"
+    },
+    "habitat-sim/data/versioned_data/replica_cad_dataset/objects/frl_apartment_chair_05.glb": {
+      "bytes": 119944,
+      "sha256": "26ee93a3dd895587ff601b1172e7426b67d7bd6142b0436052da044e81c3eac8"
+    },
+    "habitat-sim/data/versioned_data/replica_cad_dataset/objects/frl_apartment_cloth_03.glb": {
+      "bytes": 1416136,
+      "sha256": "87a410ce803727ec2d23853b7c62bb56f0f207b67a9bff2ce93d11aa79ffd018"
+    },
+    "habitat-sim/data/versioned_data/replica_cad_dataset/objects/frl_apartment_cloth_04.glb": {
+      "bytes": 1582228,
+      "sha256": "d06aaab0f6c2432cefd286c2b9b5634cb2745ab69a4b48e84fafaae320ba0f4a"
+    },
+    "habitat-sim/data/versioned_data/replica_cad_dataset/objects/frl_apartment_clothes_hanger_02.glb": {
+      "bytes": 3993980,
+      "sha256": "21e4095bd297a95a9da0b3c23f7568da9fbb6ae2ef00ef9a2a2f9c96e4a297b9"
+    },
+    "habitat-sim/data/versioned_data/replica_cad_dataset/objects/frl_apartment_indoor_plant_01.glb": {
+      "bytes": 1366184,
+      "sha256": "dd4610428ab8b44e5b70ef3b0e26299bed7cc01610f3b5d78975dad057dbcc52"
+    },
+    "habitat-sim/data/versioned_data/replica_cad_dataset/objects/frl_apartment_mat.glb": {
+      "bytes": 1335856,
+      "sha256": "9b3654f9f7fc28c3d8bd6b44f99bf5d622b7b268f4c5d4a297bdc07abf1ef2f4"
+    },
+    "habitat-sim/data/versioned_data/replica_cad_dataset/objects/frl_apartment_monitor.glb": {
+      "bytes": 41160,
+      "sha256": "75a3556300b74b3ea3ef1c9bcf85ccf6d4fa7283701c3c86522ee684a34d281f"
+    },
+    "habitat-sim/data/versioned_data/replica_cad_dataset/objects/frl_apartment_monitor_stand.glb": {
+      "bytes": 102864,
+      "sha256": "bc708bda4a9440469d10bbe9ded2d9266774b103c7fba2b340202b207e423f88"
+    },
+    "habitat-sim/data/versioned_data/replica_cad_dataset/objects/frl_apartment_table_02.glb": {
+      "bytes": 3340296,
+      "sha256": "a7b939ba4b8a691d5c145a35b64dea1df4801fb2b85ff11c80c29bcc957d7945"
+    },
+    "habitat-sim/data/versioned_data/replica_cad_dataset/objects/frl_apartment_wall_cabinet_03.glb": {
+      "bytes": 109880,
+      "sha256": "db5fd59ed50f7442d4998f2672a830ae4a0645605709ff77cdd12c1602e4c55f"
+    }
+  }
+}

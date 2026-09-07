@@ -1,0 +1,232 @@
+{
+  "psnr": 24.472016283712257,
+  "n": 40,
+  "color_mode": "legacy",
+  "sh_degree": 3,
+  "views": [
+    {
+      "index": 0,
+      "psnr": 39.952871201959134,
+      "label": "clean"
+    },
+    {
+      "index": 1,
+      "psnr": 20.235783507322765,
+      "label": "clean"
+    },
+    {
+      "index": 2,
+      "psnr": 33.912243791873436,
+      "label": "clean"
+    },
+    {
+      "index": 3,
+      "psnr": 19.159942789442496,
+      "label": "clean"
+    },
+    {
+      "index": 4,
+      "psnr": 15.093403718639273,
+      "label": "clean"
+    },
+    {
+      "index": 5,
+      "psnr": 26.237184427743564,
+      "label": "severe"
+    },
+    {
+      "index": 6,
+      "psnr": 30.46196035296926,
+      "label": "clean"
+    },
+    {
+      "index": 7,
+      "psnr": 19.19704554990037,
+      "label": "clean"
+    },
+    {
+      "index": 8,
+      "psnr": 33.02990053609516,
+      "label": "clean"
+    },
+    {
+      "index": 9,
+      "psnr": 24.635167793108245,
+      "label": "clean"
+    },
+    {
+      "index": 10,
+      "psnr": 17.009280652041497,
+      "label": "clean"
+    },
+    {
+      "index": 11,
+      "psnr": 35.85390442935478,
+      "label": "clean"
+    },
+    {
+      "index": 12,
+      "psnr": 23.83566433227154,
+      "label": "clean"
+    },
+    {
+      "index": 13,
+      "psnr": 27.64167382011623,
+      "label": "clean"
+    },
+    {
+      "index": 14,
+      "psnr": 25.1537764753499,
+      "label": "clean"
+    },
+    {
+      "index": 15,
+      "psnr": 20.026725390001193,
+      "label": "clean"
+    },
+    {
+      "index": 16,
+      "psnr": 24.890211550686377,
+      "label": "clean"
+    },
+    {
+      "index": 17,
+      "psnr": 26.855936740340077,
+      "label": "clean"
+    },
+    {
+      "index": 18,
+      "psnr": 17.576107929545238,
+      "label": "clean"
+    },
+    {
+      "index": 19,
+      "psnr": 20.29543885097649,
+      "label": "clean"
+    },
+    {
+      "index": 20,
+      "psnr": 26.344062874843676,
+      "label": "severe"
+    },
+    {
+      "index": 21,
+      "psnr": 27.71481793224446,
+      "label": "severe"
+    },
+    {
+      "index": 22,
+      "psnr": 12.069519186308245,
+      "label": "clean"
+    },
+    {
+      "index": 23,
+      "psnr": 28.1812463577019,
+      "label": "severe"
+    },
+    {
+      "index": 24,
+      "psnr": 30.4333549988765,
+      "label": "severe"
+    },
+    {
+      "index": 25,
+      "psnr": 21.265961326332963,
+      "label": "severe"
+    },
+    {
+      "index": 26,
+      "psnr": 20.288024024350907,
+      "label": "severe"
+    },
+    {
+      "index": 27,
+      "psnr": 26.19194425219245,
+      "label": "severe"
+    },
+    {
+      "index": 28,
+      "psnr": 26.096080979700346,
+      "label": "severe"
+    },
+    {
+      "index": 29,
+      "psnr": 17.746242966369415,
+      "label": "severe"
+    },
+    {
+      "index": 30,
+      "psnr": 25.498661036006297,
+      "label": "severe"
+    },
+    {
+      "index": 31,
+      "psnr": 24.75729471828741,
+      "label": "severe"
+    },
+    {
+      "index": 32,
+      "psnr": 20.614376856738215,
+      "label": "severe"
+    },
+    {
+      "index": 33,
+      "psnr": 23.28116629316756,
+      "label": "severe"
+    },
+    {
+      "index": 34,
+      "psnr": 21.5696283496664,
+      "label": "severe"
+    },
+    {
+      "index": 35,
+      "psnr": 28.189730435500024,
+      "label": "severe"
+    },
+    {
+      "index": 36,
+      "psnr": 19.132476882740715,
+      "label": "severe"
+    },
+    {
+      "index": 37,
+      "psnr": 26.949591911627362,
+      "label": "severe"
+    },
+    {
+      "index": 38,
+      "psnr": 22.994495039618073,
+      "label": "severe"
+    },
+    {
+      "index": 39,
+      "psnr": 28.507751086480187,
+      "label": "severe"
+    }
+  ],
+  "class_psnr": {
+    "severe": {
+      "n": 20,
+      "psnr": 24.599704637509422
+    },
+    "clean": {
+      "n": 20,
+      "psnr": 24.34432792991509
+    }
+  },
+  "cell": "mesh/skokloster_castle__dyn__s0/magician",
+  "catalog": "shared",
+  "inputs": {
+    "model_sha256": "ece4a5adce08ad9dff88f3cc9bbf93ba8edd6be2f55229160f292be10b1e3e27",
+    "catalog_sha256": "11f859d9a124ba5fc040e8e104fa62eb4979f7bfd104358b1ee8db05675d7e0f",
+    "color_mode": "legacy",
+    "evaluator_sha256": "20e13955004ce9366e577b93d4168ea6aa9b0838fbd3e2cf1f397b9343e400d3",
+    "verifier_sha256": "b6a6e966dd80832b348121250498af3504d2b154a90963aa469f5171608ce702"
+  },
+  "wall_time_s": 19.15833099698648,
+  "recorded_psnr": 24.472016436808495,
+  "delta_from_recorded_db": -1.5309623790926707e-07,
+  "matches_recorded_at_1e-5_db": true,
+  "recorded_scoring_path": "export_reload"
+}

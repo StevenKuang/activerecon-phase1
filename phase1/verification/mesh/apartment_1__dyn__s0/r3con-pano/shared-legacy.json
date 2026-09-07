@@ -1,0 +1,232 @@
+{
+  "psnr": 27.769243750116306,
+  "n": 40,
+  "color_mode": "legacy",
+  "sh_degree": 3,
+  "views": [
+    {
+      "index": 0,
+      "psnr": 49.71777865925242,
+      "label": "clean"
+    },
+    {
+      "index": 1,
+      "psnr": 30.96822388481361,
+      "label": "clean"
+    },
+    {
+      "index": 2,
+      "psnr": 38.237274415799206,
+      "label": "clean"
+    },
+    {
+      "index": 3,
+      "psnr": 22.018754560990786,
+      "label": "severe"
+    },
+    {
+      "index": 4,
+      "psnr": 38.663391526050034,
+      "label": "clean"
+    },
+    {
+      "index": 5,
+      "psnr": 31.508894431458007,
+      "label": "clean"
+    },
+    {
+      "index": 6,
+      "psnr": 21.967390702995626,
+      "label": "severe"
+    },
+    {
+      "index": 7,
+      "psnr": 45.23195046950211,
+      "label": "clean"
+    },
+    {
+      "index": 8,
+      "psnr": 29.513303628168565,
+      "label": "clean"
+    },
+    {
+      "index": 9,
+      "psnr": 18.44288331819131,
+      "label": "severe"
+    },
+    {
+      "index": 10,
+      "psnr": 31.49512704912481,
+      "label": "clean"
+    },
+    {
+      "index": 11,
+      "psnr": 35.982333169002125,
+      "label": "clean"
+    },
+    {
+      "index": 12,
+      "psnr": 30.703825183730352,
+      "label": "clean"
+    },
+    {
+      "index": 13,
+      "psnr": 34.404076766132135,
+      "label": "clean"
+    },
+    {
+      "index": 14,
+      "psnr": 48.082786011788215,
+      "label": "clean"
+    },
+    {
+      "index": 15,
+      "psnr": 27.083864011895148,
+      "label": "clean"
+    },
+    {
+      "index": 16,
+      "psnr": 35.83534580510951,
+      "label": "clean"
+    },
+    {
+      "index": 17,
+      "psnr": 34.533680223995376,
+      "label": "clean"
+    },
+    {
+      "index": 18,
+      "psnr": 27.003443408511796,
+      "label": "clean"
+    },
+    {
+      "index": 19,
+      "psnr": 15.209842675786085,
+      "label": "severe"
+    },
+    {
+      "index": 20,
+      "psnr": 29.831352201539477,
+      "label": "severe"
+    },
+    {
+      "index": 21,
+      "psnr": 18.638403487627514,
+      "label": "clean"
+    },
+    {
+      "index": 22,
+      "psnr": 34.7188513302864,
+      "label": "clean"
+    },
+    {
+      "index": 23,
+      "psnr": 37.069923788776464,
+      "label": "clean"
+    },
+    {
+      "index": 24,
+      "psnr": 13.795031366362739,
+      "label": "severe"
+    },
+    {
+      "index": 25,
+      "psnr": 19.621928864225392,
+      "label": "severe"
+    },
+    {
+      "index": 26,
+      "psnr": 15.02122197057387,
+      "label": "severe"
+    },
+    {
+      "index": 27,
+      "psnr": 47.813501923074355,
+      "label": "clean"
+    },
+    {
+      "index": 28,
+      "psnr": 19.235729463379133,
+      "label": "severe"
+    },
+    {
+      "index": 29,
+      "psnr": 21.19077971402469,
+      "label": "severe"
+    },
+    {
+      "index": 30,
+      "psnr": 20.80884332521855,
+      "label": "severe"
+    },
+    {
+      "index": 31,
+      "psnr": 17.650852866936216,
+      "label": "severe"
+    },
+    {
+      "index": 32,
+      "psnr": 20.949373301088766,
+      "label": "severe"
+    },
+    {
+      "index": 33,
+      "psnr": 19.587193233825367,
+      "label": "severe"
+    },
+    {
+      "index": 34,
+      "psnr": 16.52515185415027,
+      "label": "severe"
+    },
+    {
+      "index": 35,
+      "psnr": 23.605136760476068,
+      "label": "severe"
+    },
+    {
+      "index": 36,
+      "psnr": 20.531813550051513,
+      "label": "severe"
+    },
+    {
+      "index": 37,
+      "psnr": 20.31561672427669,
+      "label": "severe"
+    },
+    {
+      "index": 38,
+      "psnr": 24.178961929527144,
+      "label": "severe"
+    },
+    {
+      "index": 39,
+      "psnr": 23.07591244693458,
+      "label": "severe"
+    }
+  ],
+  "class_psnr": {
+    "severe": {
+      "n": 20,
+      "psnr": 20.178188541527717
+    },
+    "clean": {
+      "n": 20,
+      "psnr": 35.36029895870491
+    }
+  },
+  "cell": "mesh/apartment_1__dyn__s0/r3con-pano",
+  "catalog": "shared",
+  "inputs": {
+    "model_sha256": "e2254c436a6a59aa64a13b297938900034da081af7f047f8be626453b8fa93c6",
+    "catalog_sha256": "17d35d0df514573d931142fca2d1aea0a2a3484f1b4413566f88dc9798cecbc6",
+    "color_mode": "legacy",
+    "evaluator_sha256": "20e13955004ce9366e577b93d4168ea6aa9b0838fbd3e2cf1f397b9343e400d3",
+    "verifier_sha256": "b6a6e966dd80832b348121250498af3504d2b154a90963aa469f5171608ce702"
+  },
+  "wall_time_s": 8.554595900233835,
+  "recorded_psnr": 27.76924372543193,
+  "delta_from_recorded_db": 2.468437543257096e-08,
+  "matches_recorded_at_1e-5_db": true,
+  "recorded_scoring_path": "export_reload"
+}

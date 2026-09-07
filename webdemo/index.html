@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>activebench replay</title>
+<link rel="icon" href="data:," />
+<link rel="stylesheet" href="style.css" />
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/",
+    "@sparkjsdev/spark": "https://cdn.jsdelivr.net/npm/@sparkjsdev/spark@2.1.0/dist/spark.module.min.js"
+  }
+}
+</script>
+</head>
+<body>
+<div id="viewport">
+  <div id="loading">
+    <div class="loading-card">
+      <button id="loading-min" hidden title="minimize — keep loading in background">–</button>
+      <div id="loading-title">Loading viewer modules…</div>
+      <div id="loading-models"></div>
+    </div>
+  </div>
+  <div id="label-a" class="pane-label"></div>
+  <div id="label-b" class="pane-label right" hidden></div>
+  <div id="divider" hidden></div>
+  <div id="load-chip" hidden>
+    <span id="load-chip-label">3DGS</span>
+    <span class="load-chip-track"><span id="load-chip-bar"></span></span>
+    <span id="load-chip-pct"></span>
+  </div>
+</div>
+<script>
+  const showEarlyError = (event) => {
+    const title = document.getElementById("loading-title");
+    const models = document.getElementById("loading-models");
+    if (!title) return;
+    const reason = event.reason || event.error || event.message || "unknown error";
+    title.textContent = `Viewer failed to load: ${reason.message || reason}`;
+    if (models) models.replaceChildren();
+    document.getElementById("loading").hidden = false;
+  };
+  window.addEventListener("error", showEarlyError);
+  window.addEventListener("unhandledrejection", showEarlyError);
+</script>
+<aside id="panel">
+  <div class="panel-head">
+    <h1>activebench replay</h1>
+    <button id="panel-collapse" title="hide panel">»</button>
+  </div>
+  <div id="summary" class="info small"></div>
+
+  <fieldset id="live-selection" hidden>
+    <legend>Run</legend>
+    <label>Round<select id="live-round"></select></label>
+    <label>Scene<select id="live-scene"></select></label>
+  </fieldset>
+
+  <fieldset>
+    <legend>View</legend>
+    <label id="compare-row" hidden><input type="checkbox" id="compare" /> compare (split view)</label>
+    <div class="pane-ctl">
+      <span class="pane-tag" id="tag-a">A</span>
+      <div class="pane-fields">
+        <label class="live-only" hidden>Difficulty<select id="difficulty-a"></select></label>
+        <label>Planning method<select id="method-a" title="planning method"></select></label>
+        <label>Reconstruction<select id="recon-a" title="reconstruction"></select></label>
+        <label class="live-only" hidden>Seed<select id="seed-a"></select></label>
+      </div>
+    </div>
+    <div class="pane-ctl" id="paneB-row" hidden>
+      <span class="pane-tag" id="tag-b">B</span>
+      <div class="pane-fields">
+        <label class="live-only" hidden>Difficulty<select id="difficulty-b"></select></label>
+        <label>Planning method<select id="method-b" title="planning method"></select></label>
+        <label>Reconstruction<select id="recon-b" title="reconstruction"></select></label>
+        <label class="live-only" hidden>Seed<select id="seed-b"></select></label>
+      </div>
+    </div>
+    <button id="live-apply" class="live-only" hidden>Apply changes</button>
+  </fieldset>
+
+  <fieldset>
+    <legend>Reconstruction (both panes)</legend>
+    <label><input type="checkbox" id="layer-splat" /> 3DGS (hides point cloud)</label>
+    <label class="slider">detail <span id="detail-val">1.00</span>× (LoD budget)
+      <input type="range" id="detail" min="0.25" max="2" step="0.25" value="1" />
+    </label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Playback</legend>
+    <div class="row">
+      <button id="play">▶ / ⏸</button>
+      <button id="prev">⏮</button>
+      <button id="next">⏭</button>
+      <label><input type="checkbox" id="loop" checked /> loop</label>
+    </div>
+    <label class="slider">progress
+      <input type="range" id="progress" min="0" max="1" step="0.002" value="0" />
+    </label>
+    <label class="slider">speed <span id="speed-val">3.0</span> sim s/s
+      <input type="range" id="speed" min="0.5" max="10" step="0.5" value="3" />
+    </label>
+    <div id="frame-info" class="info small"></div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Layers</legend>
+    <label><input type="checkbox" id="layer-distractors" checked /> distractor objects</label>
+    <label><input type="checkbox" id="layer-contamination" checked /> contaminated pixels (red)</label>
+    <label><input type="checkbox" id="layer-history" checked /> past cameras</label>
+    <label><input type="checkbox" id="layer-eval" /> eval cameras</label>
+    <label><input type="checkbox" id="layer-shared" /> shared eval (sev=red / clean=green)</label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Camera</legend>
+    <button id="capture-view" title="Move the inspection camera to the current recorded capture">Go to capture</button>
+    <button id="fpv">👁 FPV: rotate around me</button>
+    <div class="info small">drag orbit · scroll zoom · <b>WASD</b> move · <b>Q/E</b> down/up · <b>Shift</b> faster</div>
+  </fieldset>
+
+  <img id="thumb" alt="current capture" />
+</aside>
+<button id="panel-fab" title="show panel" hidden>☰</button>
+<script type="module" src="app.js"></script>
+</body>
+</html>

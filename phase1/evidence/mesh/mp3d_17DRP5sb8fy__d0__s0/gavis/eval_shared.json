@@ -1,0 +1,489 @@
+{
+  "episode_dir": "runs_campaign_v5/mp3d_17DRP5sb8fy__d0__s0/gavis",
+  "difficulty": "d0",
+  "shared_set": "eval_assets/shared_eval_v3_1600x1200/mp3d_17DRP5sb8fy__s0",
+  "renderer": "npz-reload (gsplat rasterization)",
+  "color_model": "full",
+  "views": [
+    {
+      "index": 0,
+      "stratum": "level",
+      "psnr": 19.629,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      }
+    },
+    {
+      "index": 1,
+      "stratum": "lookup",
+      "psnr": 24.114,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      }
+    },
+    {
+      "index": 2,
+      "stratum": "lookdown",
+      "psnr": 9.667,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      }
+    },
+    {
+      "index": 3,
+      "stratum": "level",
+      "psnr": 14.678,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      }
+    },
+    {
+      "index": 4,
+      "stratum": "lookup",
+      "psnr": 33.118,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      }
+    },
+    {
+      "index": 5,
+      "stratum": "lookup",
+      "psnr": 31.932,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      }
+    },
+    {
+      "index": 6,
+      "stratum": "level",
+      "psnr": 24.977,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      }
+    },
+    {
+      "index": 7,
+      "stratum": "lookdown",
+      "psnr": 34.532,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.4288,
+          "frac_persistent": 0.4149,
+          "class": "severe"
+        }
+      }
+    },
+    {
+      "index": 8,
+      "stratum": "lookdown",
+      "psnr": 22.377,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      }
+    },
+    {
+      "index": 9,
+      "stratum": "level",
+      "psnr": 28.191,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.72544,
+          "frac_persistent": 0.70281,
+          "class": "severe"
+        }
+      }
+    },
+    {
+      "index": 10,
+      "stratum": "lookup",
+      "psnr": 25.462,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      }
+    },
+    {
+      "index": 11,
+      "stratum": "lookdown",
+      "psnr": 33.657,
+      "occlusion": {
+        "dyn": {
+          "frac": 1.0,
+          "frac_persistent": 1.0,
+          "class": "severe"
+        }
+      }
+    },
+    {
+      "index": 12,
+      "stratum": "level",
+      "psnr": 30.198,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.4978,
+          "frac_persistent": 0.17906,
+          "class": "severe"
+        }
+      }
+    },
+    {
+      "index": 13,
+      "stratum": "level",
+      "psnr": 17.462,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      }
+    },
+    {
+      "index": 14,
+      "stratum": "lookdown",
+      "psnr": 13.43,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      }
+    },
+    {
+      "index": 15,
+      "stratum": "lookdown",
+      "psnr": 21.453,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      }
+    },
+    {
+      "index": 16,
+      "stratum": "level",
+      "psnr": 24.286,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      }
+    },
+    {
+      "index": 17,
+      "stratum": "level",
+      "psnr": 24.977,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.41738,
+          "frac_persistent": 0.33495,
+          "class": "severe"
+        }
+      }
+    },
+    {
+      "index": 18,
+      "stratum": "level",
+      "psnr": 23.904,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      }
+    },
+    {
+      "index": 19,
+      "stratum": "lookdown",
+      "psnr": 7.085,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      }
+    },
+    {
+      "index": 20,
+      "stratum": "level",
+      "psnr": 5.886,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      }
+    },
+    {
+      "index": 21,
+      "stratum": "lookdown",
+      "psnr": 6.892,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      }
+    },
+    {
+      "index": 22,
+      "stratum": "level",
+      "psnr": 26.635,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.60424,
+          "frac_persistent": 0.58121,
+          "class": "severe"
+        }
+      }
+    },
+    {
+      "index": 23,
+      "stratum": "level",
+      "psnr": 20.834,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      }
+    },
+    {
+      "index": 24,
+      "stratum": "level",
+      "psnr": 29.426,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.45305,
+          "frac_persistent": 0.36978,
+          "class": "severe"
+        }
+      }
+    },
+    {
+      "index": 25,
+      "stratum": "lookup",
+      "psnr": 40.033,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      }
+    },
+    {
+      "index": 26,
+      "stratum": "route",
+      "psnr": 28.928,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.42648,
+          "frac_persistent": 0.41024,
+          "class": "severe"
+        }
+      }
+    },
+    {
+      "index": 27,
+      "stratum": "route",
+      "psnr": 24.967,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.73227,
+          "frac_persistent": 0.70438,
+          "class": "severe"
+        }
+      }
+    },
+    {
+      "index": 28,
+      "stratum": "route",
+      "psnr": 29.499,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.42578,
+          "frac_persistent": 0.39481,
+          "class": "severe"
+        }
+      }
+    },
+    {
+      "index": 29,
+      "stratum": "route",
+      "psnr": 30.222,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.76066,
+          "frac_persistent": 0.71604,
+          "class": "severe"
+        }
+      }
+    },
+    {
+      "index": 30,
+      "stratum": "route",
+      "psnr": 26.904,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.6184,
+          "frac_persistent": 0.5957,
+          "class": "severe"
+        }
+      }
+    },
+    {
+      "index": 31,
+      "stratum": "route",
+      "psnr": 22.365,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.42212,
+          "frac_persistent": 0.3959,
+          "class": "severe"
+        }
+      }
+    },
+    {
+      "index": 32,
+      "stratum": "route",
+      "psnr": 30.684,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.41265,
+          "frac_persistent": 0.397,
+          "class": "severe"
+        }
+      }
+    },
+    {
+      "index": 33,
+      "stratum": "route",
+      "psnr": 26.838,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.42701,
+          "frac_persistent": 0.38979,
+          "class": "severe"
+        }
+      }
+    },
+    {
+      "index": 34,
+      "stratum": "route",
+      "psnr": 28.393,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.81628,
+          "frac_persistent": 0.76696,
+          "class": "severe"
+        }
+      }
+    },
+    {
+      "index": 35,
+      "stratum": "route",
+      "psnr": 32.592,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      }
+    },
+    {
+      "index": 36,
+      "stratum": "route",
+      "psnr": 26.147,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.78219,
+          "frac_persistent": 0.7644,
+          "class": "severe"
+        }
+      }
+    },
+    {
+      "index": 37,
+      "stratum": "route",
+      "psnr": 29.946,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.58234,
+          "frac_persistent": 0.55738,
+          "class": "severe"
+        }
+      }
+    },
+    {
+      "index": 38,
+      "stratum": "route",
+      "psnr": 27.842,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.62192,
+          "frac_persistent": 0.59675,
+          "class": "severe"
+        }
+      }
+    }
+  ],
+  "class_psnr": {
+    "dyn": {
+      "clean": {
+        "psnr": 20.991,
+        "n": 20
+      },
+      "severe": {
+        "psnr": 28.44,
+        "n": 19
+      }
+    }
+  }
+}

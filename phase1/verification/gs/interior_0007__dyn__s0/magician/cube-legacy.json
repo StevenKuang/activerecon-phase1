@@ -1,0 +1,743 @@
+{
+  "psnr": 20.773789047085817,
+  "n": 144,
+  "color_mode": "legacy",
+  "sh_degree": 3,
+  "views": [
+    {
+      "index": 0,
+      "psnr": 13.028239195273908,
+      "label": null
+    },
+    {
+      "index": 1,
+      "psnr": 8.001857794015324,
+      "label": null
+    },
+    {
+      "index": 2,
+      "psnr": 6.75898619324912,
+      "label": null
+    },
+    {
+      "index": 3,
+      "psnr": 9.03158811605397,
+      "label": null
+    },
+    {
+      "index": 4,
+      "psnr": 8.290099429819481,
+      "label": null
+    },
+    {
+      "index": 5,
+      "psnr": 7.7850095897474265,
+      "label": null
+    },
+    {
+      "index": 6,
+      "psnr": 25.51148997661715,
+      "label": null
+    },
+    {
+      "index": 7,
+      "psnr": 21.32043841156659,
+      "label": null
+    },
+    {
+      "index": 8,
+      "psnr": 21.30738464671837,
+      "label": null
+    },
+    {
+      "index": 9,
+      "psnr": 21.095525548542042,
+      "label": null
+    },
+    {
+      "index": 10,
+      "psnr": 22.01021943532468,
+      "label": null
+    },
+    {
+      "index": 11,
+      "psnr": 25.373704853877435,
+      "label": null
+    },
+    {
+      "index": 12,
+      "psnr": 18.40923013217585,
+      "label": null
+    },
+    {
+      "index": 13,
+      "psnr": 20.788222397405942,
+      "label": null
+    },
+    {
+      "index": 14,
+      "psnr": 19.51976215362025,
+      "label": null
+    },
+    {
+      "index": 15,
+      "psnr": 25.499783627461994,
+      "label": null
+    },
+    {
+      "index": 16,
+      "psnr": 20.28626481294331,
+      "label": null
+    },
+    {
+      "index": 17,
+      "psnr": 22.95945521878922,
+      "label": null
+    },
+    {
+      "index": 18,
+      "psnr": 20.93329794363769,
+      "label": null
+    },
+    {
+      "index": 19,
+      "psnr": 20.953565239790404,
+      "label": null
+    },
+    {
+      "index": 20,
+      "psnr": 25.976548797403943,
+      "label": null
+    },
+    {
+      "index": 21,
+      "psnr": 24.738060418105373,
+      "label": null
+    },
+    {
+      "index": 22,
+      "psnr": 19.54944299435858,
+      "label": null
+    },
+    {
+      "index": 23,
+      "psnr": 26.11390118347189,
+      "label": null
+    },
+    {
+      "index": 24,
+      "psnr": 12.975861194498757,
+      "label": null
+    },
+    {
+      "index": 25,
+      "psnr": 14.1667816648879,
+      "label": null
+    },
+    {
+      "index": 26,
+      "psnr": 13.081592747187313,
+      "label": null
+    },
+    {
+      "index": 27,
+      "psnr": 15.65088866055719,
+      "label": null
+    },
+    {
+      "index": 28,
+      "psnr": 14.920274252431811,
+      "label": null
+    },
+    {
+      "index": 29,
+      "psnr": 16.326312653928973,
+      "label": null
+    },
+    {
+      "index": 30,
+      "psnr": 20.69591657594173,
+      "label": null
+    },
+    {
+      "index": 31,
+      "psnr": 18.682442121601635,
+      "label": null
+    },
+    {
+      "index": 32,
+      "psnr": 21.790143766939455,
+      "label": null
+    },
+    {
+      "index": 33,
+      "psnr": 24.582006581198534,
+      "label": null
+    },
+    {
+      "index": 34,
+      "psnr": 20.227079741512306,
+      "label": null
+    },
+    {
+      "index": 35,
+      "psnr": 25.304161489843054,
+      "label": null
+    },
+    {
+      "index": 36,
+      "psnr": 23.81394522230801,
+      "label": null
+    },
+    {
+      "index": 37,
+      "psnr": 18.940375737567624,
+      "label": null
+    },
+    {
+      "index": 38,
+      "psnr": 22.50224189966975,
+      "label": null
+    },
+    {
+      "index": 39,
+      "psnr": 27.543503665406355,
+      "label": null
+    },
+    {
+      "index": 40,
+      "psnr": 23.34512250488839,
+      "label": null
+    },
+    {
+      "index": 41,
+      "psnr": 25.119264949894145,
+      "label": null
+    },
+    {
+      "index": 42,
+      "psnr": 21.241508854408508,
+      "label": null
+    },
+    {
+      "index": 43,
+      "psnr": 23.343364973154756,
+      "label": null
+    },
+    {
+      "index": 44,
+      "psnr": 27.347173945746807,
+      "label": null
+    },
+    {
+      "index": 45,
+      "psnr": 23.10399781162947,
+      "label": null
+    },
+    {
+      "index": 46,
+      "psnr": 21.034223625949032,
+      "label": null
+    },
+    {
+      "index": 47,
+      "psnr": 27.44463755266689,
+      "label": null
+    },
+    {
+      "index": 48,
+      "psnr": 19.50525447094325,
+      "label": null
+    },
+    {
+      "index": 49,
+      "psnr": 11.855469539699769,
+      "label": null
+    },
+    {
+      "index": 50,
+      "psnr": 19.86743179548128,
+      "label": null
+    },
+    {
+      "index": 51,
+      "psnr": 9.850850028930589,
+      "label": null
+    },
+    {
+      "index": 52,
+      "psnr": 11.814378020887597,
+      "label": null
+    },
+    {
+      "index": 53,
+      "psnr": 15.456595536241016,
+      "label": null
+    },
+    {
+      "index": 54,
+      "psnr": 23.682690701811318,
+      "label": null
+    },
+    {
+      "index": 55,
+      "psnr": 19.594044322226956,
+      "label": null
+    },
+    {
+      "index": 56,
+      "psnr": 21.501529666475943,
+      "label": null
+    },
+    {
+      "index": 57,
+      "psnr": 20.770159075526678,
+      "label": null
+    },
+    {
+      "index": 58,
+      "psnr": 22.405704469158803,
+      "label": null
+    },
+    {
+      "index": 59,
+      "psnr": 25.598649430628836,
+      "label": null
+    },
+    {
+      "index": 60,
+      "psnr": 19.796776858793514,
+      "label": null
+    },
+    {
+      "index": 61,
+      "psnr": 18.785380187876434,
+      "label": null
+    },
+    {
+      "index": 62,
+      "psnr": 22.338682796437972,
+      "label": null
+    },
+    {
+      "index": 63,
+      "psnr": 22.720444042778993,
+      "label": null
+    },
+    {
+      "index": 64,
+      "psnr": 19.198466262002675,
+      "label": null
+    },
+    {
+      "index": 65,
+      "psnr": 25.700962364647644,
+      "label": null
+    },
+    {
+      "index": 66,
+      "psnr": 22.402452528884513,
+      "label": null
+    },
+    {
+      "index": 67,
+      "psnr": 20.496477852247313,
+      "label": null
+    },
+    {
+      "index": 68,
+      "psnr": 22.238853736208203,
+      "label": null
+    },
+    {
+      "index": 69,
+      "psnr": 25.72602170797034,
+      "label": null
+    },
+    {
+      "index": 70,
+      "psnr": 24.467922225341834,
+      "label": null
+    },
+    {
+      "index": 71,
+      "psnr": 25.68088207813901,
+      "label": null
+    },
+    {
+      "index": 72,
+      "psnr": 24.914403327920695,
+      "label": null
+    },
+    {
+      "index": 73,
+      "psnr": 23.47774707269723,
+      "label": null
+    },
+    {
+      "index": 74,
+      "psnr": 20.927243618288834,
+      "label": null
+    },
+    {
+      "index": 75,
+      "psnr": 20.167816651943436,
+      "label": null
+    },
+    {
+      "index": 76,
+      "psnr": 19.87601173480948,
+      "label": null
+    },
+    {
+      "index": 77,
+      "psnr": 26.282867590188438,
+      "label": null
+    },
+    {
+      "index": 78,
+      "psnr": 22.53059954749144,
+      "label": null
+    },
+    {
+      "index": 79,
+      "psnr": 20.73829977961691,
+      "label": null
+    },
+    {
+      "index": 80,
+      "psnr": 22.157643562076586,
+      "label": null
+    },
+    {
+      "index": 81,
+      "psnr": 27.17503548101336,
+      "label": null
+    },
+    {
+      "index": 82,
+      "psnr": 23.87443624334072,
+      "label": null
+    },
+    {
+      "index": 83,
+      "psnr": 25.48254439648529,
+      "label": null
+    },
+    {
+      "index": 84,
+      "psnr": 18.991954974552844,
+      "label": null
+    },
+    {
+      "index": 85,
+      "psnr": 19.232545471284606,
+      "label": null
+    },
+    {
+      "index": 86,
+      "psnr": 24.501034004618106,
+      "label": null
+    },
+    {
+      "index": 87,
+      "psnr": 27.443051889487155,
+      "label": null
+    },
+    {
+      "index": 88,
+      "psnr": 21.341289070414277,
+      "label": null
+    },
+    {
+      "index": 89,
+      "psnr": 26.871682532105115,
+      "label": null
+    },
+    {
+      "index": 90,
+      "psnr": 20.224964060855832,
+      "label": null
+    },
+    {
+      "index": 91,
+      "psnr": 17.663832363385424,
+      "label": null
+    },
+    {
+      "index": 92,
+      "psnr": 16.23877335097909,
+      "label": null
+    },
+    {
+      "index": 93,
+      "psnr": 22.47837095638975,
+      "label": null
+    },
+    {
+      "index": 94,
+      "psnr": 20.068652720535706,
+      "label": null
+    },
+    {
+      "index": 95,
+      "psnr": 23.600713547082243,
+      "label": null
+    },
+    {
+      "index": 96,
+      "psnr": 17.096538442997225,
+      "label": null
+    },
+    {
+      "index": 97,
+      "psnr": 11.591817135102215,
+      "label": null
+    },
+    {
+      "index": 98,
+      "psnr": 7.639719932608003,
+      "label": null
+    },
+    {
+      "index": 99,
+      "psnr": 6.105044687260536,
+      "label": null
+    },
+    {
+      "index": 100,
+      "psnr": 9.231120791419752,
+      "label": null
+    },
+    {
+      "index": 101,
+      "psnr": 9.629317843758372,
+      "label": null
+    },
+    {
+      "index": 102,
+      "psnr": 19.82491076909324,
+      "label": null
+    },
+    {
+      "index": 103,
+      "psnr": 22.55459223449482,
+      "label": null
+    },
+    {
+      "index": 104,
+      "psnr": 25.844449592739597,
+      "label": null
+    },
+    {
+      "index": 105,
+      "psnr": 20.51101375579753,
+      "label": null
+    },
+    {
+      "index": 106,
+      "psnr": 20.620703267761613,
+      "label": null
+    },
+    {
+      "index": 107,
+      "psnr": 24.94088206267002,
+      "label": null
+    },
+    {
+      "index": 108,
+      "psnr": 23.2642182014402,
+      "label": null
+    },
+    {
+      "index": 109,
+      "psnr": 19.66117303861493,
+      "label": null
+    },
+    {
+      "index": 110,
+      "psnr": 20.312756472171635,
+      "label": null
+    },
+    {
+      "index": 111,
+      "psnr": 26.619978915463307,
+      "label": null
+    },
+    {
+      "index": 112,
+      "psnr": 23.223168291467076,
+      "label": null
+    },
+    {
+      "index": 113,
+      "psnr": 26.36828094787073,
+      "label": null
+    },
+    {
+      "index": 114,
+      "psnr": 21.227511056551613,
+      "label": null
+    },
+    {
+      "index": 115,
+      "psnr": 19.398413825634556,
+      "label": null
+    },
+    {
+      "index": 116,
+      "psnr": 22.237852522327874,
+      "label": null
+    },
+    {
+      "index": 117,
+      "psnr": 25.312716175083892,
+      "label": null
+    },
+    {
+      "index": 118,
+      "psnr": 23.48108312124908,
+      "label": null
+    },
+    {
+      "index": 119,
+      "psnr": 25.580009254896396,
+      "label": null
+    },
+    {
+      "index": 120,
+      "psnr": 23.041487209044544,
+      "label": null
+    },
+    {
+      "index": 121,
+      "psnr": 20.492663875571505,
+      "label": null
+    },
+    {
+      "index": 122,
+      "psnr": 21.795602425088973,
+      "label": null
+    },
+    {
+      "index": 123,
+      "psnr": 27.021755522026474,
+      "label": null
+    },
+    {
+      "index": 124,
+      "psnr": 25.208126059633884,
+      "label": null
+    },
+    {
+      "index": 125,
+      "psnr": 25.66845107110456,
+      "label": null
+    },
+    {
+      "index": 126,
+      "psnr": 23.940996188743703,
+      "label": null
+    },
+    {
+      "index": 127,
+      "psnr": 19.904618201158883,
+      "label": null
+    },
+    {
+      "index": 128,
+      "psnr": 23.34164309164659,
+      "label": null
+    },
+    {
+      "index": 129,
+      "psnr": 27.98109384762015,
+      "label": null
+    },
+    {
+      "index": 130,
+      "psnr": 23.418636516707345,
+      "label": null
+    },
+    {
+      "index": 131,
+      "psnr": 26.10011364520464,
+      "label": null
+    },
+    {
+      "index": 132,
+      "psnr": 19.937417180585623,
+      "label": null
+    },
+    {
+      "index": 133,
+      "psnr": 19.280119752039933,
+      "label": null
+    },
+    {
+      "index": 134,
+      "psnr": 22.311181602404602,
+      "label": null
+    },
+    {
+      "index": 135,
+      "psnr": 23.920584876291894,
+      "label": null
+    },
+    {
+      "index": 136,
+      "psnr": 20.454507795452553,
+      "label": null
+    },
+    {
+      "index": 137,
+      "psnr": 27.63075683508469,
+      "label": null
+    },
+    {
+      "index": 138,
+      "psnr": 16.063665172414098,
+      "label": null
+    },
+    {
+      "index": 139,
+      "psnr": 12.065588540779085,
+      "label": null
+    },
+    {
+      "index": 140,
+      "psnr": 19.96200456755786,
+      "label": null
+    },
+    {
+      "index": 141,
+      "psnr": 23.1924859043354,
+      "label": null
+    },
+    {
+      "index": 142,
+      "psnr": 21.133664539605945,
+      "label": null
+    },
+    {
+      "index": 143,
+      "psnr": 19.13869207108799,
+      "label": null
+    }
+  ],
+  "class_psnr": {},
+  "cell": "gs/interior_0007__dyn__s0/magician",
+  "catalog": "cube",
+  "inputs": {
+    "model_sha256": "5fbe0d66c18184470c2b6af7740f4d6da75754dae59f54103190c1e30a59877e",
+    "catalog_sha256": "f20d9b811d2c4bf303962953e41f1216f87bbd7a6eb44f110246fca5b5120edd",
+    "color_mode": "legacy",
+    "evaluator_sha256": "20e13955004ce9366e577b93d4168ea6aa9b0838fbd3e2cf1f397b9343e400d3",
+    "verifier_sha256": "b6a6e966dd80832b348121250498af3504d2b154a90963aa469f5171608ce702"
+  },
+  "wall_time_s": 18.59729386586696,
+  "recorded_psnr": 20.77378904708581,
+  "delta_from_recorded_db": 7.105427357601002e-15,
+  "matches_recorded_at_1e-5_db": true,
+  "recorded_scoring_path": "export_reload"
+}

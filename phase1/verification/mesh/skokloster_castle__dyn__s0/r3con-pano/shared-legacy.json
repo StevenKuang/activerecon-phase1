@@ -1,0 +1,232 @@
+{
+  "psnr": 22.043758377195736,
+  "n": 40,
+  "color_mode": "legacy",
+  "sh_degree": 3,
+  "views": [
+    {
+      "index": 0,
+      "psnr": 37.921204317352014,
+      "label": "clean"
+    },
+    {
+      "index": 1,
+      "psnr": 19.256856610417078,
+      "label": "clean"
+    },
+    {
+      "index": 2,
+      "psnr": 20.455462706682077,
+      "label": "clean"
+    },
+    {
+      "index": 3,
+      "psnr": 13.894288686347945,
+      "label": "clean"
+    },
+    {
+      "index": 4,
+      "psnr": 16.594560204353897,
+      "label": "clean"
+    },
+    {
+      "index": 5,
+      "psnr": 34.78373438895767,
+      "label": "severe"
+    },
+    {
+      "index": 6,
+      "psnr": 21.786371768469202,
+      "label": "clean"
+    },
+    {
+      "index": 7,
+      "psnr": 23.03443312261186,
+      "label": "clean"
+    },
+    {
+      "index": 8,
+      "psnr": 26.36326180409882,
+      "label": "clean"
+    },
+    {
+      "index": 9,
+      "psnr": 32.111610913989054,
+      "label": "clean"
+    },
+    {
+      "index": 10,
+      "psnr": 14.494900926060838,
+      "label": "clean"
+    },
+    {
+      "index": 11,
+      "psnr": 31.131685181810322,
+      "label": "clean"
+    },
+    {
+      "index": 12,
+      "psnr": 24.67752732864554,
+      "label": "clean"
+    },
+    {
+      "index": 13,
+      "psnr": 20.628952133161526,
+      "label": "clean"
+    },
+    {
+      "index": 14,
+      "psnr": 23.138046720254316,
+      "label": "clean"
+    },
+    {
+      "index": 15,
+      "psnr": 24.40625212168768,
+      "label": "clean"
+    },
+    {
+      "index": 16,
+      "psnr": 19.615027881896985,
+      "label": "clean"
+    },
+    {
+      "index": 17,
+      "psnr": 27.15398754663635,
+      "label": "clean"
+    },
+    {
+      "index": 18,
+      "psnr": 21.091348320088134,
+      "label": "clean"
+    },
+    {
+      "index": 19,
+      "psnr": 19.676427380556397,
+      "label": "clean"
+    },
+    {
+      "index": 20,
+      "psnr": 22.882767590439972,
+      "label": "severe"
+    },
+    {
+      "index": 21,
+      "psnr": 25.03758058957696,
+      "label": "severe"
+    },
+    {
+      "index": 22,
+      "psnr": 17.26234542066543,
+      "label": "clean"
+    },
+    {
+      "index": 23,
+      "psnr": 24.68913081345725,
+      "label": "severe"
+    },
+    {
+      "index": 24,
+      "psnr": 23.439138236611115,
+      "label": "severe"
+    },
+    {
+      "index": 25,
+      "psnr": 18.558393236742464,
+      "label": "severe"
+    },
+    {
+      "index": 26,
+      "psnr": 21.263575174629747,
+      "label": "severe"
+    },
+    {
+      "index": 27,
+      "psnr": 18.353652699174685,
+      "label": "severe"
+    },
+    {
+      "index": 28,
+      "psnr": 19.241939333127903,
+      "label": "severe"
+    },
+    {
+      "index": 29,
+      "psnr": 14.42236856007123,
+      "label": "severe"
+    },
+    {
+      "index": 30,
+      "psnr": 21.243711407904804,
+      "label": "severe"
+    },
+    {
+      "index": 31,
+      "psnr": 19.8605281557932,
+      "label": "severe"
+    },
+    {
+      "index": 32,
+      "psnr": 20.420682939507145,
+      "label": "severe"
+    },
+    {
+      "index": 33,
+      "psnr": 22.204274546443074,
+      "label": "severe"
+    },
+    {
+      "index": 34,
+      "psnr": 17.41368864913383,
+      "label": "severe"
+    },
+    {
+      "index": 35,
+      "psnr": 28.94631584437898,
+      "label": "severe"
+    },
+    {
+      "index": 36,
+      "psnr": 21.432299562146135,
+      "label": "severe"
+    },
+    {
+      "index": 37,
+      "psnr": 17.310135207167402,
+      "label": "severe"
+    },
+    {
+      "index": 38,
+      "psnr": 18.548296373750645,
+      "label": "severe"
+    },
+    {
+      "index": 39,
+      "psnr": 17.003570683029572,
+      "label": "severe"
+    }
+  ],
+  "class_psnr": {
+    "severe": {
+      "n": 20,
+      "psnr": 21.35278919960219
+    },
+    "clean": {
+      "n": 20,
+      "psnr": 22.734727554789274
+    }
+  },
+  "cell": "mesh/skokloster_castle__dyn__s0/r3con-pano",
+  "catalog": "shared",
+  "inputs": {
+    "model_sha256": "fd4566e903e85bb97bf207b65f46c267692b46995067e7a99fbc42e545972e7f",
+    "catalog_sha256": "11f859d9a124ba5fc040e8e104fa62eb4979f7bfd104358b1ee8db05675d7e0f",
+    "color_mode": "legacy",
+    "evaluator_sha256": "20e13955004ce9366e577b93d4168ea6aa9b0838fbd3e2cf1f397b9343e400d3",
+    "verifier_sha256": "b6a6e966dd80832b348121250498af3504d2b154a90963aa469f5171608ce702"
+  },
+  "wall_time_s": 23.628374930936843,
+  "recorded_psnr": 22.043758408538288,
+  "delta_from_recorded_db": -3.1342551665147766e-08,
+  "matches_recorded_at_1e-5_db": true,
+  "recorded_scoring_path": "export_reload"
+}

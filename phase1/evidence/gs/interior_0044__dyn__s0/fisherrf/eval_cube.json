@@ -1,0 +1,246 @@
+{
+  "episode_dir": "runs_campaign_v6/interior_0044__dyn__s0/fisherrf",
+  "train_transforms": "transforms_stream.json",
+  "config": {
+    "backend": "gsplat",
+    "run_name": "gsplat1600cube",
+    "train_iterations": 30000,
+    "use_masks": false,
+    "opacity_threshold": 0.5,
+    "seed": 0,
+    "require_lpips": false,
+    "lpips_available": true,
+    "lpips_error": null,
+    "evaluation_resolutions": [
+      [
+        1600,
+        1600
+      ]
+    ],
+    "backend_metadata": {
+      "backend": "gsplat",
+      "implementation": "gsplat rasterization + DefaultStrategy",
+      "initialization": "benchmark RGB-D point cloud (not COLMAP SfM)",
+      "gaussian_scale_initialization": "nearest-neighbor distance (vanilla 3DGS)",
+      "supervision": "RGB L1 + DSSIM",
+      "isotropic_loss": false,
+      "depth_supervision": false,
+      "iterations": 30000,
+      "initial_num_gaussians": 3010000,
+      "depth_init_pts_per_view": 10000,
+      "sh_degree": 3,
+      "lambda_dssim": 0.2,
+      "position_lr_init": 0.00016,
+      "position_lr_final": 1.6e-06,
+      "position_lr_max_steps": 30000,
+      "feature_lr": 0.0025,
+      "opacity_lr": 0.05,
+      "scaling_lr": 0.005,
+      "rotation_lr": 0.001,
+      "init_opacity": 0.1,
+      "densify_from": 500,
+      "densify_until": 15000,
+      "densification_interval": 100,
+      "opacity_reset_interval": 3000,
+      "densify_grad_threshold": 0.0002,
+      "prune_opacity": 0.005,
+      "max_gaussians": null
+    }
+  },
+  "num_train_views": 301,
+  "num_gaussians": 5868570,
+  "scored_artifact": null,
+  "train_resolution": [
+    1600,
+    1200
+  ],
+  "eval_resolution": [
+    1600,
+    1600
+  ],
+  "resource_usage": {
+    "train_wall_time_s": 2079.1355714260135,
+    "peak_cuda_allocated_bytes": 24339729408,
+    "peak_cuda_reserved_bytes": 29154607104
+  },
+  "appearance_per_stratum": {
+    "front": {
+      "psnr": 24.127740220414598,
+      "ssim": 0.8408310686548551,
+      "lpips": 0.16731832347189388,
+      "depth_mae": 0.3426498007029295,
+      "render_coverage": 0.9999997232902006,
+      "depth_mae_fixed": 0.34265192536016303,
+      "depth_p50_fixed": 0.12600363790988922,
+      "depth_mae_zerofill": 0.3426514398306608
+    },
+    "right": {
+      "psnr": 24.97832939082862,
+      "ssim": 0.8527877678473791,
+      "lpips": 0.15572371426969767,
+      "depth_mae": 0.35840210877358913,
+      "render_coverage": 0.9999982739141462,
+      "depth_mae_fixed": 0.35841538446644944,
+      "depth_p50_fixed": 0.14817031472921371,
+      "depth_mae_zerofill": 0.3584128587196271
+    },
+    "back": {
+      "psnr": 25.23541905182654,
+      "ssim": 0.8632196858525276,
+      "lpips": 0.16326911530146995,
+      "depth_mae": 0.3650417602621019,
+      "render_coverage": 0.9999999186197917,
+      "depth_mae_fixed": 0.3650423966658612,
+      "depth_p50_fixed": 0.144587654620409,
+      "depth_mae_zerofill": 0.36504213217025
+    },
+    "left": {
+      "psnr": 23.83220964242113,
+      "ssim": 0.8304841592907906,
+      "lpips": 0.1867136349901557,
+      "depth_mae": 0.29098239727318287,
+      "render_coverage": 0.9999993977121134,
+      "depth_mae_fixed": 0.29098716378211975,
+      "depth_p50_fixed": 0.14208311339219412,
+      "depth_mae_zerofill": 0.29098420528074104
+    },
+    "up": {
+      "psnr": 24.907482270314347,
+      "ssim": 0.8841373920440674,
+      "lpips": 0.192551222940286,
+      "depth_mae": 0.34524799200395745,
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.34524799200395745,
+      "depth_p50_fixed": 0.17044910416007042,
+      "depth_mae_zerofill": 0.34524799200395745
+    },
+    "down": {
+      "psnr": 23.485693005169917,
+      "ssim": 0.8278173357248306,
+      "lpips": 0.2599745951592922,
+      "depth_mae": 0.8690264113247395,
+      "render_coverage": 0.999999951171875,
+      "depth_mae_fixed": 0.8690267639855543,
+      "depth_p50_fixed": 0.44305162007610005,
+      "depth_mae_zerofill": 0.8690265007317066
+    },
+    "all": {
+      "psnr": 24.427812263495856,
+      "ssim": 0.8498795682357417,
+      "lpips": 0.18759176768879923,
+      "depth_mae": 0.4285584117234167,
+      "render_coverage": 0.9999995441180213,
+      "depth_mae_fixed": 0.4285619377106842,
+      "depth_p50_fixed": 0.1957242408146461,
+      "depth_mae_zerofill": 0.4285608547894905
+    }
+  },
+  "appearance_by_resolution": {
+    "1600x1600": {
+      "front": {
+        "psnr": 24.127740220414598,
+        "ssim": 0.8408310686548551,
+        "lpips": 0.16731832347189388,
+        "depth_mae": 0.3426498007029295,
+        "render_coverage": 0.9999997232902006,
+        "depth_mae_fixed": 0.34265192536016303,
+        "depth_p50_fixed": 0.12600363790988922,
+        "depth_mae_zerofill": 0.3426514398306608
+      },
+      "right": {
+        "psnr": 24.97832939082862,
+        "ssim": 0.8527877678473791,
+        "lpips": 0.15572371426969767,
+        "depth_mae": 0.35840210877358913,
+        "render_coverage": 0.9999982739141462,
+        "depth_mae_fixed": 0.35841538446644944,
+        "depth_p50_fixed": 0.14817031472921371,
+        "depth_mae_zerofill": 0.3584128587196271
+      },
+      "back": {
+        "psnr": 25.23541905182654,
+        "ssim": 0.8632196858525276,
+        "lpips": 0.16326911530146995,
+        "depth_mae": 0.3650417602621019,
+        "render_coverage": 0.9999999186197917,
+        "depth_mae_fixed": 0.3650423966658612,
+        "depth_p50_fixed": 0.144587654620409,
+        "depth_mae_zerofill": 0.36504213217025
+      },
+      "left": {
+        "psnr": 23.83220964242113,
+        "ssim": 0.8304841592907906,
+        "lpips": 0.1867136349901557,
+        "depth_mae": 0.29098239727318287,
+        "render_coverage": 0.9999993977121134,
+        "depth_mae_fixed": 0.29098716378211975,
+        "depth_p50_fixed": 0.14208311339219412,
+        "depth_mae_zerofill": 0.29098420528074104
+      },
+      "up": {
+        "psnr": 24.907482270314347,
+        "ssim": 0.8841373920440674,
+        "lpips": 0.192551222940286,
+        "depth_mae": 0.34524799200395745,
+        "render_coverage": 1.0,
+        "depth_mae_fixed": 0.34524799200395745,
+        "depth_p50_fixed": 0.17044910416007042,
+        "depth_mae_zerofill": 0.34524799200395745
+      },
+      "down": {
+        "psnr": 23.485693005169917,
+        "ssim": 0.8278173357248306,
+        "lpips": 0.2599745951592922,
+        "depth_mae": 0.8690264113247395,
+        "render_coverage": 0.999999951171875,
+        "depth_mae_fixed": 0.8690267639855543,
+        "depth_p50_fixed": 0.44305162007610005,
+        "depth_mae_zerofill": 0.8690265007317066
+      },
+      "all": {
+        "psnr": 24.427812263495856,
+        "ssim": 0.8498795682357417,
+        "lpips": 0.18759176768879923,
+        "depth_mae": 0.4285584117234167,
+        "render_coverage": 0.9999995441180213,
+        "depth_mae_fixed": 0.4285619377106842,
+        "depth_p50_fixed": 0.1957242408146461,
+        "depth_mae_zerofill": 0.4285608547894905
+      }
+    }
+  },
+  "geometry": {
+    "num_recon_points": 3761643,
+    "bins": {
+      "up": {
+        "num_points": 708468,
+        "completeness@0.05": 0.26327512322363184,
+        "completeness@0.10": 0.40002371313877266
+      },
+      "down": {
+        "num_points": 1052341,
+        "completeness@0.05": 0.2724924715467705,
+        "completeness@0.10": 0.5269936265906203
+      },
+      "side": {
+        "num_points": 3363758,
+        "completeness@0.05": 0.2604227176865874,
+        "completeness@0.10": 0.44464673142360417
+      }
+    },
+    "completeness@0.05": 0.26329561112187627,
+    "completeness@0.10": 0.45538774300345763,
+    "accuracy": {
+      "mean": 0.050937216515561066,
+      "median": 0.028280846717701476,
+      "frac_within@0.05": 0.7627326676135933
+    },
+    "reused_from": "runs_campaign_v6/interior_0044__dyn__s0/fisherrf/reconstructions/gsplat1600cube/eval.json"
+  },
+  "eval_mode": {
+    "reloaded_npz": true,
+    "loaded_gaussians": 5868570,
+    "renderer": "npz-reload (gsplat rasterization)"
+  },
+  "eval_set": "eval_assets/cube_eval_gs_v6_1600/interior_0044__s0"
+}

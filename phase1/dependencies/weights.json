@@ -1,0 +1,10 @@
+{
+  "GLEAM/ckpt/train_gleam_stage2_wo_gibson_40000000_steps.zip": {
+    "bytes": 5137117,
+    "sha256": "e9ce6ea177cfbe34a4f11ee4f5bedd8a279bf3110b37da195d7a57672b58b332"
+  },
+  "MAGICIAN/weights/macarons/trained_macarons.pth": {
+    "bytes": 72493981,
+    "sha256": "34c5247f13bedda08bb57e7e7e7a5baba53af6da7faf3d5f6bb57a27c2dbb59c"
+  }
+}

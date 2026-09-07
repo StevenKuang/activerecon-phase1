@@ -1,0 +1,38 @@
+{
+  "params": {
+    "max_range": 6.0,
+    "min_range": 0.2,
+    "depth_tol_abs": 0.03,
+    "depth_tol_rel": 0.02,
+    "min_cos_incidence": 0.1,
+    "well_observed_cos": 0.5,
+    "bin_cos": 0.7
+  },
+  "num_frames": 271,
+  "bins": {
+    "up": {
+      "num_points": 880625,
+      "observed_frac": 0.1361124201561391,
+      "well_observed_frac": 0.09135670688431512,
+      "mean_best_cos_observed": 0.6265816204440859
+    },
+    "down": {
+      "num_points": 894838,
+      "observed_frac": 0.16317143438253628,
+      "well_observed_frac": 0.11941044077251972,
+      "mean_best_cos_observed": 0.6514597871682805
+    },
+    "side": {
+      "num_points": 3114941,
+      "observed_frac": 0.13101114916783335,
+      "well_observed_frac": 0.0975052175948116,
+      "mean_best_cos_observed": 0.6756600539178761
+    }
+  },
+  "overall": {
+    "num_points": 4890404,
+    "observed_frac": 0.13781438097956733,
+    "well_observed_frac": 0.10040622410745616
+  },
+  "episode_dir": "runs_campaign_v6_gavis_redens/interior_0007__dyn__s0/gavis"
+}

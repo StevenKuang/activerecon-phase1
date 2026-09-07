@@ -1,0 +1,16 @@
+{
+  "date": "2026-09-07",
+  "frozen_models": 60,
+  "cube_rescores": 24,
+  "raw_dc_checks": 4,
+  "planned_cells": 64,
+  "retained_cells": 60,
+  "missing_or_excluded_cells": 4,
+  "canonical_corrections_above_1e_5_db": 5,
+  "mesh_negative_regional_contrasts": 17,
+  "fresh_smoke_acquisitions": 7,
+  "fresh_smoke_reconstructions": 2,
+  "full_new_campaign_executed": false,
+  "all_environments_rebuilt_from_empty_machine": false,
+  "ssim_lpips_geometry_remeasured": false
+}

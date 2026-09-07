@@ -1,0 +1,199 @@
+{
+  "episode_dir": "runs_campaign_v5/skokloster_castle__dyn__s0/magician",
+  "train_transforms": "transforms_stream.json",
+  "config": {
+    "backend": "gsplat",
+    "run_name": "gsplat",
+    "train_iterations": 30000,
+    "use_masks": false,
+    "opacity_threshold": 0.5,
+    "seed": 0,
+    "require_lpips": false,
+    "lpips_available": true,
+    "lpips_error": null,
+    "evaluation_resolutions": [
+      [
+        1600,
+        1200
+      ],
+      [
+        640,
+        480
+      ]
+    ],
+    "backend_metadata": {
+      "backend": "gsplat",
+      "implementation": "gsplat rasterization + DefaultStrategy",
+      "initialization": "benchmark RGB-D point cloud (not COLMAP SfM)",
+      "gaussian_scale_initialization": "nearest-neighbor distance (vanilla 3DGS)",
+      "supervision": "RGB L1 + DSSIM",
+      "isotropic_loss": false,
+      "depth_supervision": false,
+      "iterations": 30000,
+      "initial_num_gaussians": 3010000,
+      "depth_init_pts_per_view": 10000,
+      "sh_degree": 3,
+      "lambda_dssim": 0.2,
+      "position_lr_init": 0.00016,
+      "position_lr_final": 1.6e-06,
+      "position_lr_max_steps": 30000,
+      "feature_lr": 0.0025,
+      "opacity_lr": 0.05,
+      "scaling_lr": 0.005,
+      "rotation_lr": 0.001,
+      "init_opacity": 0.1,
+      "densify_from": 500,
+      "densify_until": 15000,
+      "densification_interval": 100,
+      "opacity_reset_interval": 3000,
+      "densify_grad_threshold": 0.0002,
+      "prune_opacity": 0.005
+    }
+  },
+  "num_train_views": 301,
+  "num_gaussians": 8828847,
+  "train_resolution": [
+    1600,
+    1200
+  ],
+  "eval_resolution": [
+    1600,
+    1200
+  ],
+  "resource_usage": {
+    "train_wall_time_s": 2006.1748781580245,
+    "peak_cuda_allocated_bytes": 22972217856,
+    "peak_cuda_reserved_bytes": 30379343872
+  },
+  "appearance_per_stratum": {
+    "level": {
+      "psnr": 24.039035331429524,
+      "ssim": 0.8731170617617093,
+      "lpips": 0.2080166328411836,
+      "depth_mae": 0.15983234661129805
+    },
+    "lookup": {
+      "psnr": 24.45144400715965,
+      "ssim": 0.881354458630085,
+      "lpips": 0.22780405636876822,
+      "depth_mae": 0.3243308619130403
+    },
+    "lookdown": {
+      "psnr": 29.08162178324892,
+      "ssim": 0.9212799270947775,
+      "lpips": 0.30671780308087665,
+      "depth_mae": 0.014462235694130262
+    },
+    "route": {
+      "psnr": 23.96979879729576,
+      "ssim": 0.8165578879415989,
+      "lpips": 0.2287029423750937,
+      "depth_mae": 0.5413772996980697
+    },
+    "all": {
+      "psnr": 24.472016436808495,
+      "ssim": 0.8557530865073204,
+      "lpips": 0.22765122912824154,
+      "depth_mae": 0.33444727258756757
+    }
+  },
+  "appearance_by_resolution": {
+    "1600x1200": {
+      "level": {
+        "psnr": 24.039035331429524,
+        "ssim": 0.8731170617617093,
+        "lpips": 0.2080166328411836,
+        "depth_mae": 0.15983234661129805
+      },
+      "lookup": {
+        "psnr": 24.45144400715965,
+        "ssim": 0.881354458630085,
+        "lpips": 0.22780405636876822,
+        "depth_mae": 0.3243308619130403
+      },
+      "lookdown": {
+        "psnr": 29.08162178324892,
+        "ssim": 0.9212799270947775,
+        "lpips": 0.30671780308087665,
+        "depth_mae": 0.014462235694130262
+      },
+      "route": {
+        "psnr": 23.96979879729576,
+        "ssim": 0.8165578879415989,
+        "lpips": 0.2287029423750937,
+        "depth_mae": 0.5413772996980697
+      },
+      "all": {
+        "psnr": 24.472016436808495,
+        "ssim": 0.8557530865073204,
+        "lpips": 0.22765122912824154,
+        "depth_mae": 0.33444727258756757
+      }
+    },
+    "640x480": {
+      "level": {
+        "psnr": 24.93628192878488,
+        "ssim": 0.8694325960599459,
+        "lpips": 0.19652636635761994,
+        "depth_mae": null
+      },
+      "lookup": {
+        "psnr": 25.5028142221376,
+        "ssim": 0.8682827204465866,
+        "lpips": 0.22373909398447722,
+        "depth_mae": null
+      },
+      "lookdown": {
+        "psnr": 29.4120357690713,
+        "ssim": 0.8393618663152059,
+        "lpips": 0.3348112901051839,
+        "depth_mae": null
+      },
+      "route": {
+        "psnr": 24.884763663645188,
+        "ssim": 0.8343526944518089,
+        "lpips": 0.16567495046183467,
+        "depth_mae": null
+      },
+      "all": {
+        "psnr": 25.36466261942103,
+        "ssim": 0.8529153555631638,
+        "lpips": 0.19999971480574458,
+        "depth_mae": null
+      }
+    }
+  },
+  "geometry": {
+    "num_recon_points": 4423917,
+    "bins": {
+      "up": {
+        "num_points": 217032,
+        "completeness@0.05": 0.805503335913598,
+        "completeness@0.10": 0.9492977994028531
+      },
+      "down": {
+        "num_points": 224577,
+        "completeness@0.05": 0.8726761867867145,
+        "completeness@0.10": 0.9149022384304715
+      },
+      "side": {
+        "num_points": 631005,
+        "completeness@0.05": 0.6813464235624124,
+        "completeness@0.10": 0.7601556247573316
+      }
+    },
+    "completeness@0.05": 0.7465276418170935,
+    "completeness@0.10": 0.8308263737001381,
+    "accuracy": {
+      "mean": 0.03498254113284783,
+      "median": 0.026800652638768747,
+      "frac_within@0.05": 0.8211937520527622
+    }
+  },
+  "eval_mode": {
+    "reloaded_npz": true,
+    "loaded_gaussians": 6736832,
+    "renderer": "npz-reload (gsplat rasterization)"
+  },
+  "eval_set": "eval_assets/shared_eval_v3_1600x1200/skokloster_castle__s0"
+}

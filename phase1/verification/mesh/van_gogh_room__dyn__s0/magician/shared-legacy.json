@@ -1,0 +1,232 @@
+{
+  "psnr": 23.204203683692818,
+  "n": 40,
+  "color_mode": "legacy",
+  "sh_degree": 3,
+  "views": [
+    {
+      "index": 0,
+      "psnr": 19.375558814247853,
+      "label": "clean"
+    },
+    {
+      "index": 1,
+      "psnr": 24.00468395312194,
+      "label": "clean"
+    },
+    {
+      "index": 2,
+      "psnr": 20.007032729526586,
+      "label": "clean"
+    },
+    {
+      "index": 3,
+      "psnr": 20.324829833355057,
+      "label": "clean"
+    },
+    {
+      "index": 4,
+      "psnr": 26.127531216269464,
+      "label": "clean"
+    },
+    {
+      "index": 5,
+      "psnr": 21.064126820427628,
+      "label": "severe"
+    },
+    {
+      "index": 6,
+      "psnr": 18.39103926879591,
+      "label": "clean"
+    },
+    {
+      "index": 7,
+      "psnr": 28.28407998600192,
+      "label": "clean"
+    },
+    {
+      "index": 8,
+      "psnr": 18.3148728180797,
+      "label": "clean"
+    },
+    {
+      "index": 9,
+      "psnr": 19.287911296806374,
+      "label": "clean"
+    },
+    {
+      "index": 10,
+      "psnr": 27.134047894158833,
+      "label": "clean"
+    },
+    {
+      "index": 11,
+      "psnr": 14.169675832700221,
+      "label": "severe"
+    },
+    {
+      "index": 12,
+      "psnr": 17.71491663828848,
+      "label": "severe"
+    },
+    {
+      "index": 13,
+      "psnr": 25.565799817160286,
+      "label": "severe"
+    },
+    {
+      "index": 14,
+      "psnr": 34.44856189303773,
+      "label": "clean"
+    },
+    {
+      "index": 15,
+      "psnr": 18.949225558377275,
+      "label": "severe"
+    },
+    {
+      "index": 16,
+      "psnr": 36.56466744270607,
+      "label": "clean"
+    },
+    {
+      "index": 17,
+      "psnr": 25.990556739621873,
+      "label": "severe"
+    },
+    {
+      "index": 18,
+      "psnr": 29.898492084075468,
+      "label": "clean"
+    },
+    {
+      "index": 19,
+      "psnr": 38.09391090605843,
+      "label": "clean"
+    },
+    {
+      "index": 20,
+      "psnr": 27.220294350513274,
+      "label": "clean"
+    },
+    {
+      "index": 21,
+      "psnr": 21.710959731253425,
+      "label": "severe"
+    },
+    {
+      "index": 22,
+      "psnr": 20.59062468186014,
+      "label": "severe"
+    },
+    {
+      "index": 23,
+      "psnr": 40.11960706010812,
+      "label": "clean"
+    },
+    {
+      "index": 24,
+      "psnr": 16.79272519672779,
+      "label": "severe"
+    },
+    {
+      "index": 25,
+      "psnr": 16.66085329015651,
+      "label": "clean"
+    },
+    {
+      "index": 26,
+      "psnr": 42.83555401405518,
+      "label": "clean"
+    },
+    {
+      "index": 27,
+      "psnr": 31.853068055482836,
+      "label": "clean"
+    },
+    {
+      "index": 28,
+      "psnr": 14.474004959622418,
+      "label": "severe"
+    },
+    {
+      "index": 29,
+      "psnr": 16.912409168714163,
+      "label": "clean"
+    },
+    {
+      "index": 30,
+      "psnr": 17.796350370410664,
+      "label": "severe"
+    },
+    {
+      "index": 31,
+      "psnr": 24.314732407798108,
+      "label": "severe"
+    },
+    {
+      "index": 32,
+      "psnr": 17.022602679986182,
+      "label": "severe"
+    },
+    {
+      "index": 33,
+      "psnr": 22.530716922074173,
+      "label": "severe"
+    },
+    {
+      "index": 34,
+      "psnr": 16.725457457443255,
+      "label": "severe"
+    },
+    {
+      "index": 35,
+      "psnr": 17.53084545969469,
+      "label": "severe"
+    },
+    {
+      "index": 36,
+      "psnr": 19.252449361179213,
+      "label": "severe"
+    },
+    {
+      "index": 37,
+      "psnr": 20.500134847213545,
+      "label": "severe"
+    },
+    {
+      "index": 38,
+      "psnr": 17.88635823659898,
+      "label": "severe"
+    },
+    {
+      "index": 39,
+      "psnr": 21.726877554002787,
+      "label": "severe"
+    }
+  ],
+  "class_psnr": {
+    "severe": {
+      "n": 20,
+      "psnr": 19.615457063622056
+    },
+    "clean": {
+      "n": 20,
+      "psnr": 26.79295030376357
+    }
+  },
+  "cell": "mesh/van_gogh_room__dyn__s0/magician",
+  "catalog": "shared",
+  "inputs": {
+    "model_sha256": "e95f4185e92067a568590b464b8caa5f4ec5c97e4207a967344cb87fa5579979",
+    "catalog_sha256": "20368cbc4102820eb7432d04e1cf32e5068bdd04814dac8c896aa59b1497a893",
+    "color_mode": "legacy",
+    "evaluator_sha256": "20e13955004ce9366e577b93d4168ea6aa9b0838fbd3e2cf1f397b9343e400d3",
+    "verifier_sha256": "b6a6e966dd80832b348121250498af3504d2b154a90963aa469f5171608ce702"
+  },
+  "wall_time_s": 12.693475952837616,
+  "recorded_psnr": 23.204203675649744,
+  "delta_from_recorded_db": 8.043073762564745e-09,
+  "matches_recorded_at_1e-5_db": true,
+  "recorded_scoring_path": "export_reload"
+}

@@ -1,0 +1,90 @@
+habitat:
+  scene_path: ${HABITAT_SIM_ROOT}/data/scene_datasets/habitat-test-scenes/van-gogh-room.glb
+  scene_dataset_config_file: default
+  width: 640
+  height: 480
+  hfov: 75.1781789379499
+  enable_physics: true
+seed: 0
+trajectory_seed: 0
+start_pose:
+- 2.346
+- 1.577
+- 0.552
+- 0.0
+- 0.0
+distractors:
+- name: van_gogh_room_dyn_obj0
+  object_template: ${HABITAT_SIM_ROOT}/data/versioned_data/replica_cad_dataset/configs/objects/frl_apartment_clothes_hanger_02.object_config.json
+  object_diag_m: 1.043
+  trajectory:
+    type: waypoint_patrol
+    waypoints:
+    - - 3.531
+      - 0.978
+      - -0.344
+    - - 3.102
+      - 0.978
+      - 0.973
+    speed: 0.189
+    mode: pingpong
+- name: van_gogh_room_dyn_obj1
+  object_template: ${HABITAT_SIM_ROOT}/data/versioned_data/replica_cad_dataset/configs/objects/frl_apartment_clothes_hanger_02.object_config.json
+  object_diag_m: 1.043
+  trajectory:
+    type: waypoint_patrol
+    waypoints:
+    - - 3.531
+      - 1.208
+      - -0.344
+    - - 3.102
+      - 1.208
+      - 0.973
+    speed: 0.579
+    mode: pingpong
+- name: van_gogh_room_dyn_obj2
+  object_template: ${HABITAT_SIM_ROOT}/data/versioned_data/replica_cad_dataset/configs/objects/frl_apartment_monitor_stand.object_config.json
+  object_diag_m: 0.947
+  trajectory:
+    type: waypoint_patrol
+    waypoints:
+    - - 3.531
+      - 1.566
+      - -0.344
+    - - 3.102
+      - 1.566
+      - 0.973
+    speed: 0.411
+    mode: pingpong
+- name: van_gogh_room_dyn_obj3
+  object_template: ${HABITAT_SIM_ROOT}/data/versioned_data/replica_cad_dataset/configs/objects/frl_apartment_monitor.object_config.json
+  object_diag_m: 0.969
+  trajectory:
+    type: waypoint_patrol
+    waypoints:
+    - - 3.531
+      - 1.208
+      - -0.344
+    - - 3.102
+      - 1.208
+      - 0.973
+    speed: 0.733
+    mode: pingpong
+motion:
+  speed: 0.5
+  yaw_rate_deg: 60.0
+  pitch_rate_deg: 60.0
+episode:
+  max_captures: 640
+  max_sim_time: 300.0
+  capture_cost: 0.0
+  capture_interval: null
+  reconstruction_interval: 1.0
+  stream_observations: true
+  provide_depth: true
+  collision: navmesh
+campaign:
+  protocol: phase1-mesh
+  scene: van_gogh_room
+  difficulty: dyn
+  has_ceiling: true

@@ -1,0 +1,1461 @@
+{
+  "episode_dir": "runs_campaign_v6/interior_0007__d0__s0/r3con-pano",
+  "difficulty": "d0",
+  "shared_set": "eval_assets/shared_eval_gs_v6_1600x1200/interior_0007__s0",
+  "renderer": "npz-reload (gsplat rasterization)",
+  "color_model": "full",
+  "views": [
+    {
+      "index": 0,
+      "stratum": "lookup",
+      "psnr": 8.016,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.3262,
+      "depth_p50_fixed": 0.3241,
+      "depth_mae_zerofill": 0.3262,
+      "depth_mae": 0.3262,
+      "depth_valid_fraction": 1.0
+    },
+    {
+      "index": 1,
+      "stratum": "level",
+      "psnr": 22.3,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.5195,
+      "depth_p50_fixed": 0.3249,
+      "depth_mae_zerofill": 0.5195,
+      "depth_mae": 0.5195,
+      "depth_valid_fraction": 1.0
+    },
+    {
+      "index": 2,
+      "stratum": "lookdown",
+      "psnr": 14.764,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      },
+      "render_coverage": 0.0,
+      "depth_mae_fixed": 8.0,
+      "depth_p50_fixed": 8.0,
+      "depth_mae_zerofill": 1.8417,
+      "depth_mae": null,
+      "depth_valid_fraction": 0.0
+    },
+    {
+      "index": 3,
+      "stratum": "lookdown",
+      "psnr": 23.731,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.5261,
+      "depth_p50_fixed": 0.269,
+      "depth_mae_zerofill": 0.5261,
+      "depth_mae": 0.5261,
+      "depth_valid_fraction": 1.0
+    },
+    {
+      "index": 4,
+      "stratum": "level",
+      "psnr": 17.459,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.3891,
+      "depth_p50_fixed": 0.1328,
+      "depth_mae_zerofill": 0.3891,
+      "depth_mae": 0.3891,
+      "depth_valid_fraction": 0.9628
+    },
+    {
+      "index": 5,
+      "stratum": "level",
+      "psnr": 13.495,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.3405,
+      "depth_p50_fixed": 0.2666,
+      "depth_mae_zerofill": 0.3405,
+      "depth_mae": 0.3405,
+      "depth_valid_fraction": 1.0
+    },
+    {
+      "index": 6,
+      "stratum": "lookup",
+      "psnr": 32.718,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.1854,
+      "depth_p50_fixed": 0.0589,
+      "depth_mae_zerofill": 0.1854,
+      "depth_mae": 0.1854,
+      "depth_valid_fraction": 1.0
+    },
+    {
+      "index": 7,
+      "stratum": "level",
+      "psnr": 18.596,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.8199,
+      "depth_p50_fixed": 0.3309,
+      "depth_mae_zerofill": 0.8199,
+      "depth_mae": 0.8199,
+      "depth_valid_fraction": 0.7737
+    },
+    {
+      "index": 8,
+      "stratum": "lookup",
+      "psnr": 10.224,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      },
+      "render_coverage": 0.1413,
+      "depth_mae_fixed": 7.0099,
+      "depth_p50_fixed": 8.0,
+      "depth_mae_zerofill": 0.798,
+      "depth_mae": 0.9941,
+      "depth_valid_fraction": 0.1413
+    },
+    {
+      "index": 9,
+      "stratum": "level",
+      "psnr": 24.732,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.3051,
+      "depth_p50_fixed": 0.0916,
+      "depth_mae_zerofill": 0.3051,
+      "depth_mae": 0.3051,
+      "depth_valid_fraction": 0.8966
+    },
+    {
+      "index": 10,
+      "stratum": "level",
+      "psnr": 24.828,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.4381,
+      "depth_p50_fixed": 0.2325,
+      "depth_mae_zerofill": 0.4381,
+      "depth_mae": 0.4381,
+      "depth_valid_fraction": 1.0
+    },
+    {
+      "index": 11,
+      "stratum": "lookup",
+      "psnr": 12.351,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      },
+      "render_coverage": 0.9954,
+      "depth_mae_fixed": 2.1087,
+      "depth_p50_fixed": 2.4203,
+      "depth_mae_zerofill": 2.0892,
+      "depth_mae": 2.0815,
+      "depth_valid_fraction": 0.9954
+    },
+    {
+      "index": 12,
+      "stratum": "lookdown",
+      "psnr": 16.761,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 1.1357,
+      "depth_p50_fixed": 0.8827,
+      "depth_mae_zerofill": 1.1357,
+      "depth_mae": 1.1357,
+      "depth_valid_fraction": 1.0
+    },
+    {
+      "index": 13,
+      "stratum": "level",
+      "psnr": 31.963,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.0301,
+      "depth_p50_fixed": 0.0208,
+      "depth_mae_zerofill": 0.0301,
+      "depth_mae": 0.0301,
+      "depth_valid_fraction": 1.0
+    },
+    {
+      "index": 14,
+      "stratum": "level",
+      "psnr": 10.107,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      },
+      "render_coverage": 0.2978,
+      "depth_mae_fixed": 6.0353,
+      "depth_p50_fixed": 8.0,
+      "depth_mae_zerofill": 3.2376,
+      "depth_mae": 1.4018,
+      "depth_valid_fraction": 0.2965
+    },
+    {
+      "index": 15,
+      "stratum": "level",
+      "psnr": 24.058,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.60584,
+          "frac_persistent": 0.60514,
+          "class": "severe"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.3972,
+      "depth_p50_fixed": 0.2341,
+      "depth_mae_zerofill": 0.3972,
+      "depth_mae": 0.3972,
+      "depth_valid_fraction": 0.7277
+    },
+    {
+      "index": 16,
+      "stratum": "lookup",
+      "psnr": 26.863,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.1989,
+      "depth_p50_fixed": 0.0368,
+      "depth_mae_zerofill": 0.1989,
+      "depth_mae": 0.1989,
+      "depth_valid_fraction": 1.0
+    },
+    {
+      "index": 17,
+      "stratum": "lookdown",
+      "psnr": 28.561,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.5867,
+      "depth_p50_fixed": 0.2502,
+      "depth_mae_zerofill": 0.5867,
+      "depth_mae": 0.5867,
+      "depth_valid_fraction": 0.9885
+    },
+    {
+      "index": 18,
+      "stratum": "lookup",
+      "psnr": 20.422,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      },
+      "render_coverage": 0.9998,
+      "depth_mae_fixed": 0.1871,
+      "depth_p50_fixed": 0.0938,
+      "depth_mae_zerofill": 0.1858,
+      "depth_mae": 0.1856,
+      "depth_valid_fraction": 0.9998
+    },
+    {
+      "index": 19,
+      "stratum": "lookup",
+      "psnr": 12.703,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      },
+      "render_coverage": 0.0,
+      "depth_mae_fixed": 8.0,
+      "depth_p50_fixed": 8.0,
+      "depth_mae_zerofill": 3.2519,
+      "depth_mae": null,
+      "depth_valid_fraction": 0.0
+    },
+    {
+      "index": 20,
+      "stratum": "level",
+      "psnr": 19.81,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.6606,
+      "depth_p50_fixed": 0.0865,
+      "depth_mae_zerofill": 0.6606,
+      "depth_mae": 0.6606,
+      "depth_valid_fraction": 1.0
+    },
+    {
+      "index": 21,
+      "stratum": "lookup",
+      "psnr": 28.19,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.2982,
+      "depth_p50_fixed": 0.095,
+      "depth_mae_zerofill": 0.2982,
+      "depth_mae": 0.2982,
+      "depth_valid_fraction": 1.0
+    },
+    {
+      "index": 22,
+      "stratum": "level",
+      "psnr": 26.564,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.0915,
+      "depth_p50_fixed": 0.0311,
+      "depth_mae_zerofill": 0.0915,
+      "depth_mae": 0.0915,
+      "depth_valid_fraction": 1.0
+    },
+    {
+      "index": 23,
+      "stratum": "lookdown",
+      "psnr": 23.323,
+      "occlusion": {
+        "dyn": {
+          "frac": 1.0,
+          "frac_persistent": 1.0,
+          "class": "severe"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.7185,
+      "depth_p50_fixed": 0.7006,
+      "depth_mae_zerofill": 0.7185,
+      "depth_mae": 0.7185,
+      "depth_valid_fraction": 0.7577
+    },
+    {
+      "index": 24,
+      "stratum": "level",
+      "psnr": 21.558,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.44193,
+          "frac_persistent": 0.43955,
+          "class": "severe"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.2002,
+      "depth_p50_fixed": 0.0831,
+      "depth_mae_zerofill": 0.2002,
+      "depth_mae": 0.2002,
+      "depth_valid_fraction": 0.4911
+    },
+    {
+      "index": 25,
+      "stratum": "level",
+      "psnr": 20.034,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.3668,
+      "depth_p50_fixed": 0.0458,
+      "depth_mae_zerofill": 0.3668,
+      "depth_mae": 0.3668,
+      "depth_valid_fraction": 1.0
+    },
+    {
+      "index": 26,
+      "stratum": "level",
+      "psnr": 20.412,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.4095,
+      "depth_p50_fixed": 0.3086,
+      "depth_mae_zerofill": 0.4095,
+      "depth_mae": 0.4095,
+      "depth_valid_fraction": 1.0
+    },
+    {
+      "index": 27,
+      "stratum": "lookdown",
+      "psnr": 22.481,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.6714,
+      "depth_p50_fixed": 0.3025,
+      "depth_mae_zerofill": 0.6714,
+      "depth_mae": 0.6714,
+      "depth_valid_fraction": 0.921
+    },
+    {
+      "index": 28,
+      "stratum": "lookup",
+      "psnr": 31.686,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.062,
+      "depth_p50_fixed": 0.0437,
+      "depth_mae_zerofill": 0.062,
+      "depth_mae": 0.062,
+      "depth_valid_fraction": 1.0
+    },
+    {
+      "index": 29,
+      "stratum": "lookup",
+      "psnr": 21.307,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.1575,
+      "depth_p50_fixed": 0.0643,
+      "depth_mae_zerofill": 0.1575,
+      "depth_mae": 0.1575,
+      "depth_valid_fraction": 1.0
+    },
+    {
+      "index": 30,
+      "stratum": "level",
+      "psnr": 20.936,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.0716,
+      "depth_p50_fixed": 0.0433,
+      "depth_mae_zerofill": 0.0716,
+      "depth_mae": 0.0716,
+      "depth_valid_fraction": 1.0
+    },
+    {
+      "index": 31,
+      "stratum": "lookup",
+      "psnr": 18.923,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.1498,
+      "depth_p50_fixed": 0.0504,
+      "depth_mae_zerofill": 0.1498,
+      "depth_mae": 0.1498,
+      "depth_valid_fraction": 0.9884
+    },
+    {
+      "index": 32,
+      "stratum": "level",
+      "psnr": 26.549,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.1825,
+      "depth_p50_fixed": 0.0758,
+      "depth_mae_zerofill": 0.1825,
+      "depth_mae": 0.1825,
+      "depth_valid_fraction": 1.0
+    },
+    {
+      "index": 33,
+      "stratum": "lookup",
+      "psnr": 19.457,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.1289,
+      "depth_p50_fixed": 0.0404,
+      "depth_mae_zerofill": 0.1289,
+      "depth_mae": 0.1289,
+      "depth_valid_fraction": 1.0
+    },
+    {
+      "index": 34,
+      "stratum": "level",
+      "psnr": 21.788,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.5885,
+      "depth_p50_fixed": 0.4129,
+      "depth_mae_zerofill": 0.5885,
+      "depth_mae": 0.5885,
+      "depth_valid_fraction": 1.0
+    },
+    {
+      "index": 35,
+      "stratum": "level",
+      "psnr": 23.586,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.3352,
+      "depth_p50_fixed": 0.1355,
+      "depth_mae_zerofill": 0.3352,
+      "depth_mae": 0.3352,
+      "depth_valid_fraction": 0.946
+    },
+    {
+      "index": 36,
+      "stratum": "lookdown",
+      "psnr": 20.632,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 1.2124,
+      "depth_p50_fixed": 0.8134,
+      "depth_mae_zerofill": 1.2124,
+      "depth_mae": 1.2124,
+      "depth_valid_fraction": 0.8922
+    },
+    {
+      "index": 37,
+      "stratum": "lookdown",
+      "psnr": 11.241,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      },
+      "render_coverage": 0.6486,
+      "depth_mae_fixed": 3.1304,
+      "depth_p50_fixed": 0.7304,
+      "depth_mae_zerofill": 0.6003,
+      "depth_mae": 0.4924,
+      "depth_valid_fraction": 0.6486
+    },
+    {
+      "index": 38,
+      "stratum": "level",
+      "psnr": 35.088,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.0257,
+      "depth_p50_fixed": 0.0099,
+      "depth_mae_zerofill": 0.0257,
+      "depth_mae": 0.0257,
+      "depth_valid_fraction": 1.0
+    },
+    {
+      "index": 39,
+      "stratum": "level",
+      "psnr": 28.345,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.397,
+      "depth_p50_fixed": 0.0926,
+      "depth_mae_zerofill": 0.397,
+      "depth_mae": 0.397,
+      "depth_valid_fraction": 1.0
+    },
+    {
+      "index": 40,
+      "stratum": "level",
+      "psnr": 28.732,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.676,
+      "depth_p50_fixed": 0.6806,
+      "depth_mae_zerofill": 0.676,
+      "depth_mae": 0.676,
+      "depth_valid_fraction": 1.0
+    },
+    {
+      "index": 41,
+      "stratum": "level",
+      "psnr": 11.971,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.6251,
+      "depth_p50_fixed": 0.6624,
+      "depth_mae_zerofill": 0.6251,
+      "depth_mae": 0.6251,
+      "depth_valid_fraction": 1.0
+    },
+    {
+      "index": 42,
+      "stratum": "lookup",
+      "psnr": 23.23,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.0,
+          "frac_persistent": 0.0,
+          "class": "clean"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.177,
+      "depth_p50_fixed": 0.0505,
+      "depth_mae_zerofill": 0.177,
+      "depth_mae": 0.177,
+      "depth_valid_fraction": 1.0
+    },
+    {
+      "index": 43,
+      "stratum": "route",
+      "psnr": 25.364,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.59649,
+          "frac_persistent": 0.59151,
+          "class": "severe"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.6152,
+      "depth_p50_fixed": 0.4258,
+      "depth_mae_zerofill": 0.6152,
+      "depth_mae": 0.6152,
+      "depth_valid_fraction": 0.9388
+    },
+    {
+      "index": 44,
+      "stratum": "route",
+      "psnr": 24.185,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.60957,
+          "frac_persistent": 0.60277,
+          "class": "severe"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.5124,
+      "depth_p50_fixed": 0.3505,
+      "depth_mae_zerofill": 0.5124,
+      "depth_mae": 0.5124,
+      "depth_valid_fraction": 0.6804
+    },
+    {
+      "index": 45,
+      "stratum": "route",
+      "psnr": 24.693,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.56796,
+          "frac_persistent": 0.55638,
+          "class": "severe"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.4329,
+      "depth_p50_fixed": 0.2172,
+      "depth_mae_zerofill": 0.4329,
+      "depth_mae": 0.4329,
+      "depth_valid_fraction": 0.8216
+    },
+    {
+      "index": 46,
+      "stratum": "route",
+      "psnr": 23.731,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.4091,
+          "frac_persistent": 0.40546,
+          "class": "severe"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.4761,
+      "depth_p50_fixed": 0.2682,
+      "depth_mae_zerofill": 0.4761,
+      "depth_mae": 0.4761,
+      "depth_valid_fraction": 0.4458
+    },
+    {
+      "index": 47,
+      "stratum": "route",
+      "psnr": 25.835,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.91422,
+          "frac_persistent": 0.9092,
+          "class": "severe"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.6785,
+      "depth_p50_fixed": 0.6478,
+      "depth_mae_zerofill": 0.6785,
+      "depth_mae": 0.6785,
+      "depth_valid_fraction": 0.5913
+    },
+    {
+      "index": 48,
+      "stratum": "route",
+      "psnr": 24.651,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.89761,
+          "frac_persistent": 0.89297,
+          "class": "severe"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.4112,
+      "depth_p50_fixed": 0.3217,
+      "depth_mae_zerofill": 0.4112,
+      "depth_mae": 0.4112,
+      "depth_valid_fraction": 0.5604
+    },
+    {
+      "index": 49,
+      "stratum": "route",
+      "psnr": 25.358,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.90736,
+          "frac_persistent": 0.90593,
+          "class": "severe"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.6485,
+      "depth_p50_fixed": 0.466,
+      "depth_mae_zerofill": 0.6485,
+      "depth_mae": 0.6485,
+      "depth_valid_fraction": 0.6021
+    },
+    {
+      "index": 50,
+      "stratum": "route",
+      "psnr": 24.456,
+      "occlusion": {
+        "dyn": {
+          "frac": 1.0,
+          "frac_persistent": 1.0,
+          "class": "severe"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.2495,
+      "depth_p50_fixed": 0.0904,
+      "depth_mae_zerofill": 0.2495,
+      "depth_mae": 0.2495,
+      "depth_valid_fraction": 0.9936
+    },
+    {
+      "index": 51,
+      "stratum": "route",
+      "psnr": 21.934,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.45756,
+          "frac_persistent": 0.45063,
+          "class": "severe"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.7204,
+      "depth_p50_fixed": 0.4946,
+      "depth_mae_zerofill": 0.7204,
+      "depth_mae": 0.7204,
+      "depth_valid_fraction": 0.7575
+    },
+    {
+      "index": 52,
+      "stratum": "route",
+      "psnr": 23.005,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.50836,
+          "frac_persistent": 0.50388,
+          "class": "severe"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.5565,
+      "depth_p50_fixed": 0.4276,
+      "depth_mae_zerofill": 0.5565,
+      "depth_mae": 0.5565,
+      "depth_valid_fraction": 0.4647
+    },
+    {
+      "index": 53,
+      "stratum": "route",
+      "psnr": 24.024,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.62217,
+          "frac_persistent": 0.62095,
+          "class": "severe"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.2115,
+      "depth_p50_fixed": 0.0771,
+      "depth_mae_zerofill": 0.2115,
+      "depth_mae": 0.2115,
+      "depth_valid_fraction": 0.5639
+    },
+    {
+      "index": 54,
+      "stratum": "route",
+      "psnr": 25.158,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.4649,
+          "frac_persistent": 0.46284,
+          "class": "severe"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.2512,
+      "depth_p50_fixed": 0.0896,
+      "depth_mae_zerofill": 0.2512,
+      "depth_mae": 0.2512,
+      "depth_valid_fraction": 0.5452
+    },
+    {
+      "index": 55,
+      "stratum": "route",
+      "psnr": 22.808,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.44701,
+          "frac_persistent": 0.44388,
+          "class": "severe"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.5028,
+      "depth_p50_fixed": 0.4271,
+      "depth_mae_zerofill": 0.5028,
+      "depth_mae": 0.5028,
+      "depth_valid_fraction": 0.4697
+    },
+    {
+      "index": 56,
+      "stratum": "route",
+      "psnr": 23.569,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.67006,
+          "frac_persistent": 0.66416,
+          "class": "severe"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.6952,
+      "depth_p50_fixed": 0.664,
+      "depth_mae_zerofill": 0.6952,
+      "depth_mae": 0.6952,
+      "depth_valid_fraction": 0.6825
+    },
+    {
+      "index": 57,
+      "stratum": "route",
+      "psnr": 23.406,
+      "occlusion": {
+        "dyn": {
+          "frac": 1.0,
+          "frac_persistent": 1.0,
+          "class": "severe"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.6401,
+      "depth_p50_fixed": 0.5,
+      "depth_mae_zerofill": 0.6401,
+      "depth_mae": 0.6401,
+      "depth_valid_fraction": 0.955
+    },
+    {
+      "index": 58,
+      "stratum": "route",
+      "psnr": 24.054,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.73454,
+          "frac_persistent": 0.72587,
+          "class": "severe"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.4569,
+      "depth_p50_fixed": 0.3594,
+      "depth_mae_zerofill": 0.4569,
+      "depth_mae": 0.4569,
+      "depth_valid_fraction": 0.9
+    },
+    {
+      "index": 59,
+      "stratum": "route",
+      "psnr": 21.916,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.87024,
+          "frac_persistent": 0.86938,
+          "class": "severe"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.7153,
+      "depth_p50_fixed": 0.4091,
+      "depth_mae_zerofill": 0.7153,
+      "depth_mae": 0.7153,
+      "depth_valid_fraction": 0.5964
+    },
+    {
+      "index": 60,
+      "stratum": "route",
+      "psnr": 23.184,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.46341,
+          "frac_persistent": 0.45977,
+          "class": "severe"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.3301,
+      "depth_p50_fixed": 0.1775,
+      "depth_mae_zerofill": 0.3301,
+      "depth_mae": 0.3301,
+      "depth_valid_fraction": 0.4726
+    },
+    {
+      "index": 61,
+      "stratum": "route",
+      "psnr": 23.78,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.48446,
+          "frac_persistent": 0.48042,
+          "class": "severe"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.4408,
+      "depth_p50_fixed": 0.1895,
+      "depth_mae_zerofill": 0.4408,
+      "depth_mae": 0.4408,
+      "depth_valid_fraction": 0.3793
+    },
+    {
+      "index": 62,
+      "stratum": "route",
+      "psnr": 24.116,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.65582,
+          "frac_persistent": 0.64587,
+          "class": "severe"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.6899,
+      "depth_p50_fixed": 0.5953,
+      "depth_mae_zerofill": 0.6899,
+      "depth_mae": 0.6899,
+      "depth_valid_fraction": 0.5085
+    },
+    {
+      "index": 63,
+      "stratum": "route",
+      "psnr": 23.282,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.60927,
+          "frac_persistent": 0.60377,
+          "class": "severe"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.608,
+      "depth_p50_fixed": 0.5105,
+      "depth_mae_zerofill": 0.608,
+      "depth_mae": 0.608,
+      "depth_valid_fraction": 0.5728
+    },
+    {
+      "index": 64,
+      "stratum": "route",
+      "psnr": 26.42,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.68601,
+          "frac_persistent": 0.68064,
+          "class": "severe"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.6915,
+      "depth_p50_fixed": 0.5983,
+      "depth_mae_zerofill": 0.6915,
+      "depth_mae": 0.6915,
+      "depth_valid_fraction": 0.9631
+    },
+    {
+      "index": 65,
+      "stratum": "route",
+      "psnr": 23.823,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.87524,
+          "frac_persistent": 0.86981,
+          "class": "severe"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.4985,
+      "depth_p50_fixed": 0.4727,
+      "depth_mae_zerofill": 0.4985,
+      "depth_mae": 0.4985,
+      "depth_valid_fraction": 0.4973
+    },
+    {
+      "index": 66,
+      "stratum": "route",
+      "psnr": 21.956,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.41685,
+          "frac_persistent": 0.41441,
+          "class": "severe"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.3621,
+      "depth_p50_fixed": 0.1665,
+      "depth_mae_zerofill": 0.3621,
+      "depth_mae": 0.3621,
+      "depth_valid_fraction": 0.3742
+    },
+    {
+      "index": 67,
+      "stratum": "route",
+      "psnr": 24.522,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.83394,
+          "frac_persistent": 0.82246,
+          "class": "severe"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.6884,
+      "depth_p50_fixed": 0.6215,
+      "depth_mae_zerofill": 0.6884,
+      "depth_mae": 0.6884,
+      "depth_valid_fraction": 0.6255
+    },
+    {
+      "index": 68,
+      "stratum": "route",
+      "psnr": 24.237,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.58788,
+          "frac_persistent": 0.58491,
+          "class": "severe"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.2739,
+      "depth_p50_fixed": 0.0919,
+      "depth_mae_zerofill": 0.2739,
+      "depth_mae": 0.2739,
+      "depth_valid_fraction": 0.5012
+    },
+    {
+      "index": 69,
+      "stratum": "route",
+      "psnr": 21.639,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.52782,
+          "frac_persistent": 0.52317,
+          "class": "severe"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.6876,
+      "depth_p50_fixed": 0.5335,
+      "depth_mae_zerofill": 0.6876,
+      "depth_mae": 0.6876,
+      "depth_valid_fraction": 0.9375
+    },
+    {
+      "index": 70,
+      "stratum": "route",
+      "psnr": 23.334,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.94987,
+          "frac_persistent": 0.94804,
+          "class": "severe"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.5796,
+      "depth_p50_fixed": 0.4483,
+      "depth_mae_zerofill": 0.5796,
+      "depth_mae": 0.5796,
+      "depth_valid_fraction": 0.4672
+    },
+    {
+      "index": 71,
+      "stratum": "route",
+      "psnr": 20.536,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.52548,
+          "frac_persistent": 0.51973,
+          "class": "severe"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.6755,
+      "depth_p50_fixed": 0.5051,
+      "depth_mae_zerofill": 0.6755,
+      "depth_mae": 0.6755,
+      "depth_valid_fraction": 0.6223
+    },
+    {
+      "index": 72,
+      "stratum": "route",
+      "psnr": 17.249,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.4278,
+          "frac_persistent": 0.41811,
+          "class": "severe"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.2258,
+      "depth_p50_fixed": 0.0602,
+      "depth_mae_zerofill": 0.2258,
+      "depth_mae": 0.2258,
+      "depth_valid_fraction": 0.645
+    },
+    {
+      "index": 73,
+      "stratum": "route",
+      "psnr": 25.104,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.41951,
+          "frac_persistent": 0.41582,
+          "class": "severe"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.5114,
+      "depth_p50_fixed": 0.3432,
+      "depth_mae_zerofill": 0.5114,
+      "depth_mae": 0.5114,
+      "depth_valid_fraction": 0.3797
+    },
+    {
+      "index": 74,
+      "stratum": "route",
+      "psnr": 22.551,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.42976,
+          "frac_persistent": 0.42576,
+          "class": "severe"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.39,
+      "depth_p50_fixed": 0.2061,
+      "depth_mae_zerofill": 0.39,
+      "depth_mae": 0.39,
+      "depth_valid_fraction": 0.364
+    },
+    {
+      "index": 75,
+      "stratum": "route",
+      "psnr": 22.65,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.41628,
+          "frac_persistent": 0.41264,
+          "class": "severe"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.3288,
+      "depth_p50_fixed": 0.2155,
+      "depth_mae_zerofill": 0.3288,
+      "depth_mae": 0.3288,
+      "depth_valid_fraction": 0.4318
+    },
+    {
+      "index": 76,
+      "stratum": "route",
+      "psnr": 24.17,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.57937,
+          "frac_persistent": 0.57421,
+          "class": "severe"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.3847,
+      "depth_p50_fixed": 0.318,
+      "depth_mae_zerofill": 0.3847,
+      "depth_mae": 0.3847,
+      "depth_valid_fraction": 0.5234
+    },
+    {
+      "index": 77,
+      "stratum": "route",
+      "psnr": 23.846,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.58483,
+          "frac_persistent": 0.5814,
+          "class": "severe"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.3748,
+      "depth_p50_fixed": 0.1945,
+      "depth_mae_zerofill": 0.3748,
+      "depth_mae": 0.3748,
+      "depth_valid_fraction": 0.5271
+    },
+    {
+      "index": 78,
+      "stratum": "route",
+      "psnr": 22.805,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.43114,
+          "frac_persistent": 0.42796,
+          "class": "severe"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.3293,
+      "depth_p50_fixed": 0.1528,
+      "depth_mae_zerofill": 0.3293,
+      "depth_mae": 0.3293,
+      "depth_valid_fraction": 0.4275
+    },
+    {
+      "index": 79,
+      "stratum": "route",
+      "psnr": 23.645,
+      "occlusion": {
+        "dyn": {
+          "frac": 0.52007,
+          "frac_persistent": 0.5147,
+          "class": "severe"
+        }
+      },
+      "render_coverage": 1.0,
+      "depth_mae_fixed": 0.4328,
+      "depth_p50_fixed": 0.2873,
+      "depth_mae_zerofill": 0.4328,
+      "depth_mae": 0.4328,
+      "depth_valid_fraction": 0.7891
+    }
+  ],
+  "class_psnr": {
+    "dyn": {
+      "clean": {
+        "psnr": 21.289,
+        "n": 40
+      },
+      "severe": {
+        "psnr": 23.498,
+        "n": 40
+      }
+    }
+  }
+}

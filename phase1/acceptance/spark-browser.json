@@ -1,0 +1,136 @@
+{
+  "catalog": [
+    {
+      "difficulty": "d0",
+      "method": "r3con-pano",
+      "reconstruction": "gsplat",
+      "round": "adhoc",
+      "scene": "interior_0007",
+      "seed": "s0"
+    },
+    {
+      "difficulty": "d0",
+      "method": "random",
+      "reconstruction": "gsplat",
+      "round": "adhoc",
+      "scene": "interior_0007",
+      "seed": "s0"
+    },
+    {
+      "difficulty": "dyn",
+      "method": "r3con-pano",
+      "reconstruction": "gsplat",
+      "round": "adhoc",
+      "scene": "apartment_1",
+      "seed": "s0"
+    },
+    {
+      "difficulty": "dyn",
+      "method": "gleam",
+      "reconstruction": "gsplat",
+      "round": "adhoc",
+      "scene": "interior_0044",
+      "seed": "s0"
+    }
+  ],
+  "views": [
+    {
+      "id": "interior_0007__d0__s0__r3con-pano",
+      "ok": true,
+      "gpu": "ANGLE (NVIDIA Corporation, NVIDIA GeForce RTX 5090/PCIe/SSE2, OpenGL ES 3.2)",
+      "pagerMismatches": [],
+      "pendingBuffers": 0,
+      "drawCalls": 10,
+      "compareVisible": false,
+      "runs": [
+        {
+          "method": "r3con-pano",
+          "frames": 301,
+          "tEnd": 300,
+          "models": [
+            {
+              "name": "gsplat",
+              "count": 1499993,
+              "ready": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "interior_0007__d0__s0__random",
+      "ok": true,
+      "gpu": "ANGLE (NVIDIA Corporation, NVIDIA GeForce RTX 5090/PCIe/SSE2, OpenGL ES 3.2)",
+      "pagerMismatches": [],
+      "pendingBuffers": 0,
+      "drawCalls": 2,
+      "compareVisible": false,
+      "runs": [
+        {
+          "method": "random",
+          "frames": 301,
+          "tEnd": 300,
+          "models": [
+            {
+              "name": "gsplat",
+              "count": 1499998,
+              "ready": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "apartment_1__dyn__s0__r3con-pano",
+      "ok": true,
+      "gpu": "ANGLE (NVIDIA Corporation, NVIDIA GeForce RTX 5090/PCIe/SSE2, OpenGL ES 3.2)",
+      "pagerMismatches": [],
+      "pendingBuffers": 0,
+      "drawCalls": 5,
+      "compareVisible": false,
+      "runs": [
+        {
+          "method": "r3con-pano",
+          "frames": 301,
+          "tEnd": 300,
+          "models": [
+            {
+              "name": "gsplat",
+              "count": 1499997,
+              "ready": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "interior_0044__dyn__s0__gleam",
+      "ok": true,
+      "gpu": "ANGLE (NVIDIA Corporation, NVIDIA GeForce RTX 5090/PCIe/SSE2, OpenGL ES 3.2)",
+      "pagerMismatches": [],
+      "pendingBuffers": 0,
+      "drawCalls": 12,
+      "compareVisible": false,
+      "runs": [
+        {
+          "method": "gleam",
+          "frames": 256,
+          "tEnd": 255,
+          "models": [
+            {
+              "name": "gsplat",
+              "count": 1499994,
+              "ready": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "interactions": [
+    "method churn preserves time, pause, camera and pager ownership",
+    "capture stepping, recorded-camera reset and point-cloud/splat toggle",
+    "independent comparison panes and return to single view"
+  ],
+  "errors": []
+}

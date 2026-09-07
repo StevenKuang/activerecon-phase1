@@ -1,0 +1,38 @@
+{
+  "params": {
+    "max_range": 6.0,
+    "min_range": 0.2,
+    "depth_tol_abs": 0.03,
+    "depth_tol_rel": 0.02,
+    "min_cos_incidence": 0.1,
+    "well_observed_cos": 0.5,
+    "bin_cos": 0.7
+  },
+  "num_frames": 256,
+  "bins": {
+    "up": {
+      "num_points": 708468,
+      "observed_frac": 0.10482901133149274,
+      "well_observed_frac": 0.04264271639650626,
+      "mean_best_cos_observed": 0.4512858071964658
+    },
+    "down": {
+      "num_points": 1052341,
+      "observed_frac": 0.09137342363359405,
+      "well_observed_frac": 0.031758716993826146,
+      "mean_best_cos_observed": 0.44013800024352595
+    },
+    "side": {
+      "num_points": 3363758,
+      "observed_frac": 0.11231307365155281,
+      "well_observed_frac": 0.0920390230212756,
+      "mean_best_cos_observed": 0.7339637693502736
+    }
+  },
+  "overall": {
+    "num_points": 5124567,
+    "observed_frac": 0.1069784042242008,
+    "well_observed_frac": 0.07283132409040607
+  },
+  "episode_dir": "runs_campaign_v6/interior_0044__dyn__s0/gleam"
+}

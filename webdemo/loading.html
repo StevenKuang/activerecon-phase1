@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Preparing activebench replay</title>
+<style>
+  :root { color-scheme: dark; font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; display: grid; place-items: center;
+    color: #ececf3; background: #101014;
+  }
+  main { width: min(680px, calc(100vw - 32px)); padding: 36px 0; }
+  h1 { margin: 0 0 8px; font-size: 24px; letter-spacing: -.02em; }
+  #summary { margin: 0 0 22px; color: #aaaab8; font-size: 14px; }
+  #panes { display: grid; gap: 12px; }
+  .pane {
+    padding: 15px; border: 1px solid #30303b; border-radius: 10px;
+    background: #19191f;
+  }
+  .pane-head { display: flex; align-items: baseline; gap: 9px; margin-bottom: 11px; }
+  .tag {
+    min-width: 22px; padding: 2px 6px; border-radius: 5px; text-align: center;
+    color: #101014; background: #f1b84b; font-size: 12px; font-weight: 800;
+  }
+  .pane:nth-child(2) .tag { background: #65c6ef; }
+  .selection { overflow: hidden; color: #d7d7df; font-size: 13px; text-overflow: ellipsis; white-space: nowrap; }
+  .track { height: 9px; overflow: hidden; border-radius: 99px; background: #292933; }
+  .bar {
+    position: relative; width: 0; height: 100%; border-radius: inherit;
+    background: linear-gradient(90deg, #d99132, #f1c65a); transition: width .2s ease;
+  }
+  .pane:nth-child(2) .bar { background: linear-gradient(90deg, #398fb9, #72d3f5); }
+  .bar.active::after {
+    content: ""; position: absolute; inset: 0; width: 45%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,.42), transparent);
+    animation: sweep 1.2s linear infinite;
+  }
+  @keyframes sweep { from { transform: translateX(-110%); } to { transform: translateX(240%); } }
+  .detail { display: flex; justify-content: space-between; gap: 12px; margin-top: 8px; font-size: 12px; }
+  .message { color: #c7c7d1; }
+  .percent { color: #8f8f9d; font-variant-numeric: tabular-nums; }
+  .components { margin-top: 7px; color: #777785; font-size: 11px; }
+  #foot { margin-top: 16px; color: #777785; font-size: 12px; line-height: 1.45; }
+  #error { display: none; margin-top: 14px; padding: 12px; border-radius: 8px; color: #ffb4b4; background: #3a2024; }
+  #error a { color: #fff; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Preparing Spark view</h1>
+  <p id="summary">Starting export job…</p>
+  <div id="panes" aria-live="polite"></div>
+  <div id="error"></div>
+  <div id="foot">
+    Missing models are generated once. Building streamable RAD is usually the
+    long step; its bar keeps moving while <code>build-lod</code> is active.
+    Cached replay and models are reused across A/B combinations.
+  </div>
+</main>
+<script>
+  const jobId = location.pathname.replace(/\/$/, "").split("/").pop();
+  const summary = document.getElementById("summary");
+  const panes = document.getElementById("panes");
+  const errorBox = document.getElementById("error");
+  let startedAt = Date.now() / 1000;
+  let finished = false;
+
+  function selectionText(selection) {
+    return [selection.difficulty, selection.method,
+      selection.reconstruction || "replay only", selection.seed].join(" · ");
+  }
+
+  function paneNode(pane, status) {
+    const card = document.createElement("section");
+    card.className = "pane";
+    const head = document.createElement("div");
+    head.className = "pane-head";
+    const tag = document.createElement("span");
+    tag.className = "tag";
+    tag.textContent = pane.tag;
+    const selection = document.createElement("span");
+    selection.className = "selection";
+    selection.textContent = selectionText(pane.selection);
+    head.append(tag, selection);
+
+    const track = document.createElement("div");
+    track.className = "track";
+    const bar = document.createElement("div");
+    bar.className = "bar" + (status === "complete" ? "" : " active");
+    bar.style.width = `${Math.max(2, pane.progress)}%`;
+    track.appendChild(bar);
+
+    const detail = document.createElement("div");
+    detail.className = "detail";
+    const message = document.createElement("span");
+    message.className = "message";
+    message.textContent = pane.message;
+    const percent = document.createElement("span");
+    percent.className = "percent";
+    percent.textContent = `${pane.progress}%`;
+    detail.append(message, percent);
+
+    const components = document.createElement("div");
+    components.className = "components";
+    const replay = Math.round(100 * pane.components.replay);
+    const reconstruction = Math.round(100 * pane.components.reconstruction);
+    components.textContent = pane.selection.reconstruction
+      ? `replay ${replay}% · model ${reconstruction}%`
+      : `replay ${replay}%`;
+    card.append(head, track, detail, components);
+    return card;
+  }
+
+  function render(job) {
+    startedAt = job.created_at;
+    const elapsed = Math.max(0, Math.round(Date.now() / 1000 - startedAt));
+    summary.textContent = job.status === "queued"
+      ? `Queued · ${elapsed}s elapsed`
+      : job.status === "complete"
+        ? "Ready — opening viewer…"
+        : `Preparing ${job.panes.length} model${job.panes.length === 1 ? "" : "s"} · ${elapsed}s elapsed`;
+    panes.replaceChildren(...job.panes.map((pane) => paneNode(pane, job.status)));
+  }
+
+  function showError(message) {
+    errorBox.style.display = "block";
+    errorBox.textContent = `${message} `;
+    const retry = document.createElement("a");
+    retry.href = "/";
+    retry.textContent = "Start again";
+    errorBox.appendChild(retry);
+  }
+
+  async function poll() {
+    if (finished) return;
+    try {
+      const response = await fetch(`/api/jobs/${encodeURIComponent(jobId)}`, { cache: "no-store" });
+      if (response.status === 404) {
+        finished = true;
+        showError("This export job no longer exists; the viewer server may have restarted.");
+        return;
+      }
+      if (!response.ok) throw new Error(`progress endpoint returned ${response.status}`);
+      const job = await response.json();
+      render(job);
+      if (job.status === "complete") {
+        finished = true;
+        setTimeout(() => location.replace(job.target), 180);
+        return;
+      }
+      if (job.status === "error") {
+        finished = true;
+        showError(job.error || "Model preparation failed.");
+        return;
+      }
+      setTimeout(poll, 250);
+    } catch (error) {
+      summary.textContent = "Viewer server is unreachable — retrying…";
+      setTimeout(poll, 1000);
+    }
+  }
+  poll();
+</script>
+</body>
+</html>
