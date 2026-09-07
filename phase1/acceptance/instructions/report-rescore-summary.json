@@ -1,0 +1,512 @@
+{
+  "selected_cells": 60,
+  "completed_scores": 84,
+  "report_matches": [
+    {
+      "cell": "mesh/apartment_1__d0__s0/r3con-pano",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "mesh/apartment_1__d0__s0/magician",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "mesh/apartment_1__d0__s0/fisherrf",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "mesh/apartment_1__d0__s0/gavis",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "mesh/apartment_1__d0__s0/random",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "mesh/apartment_1__dyn__s0/r3con-pano",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "mesh/apartment_1__dyn__s0/magician",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "mesh/apartment_1__dyn__s0/fisherrf",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "mesh/apartment_1__dyn__s0/gavis",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "mesh/apartment_1__dyn__s0/random",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "mesh/van_gogh_room__d0__s0/r3con-pano",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "mesh/van_gogh_room__d0__s0/magician",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "mesh/van_gogh_room__d0__s0/fisherrf",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "mesh/van_gogh_room__d0__s0/gavis",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "mesh/van_gogh_room__d0__s0/random",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "mesh/van_gogh_room__dyn__s0/r3con-pano",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "mesh/van_gogh_room__dyn__s0/magician",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "mesh/van_gogh_room__dyn__s0/gavis",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "mesh/mp3d_17DRP5sb8fy__d0__s0/r3con-pano",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "mesh/mp3d_17DRP5sb8fy__d0__s0/magician",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "mesh/mp3d_17DRP5sb8fy__d0__s0/fisherrf",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "mesh/mp3d_17DRP5sb8fy__d0__s0/gavis",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "mesh/mp3d_17DRP5sb8fy__d0__s0/random",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "mesh/mp3d_17DRP5sb8fy__dyn__s0/r3con-pano",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "mesh/mp3d_17DRP5sb8fy__dyn__s0/magician",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "mesh/mp3d_17DRP5sb8fy__dyn__s0/fisherrf",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "mesh/mp3d_17DRP5sb8fy__dyn__s0/gavis",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "mesh/mp3d_17DRP5sb8fy__dyn__s0/random",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "mesh/skokloster_castle__d0__s0/r3con-pano",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "mesh/skokloster_castle__d0__s0/magician",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "mesh/skokloster_castle__d0__s0/fisherrf",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "mesh/skokloster_castle__d0__s0/random",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "mesh/skokloster_castle__dyn__s0/r3con-pano",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "mesh/skokloster_castle__dyn__s0/magician",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "mesh/skokloster_castle__dyn__s0/fisherrf",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "mesh/skokloster_castle__dyn__s0/random",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "gs/interior_0007__d0__s0/r3con-pano",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "gs/interior_0007__d0__s0/r3con-pano",
+      "catalog": "cube",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "gs/interior_0007__d0__s0/magician",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "gs/interior_0007__d0__s0/magician",
+      "catalog": "cube",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "gs/interior_0007__d0__s0/fisherrf",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "gs/interior_0007__d0__s0/fisherrf",
+      "catalog": "cube",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "gs/interior_0007__d0__s0/gavis",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "gs/interior_0007__d0__s0/gavis",
+      "catalog": "cube",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "gs/interior_0007__d0__s0/random",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "gs/interior_0007__d0__s0/random",
+      "catalog": "cube",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "gs/interior_0007__d0__s0/gleam",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "gs/interior_0007__d0__s0/gleam",
+      "catalog": "cube",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "gs/interior_0007__dyn__s0/r3con-pano",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "gs/interior_0007__dyn__s0/r3con-pano",
+      "catalog": "cube",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "gs/interior_0007__dyn__s0/magician",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "gs/interior_0007__dyn__s0/magician",
+      "catalog": "cube",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "gs/interior_0007__dyn__s0/fisherrf",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "gs/interior_0007__dyn__s0/fisherrf",
+      "catalog": "cube",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "gs/interior_0007__dyn__s0/gavis",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "gs/interior_0007__dyn__s0/gavis",
+      "catalog": "cube",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "gs/interior_0007__dyn__s0/random",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "gs/interior_0007__dyn__s0/random",
+      "catalog": "cube",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "gs/interior_0007__dyn__s0/gleam",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "gs/interior_0007__dyn__s0/gleam",
+      "catalog": "cube",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "gs/interior_0044__d0__s0/r3con-pano",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "gs/interior_0044__d0__s0/r3con-pano",
+      "catalog": "cube",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "gs/interior_0044__d0__s0/magician",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "gs/interior_0044__d0__s0/magician",
+      "catalog": "cube",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "gs/interior_0044__d0__s0/fisherrf",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "gs/interior_0044__d0__s0/fisherrf",
+      "catalog": "cube",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "gs/interior_0044__d0__s0/gavis",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "gs/interior_0044__d0__s0/gavis",
+      "catalog": "cube",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "gs/interior_0044__d0__s0/random",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "gs/interior_0044__d0__s0/random",
+      "catalog": "cube",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "gs/interior_0044__d0__s0/gleam",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "gs/interior_0044__d0__s0/gleam",
+      "catalog": "cube",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "gs/interior_0044__dyn__s0/r3con-pano",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "gs/interior_0044__dyn__s0/r3con-pano",
+      "catalog": "cube",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "gs/interior_0044__dyn__s0/magician",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "gs/interior_0044__dyn__s0/magician",
+      "catalog": "cube",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "gs/interior_0044__dyn__s0/fisherrf",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "gs/interior_0044__dyn__s0/fisherrf",
+      "catalog": "cube",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "gs/interior_0044__dyn__s0/gavis",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "gs/interior_0044__dyn__s0/gavis",
+      "catalog": "cube",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "gs/interior_0044__dyn__s0/random",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "gs/interior_0044__dyn__s0/random",
+      "catalog": "cube",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "gs/interior_0044__dyn__s0/gleam",
+      "catalog": "shared",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    },
+    {
+      "cell": "gs/interior_0044__dyn__s0/gleam",
+      "catalog": "cube",
+      "delta_mean_db": 0.0,
+      "max_absolute_error_db": 0.0
+    }
+  ],
+  "tolerance_db": 0.0001,
+  "failures": []
+}

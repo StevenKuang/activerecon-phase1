@@ -88,6 +88,8 @@ def main():
         for rel in ("submodules/diff-gaussian-rasterization", "submodules/simple-knn"):
             build(args.sources / "MAGICIAN/RaDe-GS" / rel)
     run([python, "-m", "pip", "install", "--no-deps", "-e", ROOT])
+    if name == "bencheval":
+        run([python, "-m", "pip", "check"])
 
 
 if __name__ == "__main__":

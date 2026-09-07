@@ -5,6 +5,8 @@ environments and CUDA-enabled PyTorch. Python 3.9 is used by the mesh simulator
 and R3-RECON; GS and GLEAM use Python 3.12. The evaluator and other methods use
 Python 3.10. `phase1/dependencies/` records exact conda artifacts, pip versions,
 source commits, local source patches and checkpoint SHA-256 hashes.
+See [the concise hardware/software matrix](SYSTEM.md) for GPU, driver, CUDA
+and PyTorch versions.
 
 The code supports Python 3.9-3.12 across isolated processes. A single shared
 environment cannot represent the different rasterizer modules used by the
@@ -31,9 +33,13 @@ python scripts/phase1/setup.py --environment r3con --prefix /new/path/envs/r3con
 
 The exact conda locks target Linux x86-64. GPU drivers and system/compiler
 compatibility still need to match the machine. The recipe is derived from the
-verified installed builds; a complete rebuild of all eight environments on an
-empty machine has not been executed for this release. Environment checking and
-relocated-code smoke results are recorded in the acceptance note.
+verified installed builds. The evaluator was also created at a new prefix
+using this setup script, its gsplat CUDA extension was compiled in an empty
+build directory, and mesh/GS report scores were reproduced. A complete rebuild
+of all eight environments on an empty machine has not been executed.
+Environment checking and relocated-code smoke results are recorded in the
+acceptance note. Matplotlib is needed only for optional figure regeneration
+(`pip install -e '.[plots]'`), not model scoring.
 
 The `habitat-gs` source patch is required for the locally validated build.
 Build CUDA and Bullet support; use a non-collidable dataset configuration for
@@ -64,8 +70,9 @@ fetches the upstream checkpoint archives. Verify hashes against
 `phase1/dependencies/weights.json`; do not
 substitute another GLEAM checkpoint or run an uninitialized policy.
 
-Run `python scripts/phase1/doctor.py --out outputs/environment-check.json` to
-verify imports in all runtime environments. Then run the short fresh
+Run `python scripts/phase1/doctor.py --environment bencheval` to check only
+the evaluator. Repeat `--environment` to check the selected simulator/planner;
+omit it to verify all runtime environments. Then run the short fresh
 simulation/reconstruction command in the reproduction guide. `bencheval`
 alone suffices for re-scoring saved models. Table regeneration needs only
 Python's standard library.

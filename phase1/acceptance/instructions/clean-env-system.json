@@ -1,0 +1,28 @@
+{
+  "captured_utc": "2026-09-07T21:41:16.575561+00:00",
+  "scope": "Current verified reproduction machine; not an immutable snapshot taken at historical acquisition time",
+  "os": "Ubuntu 24.04.4 LTS",
+  "kernel": "7.0.0-28-generic",
+  "architecture": "x86_64",
+  "cpu": "Intel(R) Core(TM) Ultra 9 285K",
+  "logical_cpus": 24,
+  "ram_bytes": 66749722624,
+  "environments": {
+    "bencheval": {
+      "python": "3.10.20",
+      "packages": {
+        "numpy": "2.2.6",
+        "torch": "2.8.0+cu128",
+        "torchvision": "0.23.0+cu128",
+        "gsplat": "1.5.3"
+      },
+      "pytorch_cuda": "12.8",
+      "cuda_available": true,
+      "cudnn": 91002,
+      "nvcc": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2025 NVIDIA Corporation\nBuilt on Fri_Feb_21_20:23:50_PST_2025\nCuda compilation tools, release 12.8, V12.8.93\nBuild cuda_12.8.r12.8/compiler.35583870_0"
+    }
+  },
+  "nvidia_driver_cuda_max": "13.2",
+  "gpus_csv": "NVIDIA GeForce RTX 5090, 32607 MiB, 595.84, 12.0",
+  "nvcc_note": "Only <environment>/bin/nvcc is queried; null does not imply absence of system or other compilers."
+}

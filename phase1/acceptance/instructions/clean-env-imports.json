@@ -1,0 +1,7 @@
+{
+  "bencheval": {
+    "ok": true,
+    "stdout": "{\"python\": \"3.10.20 (main, Jun 11 2026, 15:17:37) [GCC 14.3.0]\", \"imports\": [\"torch\", \"gsplat\", \"PIL\", \"scipy\", \"lpips\"]}",
+    "stderr": ""
+  }
+}

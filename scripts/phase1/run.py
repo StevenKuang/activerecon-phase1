@@ -13,6 +13,7 @@ from string import Template
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "src"))
 from activebench.runtime import conda_python, external_repo
+from activebench.selection import add_selection_arguments, select_cells
 
 
 def resolve(value):
@@ -84,8 +85,7 @@ def main():
     ap.add_argument("--campaign", type=Path, default=ROOT / "phase1/campaign.json")
     ap.add_argument("--data", type=Path, default=ROOT / "data/phase1")
     ap.add_argument("--out", type=Path, default=ROOT / "runs_phase1")
-    ap.add_argument("--group", choices=["mesh", "gs"])
-    ap.add_argument("--cell", action="append")
+    add_selection_arguments(ap)
     ap.add_argument("--stage", choices=["all", "acquire", "reconstruct", "export"], default="all")
     ap.add_argument("--execute", action="store_true", help="Execute the displayed plan")
     ap.add_argument("--include-missing", action="store_true", help="Attempt the four historically missing/excluded cells too")
@@ -101,14 +101,10 @@ def main():
         ap.error("non-standard training iterations require --smoke-seconds")
     if args.smoke_seconds and args.out == (ROOT / "runs_phase1").resolve():
         ap.error("smoke runs require an explicit separate --out")
-    cells = [c for c in json.loads(args.campaign.read_text())["cells"]
-             if (not args.group or c["group"] == args.group)
-             and (not args.cell or c["id"] in args.cell)
-             and (args.include_missing or c["status"] == "retained")]
-    if not cells:
-        ap.error("selection contains no eligible cells")
-    if args.cell and set(args.cell) - {c["id"] for c in cells}:
-        ap.error("unknown or excluded cell requested")
+    try:
+        cells = select_cells(json.loads(args.campaign.read_text()), args, args.include_missing)
+    except ValueError as exc:
+        ap.error(str(exc))
     if args.worker:
         if len(cells) != 1:
             ap.error("worker requires one cell")

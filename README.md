@@ -14,6 +14,7 @@ only on GS scenes. GAVIS is a reduced-density 270 s reference on GS scenes.
 
 Start with [the protocol](docs/PROTOCOL.md), [reproduction instructions](docs/REPRODUCING.md),
 [generated results](phase1/RESULTS.md) and [method setup](docs/SETUP.md).
+Hardware and software versions are in [SYSTEM.md](docs/SYSTEM.md).
 See [the acceptance record](docs/ACCEPTANCE.md) for the executed checks and
 the limits of the reproduction claims.
 
@@ -24,11 +25,11 @@ python scripts/phase1/report.py --check
 python scripts/phase1/report.py
 ```
 
-Inspect the complete acquisition/reconstruction plan before running it:
+Inspect or run a single scene and method (see the reproduction guide for setup):
 
 ```bash
-python scripts/phase1/run.py
-python scripts/phase1/run.py --group gs --execute
+python scripts/phase1/run.py --scene interior_0007 --method r3con-pano --condition d0
+# Full campaign plan: omit the selection flags.
 ```
 
 The default plan runs the 60 retained standard cells. `--include-missing`

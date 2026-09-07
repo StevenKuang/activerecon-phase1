@@ -1,0 +1,10 @@
+{
+  "cell": "gs/interior_0044__dyn__s0/r3con-pano",
+  "failed_member": "sh_rest.npy",
+  "damaged_working_copy_sha256": "42379470006419648313552b9141772f5a057bfa3b68402b50b9d830d7c20f29",
+  "restored_sha256": "9a98716e098a1cc33108a24583558a9f9fe2cdf9b9c734ee5059ec40746ca0b5",
+  "archive_sha256_matched": true,
+  "zip_crc_passed_after_cache_eviction": true,
+  "repair": "Restored identical frozen model bytes from the unchanged evaluation tar; no retraining or score substitution",
+  "cause": "Not determined; original damaged working copy retained outside the delivery"
+}

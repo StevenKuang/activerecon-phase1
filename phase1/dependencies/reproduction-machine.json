@@ -1,0 +1,112 @@
+{
+  "captured_utc": "2026-09-07T21:36:54.762194+00:00",
+  "scope": "Current verified reproduction machine; not an immutable snapshot taken at historical acquisition time",
+  "os": "Ubuntu 24.04.4 LTS",
+  "kernel": "7.0.0-28-generic",
+  "architecture": "x86_64",
+  "cpu": "Intel(R) Core(TM) Ultra 9 285K",
+  "logical_cpus": 24,
+  "ram_bytes": 66749722624,
+  "environments": {
+    "habitat": {
+      "python": "3.9.19",
+      "packages": {
+        "numpy": "1.26.4",
+        "torch": "2.8.0",
+        "torchvision": "0.23.0"
+      },
+      "pytorch_cuda": "12.8",
+      "cuda_available": true,
+      "cudnn": 91002,
+      "nvcc": null
+    },
+    "habitat-gs": {
+      "python": "3.12.13",
+      "packages": {
+        "numpy": "2.3.5",
+        "torch": "2.12.1",
+        "torchvision": "0.27.1",
+        "habitat-gs": "0.3.3"
+      },
+      "pytorch_cuda": "13.0",
+      "cuda_available": true,
+      "cudnn": 92000,
+      "nvcc": null
+    },
+    "bencheval": {
+      "python": "3.10.20",
+      "packages": {
+        "numpy": "2.2.6",
+        "torch": "2.8.0+cu128",
+        "torchvision": "0.23.0+cu128",
+        "gsplat": "1.5.3"
+      },
+      "pytorch_cuda": "12.8",
+      "cuda_available": true,
+      "cudnn": 91002,
+      "nvcc": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2025 NVIDIA Corporation\nBuilt on Fri_Feb_21_20:23:50_PST_2025\nCuda compilation tools, release 12.8, V12.8.93\nBuild cuda_12.8.r12.8/compiler.35583870_0"
+    },
+    "r3con": {
+      "python": "3.9.19",
+      "packages": {
+        "numpy": "1.26.4",
+        "torch": "2.8.0",
+        "torchvision": "0.23.0"
+      },
+      "pytorch_cuda": "12.8",
+      "cuda_available": true,
+      "cudnn": 91002,
+      "nvcc": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2025 NVIDIA Corporation\nBuilt on Fri_Feb_21_20:23:50_PST_2025\nCuda compilation tools, release 12.8, V12.8.93\nBuild cuda_12.8.r12.8/compiler.35583870_0"
+    },
+    "magician": {
+      "python": "3.10.20",
+      "packages": {
+        "numpy": "2.2.5",
+        "torch": "2.11.0",
+        "torchvision": "0.26.0"
+      },
+      "pytorch_cuda": "13.0",
+      "cuda_available": true,
+      "cudnn": 91900,
+      "nvcc": null
+    },
+    "fisherrf": {
+      "python": "3.10.20",
+      "packages": {
+        "numpy": "2.2.6",
+        "torch": "2.8.0+cu128"
+      },
+      "pytorch_cuda": "12.8",
+      "cuda_available": true,
+      "cudnn": 91002,
+      "nvcc": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2025 NVIDIA Corporation\nBuilt on Fri_Feb_21_20:23:50_PST_2025\nCuda compilation tools, release 12.8, V12.8.93\nBuild cuda_12.8.r12.8/compiler.35583870_0"
+    },
+    "gavis": {
+      "python": "3.10.20",
+      "packages": {
+        "numpy": "2.2.6",
+        "torch": "2.8.0+cu128",
+        "torchvision": "0.23.0+cu128"
+      },
+      "pytorch_cuda": "12.8",
+      "cuda_available": true,
+      "cudnn": 92000,
+      "nvcc": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2025 NVIDIA Corporation\nBuilt on Fri_Feb_21_20:23:50_PST_2025\nCuda compilation tools, release 12.8, V12.8.93\nBuild cuda_12.8.r12.8/compiler.35583870_0"
+    },
+    "gleam": {
+      "python": "3.12.0",
+      "packages": {
+        "numpy": "2.4.4",
+        "torch": "2.11.0",
+        "torchvision": "0.26.0"
+      },
+      "pytorch_cuda": "13.0",
+      "cuda_available": true,
+      "cudnn": 91900,
+      "nvcc": null
+    }
+  },
+  "gpus_csv": "NVIDIA GeForce RTX 5090, 32607 MiB, 595.84, 12.0",
+  "nvidia_driver_cuda_max": "13.2",
+  "nvcc_note": "Only <environment>/bin/nvcc is queried; null does not imply absence of system or other compilers."
+}

@@ -78,3 +78,42 @@ def test_replay_summary_uses_verified_psnr_without_replacing_historical_geometry
     verified = replay.summary("gsplat")
     assert "recon PSNR 33.3" in verified and "sev/clean 22.2/44.4" in verified
     assert historical.split("cmp@5cm")[1].split(" | ")[0] == verified.split("cmp@5cm")[1].split(" | ")[0]
+
+
+def test_scene_method_selection_rejects_empty_and_inconsistent_requests():
+    import json
+    from types import SimpleNamespace
+    from activebench.selection import select_cells
+    campaign = json.loads((ROOT / "phase1/campaign.json").read_text())
+    args = SimpleNamespace(scene="interior_0007", method="r3con-pano", condition="d0", cell=None)
+    assert [c["id"] for c in select_cells(campaign, args)] == ["gs/interior_0007__d0__s0/r3con-pano"]
+    args.condition = None
+    assert len(select_cells(campaign, args)) == 2
+    args.scene = "apartment_1"
+    args.method = "gleam"
+    with pytest.raises(ValueError, match="no eligible cells"):
+        select_cells(campaign, args)
+    args.scene, args.method = "interior_0007", "r3con-pano"
+    args.cell = ["gs/interior_0007__d0__s0/r3con-pano", "nonexistent"]
+    with pytest.raises(ValueError, match="unknown"):
+        select_cells(campaign, args)
+
+
+def test_report_check_catches_per_view_errors_and_model_substitution():
+    import copy
+    import json
+    verifier = module("rescore")
+    reference = json.loads((ROOT / "phase1/verification/gs/interior_0007__d0__s0/gleam/shared-legacy.json").read_text())
+    assert verifier.check_report(reference, reference, 1e-4)["max_absolute_error_db"] == 0
+    for modification in ("pixel_score", "model", "missing_view", "nan"):
+        result = copy.deepcopy(reference)
+        if modification == "pixel_score":
+            result["views"][0]["psnr"] += 0.01  # Aggregate alone would still match.
+        elif modification == "model":
+            result["inputs"]["model_sha256"] = "another model"
+        elif modification == "missing_view":
+            result["views"].pop()
+        else:
+            result["psnr"] = float("nan")
+        with pytest.raises(ValueError):
+            verifier.check_report(result, reference, 1e-4)

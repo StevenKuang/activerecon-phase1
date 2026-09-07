@@ -8,9 +8,32 @@
   "missing_or_excluded_cells": 4,
   "canonical_corrections_above_1e_5_db": 5,
   "mesh_negative_regional_contrasts": 17,
-  "fresh_smoke_acquisitions": 7,
-  "fresh_smoke_reconstructions": 2,
+  "fresh_smoke_acquisitions": 8,
+  "fresh_smoke_reconstructions": 3,
   "full_new_campaign_executed": false,
   "all_environments_rebuilt_from_empty_machine": false,
-  "ssim_lpips_geometry_remeasured": false
+  "ssim_lpips_geometry_remeasured": false,
+  "instruction_validation": {
+    "revision": "phase1-v1.1",
+    "validation_dates": [
+      "2026-09-07",
+      "2026-09-08"
+    ],
+    "tests_passed": 234,
+    "tests_skipped": 6,
+    "numerical_report_cells_checked": 115,
+    "report_psnr_scores_checked": 84,
+    "report_psnr_mismatches": 0,
+    "report_max_psnr_error_db": 0.0,
+    "fresh_evaluator_prefix_created": true,
+    "gsplat_compiled_in_empty_build_directory": true,
+    "fresh_evaluator_report_cases": [
+      "gs/interior_0007__d0__s0/r3con-pano",
+      "mesh/apartment_1__d0__s0/r3con-pano"
+    ],
+    "pip_check_passed": true,
+    "one_scene_one_method_pipeline": "gs/interior_0007__d0__s0/r3con-pano; 5 s, 6 frames, 20 iterations",
+    "historical_model_retrained": false,
+    "working_copy_recovered_from_unchanged_archive": true
+  }
 }

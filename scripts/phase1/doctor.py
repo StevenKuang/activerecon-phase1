@@ -25,9 +25,13 @@ IMPORTS = {
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--out", type=Path)
+    ap.add_argument("--environment", choices=sorted(IMPORTS), action="append",
+                    help="Check only this conda environment; repeat as needed")
     args = ap.parse_args()
     results = {}
     for name, modules in IMPORTS.items():
+        if args.environment and name not in args.environment:
+            continue
         code = "import importlib,json,sys; mods=" + repr(modules) + "; [importlib.import_module(x) for x in mods]; print(json.dumps({'python':sys.version,'imports':mods}))"
         try:
             proc = subprocess.run([conda_python(name), "-c", code], capture_output=True, text=True, timeout=90)

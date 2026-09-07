@@ -1,6 +1,6 @@
 ........................................................................ [ 30%]
 .................................ssssss................................. [ 60%]
 ........................................................................ [ 90%]
-......................                                                   [100%]
---------------- generated xml file: /tmp/phase1-final-tests.xml ----------------
-232 passed, 6 skipped in 8.25s
+........................                                                 [100%]
+- generated xml file: /home/steven/Projects/Deliverables/2/activebench/outputs/instruction-validation/tests.xml -
+234 passed, 6 skipped in 8.29s

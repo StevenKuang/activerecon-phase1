@@ -4,15 +4,16 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "activebench"
-version = "0.1.0"
+version = "0.1.1"
 description = "Phase 1 active 3D reconstruction benchmark, reproducible evidence and Spark replay."
 readme = "README.md"
 requires-python = ">=3.9,<3.13"
 license = {text = "MIT"}
-dependencies = ["numpy>=1.23", "PyYAML>=6.0", "scipy>=1.7", "Pillow>=9", "matplotlib>=3.6"]
+dependencies = ["numpy>=1.23", "PyYAML>=6.0", "scipy>=1.7", "Pillow>=9"]
 
 [project.optional-dependencies]
 dev = ["pytest>=7"]
+plots = ["matplotlib>=3.6"]
 viewer = []
 share = ["viser>=1.0.26,<1.1"]
 

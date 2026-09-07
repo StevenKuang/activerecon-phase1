@@ -1,0 +1,811 @@
+{
+  "numeric_cells": 115,
+  "checks": [
+    {
+      "label": "r3con-pano configured_budget_s",
+      "actual": "300",
+      "expected": "300",
+      "unrounded": 300.0,
+      "ok": true
+    },
+    {
+      "label": "r3con-pano psnr_shared",
+      "actual": "23.26",
+      "expected": "23.26",
+      "unrounded": 23.260115257998635,
+      "ok": true
+    },
+    {
+      "label": "r3con-pano psnr_cube_provisional",
+      "actual": "22.96",
+      "expected": "22.96",
+      "unrounded": 22.964971571077072,
+      "ok": true
+    },
+    {
+      "label": "r3con-pano historical_completeness_5cm",
+      "actual": "21.6",
+      "expected": "21.6",
+      "unrounded": 21.559384720201034,
+      "ok": true
+    },
+    {
+      "label": "magician configured_budget_s",
+      "actual": "300",
+      "expected": "300",
+      "unrounded": 300.0,
+      "ok": true
+    },
+    {
+      "label": "magician psnr_shared",
+      "actual": "22.61",
+      "expected": "22.61",
+      "unrounded": 22.6059659508185,
+      "ok": true
+    },
+    {
+      "label": "magician psnr_cube_provisional",
+      "actual": "23.26",
+      "expected": "23.26",
+      "unrounded": 23.260508117335455,
+      "ok": true
+    },
+    {
+      "label": "magician historical_completeness_5cm",
+      "actual": "20.5",
+      "expected": "20.5",
+      "unrounded": 20.51887336187948,
+      "ok": true
+    },
+    {
+      "label": "fisherrf configured_budget_s",
+      "actual": "300",
+      "expected": "300",
+      "unrounded": 300.0,
+      "ok": true
+    },
+    {
+      "label": "fisherrf psnr_shared",
+      "actual": "20.10",
+      "expected": "20.10",
+      "unrounded": 20.102173420721712,
+      "ok": true
+    },
+    {
+      "label": "fisherrf psnr_cube_provisional",
+      "actual": "20.13",
+      "expected": "20.13",
+      "unrounded": 20.126630489418005,
+      "ok": true
+    },
+    {
+      "label": "fisherrf historical_completeness_5cm",
+      "actual": "20.4",
+      "expected": "20.4",
+      "unrounded": 20.36750824877612,
+      "ok": true
+    },
+    {
+      "label": "gleam configured_budget_s",
+      "actual": "300",
+      "expected": "300",
+      "unrounded": 300.0,
+      "ok": true
+    },
+    {
+      "label": "gleam psnr_shared",
+      "actual": "19.93",
+      "expected": "19.93",
+      "unrounded": 19.93056979966111,
+      "ok": true
+    },
+    {
+      "label": "gleam psnr_cube_provisional",
+      "actual": "19.41",
+      "expected": "19.41",
+      "unrounded": 19.405323265609148,
+      "ok": true
+    },
+    {
+      "label": "gleam historical_completeness_5cm",
+      "actual": "16.3",
+      "expected": "16.3",
+      "unrounded": 16.268209240907677,
+      "ok": true
+    },
+    {
+      "label": "random configured_budget_s",
+      "actual": "300",
+      "expected": "300",
+      "unrounded": 300.0,
+      "ok": true
+    },
+    {
+      "label": "random psnr_shared",
+      "actual": "16.76",
+      "expected": "16.76",
+      "unrounded": 16.762168398171994,
+      "ok": true
+    },
+    {
+      "label": "random psnr_cube_provisional",
+      "actual": "16.61",
+      "expected": "16.61",
+      "unrounded": 16.611958811868647,
+      "ok": true
+    },
+    {
+      "label": "random historical_completeness_5cm",
+      "actual": "10.6",
+      "expected": "10.6",
+      "unrounded": 10.61310501506524,
+      "ok": true
+    },
+    {
+      "label": "gavis configured_budget_s",
+      "actual": "270",
+      "expected": "270",
+      "unrounded": 270.0,
+      "ok": true
+    },
+    {
+      "label": "gavis psnr_shared",
+      "actual": "19.25",
+      "expected": "19.25",
+      "unrounded": 19.247852415022493,
+      "ok": true
+    },
+    {
+      "label": "gavis psnr_cube_provisional",
+      "actual": "18.34",
+      "expected": "18.34",
+      "unrounded": 18.342623800725086,
+      "ok": true
+    },
+    {
+      "label": "gavis historical_completeness_5cm",
+      "actual": "15.7",
+      "expected": "15.7",
+      "unrounded": 15.696812683638498,
+      "ok": true
+    },
+    {
+      "label": "r3con-pano interior_0007 psnr_shared",
+      "actual": "22.39",
+      "expected": "22.39",
+      "unrounded": 22.393643411703152,
+      "ok": true
+    },
+    {
+      "label": "r3con-pano interior_0044 psnr_shared",
+      "actual": "24.13",
+      "expected": "24.13",
+      "unrounded": 24.126587104294117,
+      "ok": true
+    },
+    {
+      "label": "r3con-pano interior_0007 psnr_cube_provisional",
+      "actual": "22.07",
+      "expected": "22.07",
+      "unrounded": 22.069861327140256,
+      "ok": true
+    },
+    {
+      "label": "r3con-pano interior_0044 psnr_cube_provisional",
+      "actual": "23.86",
+      "expected": "23.86",
+      "unrounded": 23.860081815013885,
+      "ok": true
+    },
+    {
+      "label": "magician interior_0007 psnr_shared",
+      "actual": "22.01",
+      "expected": "22.01",
+      "unrounded": 22.013097435229152,
+      "ok": true
+    },
+    {
+      "label": "magician interior_0044 psnr_shared",
+      "actual": "23.20",
+      "expected": "23.20",
+      "unrounded": 23.198834466407853,
+      "ok": true
+    },
+    {
+      "label": "magician interior_0007 psnr_cube_provisional",
+      "actual": "22.83",
+      "expected": "22.83",
+      "unrounded": 22.834802964824043,
+      "ok": true
+    },
+    {
+      "label": "magician interior_0044 psnr_cube_provisional",
+      "actual": "23.69",
+      "expected": "23.69",
+      "unrounded": 23.686213269846867,
+      "ok": true
+    },
+    {
+      "label": "fisherrf interior_0007 psnr_shared",
+      "actual": "17.71",
+      "expected": "17.71",
+      "unrounded": 17.71180946300758,
+      "ok": true
+    },
+    {
+      "label": "fisherrf interior_0044 psnr_shared",
+      "actual": "22.49",
+      "expected": "22.49",
+      "unrounded": 22.49253737843585,
+      "ok": true
+    },
+    {
+      "label": "fisherrf interior_0007 psnr_cube_provisional",
+      "actual": "17.64",
+      "expected": "17.64",
+      "unrounded": 17.63931148959239,
+      "ok": true
+    },
+    {
+      "label": "fisherrf interior_0044 psnr_cube_provisional",
+      "actual": "22.61",
+      "expected": "22.61",
+      "unrounded": 22.61394948924362,
+      "ok": true
+    },
+    {
+      "label": "gleam interior_0007 psnr_shared",
+      "actual": "18.99",
+      "expected": "18.99",
+      "unrounded": 18.993463557905542,
+      "ok": true
+    },
+    {
+      "label": "gleam interior_0044 psnr_shared",
+      "actual": "20.87",
+      "expected": "20.87",
+      "unrounded": 20.86767604141668,
+      "ok": true
+    },
+    {
+      "label": "gleam interior_0007 psnr_cube_provisional",
+      "actual": "17.85",
+      "expected": "17.85",
+      "unrounded": 17.847194683967945,
+      "ok": true
+    },
+    {
+      "label": "gleam interior_0044 psnr_cube_provisional",
+      "actual": "20.96",
+      "expected": "20.96",
+      "unrounded": 20.963451847250347,
+      "ok": true
+    },
+    {
+      "label": "random interior_0007 psnr_shared",
+      "actual": "18.57",
+      "expected": "18.57",
+      "unrounded": 18.574835156338843,
+      "ok": true
+    },
+    {
+      "label": "random interior_0044 psnr_shared",
+      "actual": "14.95",
+      "expected": "14.95",
+      "unrounded": 14.949501640005149,
+      "ok": true
+    },
+    {
+      "label": "random interior_0007 psnr_cube_provisional",
+      "actual": "17.55",
+      "expected": "17.55",
+      "unrounded": 17.55253425536185,
+      "ok": true
+    },
+    {
+      "label": "random interior_0044 psnr_cube_provisional",
+      "actual": "15.67",
+      "expected": "15.67",
+      "unrounded": 15.671383368375444,
+      "ok": true
+    },
+    {
+      "label": "gavis interior_0007 psnr_shared",
+      "actual": "17.63",
+      "expected": "17.63",
+      "unrounded": 17.62919066317134,
+      "ok": true
+    },
+    {
+      "label": "gavis interior_0044 psnr_shared",
+      "actual": "20.87",
+      "expected": "20.87",
+      "unrounded": 20.86651416687365,
+      "ok": true
+    },
+    {
+      "label": "gavis interior_0007 psnr_cube_provisional",
+      "actual": "16.58",
+      "expected": "16.58",
+      "unrounded": 16.582261263780023,
+      "ok": true
+    },
+    {
+      "label": "gavis interior_0044 psnr_cube_provisional",
+      "actual": "20.10",
+      "expected": "20.10",
+      "unrounded": 20.10298633767015,
+      "ok": true
+    },
+    {
+      "label": "r3con-pano path_length_m",
+      "actual": "135.4",
+      "expected": "135.4",
+      "unrounded": 135.43698550562408,
+      "ok": true
+    },
+    {
+      "label": "r3con-pano decision_captures",
+      "actual": "93.5",
+      "expected": "93.5",
+      "unrounded": 93.5,
+      "ok": true
+    },
+    {
+      "label": "r3con-pano reconstruction_frames",
+      "actual": "301",
+      "expected": "301",
+      "unrounded": 301.0,
+      "ok": true
+    },
+    {
+      "label": "r3con-pano planning_wall_time_s",
+      "actual": "37.3",
+      "expected": "37.3",
+      "unrounded": 37.34728740956052,
+      "ok": true
+    },
+    {
+      "label": "magician path_length_m",
+      "actual": "108.9",
+      "expected": "108.9",
+      "unrounded": 108.93989302173493,
+      "ok": true
+    },
+    {
+      "label": "magician decision_captures",
+      "actual": "130.5",
+      "expected": "130.5",
+      "unrounded": 130.5,
+      "ok": true
+    },
+    {
+      "label": "magician reconstruction_frames",
+      "actual": "301",
+      "expected": "301",
+      "unrounded": 301.0,
+      "ok": true
+    },
+    {
+      "label": "magician planning_wall_time_s",
+      "actual": "394.6",
+      "expected": "394.6",
+      "unrounded": 394.6278224198177,
+      "ok": true
+    },
+    {
+      "label": "fisherrf path_length_m",
+      "actual": "143.3",
+      "expected": "143.3",
+      "unrounded": 143.27635663360934,
+      "ok": true
+    },
+    {
+      "label": "fisherrf decision_captures",
+      "actual": "106.0",
+      "expected": "106.0",
+      "unrounded": 106.0,
+      "ok": true
+    },
+    {
+      "label": "fisherrf reconstruction_frames",
+      "actual": "301",
+      "expected": "301",
+      "unrounded": 301.0,
+      "ok": true
+    },
+    {
+      "label": "fisherrf planning_wall_time_s",
+      "actual": "1226.7",
+      "expected": "1226.7",
+      "unrounded": 1226.6550444850436,
+      "ok": true
+    },
+    {
+      "label": "gleam path_length_m",
+      "actual": "86.2",
+      "expected": "86.2",
+      "unrounded": 86.20099994049238,
+      "ok": true
+    },
+    {
+      "label": "gleam decision_captures",
+      "actual": "46.0",
+      "expected": "46.0",
+      "unrounded": 46.0,
+      "ok": true
+    },
+    {
+      "label": "gleam reconstruction_frames",
+      "actual": "301",
+      "expected": "301",
+      "unrounded": 301.0,
+      "ok": true
+    },
+    {
+      "label": "gleam planning_wall_time_s",
+      "actual": "11.3",
+      "expected": "11.3",
+      "unrounded": 11.336189130986895,
+      "ok": true
+    },
+    {
+      "label": "random path_length_m",
+      "actual": "70.5",
+      "expected": "70.5",
+      "unrounded": 70.48642036715178,
+      "ok": true
+    },
+    {
+      "label": "random decision_captures",
+      "actual": "477.5",
+      "expected": "477.5",
+      "unrounded": 477.5,
+      "ok": true
+    },
+    {
+      "label": "random reconstruction_frames",
+      "actual": "301",
+      "expected": "301",
+      "unrounded": 301.0,
+      "ok": true
+    },
+    {
+      "label": "random planning_wall_time_s",
+      "actual": "<0.1",
+      "expected": "0.0",
+      "unrounded": 0.026533117139479145,
+      "ok": true
+    },
+    {
+      "label": "gavis path_length_m",
+      "actual": "130.6",
+      "expected": "130.6",
+      "unrounded": 130.64333200791376,
+      "ok": true
+    },
+    {
+      "label": "gavis decision_captures",
+      "actual": "101.5",
+      "expected": "101.5",
+      "unrounded": 101.5,
+      "ok": true
+    },
+    {
+      "label": "gavis reconstruction_frames",
+      "actual": "271",
+      "expected": "271",
+      "unrounded": 271.0,
+      "ok": true
+    },
+    {
+      "label": "gavis planning_wall_time_s",
+      "actual": "1026.5",
+      "expected": "1026.5",
+      "unrounded": 1026.4658534655064,
+      "ok": true
+    },
+    {
+      "label": "apartment_1 r3con-pano",
+      "actual": "37.29",
+      "expected": "37.29",
+      "unrounded": 37.29044803436401,
+      "ok": true
+    },
+    {
+      "label": "apartment_1 magician",
+      "actual": "21.31",
+      "expected": "21.31",
+      "unrounded": 21.307243467294846,
+      "ok": true
+    },
+    {
+      "label": "apartment_1 fisherrf",
+      "actual": "32.75",
+      "expected": "32.75",
+      "unrounded": 32.746609145667875,
+      "ok": true
+    },
+    {
+      "label": "apartment_1 gavis",
+      "actual": "34.30",
+      "expected": "34.30",
+      "unrounded": 34.30397087445877,
+      "ok": true
+    },
+    {
+      "label": "apartment_1 random",
+      "actual": "31.64",
+      "expected": "31.64",
+      "unrounded": 31.63649889177187,
+      "ok": true
+    },
+    {
+      "label": "van_gogh_room r3con-pano",
+      "actual": "30.45",
+      "expected": "30.45",
+      "unrounded": 30.45285564961211,
+      "ok": true
+    },
+    {
+      "label": "van_gogh_room magician",
+      "actual": "30.04",
+      "expected": "30.04",
+      "unrounded": 30.03691747403328,
+      "ok": true
+    },
+    {
+      "label": "van_gogh_room fisherrf",
+      "actual": "30.28",
+      "expected": "30.28",
+      "unrounded": 30.280073851498848,
+      "ok": true
+    },
+    {
+      "label": "van_gogh_room gavis",
+      "actual": "29.73",
+      "expected": "29.73",
+      "unrounded": 29.730254457569878,
+      "ok": true
+    },
+    {
+      "label": "van_gogh_room random",
+      "actual": "25.31",
+      "expected": "25.31",
+      "unrounded": 25.30776671973669,
+      "ok": true
+    },
+    {
+      "label": "mp3d_17DRP5sb8fy r3con-pano",
+      "actual": "27.60",
+      "expected": "27.60",
+      "unrounded": 27.598097034950623,
+      "ok": true
+    },
+    {
+      "label": "mp3d_17DRP5sb8fy magician",
+      "actual": "19.82",
+      "expected": "19.82",
+      "unrounded": 19.815997335912098,
+      "ok": true
+    },
+    {
+      "label": "mp3d_17DRP5sb8fy fisherrf",
+      "actual": "19.88",
+      "expected": "19.88",
+      "unrounded": 19.881484415230933,
+      "ok": true
+    },
+    {
+      "label": "mp3d_17DRP5sb8fy gavis",
+      "actual": "24.62",
+      "expected": "24.62",
+      "unrounded": 24.619504787260404,
+      "ok": true
+    },
+    {
+      "label": "mp3d_17DRP5sb8fy random",
+      "actual": "24.85",
+      "expected": "24.85",
+      "unrounded": 24.850080331526286,
+      "ok": true
+    },
+    {
+      "label": "skokloster_castle r3con-pano",
+      "actual": "19.00",
+      "expected": "19.00",
+      "unrounded": 18.997456545466868,
+      "ok": true
+    },
+    {
+      "label": "skokloster_castle magician",
+      "actual": "25.17",
+      "expected": "25.17",
+      "unrounded": 25.170805845620627,
+      "ok": true
+    },
+    {
+      "label": "skokloster_castle fisherrf",
+      "actual": "27.08",
+      "expected": "27.08",
+      "unrounded": 27.076848642219357,
+      "ok": true
+    },
+    {
+      "label": "skokloster_castle random",
+      "actual": "20.05",
+      "expected": "20.05",
+      "unrounded": 20.048860621921655,
+      "ok": true
+    },
+    {
+      "label": "r3con-pano delta_severe",
+      "actual": "\u22122.61",
+      "expected": "-2.61",
+      "unrounded": -2.6089422779784126,
+      "ok": true
+    },
+    {
+      "label": "r3con-pano delta_clean",
+      "actual": "\u22120.34",
+      "expected": "-0.34",
+      "unrounded": -0.3386545494049873,
+      "ok": true
+    },
+    {
+      "label": "r3con-pano regional_contrast",
+      "actual": "\u22122.27",
+      "expected": "-2.27",
+      "unrounded": -2.2702877285734253,
+      "ok": true
+    },
+    {
+      "label": "r3con-pano path_change_percent",
+      "actual": "\u22124.2",
+      "expected": "-4.2",
+      "unrounded": -4.171882237152868,
+      "ok": true
+    },
+    {
+      "label": "magician delta_severe",
+      "actual": "\u22122.24",
+      "expected": "-2.24",
+      "unrounded": -2.2424502234069923,
+      "ok": true
+    },
+    {
+      "label": "magician delta_clean",
+      "actual": "+0.14",
+      "expected": "+0.14",
+      "unrounded": 0.13616427495670003,
+      "ok": true
+    },
+    {
+      "label": "magician regional_contrast",
+      "actual": "\u22122.38",
+      "expected": "-2.38",
+      "unrounded": -2.3786144983636923,
+      "ok": true
+    },
+    {
+      "label": "magician path_change_percent",
+      "actual": "+3.5",
+      "expected": "+3.5",
+      "unrounded": 3.5421843572937872,
+      "ok": true
+    },
+    {
+      "label": "fisherrf delta_severe",
+      "actual": "\u22120.56",
+      "expected": "-0.56",
+      "unrounded": -0.5556173411191114,
+      "ok": true
+    },
+    {
+      "label": "fisherrf delta_clean",
+      "actual": "+1.83",
+      "expected": "+1.83",
+      "unrounded": 1.826942600014295,
+      "ok": true
+    },
+    {
+      "label": "fisherrf regional_contrast",
+      "actual": "\u22122.38",
+      "expected": "-2.38",
+      "unrounded": -2.3825599411334064,
+      "ok": true
+    },
+    {
+      "label": "fisherrf path_change_percent",
+      "actual": "+0.3",
+      "expected": "+0.3",
+      "unrounded": 0.32555474467270695,
+      "ok": true
+    },
+    {
+      "label": "gleam delta_severe",
+      "actual": "\u22121.11",
+      "expected": "-1.11",
+      "unrounded": -1.1132980201248373,
+      "ok": true
+    },
+    {
+      "label": "gleam delta_clean",
+      "actual": "\u22121.75",
+      "expected": "-1.75",
+      "unrounded": -1.751392512864781,
+      "ok": true
+    },
+    {
+      "label": "gleam regional_contrast",
+      "actual": "+0.64",
+      "expected": "+0.64",
+      "unrounded": 0.6380944927399437,
+      "ok": true
+    },
+    {
+      "label": "gleam path_change_percent",
+      "actual": "\u221230.9",
+      "expected": "-30.9",
+      "unrounded": -30.91719670586181,
+      "ok": true
+    },
+    {
+      "label": "random delta_severe",
+      "actual": "\u22121.70",
+      "expected": "-1.70",
+      "unrounded": -1.69574319515484,
+      "ok": true
+    },
+    {
+      "label": "random delta_clean",
+      "actual": "\u22120.29",
+      "expected": "-0.29",
+      "unrounded": -0.28953174323077935,
+      "ok": true
+    },
+    {
+      "label": "random regional_contrast",
+      "actual": "\u22121.41",
+      "expected": "-1.41",
+      "unrounded": -1.4062114519240607,
+      "ok": true
+    },
+    {
+      "label": "random path_change_percent",
+      "actual": "+7.8",
+      "expected": "+7.8",
+      "unrounded": 7.826526086400721,
+      "ok": true
+    },
+    {
+      "label": "gavis delta_severe",
+      "actual": "\u22121.12",
+      "expected": "-1.12",
+      "unrounded": -1.116279416095777,
+      "ok": true
+    },
+    {
+      "label": "gavis delta_clean",
+      "actual": "+0.11",
+      "expected": "+0.11",
+      "unrounded": 0.11450877585735952,
+      "ok": true
+    },
+    {
+      "label": "gavis regional_contrast",
+      "actual": "\u22121.23",
+      "expected": "-1.23",
+      "unrounded": -1.2307881919531365,
+      "ok": true
+    },
+    {
+      "label": "gavis path_change_percent",
+      "actual": "\u22120.9",
+      "expected": "-0.9",
+      "unrounded": -0.9488263775545847,
+      "ok": true
+    }
+  ],
+  "failures": []
+}

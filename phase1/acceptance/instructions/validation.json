@@ -1,0 +1,23 @@
+{
+  "revision": "phase1-v1.1",
+  "validation_dates": [
+    "2026-09-07",
+    "2026-09-08"
+  ],
+  "tests_passed": 234,
+  "tests_skipped": 6,
+  "numerical_report_cells_checked": 115,
+  "report_psnr_scores_checked": 84,
+  "report_psnr_mismatches": 0,
+  "report_max_psnr_error_db": 0.0,
+  "fresh_evaluator_prefix_created": true,
+  "gsplat_compiled_in_empty_build_directory": true,
+  "fresh_evaluator_report_cases": [
+    "gs/interior_0007__d0__s0/r3con-pano",
+    "mesh/apartment_1__d0__s0/r3con-pano"
+  ],
+  "pip_check_passed": true,
+  "one_scene_one_method_pipeline": "gs/interior_0007__d0__s0/r3con-pano; 5 s, 6 frames, 20 iterations",
+  "historical_model_retrained": false,
+  "working_copy_recovered_from_unchanged_archive": true
+}
