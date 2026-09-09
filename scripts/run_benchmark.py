@@ -32,8 +32,12 @@ CONDA_ENVS_DIR = conda_envs_dir()
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--config", required=True, help="episode spec YAML")
-    parser.add_argument("--agent", default="random", choices=registry.available_agents())
+    parser.add_argument("--agent", default="random",
+                        help="registered name or module:factory or /path/agent.py:factory")
     parser.add_argument("--out", required=True, help="episode output directory")
+    parser.add_argument(
+        "--agent-python", help="explicit Python executable for an isolated external agent",
+    )
     parser.add_argument(
         "--agent-env",
         default=None,
@@ -48,11 +52,19 @@ def main() -> None:
     )
     args = parser.parse_args()
 
+    if args.agent_python and args.agent_env:
+        parser.error("choose --agent-python or --agent-env, not both")
+    if ":" in args.agent:
+        from activebench.plugins import normalize_factory
+        args.agent = normalize_factory(args.agent)
+    if (Path(args.out) / "manifest.json").exists():
+        parser.error("completed output already exists; choose a new --out (campaign CLI supports resume)")
+
     spec = EpisodeSpec.from_yaml(Path(args.config))
     out_dir = Path(args.out)
 
     env_name = args.agent_env or registry.default_env(args.agent)
-    inline = env_name in (None, "inline")
+    inline = not args.agent_python and env_name in (None, "inline")
     if inline and registry.default_env(args.agent) is not None:
         # In-process CUDA agents need the CUDA context created before
         # Habitat's GL context, or custom CUDA kernels can crash.
@@ -96,7 +108,8 @@ def main() -> None:
         if inline:
             agent = registry.build_agent(args.agent, options)
         else:
-            python_exe = CONDA_ENVS_DIR / env_name / "bin" / "python"
+            python_exe = (Path(args.agent_python).expanduser().resolve() if args.agent_python
+                          else CONDA_ENVS_DIR / env_name / "bin" / "python")
             if not python_exe.exists():
                 raise SystemExit("conda env %r not found at %s" % (env_name, python_exe))
             proxy = AgentProcessProxy(

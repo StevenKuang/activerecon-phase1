@@ -247,9 +247,13 @@ class EpisodeReplay:
                 verified_psnr = json.loads(verified_path.read_text())
         if retrain is not None:
             rt = json.loads(retrain.read_text())
-            text += " | recon PSNR %.1f, cmp@5cm %.0f%%" % (
-                verified_psnr["psnr"] if verified_psnr else rt["appearance_per_stratum"]["all"]["psnr"],
-                100 * rt["geometry"]["completeness@0.05"])
+            text += " | recon PSNR %.1f" % (
+                verified_psnr["psnr"] if verified_psnr else rt["appearance_per_stratum"]["all"]["psnr"])
+            completeness = rt.get("geometry", {}).get("completeness@0.05")
+            if completeness is None:
+                text += ", cmp@5cm unavailable"
+            else:
+                text += ", cmp@5cm %.0f%%" % (100 * completeness)
         shared = resolve_shared_eval(self.episode_dir, reconstruction_run)
         if shared is not None:
             payload = json.loads(shared.read_text())

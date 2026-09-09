@@ -99,7 +99,8 @@ class EpisodeSpec:
 
     @classmethod
     def from_yaml(cls, path: Path) -> "EpisodeSpec":
-        payload = yaml.safe_load(Path(path).read_text())
+        from activebench.configuration import load_yaml
+        payload = load_yaml(path)
         return cls.from_dict(payload)
 
     @classmethod

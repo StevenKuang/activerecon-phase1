@@ -1,0 +1,424 @@
+{
+  "date": "2026-09-09",
+  "purpose": "Platform integration smoke tests, not report-quality experiments or method rankings",
+  "execution": "Independent source export, using installed isolated environments",
+  "unit_tests": {
+    "passed": 246,
+    "skipped": 6,
+    "skips": "Legacy run-data dependent replay tests; campaign data is intentionally absent from the code delivery"
+  },
+  "quickstart": [
+    {
+      "scene": "van_gogh",
+      "condition": "d0",
+      "seed": 0,
+      "alias": "random",
+      "identity": "5ab831ad2a66ae5b66a519ff535718705d598a176224957379292d9693c8e4e5",
+      "platform_code": "4db91bb5008d64c69489bde1b37043256b0b883cd01a8cd0a96346855bf94dd9",
+      "method": {
+        "name": "random",
+        "needs_depth": true,
+        "action_space": "free",
+        "pose_access": "gt"
+      },
+      "sim_seconds": 6.0,
+      "agent_observations": 10,
+      "reconstruction_frames": 7,
+      "max_distractor_fraction": 0.0,
+      "manifest_sha256": "80ec79284cd921ccf10985cbdc1d4b7a678162f328256c9f2f5373b8617fa776",
+      "train_resolution": [
+        160,
+        120
+      ],
+      "eval_resolution": [
+        96,
+        96
+      ],
+      "train_iterations": 20,
+      "appearance": {
+        "psnr": 9.458395336446598,
+        "ssim": 0.30979605720494874,
+        "lpips": 0.5678060228625933,
+        "depth_mae": 0.1236568369733339,
+        "render_coverage": 0.6470609478188215,
+        "depth_mae_fixed": 2.909028981307832,
+        "depth_p50_fixed": 2.1251939622064433,
+        "depth_mae_zerofill": 0.7475375363525624
+      },
+      "eval_sha256": "04d3bf0292a8df196c370708e8936d2f853e73c63cb565cff777da050dc2e6e3",
+      "model_sha256": "b397cb43242f4ba82fe4f30deb6c711e9e1f8ea7cf27726d030eb9fa33e7dfd3"
+    }
+  ],
+  "additional_scene_static_dynamic": [
+    {
+      "scene": "interior_0022",
+      "condition": "d0",
+      "seed": 0,
+      "alias": "example-spin",
+      "identity": "4d620804c114a637d9b80b441dce74991c1d8434c2eb83b775baeda0d96a84f3",
+      "platform_code": "4db91bb5008d64c69489bde1b37043256b0b883cd01a8cd0a96346855bf94dd9",
+      "method": {
+        "name": "example-spin",
+        "needs_depth": false,
+        "action_space": "free",
+        "pose_access": "none"
+      },
+      "sim_seconds": 6.0,
+      "agent_observations": 13,
+      "reconstruction_frames": 7,
+      "max_distractor_fraction": 0.0,
+      "manifest_sha256": "f6c6e43f5625e281015178f4205998cde5e87ff637f6867cde7236f35e37a4a3",
+      "train_resolution": [
+        160,
+        120
+      ],
+      "eval_resolution": [
+        96,
+        96
+      ],
+      "train_iterations": 20,
+      "appearance": {
+        "psnr": 5.62884901965268,
+        "ssim": 0.1615781215490036,
+        "lpips": 0.7637862612803777,
+        "depth_mae": 0.6090367463502017,
+        "render_coverage": 0.600713247230584,
+        "depth_mae_fixed": 3.553671027223269,
+        "depth_p50_fixed": 3.5998675959805646,
+        "depth_mae_zerofill": 0.8234073792894682
+      },
+      "eval_sha256": "4954f53c97aafb4184ca231ced0c9c0c90e65e433da2f92a024469b28c496005",
+      "model_sha256": "d2bce647167f1aadfed3f98258440f35a9f09efd9e6dce016b6440b53edc6c08"
+    },
+    {
+      "scene": "interior_0022",
+      "condition": "d0",
+      "seed": 0,
+      "alias": "random",
+      "identity": "c96cf178165c5040fbe8aa5b301b62b71094727090ab47b9db3404ac39dc6c24",
+      "platform_code": "4db91bb5008d64c69489bde1b37043256b0b883cd01a8cd0a96346855bf94dd9",
+      "method": {
+        "name": "random",
+        "needs_depth": true,
+        "action_space": "free",
+        "pose_access": "gt"
+      },
+      "sim_seconds": 6.0,
+      "agent_observations": 8,
+      "reconstruction_frames": 7,
+      "max_distractor_fraction": 0.0,
+      "manifest_sha256": "e07ecb198a91792251e75247e3c9deb741c8b9ff69d6f69e6ec7f51b4ed3de2d",
+      "train_resolution": [
+        160,
+        120
+      ],
+      "eval_resolution": [
+        96,
+        96
+      ],
+      "train_iterations": 20,
+      "appearance": {
+        "psnr": 3.882944906168644,
+        "ssim": 0.02425966423046096,
+        "lpips": 0.8287207136551539,
+        "depth_mae": 1.2500128831182207,
+        "render_coverage": 0.17772837622953178,
+        "depth_mae_fixed": 6.78240982691447,
+        "depth_p50_fixed": 7.431739389896393,
+        "depth_mae_zerofill": 1.253323957324028
+      },
+      "eval_sha256": "c6395a654b53a5fe109aae7d0063996c5e343457c2e524df325361dd7c38b09c",
+      "model_sha256": "5763efc46272d836547dc415d29c33b393f672ade856611f24b447abc4623e03"
+    },
+    {
+      "scene": "interior_0022",
+      "condition": "dyn",
+      "seed": 0,
+      "alias": "example-spin",
+      "identity": "5e4917026fc68326b5d6b878263653611bb5e3de331ae2671b9b5a0d364168d7",
+      "platform_code": "4db91bb5008d64c69489bde1b37043256b0b883cd01a8cd0a96346855bf94dd9",
+      "method": {
+        "name": "example-spin",
+        "needs_depth": false,
+        "action_space": "free",
+        "pose_access": "none"
+      },
+      "sim_seconds": 6.0,
+      "agent_observations": 13,
+      "reconstruction_frames": 7,
+      "max_distractor_fraction": 0.002916666666666667,
+      "manifest_sha256": "d086ece6f87323b287c7190c92da4b276e296fd56edad85eeab3334f791a6f34",
+      "train_resolution": [
+        160,
+        120
+      ],
+      "eval_resolution": [
+        96,
+        96
+      ],
+      "train_iterations": 20,
+      "appearance": {
+        "psnr": 5.555083608013715,
+        "ssim": 0.15596259000449209,
+        "lpips": 0.7637268006801605,
+        "depth_mae": 0.6035802858796987,
+        "render_coverage": 0.5938891320071494,
+        "depth_mae_fixed": 3.598661865418156,
+        "depth_p50_fixed": 3.600546147674322,
+        "depth_mae_zerofill": 0.824534855162104
+      },
+      "eval_sha256": "7be3a1af4412d465e17200034b19515ae40b2fc3740258c22c7ec6e9c3a15676",
+      "model_sha256": "51aa81deb5f8003aef44eb5444163742c1040e054c77b2ac0b15223903ae017f"
+    },
+    {
+      "scene": "interior_0022",
+      "condition": "dyn",
+      "seed": 0,
+      "alias": "random",
+      "identity": "a4f043e1ff99966ac7f0e993eef6a146e09856214d25203da6a38cc99b7920fc",
+      "platform_code": "4db91bb5008d64c69489bde1b37043256b0b883cd01a8cd0a96346855bf94dd9",
+      "method": {
+        "name": "random",
+        "needs_depth": true,
+        "action_space": "free",
+        "pose_access": "gt"
+      },
+      "sim_seconds": 6.0,
+      "agent_observations": 8,
+      "reconstruction_frames": 7,
+      "max_distractor_fraction": 0.0,
+      "manifest_sha256": "9700ee25cfe440a8272f56ba9b9c8e0c2f6e544c36fd3a444de0eb97cac7359c",
+      "train_resolution": [
+        160,
+        120
+      ],
+      "eval_resolution": [
+        96,
+        96
+      ],
+      "train_iterations": 20,
+      "appearance": {
+        "psnr": 3.8829449061790005,
+        "ssim": 0.024259663916382124,
+        "lpips": 0.828720286488533,
+        "depth_mae": 1.2500127937112535,
+        "render_coverage": 0.17772837622953178,
+        "depth_mae_fixed": 6.78240982691447,
+        "depth_p50_fixed": 7.431739429632823,
+        "depth_mae_zerofill": 1.253323957324028
+      },
+      "eval_sha256": "d6586bc519efd7c1b524bcad86e6f940bf278b67a728cb4d6eaee371242cdc82",
+      "model_sha256": "3d312a3382c432754e08abf4942ff1469338bde2ea38ad1c27c5618641c97405"
+    }
+  ],
+  "published_method_roster": [
+    {
+      "scene": "interior_0022",
+      "condition": "d0",
+      "seed": 0,
+      "alias": "fisherrf",
+      "identity": "fd47c7be74f9d348352ba2bf312a70ad58ee1fcf492f8cf690cc1eb186ede092",
+      "platform_code": "4db91bb5008d64c69489bde1b37043256b0b883cd01a8cd0a96346855bf94dd9",
+      "method": {
+        "name": "fisherrf",
+        "needs_depth": true,
+        "action_space": "pool",
+        "pose_access": "gt"
+      },
+      "sim_seconds": 12.0,
+      "agent_observations": 4,
+      "reconstruction_frames": 13,
+      "max_distractor_fraction": 0.0,
+      "manifest_sha256": "9440f71168dfd6e599c799b1ef189d3eef93f78186dc7dff8d6d996e8bfa5339"
+    },
+    {
+      "scene": "interior_0022",
+      "condition": "d0",
+      "seed": 0,
+      "alias": "gavis",
+      "identity": "a2630b6e3f8136529ea2f5997951a341884729793a591a5076abd7b190616703",
+      "platform_code": "4db91bb5008d64c69489bde1b37043256b0b883cd01a8cd0a96346855bf94dd9",
+      "method": {
+        "name": "gavis",
+        "needs_depth": true,
+        "action_space": "pool",
+        "pose_access": "gt"
+      },
+      "sim_seconds": 12.0,
+      "agent_observations": 4,
+      "reconstruction_frames": 13,
+      "max_distractor_fraction": 0.0,
+      "manifest_sha256": "27b6b96d3c5b1cb315e884fbf859723742c93e0c9fed05c193ae8267474d0f6c"
+    },
+    {
+      "scene": "interior_0022",
+      "condition": "d0",
+      "seed": 0,
+      "alias": "gleam",
+      "identity": "ba2a2d740132f12b302b957662d2fb0634b76b1291a256914ad423b1d86a89c5",
+      "platform_code": "4db91bb5008d64c69489bde1b37043256b0b883cd01a8cd0a96346855bf94dd9",
+      "method": {
+        "name": "gleam",
+        "needs_depth": true,
+        "action_space": "free",
+        "pose_access": "gt"
+      },
+      "sim_seconds": 12.0,
+      "agent_observations": 2,
+      "reconstruction_frames": 13,
+      "max_distractor_fraction": 0.0,
+      "manifest_sha256": "5dcb04e271933487197291171fe2e66402663b741fc333d6e7020bffe221023b"
+    },
+    {
+      "scene": "interior_0022",
+      "condition": "d0",
+      "seed": 0,
+      "alias": "magician",
+      "identity": "e9d851606a499e6723eae02060407af09658f8655c2b8e8e8d87d656fe2f1fbf",
+      "platform_code": "4db91bb5008d64c69489bde1b37043256b0b883cd01a8cd0a96346855bf94dd9",
+      "method": {
+        "name": "magician",
+        "needs_depth": true,
+        "action_space": "free",
+        "pose_access": "gt"
+      },
+      "sim_seconds": 12.0,
+      "agent_observations": 3,
+      "reconstruction_frames": 13,
+      "max_distractor_fraction": 0.0,
+      "manifest_sha256": "215f743f22dadeb239cc8546dd2f6f61482c0aed3f35ba2a56d33524d9d1b2b0"
+    },
+    {
+      "scene": "interior_0022",
+      "condition": "d0",
+      "seed": 0,
+      "alias": "r3con-pano",
+      "identity": "a09381a7e92820d681aeaa2983e3311f1e33083e0841a5c72bc2d93ad00e46f3",
+      "platform_code": "4db91bb5008d64c69489bde1b37043256b0b883cd01a8cd0a96346855bf94dd9",
+      "method": {
+        "name": "r3con-pano",
+        "needs_depth": true,
+        "action_space": "free",
+        "pose_access": "gt"
+      },
+      "sim_seconds": 12.0,
+      "agent_observations": 6,
+      "reconstruction_frames": 13,
+      "max_distractor_fraction": 0.0,
+      "manifest_sha256": "67a49fb73c8b194fe1fc8d91b3f9c99833191cce6fdea3c048a38b79e74e4bdd"
+    },
+    {
+      "scene": "interior_0022",
+      "condition": "d0",
+      "seed": 0,
+      "alias": "random",
+      "identity": "45fd155c87c833a37ee5d5e739b1102b69cba28ec9aee35ab3e6790555278e2f",
+      "platform_code": "4db91bb5008d64c69489bde1b37043256b0b883cd01a8cd0a96346855bf94dd9",
+      "method": {
+        "name": "random",
+        "needs_depth": true,
+        "action_space": "free",
+        "pose_access": "gt"
+      },
+      "sim_seconds": 12.0,
+      "agent_observations": 15,
+      "reconstruction_frames": 13,
+      "max_distractor_fraction": 0.0,
+      "manifest_sha256": "1a610cb9178cc99e95565f0616f4ae929b9ded3f97cfc178aa80e8044b1b0894"
+    }
+  ],
+  "reference_recipe": {
+    "quickstart_and_additional": {
+      "cube_points": 2,
+      "faces_per_point": 6,
+      "resolution": [
+        96,
+        96
+      ],
+      "surface_grid_spacing_m": 8,
+      "surface_points_per_frame": 128
+    },
+    "roster": {
+      "cube_points": 2,
+      "faces_per_point": 6,
+      "resolution": [
+        96,
+        96
+      ],
+      "surface_grid_spacing_m": 4,
+      "surface_points_per_frame": 512
+    }
+  },
+  "external_method": {
+    "factory": "examples/methods/spin_agent.py:build_agent",
+    "worker_environment": "bencheval",
+    "pose_access": "none",
+    "also_tested_direct_rpc": true
+  },
+  "viewer": {
+    "catalog": {
+      "rounds": [
+        {
+          "id": "adhoc",
+          "label": "Ad-hoc"
+        }
+      ],
+      "views": [
+        {
+          "round": "adhoc",
+          "scene": "interior_0022",
+          "difficulty": "d0",
+          "method": "example-spin",
+          "reconstruction": "gsplat",
+          "seed": "s0"
+        },
+        {
+          "round": "adhoc",
+          "scene": "interior_0022",
+          "difficulty": "d0",
+          "method": "random",
+          "reconstruction": "gsplat",
+          "seed": "s0"
+        },
+        {
+          "round": "adhoc",
+          "scene": "interior_0022",
+          "difficulty": "dyn",
+          "method": "example-spin",
+          "reconstruction": "gsplat",
+          "seed": "s0"
+        },
+        {
+          "round": "adhoc",
+          "scene": "interior_0022",
+          "difficulty": "dyn",
+          "method": "random",
+          "reconstruction": "gsplat",
+          "seed": "s0"
+        }
+      ]
+    },
+    "prepared_replays": 4,
+    "prepared_models": 4,
+    "encoding": "PLY",
+    "http_view_and_manifest": 200,
+    "missing_geometry_summary_regression_fixed": true,
+    "scope": "Asset preparation and HTTP manifest; no new browser pixel-comparison claim"
+  },
+  "historical_checks": {
+    "report_evidence_files": 4,
+    "numerical_report_cells": 115,
+    "mismatches": 0,
+    "frozen_results_modified": false
+  },
+  "limitations": [
+    "6/12-second acquisition and 20-iteration training are smoke settings",
+    "Fresh installation of all eight environments on an empty machine was not performed",
+    "No new full-budget campaign or additional MP3D asset was run",
+    "GS renderer depth/geometry limitations remain; smoke outputs support no quality ranking"
+  ],
+  "notes": [
+    "Tutorial resume was checked by repeating the identical command",
+    "Per-run platform_code hashes identify the acquisition/scoring snapshot; the later viewer-only missing-completeness fix did not change model/evaluation files"
+  ]
+}

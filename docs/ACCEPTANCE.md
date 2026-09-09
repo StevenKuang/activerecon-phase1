@@ -56,3 +56,39 @@ detected by CRC/SHA-256 checks. Identical frozen bytes were restored from the
 unchanged evaluation archive and both scores passed. The damaged copy was
 retained outside the release; no model was retrained or substituted. See
 `phase1/acceptance/instructions/artifact-recovery.json`.
+
+## Extensible platform verification — 2026-09-09
+
+The delivery now includes the general campaign, scene/reference preparation,
+external method factories and standalone platform guides. The historical
+Phase 1 tables above are unchanged. [The machine-readable validation record](../validation/platform-2026-09-09.json)
+contains the actual run counts, settings, scores and artifact hashes.
+
+| Check | Executed result |
+|---|---|
+| Clean exported source tests | 246 passed; 6 existing run-data-dependent skips |
+| README-linked mesh tutorial | Van Gogh, Random, 6 s; actual acquisition, 160 × 120 resampling, 20-step gsplat training, 12 held-out 96 × 96 cube views, summary; repeated command resumes |
+| Additional non-campaign scene | InteriorGS `interior_0022_840117`; d0/dyn configs and clean references prepared from installed assets |
+| External method API/RPC | Supplied spin factory in `bencheval`; direct episode plus generic campaign; masked observation poses and camera-frame actions |
+| Additional-scene common pipeline | Random and external spin × d0/dyn: 4/4 complete; 6 s, 20 training steps; dynamic pixels actually recorded in the spin run |
+| Published adapters via general runner | Random, R3-RECON, MAGICIAN, FisherRF, GAVIS, GLEAM: 6/6 short acquisitions, each 12 s at 640 × 480, with shared coverage evaluation |
+| New-scene viewer | Four replay/model pairs prepared; live HTTP view and manifest served with all four selections, including the external method |
+| Historical evidence | Four generated files verified; 115 numerical report cells checked, zero mismatches |
+
+The new viewer check exposed an absent overall completeness field when a short
+model has no Gaussians above the geometry opacity cutoff. The summary now shows
+that metric as unavailable and continues to export; a regression test covers it.
+Stored geometry values and historical model/report files were not rewritten.
+
+These checks validate the documented integration path, not reconstruction quality
+or a fresh full-budget reproduction. Common training was smoke-checked separately
+from the six-method acquisition roster. Additional MP3D scenes are accepted through
+the same scene interface, but no additional MP3D asset was installed/run in this
+validation. The installed environments were reused; the earlier clean evaluator
+build does not establish a clean build of all eight environments.
+
+New summaries retain failed/unstarted cells, reject incompatible protocols and
+check both requested configs and recorded worlds. Resume rejects changed recipes,
+method file source and scene/reference identities. Full dataset distributions,
+external source revisions and checkpoints still need to be preserved alongside
+new experiments. [SYSTEM.md](SYSTEM.md) links the current software/hardware snapshot.

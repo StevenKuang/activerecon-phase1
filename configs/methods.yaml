@@ -1,0 +1,10 @@
+# Existing adapter recipes. Scene-specific Phase 1 overrides live only in
+# phase1/campaign.json; these defaults do not claim the historical results.
+schema_version: 1
+methods:
+  random: {agent: random, environment: inline, options: {}}
+  r3con-pano: {agent: r3con-pano, environment: r3con, options: {}}
+  magician: {agent: magician, environment: magician, options: {beam_width: 10, beam_steps: 10}}
+  fisherrf: {agent: fisherrf, environment: fisherrf, options: {train_iterations: 800}}
+  gavis: {agent: gavis, environment: gavis, options: {train_iterations: 800}}
+  gleam: {agent: gleam, environment: gleam, options: {}}

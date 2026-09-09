@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "activebench"
 version = "0.1.1"
-description = "Phase 1 active 3D reconstruction benchmark, reproducible evidence and Spark replay."
+description = "Extensible active 3D reconstruction benchmark with dynamic distractors, common evaluation and replay."
 readme = "README.md"
 requires-python = ">=3.9,<3.13"
 license = {text = "MIT"}

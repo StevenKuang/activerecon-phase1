@@ -1,0 +1,8 @@
+schema_version: 1
+methods:
+  example-spin:
+    agent: spin_agent.py:build_agent
+    environment: bencheval
+    version: api-example-1
+    options:
+      turn_degrees: 30

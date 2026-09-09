@@ -1,102 +1,141 @@
-# Runtime and external sources
+# Install the platform and methods
 
-The verified machine uses Linux, an NVIDIA RTX 5090 (32 GiB), separate conda
-environments and CUDA-enabled PyTorch. Python 3.9 is used by the mesh simulator
-and R3-RECON; GS and GLEAM use Python 3.12. The evaluator and other methods use
-Python 3.10. `phase1/dependencies/` records exact conda artifacts, pip versions,
-source commits, local source patches and checkpoint SHA-256 hashes.
-See [the concise hardware/software matrix](SYSTEM.md) for GPU, driver, CUDA
-and PyTorch versions.
+Use Linux x86-64, conda and an NVIDIA CUDA-capable GPU for simulation and common
+3DGS training. The validated machine is an RTX 5090 (32 GB); see
+[SYSTEM.md](SYSTEM.md) for CUDA, PyTorch, driver and OS versions. Package locks,
+upstream revisions, local adapter patches and checkpoint hashes are versioned
+under [phase1/dependencies/](../phase1/dependencies/). That directory is a
+reusable dependency snapshot, not a restriction to the Phase 1 scene roster.
 
-The code supports Python 3.9-3.12 across isolated processes. A single shared
-environment cannot represent the different rasterizer modules used by the
-participants. `ACTIVEBENCH_ENVS_DIR` selects the directory containing the
-named environments (`habitat`, `habitat-gs`, `bencheval`, `r3con`, `magician`,
-`fisherrf`, `gavis`, `gleam`). It defaults to `~/miniconda3/envs`.
+## 1. Choose the runtimes you need
 
-Source locations are configurable: `HABITAT_SIM_ROOT`, `HABITAT_GS_ROOT`,
-`R3CON_REPO`, `MAGICIAN_REPO`, `FISHERRF_REPO`, `GAVIS_REPO`, `GLEAM_REPO`.
-Defaults are checkouts under `~/Projects`. Set these variables before launching
-the campaign so the simulator and RPC workers inherit the same locations.
+| Operation / method | Environment | Additional source / checkpoint |
+|---|---|---|
+| Mesh simulation, including Habitat test scenes and MP3D | `habitat` | Scene files, navmesh and any dataset config |
+| InteriorGS simulation | `habitat-gs` | Patched Habitat-GS source; GS stage + navmesh + non-collidable dataset config |
+| Common reconstruction/evaluation | `bencheval` | gsplat; independent of planner environments |
+| Random | No extra environment | Runs in the scene simulator |
+| R3-RECON (`r3con-pano`) | `r3con` | `R3CON`; compiled panoramic rasterizers |
+| MAGICIAN (`magician`) | `magician` | `MAGICIAN`; `weights/macarons/trained_macarons.pth` |
+| FisherRF (`fisherrf`) | `fisherrf` | `FisherRF`; its compiled scoring/rasterizer extensions |
+| GAVIS (`gavis`) | `gavis` | `gavis`, `gavis-dgr`, `gavis-rasterizer` |
+| GLEAM (`gleam`) | `gleam` | `GLEAM`; `ckpt/train_gleam_stage2_wo_gibson_40000000_steps.zip` |
 
-Inspect pinned setup commands first, then execute them against new locations:
+For example: mesh + Random + common reconstruction needs only `habitat` and
+`bencheval`. Add `r3con` for R3-RECON, or install all five planner environments
+for the full roster. GLEAM's adaptation has been benchmarked on InteriorGS;
+its behavior on another scene/dataset requires validation.
 
-```bash
-python scripts/phase1/setup.py --sources /new/path/sources
-python scripts/phase1/setup.py --sources /new/path/sources --execute
-python scripts/phase1/setup.py --environment bencheval --prefix /new/path/envs/bencheval
-python scripts/phase1/setup.py --environment bencheval --prefix /new/path/envs/bencheval --execute
-# Repeat for each required environment; source-built methods need --sources.
-python scripts/phase1/setup.py --environment r3con --prefix /new/path/envs/r3con \
-  --sources /new/path/sources --execute
-```
+Do not merge all methods into one environment: they use incompatible compiled
+modules and PyTorch/CUDA versions. The orchestrator launches isolated workers.
 
-The exact conda locks target Linux x86-64. GPU drivers and system/compiler
-compatibility still need to match the machine. The recipe is derived from the
-verified installed builds. The evaluator was also created at a new prefix
-using this setup script, its gsplat CUDA extension was compiled in an empty
-build directory, and mesh/GS report scores were reproduced. A complete rebuild
-of all eight environments on an empty machine has not been executed.
-Environment checking and relocated-code smoke results are recorded in the
-acceptance note. Matplotlib is needed only for optional figure regeneration
-(`pip install -e '.[plots]'`), not model scoring.
+## 2. Fetch pinned sources and build environments
 
-The `habitat-gs` source patch is required for the locally validated build.
-Build CUDA and Bullet support; use a non-collidable dataset configuration for
-GS stages, which have no collidable scene mesh. Existing dataset configuration
-and every referenced scene/object asset must be available at the expanded
-paths in `phase1/configs/`. Keep the exact archived evaluation catalogs.
-
-Obtain simulation data through the dataset authors' distribution: Habitat test
-scenes and ReplicaCAD object assets for the mesh group, Matterport3D
-17DRP5sb8fy through its access process, and the two InteriorGS stages from
-[the GS scene collection](https://huggingface.co/datasets/RukawaY/gs_scenes).
-Scene filenames, initial poses and distractor templates are frozen in the
-configs. Dataset/checkpoint files are separate from the code repository.
-`phase1/dependencies/simulation-assets.json` freezes the actual scene,
-navmesh, dataset-config and moving-object bytes. With the two simulator
-directories under a common `/your/sources`, verify them using:
+Run from this repository's root. Choose **new** source/environment locations;
+the setup script refuses to overwrite an existing checkout directory or prefix.
+Without `--execute` it prints the commands for review.
 
 ```bash
-python scripts/phase1/data.py --verify /your/sources \
-  --manifest phase1/dependencies/simulation-assets.json
+export ACTIVEBENCH_SOURCES="$HOME/activerecon-sources"
+export ACTIVEBENCH_ENVS_DIR="$HOME/activerecon-envs"
+
+python scripts/setup.py --sources "$ACTIVEBENCH_SOURCES" --execute
+python scripts/setup.py --environment habitat \
+  --prefix "$ACTIVEBENCH_ENVS_DIR/habitat" --execute
+python scripts/setup.py --environment bencheval \
+  --prefix "$ACTIVEBENCH_ENVS_DIR/bencheval" --execute
+
+# Add GS simulation and all five published planners as needed.
+for env_name in habitat-gs r3con magician fisherrf gavis gleam; do
+  python scripts/setup.py --environment "$env_name" \
+    --prefix "$ACTIVEBENCH_ENVS_DIR/$env_name" \
+    --sources "$ACTIVEBENCH_SOURCES" --execute || break
+done
 ```
 
-MAGICIAN requires `weights/macarons/trained_macarons.pth` from its
-[released weights](https://drive.google.com/drive/folders/1wyc9_QFmcxOz4oerE8kCQ3I8LO5zioZL).
-GLEAM requires `ckpt/train_gleam_stage2_wo_gibson_40000000_steps.zip` from its
-release. `GLEAM_CKPT_DIR=/your/GLEAM/ckpt bash scripts/envs/fetch_gleam_ckpt.sh`
-fetches the upstream checkpoint archives. Verify hashes against
-`phase1/dependencies/weights.json`; do not
-substitute another GLEAM checkpoint or run an uninitialized policy.
+Keep sources separate from the code delivery. Configure their locations before
+launching runs so all workers inherit them:
 
-Run `python scripts/phase1/doctor.py --environment bencheval` to check only
-the evaluator. Repeat `--environment` to check the selected simulator/planner;
-omit it to verify all runtime environments. Then run the short fresh
-simulation/reconstruction command in the reproduction guide. `bencheval`
-alone suffices for re-scoring saved models. Table regeneration needs only
-Python's standard library.
+```bash
+export HABITAT_SIM_ROOT="$ACTIVEBENCH_SOURCES/habitat-sim"
+export HABITAT_GS_ROOT="$ACTIVEBENCH_SOURCES/habitat-gs"
+export R3CON_REPO="$ACTIVEBENCH_SOURCES/R3CON"
+export MAGICIAN_REPO="$ACTIVEBENCH_SOURCES/MAGICIAN"
+export FISHERRF_REPO="$ACTIVEBENCH_SOURCES/FisherRF"
+export GAVIS_REPO="$ACTIVEBENCH_SOURCES/gavis"
+export GLEAM_REPO="$ACTIVEBENCH_SOURCES/GLEAM"
+```
 
-Spark's browser imports are pinned in `webdemo/index.html`. For streamed
-SH3/LoD conversion, install the matching Spark `build-lod` executable on PATH.
-The verified converter was built from Spark 2.1.0's Rust implementation;
-it is an optional CPU conversion step, separate from the browser import.
-Viewer inspection is not a pixel-identity check against gsplat evaluation.
+Existing validated installations can be reused. In that case set the variables
+to those existing locations and skip creation; environment names still need to
+match the table. The default environment root is `~/miniconda3/envs`; external
+source defaults are under `~/Projects`. Explicit variables are more portable.
 
-## Adapter scope
+The setup recipe uses Linux conda artifact locks, pinned pip packages and
+source-built extensions. A compatible compiler, CUDA toolkit and GPU driver are
+required. The evaluator has been rebuilt at a fresh prefix and exercised with
+an empty CUDA extension cache. All eight installed environments have passed
+import checks, but a fresh rebuild of **all eight on an empty machine** has not
+been executed. These are the verified limits, not a universal one-command
+installation claim.
 
-R3-RECON imports the released incremental voxel/renderability panoramic
-planner. MAGICIAN imports occupancy prediction and its multi-step lattice
-planning components; its reference-surface feasibility input is documented.
-FisherRF and GAVIS import their released scoring code behind the shared local
-candidate-pool interface and train an internal map for 800 iterations per
-decision. GAVIS's internal model is distinct from the common reconstruction.
-GLEAM imports the released policy network/checkpoint and rebuilds observation
-mapping against the single ActiveBench camera, using four turning legs to
-approximate its original depth ring. Its conservative observed-occupancy goal
-gate and deterministic stalls are properties of this adaptation. Random is
-the benchmark's short-step random baseline.
+## 3. Install weights and simulation data
 
-External algorithms retain their upstream attribution and licenses. Source
-URLs and exact revisions are in `phase1/dependencies/sources.json`. This
-repository does not rename those published planners as new methods.
+MAGICIAN's [released weights](https://drive.google.com/drive/folders/1wyc9_QFmcxOz4oerE8kCQ3I8LO5zioZL)
+go under `$MAGICIAN_REPO/weights/macarons/trained_macarons.pth`.
+Fetch GLEAM's released checkpoint archives with:
+
+```bash
+GLEAM_CKPT_DIR="$GLEAM_REPO/ckpt" bash scripts/envs/fetch_gleam_ckpt.sh
+```
+
+Use the `stage2_wo_gibson` checkpoint named above. Verify weight bytes against
+[weights.json](../phase1/dependencies/weights.json); an uninitialized network
+or a different checkpoint is a different method configuration.
+
+Dataset installation and choosing **additional scenes** are covered in
+[SCENES.md](SCENES.md). Git does not include licensed datasets, model weights,
+scene meshes or GS stages. A source checkout alone does not contain those assets.
+
+## 4. Check your installation and run a short benchmark
+
+```bash
+python scripts/doctor.py --environment habitat --environment bencheval
+# For all five planners, check all eight runtime environments:
+python scripts/doctor.py
+# Snapshot actual local hardware/software for your new experiment:
+python scripts/phase1/system_info.py --out outputs/system-info.json
+```
+
+Doctor checks interpreter paths and imports, not a complete planner run or GPU
+training. Follow [RUNNING.md](RUNNING.md) for a real acquisition/reconstruction
+smoke test, then increase the budget. Worker failures are reported in per-method
+logs. The current validation record is in [ACCEPTANCE.md](ACCEPTANCE.md).
+
+For core development/tests, use an environment containing the core dependencies:
+
+```bash
+python -m pip install -e '.[dev]'
+python -m pytest
+```
+
+## Adapter settings
+
+[configs/methods.yaml](../configs/methods.yaml) supplies the general roster.
+FisherRF/GAVIS use their released scoring implementations with a shared local
+candidate pool and 800 internal map-training iterations per decision. MAGICIAN
+uses beam width/steps 10/10 and the benchmark-prepared reference surface for
+feasibility. R3-RECON uses its released panoramic planner. GLEAM uses its released
+policy and four turning legs to approximate the original depth ring, with an
+observed-occupancy goal gate. These adaptations and early stopping must be
+reported with comparisons.
+
+The historical campaign's per-scene exceptions, including reduced-density GS
+GAVIS, are confined to `phase1/campaign.json`; the general defaults do not claim
+to reproduce those cells. Upstream code retains its original attribution and
+licenses; [sources.json](../phase1/dependencies/sources.json) records exact URLs
+and revisions.
+
+Spark's browser dependencies are pinned. The optional CPU `build-lod` converter
+was validated at Spark 2.1.0; it enables streamed RAD/LoD. PLY is supported when
+it is absent. Browser viewing is not a pixel-identity check against gsplat scoring.

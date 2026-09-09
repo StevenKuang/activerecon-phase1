@@ -17,3 +17,21 @@ def test_corrupt_replay_rgb_reports_the_exact_frame(tmp_path):
     replay.frames = [SimpleNamespace(index=42, rgb_path=rgb, depth_path=depth)]
     with pytest.raises(OSError, match="RGB frame 42: .*frame_00042.png"):
         replay.chunk(0)
+
+
+def test_summary_allows_short_reconstruction_without_overall_completeness(tmp_path):
+    import json
+
+    reconstruction = tmp_path / "reconstructions/gsplat"
+    reconstruction.mkdir(parents=True)
+    (reconstruction / "eval.json").write_text(json.dumps({
+        "appearance_per_stratum": {"all": {"psnr": 9.5}},
+        "geometry": {"num_recon_points": 0, "bins": {}},
+    }))
+    replay = EpisodeReplay.__new__(EpisodeReplay)
+    replay.episode_dir = tmp_path
+    replay.manifest = {"method": {"name": "example"}, "num_captures": 2,
+                       "clock": {"final_sim_time": 1.0}, "seed": 0, "distractors": []}
+    text = replay.summary("gsplat")
+    assert "PSNR 9.5" in text
+    assert "cmp@5cm unavailable" in text

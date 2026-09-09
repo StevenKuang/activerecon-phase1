@@ -237,6 +237,11 @@ def build_agent(name: str, options: Dict[str, Any]):
 
 
 def _entry(name: str) -> Dict[str, Any]:
+    if ":" in name:
+        from activebench.plugins import build_external, normalize_factory
+
+        factory = normalize_factory(name)
+        return {"factory": lambda options: build_external(factory, options), "default_env": None}
     if name not in _REGISTRY:
         raise KeyError(
             "unknown agent %r (available: %s)" % (name, ", ".join(available_agents()))

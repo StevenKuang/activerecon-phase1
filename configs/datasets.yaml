@@ -1,0 +1,31 @@
+schema_version: 1
+datasets:
+  habitat_test:
+    capability: habitat
+    root: scene_datasets/habitat-test-scenes
+    discovery: {scene_glob: "*.glb"}
+  mp3d:
+    capability: habitat
+    root: scene_datasets
+    discovery: {scene_glob: "mp3d/*/*.glb", name_from: parent}
+    scenes:
+      - name: mp3d_17DRP5sb8fy
+        scene_path: mp3d_example/17DRP5sb8fy/17DRP5sb8fy.glb
+        scene_dataset_config_file: mp3d_example/mp3d.scene_dataset_config.json
+  interiorgs:
+    capability: habitat
+    root: scene_datasets/gs_scenes
+    scene_dataset_config_file: train_activebench_noncollide.scene_dataset_config.json
+    discovery: {scene_glob: "train/*/*.gs.ply", name_from: parent}
+  replica_cad:
+    capability: habitat
+    root: replica_cad
+    scene_dataset_config_file: replicaCAD.scene_dataset_config.json
+    scene_paths_are_handles: true
+    scenes:
+      - {name: apt_0, scene_path: apt_0}
+      - {name: apt_1, scene_path: apt_1}
+      - {name: apt_2, scene_path: apt_2}
+      - {name: apt_3, scene_path: apt_3}
+      - {name: apt_4, scene_path: apt_4}
+      - {name: apt_5, scene_path: apt_5}

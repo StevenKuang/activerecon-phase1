@@ -32,3 +32,8 @@ python scripts/phase1/system_info.py --out outputs/system-info.json
 # Only the evaluator, if reproducing saved-model results:
 python scripts/phase1/system_info.py --environment bencheval --out outputs/evaluator-system.json
 ```
+
+The same hardware and the listed Python/PyTorch/CUDA versions were checked again
+for the 2026-09-09 extensible-platform smoke tests. The separate
+[current validation snapshot](../validation/system-2026-09-09.json) is recorded
+in Git; it does not replace the historical dependency/provenance records.

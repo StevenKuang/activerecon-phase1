@@ -1,65 +1,88 @@
 # ActiveBench
 
-ActiveBench evaluates active camera acquisition through a common RGB-D
-simulation interface, fixed-rate trajectory sampling, a common gsplat
-reconstructor and Spark replay. This repository contains the Phase 1 benchmark
-and its frozen evidence.
+An extensible benchmark platform for **active 3D reconstruction under dynamic
+distractors**. Run camera-acquisition policies on installed Habitat/MP3D or
+InteriorGS scenes, collect comparable RGB-D streams, and evaluate them with a
+shared 3D Gaussian reconstruction and held-out reference views.
 
-The campaign has two protocol groups: four mesh scenes and two InteriorGS
-scenes. It retains 60 standard reconstruction results from 64 planned cells.
-The two groups have different motion, evaluation-camera and disturbance
-protocols; their scores are reported separately. The evaluated implementations
-are R3-RECON, MAGICIAN, FisherRF, GAVIS, GLEAM and Random. GLEAM was evaluated
-only on GS scenes. GAVIS is a reduced-density 270 s reference on GS scenes.
+The repository includes adapters for **R3-RECON, MAGICIAN, FisherRF, GAVIS and
+GLEAM**, plus Random. Add another scene through an episode YAML and another
+method through a Python factory; neither needs to belong to an existing campaign.
+Phase 1 results are retained as a documented reference experiment.
 
-Start with [the protocol](docs/PROTOCOL.md), [reproduction instructions](docs/REPRODUCING.md),
-[generated results](phase1/RESULTS.md) and [method setup](docs/SETUP.md).
-Hardware and software versions are in [SYSTEM.md](docs/SYSTEM.md).
-See [the acceptance record](docs/ACCEPTANCE.md) for the executed checks and
-the limits of the reproduction claims.
+## Start here
 
-Regenerate and verify the reported tables without a GPU or datasets:
+| Goal | Guide |
+|---|---|
+| Install the simulator, evaluator and existing methods | [Setup](docs/SETUP.md) |
+| Run one scene/method or a complete benchmark matrix | [Run a benchmark](docs/RUNNING.md) |
+| Use other scenes from the datasets | [Datasets and scenes](docs/SCENES.md) |
+| Connect a new method through the API/RPC | [Add a method](docs/adding-a-method.md) |
+| Understand inputs, fairness and metrics | [Protocol](docs/PROTOCOL.md) · [Architecture](docs/ARCHITECTURE.md) |
+| Reproduce the supplied report | [Historical reproduction](docs/REPRODUCING.md) |
+
+## Run the platform
+
+After setup, the workflow is:
+
+```text
+installed scene → episode configs → clean references → selected methods → scores/replay
+```
+
+[The short tutorial](docs/RUNNING.md#a-short-real-end-to-end-run) runs real
+simulation, common reconstruction and evaluation. It does not require historical
+model/result archives. Once configs and references are prepared, run a single
+method or all five published adapters plus Random:
 
 ```bash
+python scripts/run_campaign.py \
+  --configs-dir outputs/my-study/configs --assets-dir outputs/my-study/assets \
+  --methods random r3con-pano magician fisherrf gavis gleam \
+  --out-dir outputs/my-study/runs --execute
+
+python scripts/summarize_benchmark.py --runs-dir outputs/my-study/runs
+```
+
+Omit `--execute` for a plan. Select `--scenes`, `--conditions`, `--seeds` and
+`--methods` independently. Use `--acquisition-only` to collect without training.
+The defaults use a 300 s generated episode, a 1 Hz stream and a common 30,000-step
+gsplat reconstruction; use the documented short recipe to check installation first.
+GLEAM's existing adaptation has been benchmarked on GS scenes; extensions to
+other datasets require validation.
+
+For a new method, provide `info()`, `reset(seed, task)` and `act(observation)`.
+The launcher accepts `package.module:factory` or `/path/agent.py:factory` and can
+run it in its own environment. An [executable example](examples/methods/spin_agent.py)
+and [integration tutorial](docs/adding-a-method.md) are included.
+
+## What is versioned
+
+- `src/activebench/`: simulator interface, episode clock, policy API/RPC,
+  acquisition, common reconstruction, metrics and replay.
+- `scripts/`: scene/reference preparation, campaign execution, fresh summaries,
+  environment setup/checking and Spark visualization.
+- `configs/`, `examples/`, `tests/`: dataset discovery, method recipes, extension
+  examples and interface/protocol checks.
+- `phase1/`: the historical campaign, retained evidence, dependency snapshots
+  and table/model verification tools.
+
+Datasets, checkpoints, acquired frames and trained models stay outside Git.
+[Hardware/software versions](docs/SYSTEM.md), [executed validation and limits](docs/ACCEPTANCE.md)
+and [research/delivery alignment](docs/SOURCE_SYNC.md) are recorded in the repository.
+
+## Historical Phase 1 results
+
+The reference experiment retains 60 reconstructions from 64 planned cells:
+four mesh scenes and two InteriorGS scenes, with separate protocols. Its exact
+budgets and exceptions remain in [phase1/campaign.json](phase1/campaign.json).
+[The reproduction guide](docs/REPRODUCING.md) separates table verification,
+saved-model re-scoring and fresh reruns of that experiment.
+
+```bash
+# Verify saved evidence/table consistency; this does not execute a benchmark.
 python scripts/phase1/report.py --check
-python scripts/phase1/report.py
 ```
 
-Inspect or run a single scene and method (see the reproduction guide for setup):
-
-```bash
-python scripts/phase1/run.py --scene interior_0007 --method r3con-pano --condition d0
-# Full campaign plan: omit the selection flags.
-```
-
-The default plan runs the 60 retained standard cells. `--include-missing`
-attempts all 64 planned cells, keeping any new outcomes separate from the
-frozen evidence. [The campaign manifest](phase1/campaign.json) declares every
-budget, method option, completion state and historical source.
-
-Spark is the demonstration frontend. After restoring the evaluation, uniform
-stream and viewer-assets archives into `data/phase1/`:
-
-```bash
-python scripts/phase1/view.py --port 8090
-```
-
-Open http://127.0.0.1:8090. Select a recording, click **Apply changes**, and use
-playback, stepping and the timeline. Enable **compare (split view)** to compare
-methods or static/dynamic conditions with a shared camera and clock. The
-viewer displays final stored reconstructions; playback advances recorded
-acquisition. Install Spark `build-lod` for streamed RAD/LoD models; PLY is the
-supported fallback when the converter is absent.
-
-Run the platform tests in the simulator/core environment:
-
-```bash
-python -m pip install -e '.[dev]'
-python -m pytest
-```
-
-Large model/observation archives and simulation assets stay outside Git.
-The source tree excludes revisit-policy, RL/UAV and pose-free reconstruction
-experiments. [Source export hashes](phase1/source-export.json) and
-[dependency provenance](phase1/dependencies/sources.json) identify the code
-and local upstream patches used for this release.
+The general platform workflow above produces new results independently of these
+frozen tables. The GitHub repository is named `activerecon-phase1`; the benchmark
+package and API remain `activebench`.

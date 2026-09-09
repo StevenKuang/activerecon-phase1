@@ -1,23 +1,8 @@
-"""Benchmark campaign runner: methods × campaign configs, resumable.
+"""Run a configurable ActiveBench campaign and its shared evaluation pipeline.
 
-For every (config, method) pair, in order:
-
-1. ensure the scene's GT surface samples exist (built once per scene, cached
-   in eval_assets/surface/<scene>.npz);
-2. run the episode as a `run_benchmark.py` subprocess (crash containment:
-   a segfaulting method or sim loses one episode, not the campaign) into
-   runs_campaign/<config-stem>/<method>/ — skipped when manifest.json exists;
-3. run Tier-1 coverage eval (in-process, fast) — skipped when coverage.json
-   exists;
-4. run the selected Tier-2 reconstruction backend — skipped when its named
-   evaluation artifact exists.
-
-Method budgets are the campaign defaults (full budgets, not smoke settings);
-override per run with --method-options JSON.
-
-Run in the habitat conda env:
-    python scripts/run_campaign.py
-Then aggregate with scripts/aggregate_campaign.py.
+Use --configs-dir, --methods and --out-dir; inspect the plan, then add --execute.
+See docs/RUNNING.md. Frozen report reproduction remains scripts/phase1/run.py.
+The stage helpers are shared by the generic and historical campaign launchers.
 """
 
 import argparse
@@ -212,6 +197,10 @@ def run_episode(
     retry_cooldown_s: float = 30.0,
     retry_max_wall_s: float = 120.0,
     retry_max_frames: int = 5,
+    agent_name: Optional[str] = None,
+    agent_options: Optional[dict] = None,
+    agent_env: Optional[str] = None,
+    agent_python: Optional[str] = None,
 ) -> Tuple[bool, int]:
     """Run one (config, method) episode, with retry for transient early crashes.
 
@@ -221,8 +210,8 @@ def run_episode(
         return True, 1
 
     episode_dir.parent.mkdir(parents=True, exist_ok=True)
-    options = dict(METHOD_OPTIONS.get(method, {}))
-    if method == "magician":
+    options = dict(METHOD_OPTIONS.get(method, {}) if agent_options is None else agent_options)
+    if (agent_name or method) == "magician":
         options["surface_samples_path"] = str(samples_path)
         options["max_captures"] = int(
             yaml.safe_load(config_path.read_text())["episode"]["max_captures"]
@@ -230,11 +219,15 @@ def run_episode(
     cmd = [
         _sim_python(config_path), str(_REPO_ROOT / "scripts/run_benchmark.py"),
         "--config", str(config_path),
-        "--agent", method,
+        "--agent", agent_name or method,
         "--out", str(episode_dir),
     ]
     if options:
         cmd += ["--agent-options", json.dumps(options)]
+    if agent_env:
+        cmd += ["--agent-env", agent_env]
+    if agent_python:
+        cmd += ["--agent-python", agent_python]
 
     log_path = episode_dir.parent / ("%s.launcher.log" % method)
     wall_s = 0.0
@@ -582,7 +575,10 @@ def run_spark_export(
           % (episode_dir.name, count, degree, ply_path.name, rad_path.name), flush=True)
 
 
+def main() -> None:
+    from activebench.campaign import main as campaign_main
+    campaign_main()
 
 
 if __name__ == "__main__":
-    raise SystemExit("Use scripts/phase1/run.py for the frozen grouped campaign and per-cell overrides.")
+    main()

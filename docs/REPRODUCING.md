@@ -1,154 +1,126 @@
-# Reproduce the report, or run one scene and method
+# Reproduce the Phase 1 report
 
-Run these commands from the repository root. The report's stored-model PSNR
-results can be reproduced with **only the `bencheval` environment**; simulator
-and planner environments are needed only for new acquisition.
+This guide concerns the **retained reference experiment**. To benchmark another
+scene or method, start with [RUNNING.md](RUNNING.md); it does not require the
+historical archives. Exact historical settings and caveats are in
+[PHASE1_PROTOCOL.md](PHASE1_PROTOCOL.md).
 
-## 1. Verify the report tables — no GPU or data required
+Run commands from the repository root. There are three different operations:
+
+| Operation | Actually executed | Requirements |
+|---|---|---|
+| Verify/regenerate tables | Derive tables from saved evidence JSON | Python standard library |
+| Re-score retained models | Render stored Gaussians against archived targets | `bencheval`, GPU, evaluation archive |
+| Rerun acquisition/training | Execute planners, collect frames, train new models | Simulator + selected method + evaluator, scene assets and fixed references |
+
+## 1. Verify the saved tables
 
 ```bash
 python scripts/phase1/report.py --check
+# To write the four generated tables/files again:
+python scripts/phase1/report.py
 ```
 
 Expected: `Verified 4 files from primary evidence and model re-scores`.
-`phase1/RESULTS.md` reproduces the static means (§4.2), mesh results (§4.4)
-and paired regional changes (§5.3–5.4). `results.csv` and `pairs.csv` contain
-full precision. Run without `--check` to regenerate these files. For example,
-GS static shared PSNR is 23.26 dB for R3-RECON and 19.93 dB for GLEAM;
-mesh negative regional contrasts are 17/17. The two protocol groups stay separate.
-
-For the supplied delivery folder layout, check the actual report tables too:
+This checks consistency; it does not run simulation, training or GPU rendering.
+For the supplied report, also check its 115 numerical cells:
 
 ```bash
-python scripts/phase1/check_report_tables.py --report ../../1/final/ActiveBench-Phase1-Report.md
+python scripts/phase1/check_report_tables.py \
+  --report ../../1/final/ActiveBench-Phase1-Report.md
 ```
 
-Expected: `115 numerical report cells; 0 mismatches`. Use your report's path
-if it is stored elsewhere.
+Use your actual report path. Expected: `115 numerical report cells; 0 mismatches`.
 
-## 2. Re-render the saved models and check against the report
+## 2. Re-render stored models against the report
 
-Prerequisites: Linux x86-64, conda, an NVIDIA GPU/driver compatible with CUDA
-12.8, and a C++ compiler. The validated machine has 32 GB VRAM; see
-[SYSTEM.md](SYSTEM.md). The first render compiles the gsplat CUDA extension.
-
-If you already have the validated `bencheval` environment, use its prefix.
-Otherwise create a **new** prefix; the setup command refuses to overwrite one:
-
-```bash
-PHASE1_EVAL_ENV="$HOME/phase1-envs/bencheval"
-python scripts/phase1/setup.py --environment bencheval --prefix "$PHASE1_EVAL_ENV" --execute
-```
-
-Restore the evaluation archive supplied alongside this repository. This
-69.53 GB archive contains all models and clean reference images; acquisition
-streams and external method repositories are unnecessary for this step.
+Install/reuse `bencheval` following [SETUP.md](SETUP.md). Restore the supplied
+69.53 GB evaluation archive (models and fixed clean reference images):
 
 ```bash
 mkdir -p data/phase1
 tar -xf ../artifacts/activebench-phase1-evaluation.tar -C data/phase1
-python scripts/phase1/data.py --verify data/phase1 --manifest data/phase1/evaluation-manifest.json
+python scripts/phase1/data.py --verify data/phase1 \
+  --manifest data/phase1/evaluation-manifest.json
 ```
 
-Start with **one scene, one method, one condition**:
+One scene/method/condition, then every retained report PSNR:
 
 ```bash
-conda run --no-capture-output -p "$PHASE1_EVAL_ENV" python scripts/phase1/rescore.py \
+conda run --no-capture-output -p "$ACTIVEBENCH_ENVS_DIR/bencheval" \
+  python scripts/phase1/rescore.py \
   --scene interior_0007 --method r3con-pano --condition d0 \
   --catalog shared --check-report --out outputs/one-result
+
+conda run --no-capture-output -p "$ACTIVEBENCH_ENVS_DIR/bencheval" \
+  python scripts/phase1/rescore.py --check-report --out outputs/report-rescore
 ```
 
-Expected: **22.39 dB**, `REPORT MATCH`, then
-`1 cells; 1 scores; 1 report matches; 0 failures`.
-This checks model/camera identity, every view and the class means, with
-`--tolerance-db 0.0001`. A mismatch, unknown selection or missing input returns
-a nonzero exit code. Frozen results are never used as the output directory.
+Expected first result: **22.39 dB**, `REPORT MATCH`.
+Expected full result: **60 cells; 84 scores; 84 report matches; 0 failures**.
+The default tolerance is 0.0001 dB. Inspect `summary.json` and per-view JSON.
+A mismatch/missing input exits nonzero. Repeating the command resumes with
+model/camera/target/verifier identity checks.
 
-Reproduce **every primary and provisional cube PSNR result in the report**:
+This recomputes PSNR. SSIM, LPIPS, geometry and planning times in the historical
+tables remain recorded measurements. The provisional GS cube scores retain the
+limitations described in the report; recomputing them does not resolve those
+limitations or justify stronger conclusions.
 
-```bash
-conda run --no-capture-output -p "$PHASE1_EVAL_ENV" python scripts/phase1/rescore.py \
-  --check-report --out outputs/report-rescore
-```
+## 3. Run the historical method matrix again
 
-Expected: `60 cells; 84 scores; 84 report matches; 0 failures`.
-Inspect `outputs/report-rescore/summary.json` and the per-view JSON files.
-Resume by repeating the command; cached results are checked again, and changed
-models, cameras, target-image bytes or verifier code invalidate the cache.
-`--group mesh` or `--group gs` selects one protocol group.
-
-This command recomputes PSNR. SSIM, LPIPS, geometry and recorded planning times
-in the tables remain explicitly historical measurements. Rebuilding a model
-or resampling evaluation cameras is a different experiment.
-
-## 3. Acquire and reconstruct one scene with one method
-
-Install only the needed runtimes using [SETUP.md](SETUP.md), plus that scene's
-simulation assets and the selected planner's source/checkpoint. Set
-`ACTIVEBENCH_ENVS_DIR` if your named environments are outside `~/miniconda3/envs`.
-
-| Operation | Required conda environments |
-|---|---|
-| Saved-model re-score | `bencheval` only |
-| GS scene with R3-RECON, including reconstruction | `habitat-gs`, `r3con`, `bencheval` |
-| Mesh scene with R3-RECON, including reconstruction | `habitat`, `r3con`, `bencheval` |
-| Random baseline | Scene simulator and `bencheval`; no planner environment |
-| Another planner | Scene simulator, that planner's environment, and `bencheval` |
-
-Inspect the selected full-budget run before executing it:
+Install the required simulator and planner environments, weights and simulation
+assets from [SETUP.md](SETUP.md). Keep the archived references from step 2.
+The historical runner supports one method, one scene, one condition, or the
+whole declared matrix:
 
 ```bash
+# Plan one cell.
 python scripts/phase1/run.py --scene interior_0007 --method r3con-pano --condition d0
-```
 
-Expected: `1 cells; plan only; 0 failures`. The following **verified short
-end-to-end example** acquires 5 simulation seconds, resamples six RGB-D frames
-to 1600 x 1200, trains for 20 iterations, scores and exports a Spark model:
-
-```bash
+# Verified short acquisition + reconstruction recipe, in a separate output.
 python scripts/phase1/run.py --scene interior_0007 --method r3con-pano --condition d0 \
-  --smoke-seconds 5 --iterations 20 --out runs_tutorial_smoke --execute
+  --smoke-seconds 5 --iterations 20 --out runs_phase1_smoke --execute
+
+# Fresh full-budget runs for all 60 retained cells and their methods.
+python scripts/phase1/run.py --out runs_phase1_fresh --execute
+
+# Also attempt all four historically missing/excluded cells: 64 in total.
+python scripts/phase1/run.py --include-missing --out runs_phase1_all64 --execute
 ```
 
-Expected: `1 cells; executed; 0 failures`. Model and score files are under
-`runs_tutorial_smoke/gs/interior_0007__d0__s0/r3con-pano/reconstructions/gsplat/`.
-Smoke scores are excluded from the report. For the full recorded recipe, use
-a new output root and omit the two smoke overrides:
+Omit `--execute` for a plan. `--group mesh|gs`, `--scene`, `--method`,
+`--condition d0|dyn` and `--seed` filter the frozen manifest. The six method IDs
+are `random`, `r3con-pano`, `magician`, `fisherrf`, `gavis`, `gleam`; historical
+GLEAM cells are GS-only. Missing/excluded cells remain declared as such in the
+retained evidence even if a new attempt succeeds.
+
+The full new 60/64-cell training matrix has not been rerun for this delivery.
+Independent acquisition/training need not recover historical floating-point
+scores exactly. Record new outcomes separately. The full method matrix also
+requires substantial disk space beyond the source repository.
+
+## Retained streams and visualization
+
+For fixed-stream retraining or historical playback, extract
+`activebench-phase1-streams.tar.gz` into `data/phase1`. Before verifying the
+stream manifest, apply the supplied one-frame repair in `artifacts/input-repair/`
+with `python ../artifacts/input-repair/apply_stream_repair.py data/phase1`. It repairs one undecodable archived GAVIS PNG using
+verified simulator replay; retained model bytes and scores are unchanged.
+Then verify `data/phase1/streams-manifest.json` with `scripts/phase1/data.py`.
+For Spark, also extract/verify `activebench-phase1-viewer-assets.tar.gz`.
+The optional replay archive contains additional planner decision captures.
 
 ```bash
-python scripts/phase1/run.py --scene interior_0007 --method r3con-pano --condition d0 \
-  --out runs_one_full --execute
-```
-
-Use `--scene apartment_1` for the mesh example; `--condition dyn` selects moving
-objects. Methods: `r3con-pano`, `magician`, `fisherrf`, `gavis`, `gleam`, `random`.
-GLEAM is GS-only. Omit `--condition` to run both static and dynamic cells.
-`--stage acquire`, `reconstruct` or `export` runs one pipeline stage;
-`--include-missing` also attempts historically missing/excluded cells.
-All budgets and per-cell overrides come from `phase1/campaign.json`.
-
-The full 60-cell fresh acquisition/training matrix has not been rerun for this
-release. New acquisition and training need not recover historical floats bit
-for bit. The [acceptance record](ACCEPTANCE.md) distinguishes the full PSNR
-verification, clean evaluator setup, and bounded new-run checks.
-
-## Recorded-stream retraining and Spark
-
-Restore `activebench-phase1-streams.tar.gz` into `data/phase1/` for fixed-stream
-retraining or Spark. Spark also needs `activebench-phase1-viewer-assets.tar.gz`.
-Verify each with `data.py --verify data/phase1 --manifest data/phase1/streams-manifest.json`
-or `viewer-assets-manifest.json`. The optional `replay` archive contains
-additional planner decision captures and is unnecessary for uniform-time replay.
-
-```bash
-# A new model from the retained stream; preserve the frozen model named gsplat.
+# Train a separately named model from a retained acquisition stream.
 python scripts/phase1/run.py --scene interior_0007 --method r3con-pano --condition d0 \
   --stage reconstruct --reconstruction-name gsplat-retrained --out data/phase1/runs --execute
-# Browse the retained final models and their recorded acquisition.
+
+# Browse retained final models and recorded acquisition.
 python scripts/phase1/view.py --port 8090
 ```
 
-An existing run refuses a changed configuration or recipe: use a fresh output
-root for another experiment. Keep the archived evaluation cameras and targets;
-regenerating them changes the measurement. [README](../README.md) describes
-Spark playback and comparison controls.
+The historical viewer validates retained model identity. For new generic runs,
+use `scripts/export_web_demo.py --runs-dir ...` as described in
+[RUNNING.md](RUNNING.md). [ACCEPTANCE.md](ACCEPTANCE.md) records which checks were
+actually executed; [SYSTEM.md](SYSTEM.md) records the validated environment.

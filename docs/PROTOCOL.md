@@ -1,51 +1,75 @@
-# Phase 1 protocol
+# Benchmark contract
 
-The benchmark compares acquisition implementations with known camera pose.
-Each planner receives a 640 x 480 camera (75.17817894 degree horizontal FOV),
-with depth according to its adapter. Motion costs the maximum of translation,
-yaw and pitch time: 0.5 m/s and 60 degrees/s. Planning wall time is recorded
-separately and does not advance the motion clock.
+ActiveBench compares **camera acquisition policies** under an explicit episode
+configuration. A common reconstructor measures the utility of their collected
+RGB-D streams. A planner's internal map is not substituted for that common model.
 
-Reconstruction input is sampled at 1 Hz, including time zero, and re-rendered
-at 1600 x 1200 without re-running planning. Planners receive newly recorded
-640 x 480 stream observations at their next update. Decision count does not
-increase the uniform-time reconstruction frame count.
+## Episode and inputs
 
-| Setting | Mesh | InteriorGS |
-|---|---|---|
-| Scenes | Apartment, Van Gogh, MP3D 17DRP5sb8fy, Skokloster | interior_0007, interior_0044 |
-| Motion execution | Navmesh-routed | Unrouted, collision none |
-| Shared evaluation | 20 severe + 20 clean; MP3D 19 + 20 | 40 severe + 40 clean |
-| Planned/retained reconstructions | 40 / 36 | 24 / 24 |
-| Methods | Five; no GLEAM | Six, including GLEAM |
-| GAVIS | 300 s, planner initialization 10,000 points/view | 270 s, 2,000 points/view |
-| Other budgets | 300 s | 300 s; dynamic GLEAM ends at 244.774 / 255.570 s |
-| Distractors | Four to six mixed objects, 0.189-0.733 m/s | Six chairs, 0.35 m/s |
+The episode YAML defines the scene, seed, start pose, sensor, motion rates,
+collision policy, distractor trajectories and budgets. `prepare_scene.py`
+creates portable inputs for installed scenes; it does not select from the
+historical report roster.
 
-Common reconstruction: 30,000 iterations, seed 0, SH3, 10,000 initial RGB-D
-points per frame, RGB L1 + DSSIM, no depth loss, no dynamic mask, densification
-gradient threshold 0.0002, no Gaussian-count cap. Historical altered-recipe
-Van Gogh dynamic Random/FisherRF retries are excluded. Missing Skokloster
-GAVIS acquisitions are kept as missing entries.
+The default generated protocol uses a 640 × 480 camera with 75.17817894° HFOV,
+0.5 m/s translation, 60°/s yaw/pitch and navmesh-routed motion. A move costs the
+maximum of translation, yaw and pitch times; planning wall time is recorded
+separately. Episodes stop at their time/capture budget or an agent's `done()`.
+New InteriorGS scenes also default to navmesh routing. The historical GS
+experiments used `collision: none`; those results belong to a separate protocol.
 
-All release PSNR tables use reloaded exported models, reconstructing the DC
-band from stored RGB and retaining the higher SH bands. Original scores and
-the exact differences remain in the evidence. This standardizes the loading
-regime of older and newer model exports; it does not restore coefficients
-already clipped in old artifacts. Rebuilding a new model can give a different
-score and is recorded as a new run.
+Policies receive RGB, intrinsics, elapsed simulation time and optional depth
+and camera pose, as declared by `MethodInfo`. With `stream_observations: true`,
+new 1 Hz trajectory frames are delivered at the next decision. Evaluation masks,
+held-out reference images and scores are not observation fields. The launcher
+also supplies scene bounds/start and, where needed, candidate positions; these
+are declared benchmark inputs. `pose_access: none` masks observation/stream
+poses, not every possible privileged configuration input. See the
+[API guide](adding-a-method.md) before making pose-free claims.
 
-The provisional GS cube set has 24 standing points and six views each,
-1600 x 1600 and 90 degree FOV. Its unresolved downward-depth and camera-height
-issue limits geometric and floor/ceiling interpretations. The selected GS
-assets have zero higher-order SH signal: this is not evidence for recovering
-view-dependent reflectance. Gaussian-center completeness is a diagnostic,
-not a physical fraction of room surface recovered.
+MAGICIAN additionally uses reference-surface samples for feasibility. Existing
+adapters do not all have identical information and action spaces. Report these
+adaptations with results; adding an adapter alone does not establish a fair
+comparison with another publication's original experiment.
 
-Dynamic-minus-static severe and clean deltas are paired within scene, method
-and seed. Negative severe-minus-clean contrast is relative regional damage;
-severe PSNR need not decrease absolutely. Trajectories may change, and two
-GLEAM dynamic durations are shorter. These single-seed results do not isolate
-direct occlusion effects, establish significance or validate collision-free
-flight. MAGICIAN's adapter uses a reference surface in feasibility checks;
-the implementations do not share an identical information/action contract.
+## Independent measurements
+
+1. **Coverage:** acquired RGB-D visibility of a clean, fixed reference surface.
+2. **Common reconstruction:** resample the executed trajectory at 1 Hz and
+   1600 × 1200, then train the same gsplat vanilla 3DGS recipe for every policy.
+   Default: 30,000 iterations, SH3, RGB L1 + DSSIM, RGB-D initialization,
+   no dynamic mask, no depth loss. The full settings are in each `eval.json`. PSNR/SSIM are recorded per view stratum;
+   LPIPS is recorded when its pretrained dependency is available (check
+   `config.lpips_available` and `config.lpips_error` before reporting it).
+3. **Held-out appearance:** render a fixed clean cube catalog prepared before
+   running methods. The default new-campaign catalog contains 24 standing points
+   × six square 90° views at 1200 × 1200. Reference positions do not depend on
+   method trajectories or dynamic masks. All six views at a point must pass
+   the valid-depth threshold; a failed reference build is not a usable catalog.
+4. **Geometry:** Gaussian-center completeness and accuracy relative to sampled
+   clean surfaces. These are diagnostics, not a physical fraction of recovered
+   room geometry. Surface sampling itself is finite and renderer-dependent.
+
+Cube and severe/clean damage-probe PSNR are different metrics. The new generic
+pipeline defaults to cube views; the frozen report uses its archived catalogs.
+Do not pool them. [PHASE1_PROTOCOL.md](PHASE1_PROTOCOL.md) describes the report's
+exact grouping and unresolved GS geometry limitations.
+
+## Comparing and resuming
+
+Use identical scene/config/budget, reference assets and reconstruction settings
+across methods within a comparison. Collect several seeds for robustness claims.
+`summarize_benchmark.py` reports per-scene seed mean/std, completion counts and
+matched static/dynamic deltas. One seed does not estimate variability. Different
+methods may visit different routes under distractors; a paired score difference
+does not isolate the causal effect of occluded pixels.
+
+The generic runner records expanded inputs, directly referenced asset hashes,
+method factory/options/version, platform code and reference recipe. Repeating
+the command resumes only matching receipts; changed settings require a new
+output root. Preserve the installed dataset distribution, upstream source pins,
+weights and environment snapshot as well: nested dataset resources and arbitrary
+external Python package contents are not exhaustively hashed by the run receipt.
+
+Short budgets, smaller cameras or fewer training iterations are useful pipeline
+tests. Record their actual settings and keep them separate from full experiments.

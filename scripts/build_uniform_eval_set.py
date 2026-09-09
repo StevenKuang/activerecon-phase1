@@ -335,7 +335,7 @@ def process_group(group: str, config_path: Path, args) -> None:
     spec = EpisodeSpec.from_dict(payload)
     sim = DynamicSceneSim(spec.scene)
     try:
-        surface_path = _REPO_ROOT / "eval_assets/surface" / ("%s.npz" % group.split("__")[0])
+        surface_path = Path(getattr(args, "surface_dir", None) or _REPO_ROOT / "eval_assets/surface") / ("%s.npz" % group.split("__")[0])
         surface = (
             np.load(surface_path)["points"] if surface_path.exists() else np.zeros((0, 3))
         )
@@ -470,6 +470,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--configs-dir", type=Path, required=True)
     parser.add_argument("--out-dir", type=Path, required=True)
+    parser.add_argument("--surface-dir", type=Path, help="prepared clean reference surfaces")
     parser.add_argument("--group", default=None, help="process one <scene>__s<seed>")
     parser.add_argument(
         "--points", type=int, default=24,
