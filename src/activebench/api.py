@@ -35,8 +35,8 @@ class StreamFrame:
     Protocol v3: the runner samples the executed trajectory at the
     reconstruction interval (1 Hz) and hands those frames to the agent in the
     next Observation, so every method sees the same stream its Tier-2
-    evaluation will be trained on. Paths only — frames are already persisted,
-    agents load pixels lazily, and RPC ships references.
+    evaluation will be trained on. Frames are persisted as files; agents load
+    pixels lazily, and RPC sends file paths.
     """
 
     pose: Optional[CameraPose]
@@ -76,7 +76,7 @@ class Observation:
     """What an agent sees at one capture instant.
 
     ``pose`` (and the poses inside ``stream_frames``) is ground truth and is
-    withheld — ``None`` — for methods declaring ``pose_access="none"``; see
+    set to ``None`` for methods declaring ``pose_access="none"``; see
     :func:`mask_observation_pose`.
     """
 
@@ -88,7 +88,7 @@ class Observation:
     task: Optional[str] = None
     step: int = 0
     # Absolute paths of the persisted arrays, set by the runner so RPC proxies
-    # can ship files instead of pixel payloads.
+    # can send file references.
     rgb_path: Optional[str] = None
     depth_path: Optional[str] = None
     # Protocol v3: trajectory frames recorded since the previous decision
@@ -183,8 +183,8 @@ class AgentAction:
     - ``done``: end the episode early.
 
     ``frame`` selects the coordinate frame of ``target``/``waypoints``:
-    ``"world"`` (default) or ``"camera"`` — poses relative to the camera at
-    the decision instant (OpenCV axes: +x right, +y down, +z forward;
+    ``"world"`` (default) or ``"camera"``. Camera-frame poses are relative
+    to the camera at the decision instant (OpenCV axes: +x right, +y down, +z forward;
     yaw/pitch are deltas on the current values). Camera-frame actions are the
     action space of pose-free methods; the runner resolves them against the
     true pose via :func:`resolve_action_frame`, so agents never need world
@@ -274,7 +274,7 @@ class MethodInfo:
     conda_env: Optional[str] = None
     # Ego-pose privilege: "gt" methods receive ground-truth poses; "none"
     # methods get pose-masked observations and act in the camera frame.
-    # ("odometry" — noisy odometry — is a planned tier, not implemented.)
+    # A noisy "odometry" pose tier is planned for future implementation.
     pose_access: str = "gt"
     # The optional decision_diagnostics() callback is invoked only when this
     # is true. Diagnostics are written after action selection and never become
@@ -324,8 +324,8 @@ def mask_observation_pose(observation: Observation) -> Observation:
 
     The single enforcement point for ``pose_access="none"``: both the ego
     pose and the poses of the delivered stream frames are blanked (a stream
-    pose would hand localization back to the agent for free). Pixel arrays
-    are shared, not copied.
+    pose would otherwise expose localization). Pixel arrays retain shared
+    references.
     """
 
     return replace(
@@ -341,7 +341,7 @@ def resolve_action_frame(action: AgentAction, current: CameraPose) -> AgentActio
     World-frame actions pass through untouched. Camera-frame poses are
     offsets in the decision camera's OpenCV axes (+x right, +y down,
     +z forward) with yaw/pitch deltas; every waypoint of a trajectory is
-    relative to the same decision pose, not chained.
+    relative to the same decision pose.
     """
 
     if action.frame == "world":

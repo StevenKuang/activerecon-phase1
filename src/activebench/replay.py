@@ -222,7 +222,7 @@ class EpisodeReplay:
         method = self.manifest["method"]["name"]
         reconstruction = self.manifest.get("reconstruction") or {}
         frame_count = reconstruction.get("num_frames", self.manifest["num_captures"])
-        text = "**%s** — %d reconstruction frames, %d agent captures, %.1fs sim time, world %s" % (
+        text = "**%s**: %d reconstruction frames, %d agent captures, %.1fs sim time, world %s" % (
             method,
             frame_count,
             self.manifest["num_captures"],

@@ -1068,7 +1068,7 @@ function beginSoftWait() {
     };
   });
   renderViewerLoads();
-  loadingTitle.textContent = "Loading 3DGS — minimize to keep exploring";
+  loadingTitle.textContent = "Loading 3DGS. Minimize to keep exploring.";
   loadingMin.hidden = false;
   loadingOverlay.hidden = false;
   const waits = waitingPanes.map((pane) => splatLoadRegistry.get(runs[pane.runIndex])?.promise);
@@ -1761,8 +1761,8 @@ function updatePanel() {
   thumbEl.src = run.frames[k].thumb;
   const distractorFraction = Number(run.frames[k].distractor_pixel_fraction || 0);
   el("frame-info").textContent =
-    `frame ${k + 1}/${run.frames.length} — sim t ${run.times[k].toFixed(1)}s` +
-    ` — distractor pixels ${(100 * distractorFraction).toFixed(1)}%`;
+    `frame ${k + 1}/${run.frames.length} · sim t ${run.times[k].toFixed(1)}s` +
+    ` · distractor pixels ${(100 * distractorFraction).toFixed(1)}%`;
 }
 
 // Read-only introspection for automated browser tests (no behavior change).

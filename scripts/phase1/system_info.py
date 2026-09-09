@@ -32,7 +32,7 @@ def main():
     mem = next(s for s in Path("/proc/meminfo").read_text().splitlines() if s.startswith("MemTotal:"))
     os_release = dict(line.split("=", 1) for line in Path("/etc/os-release").read_text().splitlines() if "=" in line)
     result = dict(captured_utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),
-        scope="Current verified reproduction machine; not an immutable snapshot taken at historical acquisition time",
+        scope="Hardware and software installed on the reproduction machine at capture time",
         os=os_release.get("PRETTY_NAME", "").strip('"'), kernel=platform.release(),
         architecture=platform.machine(), cpu=cpu, logical_cpus=os.cpu_count(),
         ram_bytes=int(mem.split()[1])*1024, environments={})

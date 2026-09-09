@@ -197,12 +197,12 @@ def process_group(group: str, config_paths: Dict[str, Path], args) -> None:
     payloads = {d: yaml.safe_load(p.read_text()) for d, p in sorted(config_paths.items())}
     dynamic = {d: p for d, p in payloads.items() if p.get("distractors")}
     if not dynamic:
-        print("[%s] no dynamic difficulty — skipped" % group)
+        print("[%s] dynamic condition unavailable; skipped" % group)
         return
     out_dir = Path(args.out_dir) / group
     transforms_path = out_dir / "transforms_eval_shared.json"
     if transforms_path.exists() and not args.overwrite:
-        print("[%s] exists — skipped (use --overwrite)" % group)
+        print("[%s] exists; skipped (use --overwrite)" % group)
         return
 
     rng = np.random.default_rng((zlib.crc32(group.encode()) + args.eval_seed) % 2**32)

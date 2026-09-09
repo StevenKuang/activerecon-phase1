@@ -1,14 +1,13 @@
 # Add a method
 
 Implement a Python factory returning an `ActiveAgent`. You can use a separate
-package/environment; **no registry edit is required**. The same adapter runs
+package/environment, loaded directly through its factory. The same adapter runs
 inline or through the benchmark's existing RPC boundary.
 
 ## Minimal working example
 
 [examples/methods/spin_agent.py](../examples/methods/spin_agent.py) is an executable
-example. It rotates in place to exercise the interface; it is not an exploration
-baseline for quality claims.
+example. It rotates in place to test interface integration.
 
 ```python
 from activebench.api import AgentAction, MethodInfo
@@ -45,7 +44,7 @@ For a GS config, use `-p "$ACTIVEBENCH_ENVS_DIR/habitat-gs"`.
 named environment. Omit both for an
 inline external agent. Built-in methods choose their own registered environments.
 The worker environment needs this package's core dependencies plus your method's
-own dependencies; it does not need Habitat. Install with
+own dependencies. Habitat runs in the simulator process. Install with
 `/path/to/myenv/bin/python -m pip install --no-deps -e /path/to/this/repo` after
 installing the core dependencies (`numpy`, `PyYAML`, `scipy`, `Pillow`).
 
@@ -68,11 +67,11 @@ by absolute path; use a package for adapters with relative imports.
 
 Set `needs_depth=True` to receive depth when the episode enables it.
 `pose_access="none"` removes both decision and stream poses. Masks identifying
-distractors, clean targets and evaluation scores are not policy inputs.
+distractors, clean targets and scores are reserved for evaluation.
 The factory receives benchmark configuration such as seed, start pose, scene
 bounds, sensor width/height/HFOV, time/capture limits and applicable candidate
 positions. Document which of these privileged inputs your method uses;
-observation-pose masking alone does not establish a fully pose-free setting.
+a pose-free claim requires checking all observation and configuration inputs.
 MAGICIAN's existing reference-surface feasibility input is a declared exception.
 
 ## Actions and coordinates
@@ -91,12 +90,12 @@ convention); relative displacement uses OpenCV right/down/forward axes.
 Use `activebench.convention.pose_to_c2w_cv` and the shared conversion helpers
 when integrating a library that expects OpenCV matrices. `CameraPose` and the
 YAML `start_pose: [x,y,z,yaw,pitch]` use **radians**; YAML `hfov` and motion
-`yaw_rate_deg`/`pitch_rate_deg` use degrees. Do not silently interchange them.
+`yaw_rate_deg`/`pitch_rate_deg` use degrees. Convert explicitly at API boundaries.
 
 The runner routes/clips movement according to the episode, enforces the clock
 and capture budget, and executes actions with its own geometry. A requested
-move can fail to reach its target. Derive policy state from the next observation,
-not an assumption that the command was executed exactly. Avoid endless zero-time
+move can fail to reach its target. Update policy state from the next observation
+to reflect the movement actually executed. Avoid endless zero-time
 `capture()` loops when `capture_cost=0`; the capture budget still limits them.
 
 ## Run the method in a campaign
@@ -122,10 +121,10 @@ methods:
       turn_degrees: 30
 ```
 
-Alternatively set `python: /absolute/path/to/python` instead of `environment`.
+Choose either `environment: myenv` or `python: /absolute/path/to/python`.
 Factories must accept a JSON-serializable options dictionary. Benchmark-owned
-keys (seed, camera, start, bounds, budgets and reference surface) cannot be
-changed through the general campaign's method overrides.
+keys (seed, camera, start, bounds, budgets and reference surface) remain
+controlled by the benchmark configuration.
 
 ```bash
 python scripts/run_campaign.py --configs-dir outputs/tutorial/configs \
@@ -151,5 +150,5 @@ Start with `python -m pytest tests/test_platform_campaign.py tests/test_bench_rp
 These tests check actual external-file loading, RPC round trips, pose masking,
 invalid contracts and recipe protection. Then run a short real scene, inspect
 `agent_worker.log`, `manifest.json` and recorded actions, and only then increase
-the budget. API conformance does not validate your method's mathematical
-implementation or its upstream paper claims.
+the budget. Validate the method's mathematical implementation and upstream
+paper claims separately from API conformance.

@@ -7,7 +7,7 @@ shared 3D Gaussian reconstruction and held-out reference views.
 
 The repository includes adapters for **R3-RECON, MAGICIAN, FisherRF, GAVIS and
 GLEAM**, plus Random. Add another scene through an episode YAML and another
-method through a Python factory; neither needs to belong to an existing campaign.
+method through a Python factory. Both interfaces support new experiments.
 The Phase 1 results provide a reference experiment across six scenes.
 
 ## Start here
@@ -31,8 +31,7 @@ installed scene → episode configs → clean references → selected methods �
 ```
 
 [The short tutorial](docs/RUNNING.md#a-short-real-end-to-end-run) runs real
-simulation, common reconstruction and evaluation. It does not require Phase 1
-model/result archives. Once configs and references are prepared, run a single
+simulation, common reconstruction and evaluation using installed scene assets. Once configs and references are prepared, run a single
 method or all five published adapters plus Random:
 
 ```bash
@@ -80,7 +79,7 @@ budgets and exceptions remain in [phase1/campaign.json](phase1/campaign.json).
 saved-model re-scoring and fresh reruns of that experiment.
 
 ```bash
-# Verify saved evidence/table consistency; this does not execute a benchmark.
+# Verify saved evidence and table consistency.
 python scripts/phase1/report.py --check
 ```
 

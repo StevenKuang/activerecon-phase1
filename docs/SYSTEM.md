@@ -1,8 +1,8 @@
 # Reference hardware and software
 
 The following environment was used for model re-scoring and platform validation
-in September 2026. A complete software image was not captured at acquisition
-time, so this snapshot describes the reproduction environment.
+in September 2026. This snapshot describes the reproduction environment; a
+complete software image from acquisition time is unavailable.
 
 | Component | Specification |
 |---|---|

@@ -114,7 +114,7 @@ def _wait_for_gpu_settle(min_free_gib: float = 15.0, timeout_s: float = 60.0) ->
             free_mib = int(raw.strip().split("\n")[0])
             if free_mib >= min_free_gib * 1024:
                 print(
-                    "[campaign] GPU settle: %.0f GiB free — proceeding" % (free_mib / 1024),
+                    "[campaign] GPU settle: %.0f GiB free; proceeding" % (free_mib / 1024),
                     flush=True,
                 )
                 return
@@ -310,7 +310,7 @@ def _assert_stream_resolution(episode_dir: Path, width: int, height: int) -> Non
     cur = (payload.get("w"), payload.get("h"))
     if cur != (width, height):
         raise RuntimeError(
-            "stream in %s is %sx%s but the campaign trains at %dx%d — "
+            "stream in %s is %sx%s but the campaign trains at %dx%d; "
             "resample it first" % (episode_dir, cur[0], cur[1], width, height)
         )
 
@@ -358,7 +358,7 @@ def run_retrain(
         )
     if proc.returncode != 0 or not (output_dir / "eval.json").exists():
         raise RuntimeError(
-            "retrain failed for %s (exit %d) — see %s"
+            "retrain failed for %s (exit %d); see %s"
             % (episode_dir, proc.returncode, log_path)
         )
 
@@ -417,11 +417,11 @@ def run_resample_stream(
             )
         if proc.returncode != 0:
             raise RuntimeError(
-                "resample_stream exited %d — see %s" % (proc.returncode, log_path)
+                "resample_stream exited %d; see %s" % (proc.returncode, log_path)
             )
         if not (tmp_mirror / "stream").exists():
             raise RuntimeError(
-                "resample_stream produced no stream/ — see %s" % log_path
+                "resample_stream produced no stream/; see %s" % log_path
             )
 
         # Replace the stream directory in-place.

@@ -112,7 +112,7 @@ def main() -> None:
             else shared_eval_set_dir(Path(episode), Path(args.shared_dir))
         )
         if eval_set is None:
-            print("[retrain] %s: no shared eval set — legacy episode-local views"
+            print("[retrain] %s: using legacy episode-local views; shared eval set unavailable"
                   % episode)
         try:
             result = run_retrain_eval(

@@ -1,8 +1,7 @@
 # Reproduce the Phase 1 report
 
 This guide concerns the **Phase 1 results**. To benchmark another
-scene or method, start with [RUNNING.md](RUNNING.md); it does not require the
-Phase 1 archives. Exact Phase 1 settings and caveats are in
+scene or method, use [RUNNING.md](RUNNING.md) with your installed scene assets. Exact Phase 1 settings and caveats are in
 [PHASE1_PROTOCOL.md](PHASE1_PROTOCOL.md).
 
 The report distinguishes shared severe/clean PSNR from provisional GS cube
@@ -27,7 +26,7 @@ python scripts/phase1/report.py
 ```
 
 Expected: `Verified 4 files from primary evidence and model re-scores`.
-This checks consistency; it does not run simulation, training or GPU rendering.
+This validates the saved tables against their evidence files.
 For the supplied report, also check its 115 numerical cells:
 
 ```bash
@@ -69,8 +68,8 @@ model/camera/target/verifier identity checks.
 
 This recomputes PSNR. SSIM, LPIPS, geometry and planning times in the Phase 1
 tables remain recorded measurements. The provisional GS cube scores retain the
-limitations described in the report; recomputing them does not resolve those
-limitations or justify stronger conclusions.
+depth and placement limitations described in the report. Their interpretation
+remains provisional after re-scoring.
 
 ## 3. Run the Phase 1 method matrix again
 
@@ -102,7 +101,7 @@ retained evidence even if a new attempt succeeds.
 
 Fresh acquisition and training can produce different floating-point scores.
 Save those results in a new output directory. Validation covers short runs and
-re-scoring all retained models; a fresh full-budget matrix has not been tested.
+re-scoring all retained models; a fresh full-budget matrix remains unverified.
 Allow substantial disk space for the acquired streams and trained models.
 
 ## Retained streams and visualization

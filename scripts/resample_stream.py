@@ -194,7 +194,7 @@ def main() -> None:
                 if diff > 1.0:
                     sys.exit(
                         "re-rendered frame at t=%.1f deviates from the recording "
-                        "(mean |diff| %.2f gray levels) — sim/world mismatch" % (t, diff))
+                        "(mean |diff| %.2f gray levels); sim/world mismatch" % (t, diff))
             rgb_rel = "stream/frame_%05d.png" % index
             depth_rel = "stream/depth_%05d.npy" % index
             mask_rel = "stream/mask_%05d.png" % index

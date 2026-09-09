@@ -119,7 +119,7 @@
     summary.textContent = job.status === "queued"
       ? `Queued · ${elapsed}s elapsed`
       : job.status === "complete"
-        ? "Ready — opening viewer…"
+        ? "Ready. Opening viewer…"
         : `Preparing ${job.panes.length} model${job.panes.length === 1 ? "" : "s"} · ${elapsed}s elapsed`;
     panes.replaceChildren(...job.panes.map((pane) => paneNode(pane, job.status)));
   }
@@ -157,7 +157,7 @@
       }
       setTimeout(poll, 250);
     } catch (error) {
-      summary.textContent = "Viewer server is unreachable — retrying…";
+      summary.textContent = "Viewer server is unreachable. Retrying…";
       setTimeout(poll, 1000);
     }
   }

@@ -159,7 +159,7 @@ class TerminalPrepareProgress:
                     snapshot["current"],
                     key=lambda item: item["kind"] != "reconstruction",
                 )[0]
-                line += " | %s — %s (%.0f%%)" % (
+                line += " | %s: %s (%.0f%%)" % (
                     current["label"], current["message"], current["progress"])
             if snapshot["failed"]:
                 line += " | %d failed" % snapshot["failed"]

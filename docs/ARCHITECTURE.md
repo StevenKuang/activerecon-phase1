@@ -1,8 +1,8 @@
 # ActiveBench architecture
 
 The reusable unit is an episode configuration and a method implementing
-`ActiveAgent`. Neither the simulator nor the method API depends on the frozen
-Phase 1 campaign manifest.
+`ActiveAgent`. The simulator and method API work directly with these inputs,
+independently of the Phase 1 campaign manifest.
 
 ```text
 installed scene + episode YAML       method factory + options
@@ -40,8 +40,8 @@ installed scene + episode YAML       method factory + options
 The orchestrator needs only the core Python package. Each episode runs in
 `habitat` (mesh) or `habitat-gs` (Gaussian stages); each external planner runs in
 its registered or explicitly configured Python environment. Common training
-runs in `bencheval`. A CUDA/toolchain conflict in one method need not change
-another method's environment. Failed cells are logged and the campaign exits
+runs in `bencheval`. Separate environments isolate method-specific CUDA and
+toolchain requirements. Failed cells are logged and the campaign exits
 nonzero after recording the outcomes.
 
 The benchmark persists RGB/depth before sending the observation to a worker.
@@ -58,5 +58,5 @@ assets and runs are outside Git by default.
 
 `phase1/` is the retained experiment/evidence package. Its runner selects
 Phase 1 cells and exact overrides; its report script rebuilds saved tables.
-It calls the same stage helpers as the general runner but does not define the
-platform's allowed scenes or methods.
+It calls the same stage helpers as the general runner. New experiments supply
+their own scene configurations and method selections.

@@ -121,10 +121,10 @@ def main():
              "| Scene | Condition | Method | Complete / planned | PSNR mean ± std (n) |",
              "|---|---|---|---:|---:|"]
     for row in summaries:
-        score = "—" if row["psnr_mean"] is None else "%.3f%s (%d)" % (
+        score = "Missing" if row["psnr_mean"] is None else "%.3f%s (%d)" % (
                 row["psnr_mean"], " ± %.3f" % row["psnr_std"] if row["psnr_std"] is not None else "", row["psnr_n"])
         lines.append("| %s | %s | %s | %d / %d | %s |" % (row["scene"], row["condition"], row["method"], row["complete"], row["planned"], score))
-    lines += ["", "Per-cell metrics and matched d0/dyn deltas are in summary.json. These are new runs, not frozen report evidence.", ""]
+    lines += ["", "Per-cell metrics and matched d0/dyn deltas for this experiment are in summary.json.", ""]
     (out / "RESULTS.md").write_text("\n".join(lines))
     print(out / "RESULTS.md")
 

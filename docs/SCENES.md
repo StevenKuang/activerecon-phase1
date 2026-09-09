@@ -1,8 +1,8 @@
 # Datasets and additional scenes
 
 The platform accepts installed Habitat-compatible stage files or scene-dataset
-handles. A scene does **not** have to appear in `phase1/campaign.json`. The
-six Phase 1 scenes are examples of platform use, not an allowlist.
+handles. Add compatible scenes through episode configurations. The six
+Phase 1 scenes provide examples of this workflow.
 
 | Dataset | Inputs | Simulator |
 |---|---|---|
@@ -23,8 +23,7 @@ conda run --no-capture-output -p "$ACTIVEBENCH_ENVS_DIR/habitat" \
 ```
 
 Record dataset versions alongside each experiment. Moving object templates
-must also be installed for dynamic scenes;
-static runs do not need those templates.
+are an additional requirement for dynamic scenes.
 
 ## Discover installed scenes
 
@@ -35,7 +34,7 @@ python scripts/list_scenes.py --data-root "$HABITAT_GS_ROOT/data" --datasets int
 ```
 
 The editable catalog is [configs/datasets.yaml](../configs/datasets.yaml).
-Discovery scans the installation rather than Phase 1 result directories.
+Discovery scans the installed datasets.
 Explicit catalog entries describe expected paths; check installation before
 using them. Change a dataset root/glob for another split or directory layout.
 You can also skip discovery and pass any installed scene directly.
@@ -52,13 +51,14 @@ conda run --no-capture-output -p "$ACTIVEBENCH_ENVS_DIR/habitat" \
 This creates `mp3d_OTHER_ID__d0__s{0,1,2}.yaml` with a shared render-checked start
 and 300 s budgets. Pass `--dataset-config /path/to/dataset.json` when the asset
 requires one. For ReplicaCAD, pass `--scene-path apt_1` plus its dataset config.
-A loadable navmesh is required by automatic scene/reference preparation; merely
-having a mesh file is insufficient.
+Automatic scene/reference preparation requires the scene asset and a loadable
+navmesh.
 
 ## Prepare an additional InteriorGS scene
 
 Create the non-collidable dataset config once per installed split. Gaussian
-stages have no collision mesh; this setting permits Bullet-backed distractors.
+stages use Gaussian geometry; this setting disables stage-mesh collision
+construction while permitting Bullet-backed distractors.
 
 ```bash
 python scripts/gs_make_noncollide_config.py \
@@ -88,14 +88,14 @@ Append these options to `prepare_scene.py`:
 The template origin/scale must match the object asset; diagonal is a conservative
 **scaled** size used for route clearance. Inspect the resulting placement before
 reporting experiments. Routes follow navmesh shortest-path polylines on the start
-island, with sampled clearance checks; the script fails if it cannot find the
-requested number. This is a route construction check, not a full swept-volume
-collision proof. Static and dynamic conditions share camera/start/budget and seed.
+island, with sampled clearance checks; the build requires the requested number
+of valid routes. Full swept-volume collision validation requires additional
+checks. Static and dynamic conditions share camera/start/budget and seed.
 
 Generated YAML is the editable interface: adjust motion, budget, task or object
 trajectories there and use a new output root. `start_pose` yaw/pitch are radians;
 HFOV and motion rates with `_deg` are degrees. Keep unique scene names within
-one experiment. Names cannot include the reserved `__` separator.
+one experiment. Reserve `__` for the generated field separator.
 
 Next, prepare clean references and run methods using [RUNNING.md](RUNNING.md).
 References use only the `d0` configs, so keep a clean config even if you later

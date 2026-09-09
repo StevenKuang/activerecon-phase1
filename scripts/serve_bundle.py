@@ -5,7 +5,7 @@ Paged RAD reconstructions are streamed with HTTP range requests, so a plain
 header, answers 200 with the whole file, and the splat layer never renders
 (the replay and point cloud still show, which makes it look like the LOD
 build was skipped). ``export_web_demo.py --serve`` uses the right handler,
-but only after re-running a full export — this script just serves.
+by running a full export first. This script serves the existing bundle.
 
     python scripts/serve_bundle.py exports/campaign_v6/interior_0007_dyn_compare
     python scripts/serve_bundle.py <bundle> --port 8091
@@ -34,7 +34,7 @@ def main() -> None:
 
     bundle = args.bundle.resolve()
     if not (bundle / "index.html").exists():
-        parser.error("%s has no index.html — not an exported bundle" % bundle)
+        parser.error("%s: missing index.html; serve a directory produced by the exporter" % bundle)
 
     handler = functools.partial(RangeRequestHandler, directory=str(bundle))
     server = http.server.ThreadingHTTPServer(("127.0.0.1", args.port), handler)

@@ -16,7 +16,7 @@ The depth-based height adjustment needs separate validation on GS assets.
 Output: transforms_eval_shared.json plus clean gt/ RGB-D, compatible with
 retrain_eval.py --shared-dir. For new campaigns, use prepare_evaluation.py to
 prepare this catalog and the reference surface together. The Phase 1 report
-uses its archived catalogs rather than the current default recipe.
+uses its archived catalogs for report reproduction.
 """
 
 import argparse
@@ -471,8 +471,8 @@ def main() -> None:
     parser.add_argument(
         "--min-valid-depth-frac", type=float, default=0.5,
         help="a view must have at least this fraction of pixels with valid "
-             "depth, i.e. must actually see geometry rather than escape the "
-             "scene. A point is rejected unless ALL its faces pass. Measured "
+             "depth, indicating visible geometry. All faces at a point must "
+             "pass this check. Measured "
              "separation on the existing sets is wide: legitimate views sit at "
              "0.57-1.00 while escaping ones sit at 0.00-0.20",
     )

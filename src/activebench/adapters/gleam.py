@@ -485,7 +485,7 @@ class GleamAgent:
                 self._policy.load_checkpoint(self.checkpoint)
             else:
                 print(
-                    "[gleam] WARNING: no checkpoint given — the policy is "
+                    "[gleam] WARNING: checkpoint missing; the policy is "
                     "randomly initialized and its actions are meaningless."
                 )
 

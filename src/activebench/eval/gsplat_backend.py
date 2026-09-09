@@ -410,7 +410,7 @@ class GsplatVanilla3DGSBackend:
                 strategy.refine_stop_iter = step
                 print(
                     "[gsplat] gaussian cap %d reached at iter %d "
-                    "(%d Gaussians) — densification frozen"
+                    "(%d Gaussians); densification frozen"
                     % (int(max_gaussians), step, len(params["means"])),
                     flush=True,
                 )

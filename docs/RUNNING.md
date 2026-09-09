@@ -4,13 +4,13 @@ Run commands from the repository root after [SETUP.md](SETUP.md). The orchestrat
 needs the core Python dependencies; activate `bencheval` or another core environment.
 `ACTIVEBENCH_ENVS_DIR`, `HABITAT_SIM_ROOT` and applicable method source variables
 must point to the installed locations. The commands below use the configurable
-prefixes rather than assuming conda's default environment directory.
+prefixes supplied through these variables.
 
 ## A short, real end-to-end run
 
 This example collects **6 simulation seconds**, prepares a small independent
-reference set, and trains for **20 iterations**. It checks the pipeline; its
-scores are not research results or reproductions of Phase 1 report scores.
+reference set, and trains for **20 iterations**. Its scores serve as pipeline
+diagnostics for this short configuration.
 
 ```bash
 # 1. Prepare a clean installed scene.
@@ -56,7 +56,8 @@ outputs/tutorial/
 The campaign prints `Finished: 1 completed, 0 failed`. Omit `--execute` to inspect
 a plan. For collection alone, replace the asset/reconstruction options with
 `--acquisition-only`. A new scene requires reference preparation before common
-reconstruction; saved Phase 1 result archives are not needed for this workflow.
+reconstruction. This workflow generates its own acquisition and reconstruction
+artifacts from the installed scene.
 
 ## One scene/method, or the full method roster
 
@@ -75,27 +76,28 @@ python scripts/run_campaign.py --configs-dir outputs/my-study/configs \
   --out-dir outputs/my-study/runs --execute
 ```
 
-The matrix is **selected YAMLs × selected methods**, with no dependency on the
-Phase 1 campaign roster. GLEAM's Phase 1 validation covers GS scenes; do not
-assume equivalent behavior on all other datasets. The general method settings
+The matrix is **selected YAMLs × selected methods**, defined by your supplied
+configurations. GLEAM's Phase 1 validation covers GS scenes; behavior on other
+datasets requires validation. The general method settings
 are in [configs/methods.yaml](../configs/methods.yaml), and a custom method YAML
 can be selected with `--method-config`. Use `--method-options` for JSON option
-overrides keyed by method alias. Protocol-owned inputs cannot be overridden
-as method hyperparameters.
+overrides keyed by method alias. Protocol-owned inputs remain controlled by
+the benchmark configuration.
 
 To do a full experiment, prepare a **new** configuration directory using the
 300 s defaults and multiple seeds, prepare references with the default sampling
 recipe, and omit the short-run reconstruction overrides. Defaults are 1600 × 1200
 training streams and 30,000 iterations. This costs substantially more GPU time
-and disk space; the small tutorial is not a runtime estimate for the full matrix.
+and disk space. Estimate full-matrix runtime using representative runs at
+the intended budget.
 
 ## Resume and inspect failures
 
 Repeat the same campaign command to resume matching outputs. The runner rejects
 changed configs, method options/file source, core pipeline code or reference
 assets in an existing cell. Choose a new `--out-dir` when changing the recipe.
-Do not delete a receipt to bypass that check. Legacy runs without a generic
-receipt are not silently adopted. Keep external source/weights/environment
+Keep receipts intact. Resume requires a matching generic receipt, including
+for legacy runs. Keep external source/weights/environment
 versions fixed and record them separately as described in [PROTOCOL.md](PROTOCOL.md).
 
 A failed cell remains visible in `benchmark-status.json` and
@@ -126,7 +128,8 @@ python scripts/export_web_demo.py --runs-dir outputs/tutorial/runs \
 Open http://127.0.0.1:8090 and keep the process running. Select a recording,
 apply changes, then use timeline playback/stepping and camera controls.
 The viewer displays the stored final reconstruction alongside recorded
-acquisition. It does not retrain Gaussians at every playback frame.
+acquisition. Playback advances the trajectory and RGB frames while the final
+Gaussian model remains fixed.
 
 - **Select:** choose scene, condition (`d0` or `dyn`), method, reconstruction and
   seed, then click **Apply changes**.

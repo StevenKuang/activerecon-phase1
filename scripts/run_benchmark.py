@@ -53,7 +53,7 @@ def main() -> None:
     args = parser.parse_args()
 
     if args.agent_python and args.agent_env:
-        parser.error("choose --agent-python or --agent-env, not both")
+        parser.error("choose exactly one of --agent-python and --agent-env")
     if ":" in args.agent:
         from activebench.plugins import normalize_factory
         args.agent = normalize_factory(args.agent)

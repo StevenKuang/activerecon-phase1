@@ -83,7 +83,7 @@ def main():
         rr=[r for r in rows if r["group"]=="gs" and r["condition"]=="d0" and r["method"]==m]
         v=[np.mean([float(r["psnr_"+k]) for r in rr]) for k in ("severe","clean")]
         fig.text(.08+.89*(i+.5)/6,.09,f"{v[0]:.2f} / {v[1]:.2f}",ha="center",fontsize=12)
-    fig.text(.08,.01,"* GAVIS: 270 s reference; dynamic GLEAM: 244.8 / 255.6 s. Markers show scenes, not seed uncertainty.",fontsize=11.5,color="#485A6D")
+    fig.text(.08,.01,"* GAVIS: 270 s reference; dynamic GLEAM: 244.8 / 255.6 s. Markers identify individual scenes; one acquisition seed.",fontsize=11.5,color="#485A6D")
     save(fig,"figure-07-regional-dynamic-response")
 
     fig=plt.figure(figsize=(13,9.7)); ms=["r3con-pano","magician","fisherrf","gavis","random"]
@@ -99,7 +99,7 @@ def main():
         ax.text(1.06,1.04,"Static PSNR\nsevere / clean",transform=ax.transAxes,fontsize=11,color="#485A6D",va="bottom")
         for y,m in enumerate(ms):
             match=next((p for p in pairs if p["group"]=="mesh" and p["scene"]==scene and p["method"]==m),None)
-            label="—"
+            label="Missing"
             if match:
                 ds,dc=float(match["delta_severe"]),float(match["delta_clean"])
                 ax.plot([ds,dc],[y,y],color="#BAC3CC",lw=2,zorder=2)
