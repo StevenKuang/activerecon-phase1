@@ -51,10 +51,6 @@
     "source_sha256": "be4eac02538c1037198e655191b25c144b49cbe42fe01d4f71d76d915de8c177",
     "exported_sha256": "be4eac02538c1037198e655191b25c144b49cbe42fe01d4f71d76d915de8c177"
   },
-  "docs/assets/phase1-video-poster.jpg": {
-    "source_sha256": "e4d73635ccc0dea2d2f25732c71afd3de2b2b41547f5af993a06c52229791628",
-    "exported_sha256": "e4d73635ccc0dea2d2f25732c71afd3de2b2b41547f5af993a06c52229791628"
-  },
   "examples/methods/spin-method.yaml": {
     "source_sha256": "339a447c75bccb74ce7b253bc9cf818e9abfbf3a66818c7e6eca2640d885d1a6",
     "exported_sha256": "339a447c75bccb74ce7b253bc9cf818e9abfbf3a66818c7e6eca2640d885d1a6"
@@ -2722,8 +2718,8 @@
   },
   "README.md": {
     "source": "phase1/project/README.md",
-    "source_sha256": "dc8bdf08b6e421467074419de19be955af4393015580197ab9f8315c898bf04b",
-    "exported_sha256": "dc8bdf08b6e421467074419de19be955af4393015580197ab9f8315c898bf04b"
+    "source_sha256": "a21d72f627e75c57d0fc58813099183ab75bf95b824d90af6db6610eece6bc7a",
+    "exported_sha256": "a21d72f627e75c57d0fc58813099183ab75bf95b824d90af6db6610eece6bc7a"
   },
   ".gitignore": {
     "source": "phase1/project/.gitignore",

@@ -88,14 +88,5 @@ Use the general platform workflow above to benchmark additional scenes and metho
 
 ## Supplementary video
 
-**ActiveBench Visualization · 4:54** — six static scenes, followed by a
-five-method MP3D static/dynamic comparison. Click the cover to open the downloads.
-
-[![ActiveBench Visualization — Phase 1 supplementary video](docs/assets/phase1-video-poster.jpg)](https://github.com/StevenKuang/activerecon-phase1/releases/tag/phase1-videos)
-
-[Download 1080p · 287 MB](https://github.com/StevenKuang/activerecon-phase1/releases/download/phase1-videos/ActiveBench-Phase1-All-Scenes-1080p.mp4)
-· [Download 4K · 1.09 GB](https://github.com/StevenKuang/activerecon-phase1/releases/download/phase1-videos/ActiveBench-Phase1-All-Scenes-4K.mp4)
-· [Chapters and visualization guide](docs/VIDEO.md)
-
-Download either version from GitHub Releases and open it in a video player.
-Downloads require an account with access to this repository.
+[1080p](https://github.com/StevenKuang/activerecon-phase1/releases/download/phase1-videos/ActiveBench-Phase1-All-Scenes-1080p.mp4)
+· [4K](https://github.com/StevenKuang/activerecon-phase1/releases/download/phase1-videos/ActiveBench-Phase1-All-Scenes-4K.mp4)
