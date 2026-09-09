@@ -129,5 +129,17 @@ apply changes, then use timeline playback/stepping and camera controls.
 The viewer displays the stored final reconstruction alongside recorded
 acquisition. It does not retrain Gaussians at every playback frame.
 
+- **Select:** choose scene, condition (`d0` or `dyn`), method, reconstruction and
+  seed, then click **Apply changes**.
+- **Replay:** use play/pause, frame stepping or the progress slider. RGB and
+  trajectory state follow recorded timestamps; disabling the 3DGS layer reveals
+  accumulated RGB-D points.
+- **Inspect:** **Go to capture** returns to the recorded camera; FPV, orbit/zoom
+  and WASD/QE move the inspection camera. Layer controls expose trajectories,
+  camera history and evaluation poses.
+- **Compare:** enable **compare (split view)**, select B and apply changes. Keep
+  condition fixed to compare methods, or method fixed to compare `d0`/`dyn`.
+  Same-scene panes share the inspection camera and replay clock.
+
 [Add another scene](SCENES.md) · [Add a policy](adding-a-method.md) ·
 [Reproduce the Phase 1 report](REPRODUCING.md)

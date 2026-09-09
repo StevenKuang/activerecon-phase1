@@ -28,8 +28,8 @@
     "exported_sha256": "1bdb45fc6af1426ec7f5f7fc656d2211c2a7008b0f8943de28d2095c075c8833"
   },
   "docs/RUNNING.md": {
-    "source_sha256": "d65a55c0c2c27a7656507049c8888e24737618ac779763c33003e3aad951bcfc",
-    "exported_sha256": "d65a55c0c2c27a7656507049c8888e24737618ac779763c33003e3aad951bcfc"
+    "source_sha256": "a52b3e86feba3672b3b8ac7feb30e16c3d3365fc7113dc0051da0d2cffcbde41",
+    "exported_sha256": "a52b3e86feba3672b3b8ac7feb30e16c3d3365fc7113dc0051da0d2cffcbde41"
   },
   "docs/SCENES.md": {
     "source_sha256": "55eb30ad9c2e2ffe67533a17e56359c499094b6caac345a66f7937a483ba4b1d",
@@ -2692,8 +2692,8 @@
     "exported_sha256": "3eb739cf03dd87a9dcb754151004907bc604dc34b7bb4c5c8ebba3902070e264"
   },
   "validation/documentation-2026-09-09.json": {
-    "source_sha256": "0cf523fd3f7c5f80a0885966b6866b448cc8c0b0863041f12b823da2e09e467a",
-    "exported_sha256": "0cf523fd3f7c5f80a0885966b6866b448cc8c0b0863041f12b823da2e09e467a"
+    "source_sha256": "d80a5cf26d5feb53e7cb7be3963a67c363ce0dd4eb90b4844b6ac709b7d7b876",
+    "exported_sha256": "d80a5cf26d5feb53e7cb7be3963a67c363ce0dd4eb90b4844b6ac709b7d7b876"
   },
   "validation/platform-2026-09-09.json": {
     "source_sha256": "08a086d43f954efcbb5294c8d1e4212099dccd0f6a56c8a8491011a442e1608c",
