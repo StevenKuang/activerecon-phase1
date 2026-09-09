@@ -1,8 +1,10 @@
-# Hardware and software for reproduction
+# Reference hardware and software
 
-This is the machine verified during the 2026-09-07 reproduction audit. Phase 1 acquisition did not save a complete immutable software image; these versions describe the validated reproduction environment.
+The following environment was used for model re-scoring and platform validation
+in September 2026. A complete software image was not captured at acquisition
+time, so this snapshot describes the reproduction environment.
 
-| Component | Verified value |
+| Component | Specification |
 |---|---|
 | GPU | NVIDIA GeForce RTX 5090; 32 GB VRAM (32607 MiB reported) |
 | NVIDIA driver | 595.84 |
@@ -33,7 +35,5 @@ python scripts/phase1/system_info.py --out outputs/system-info.json
 python scripts/phase1/system_info.py --environment bencheval --out outputs/evaluator-system.json
 ```
 
-The same hardware and the listed Python/PyTorch/CUDA versions were checked again
-for the 2026-09-09 extensible-platform smoke tests. The separate
-[current validation snapshot](../validation/system-2026-09-09.json) is recorded
-in Git; it does not replace the Phase 1 dependency/provenance records.
+The [platform validation snapshot](../validation/system-2026-09-09.json)
+records the environment used for the 2026-09-09 integration tests.

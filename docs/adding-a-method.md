@@ -32,15 +32,17 @@ def build_agent(options):
 After preparing a scene as in [RUNNING.md](RUNNING.md), test the supplied example:
 
 ```bash
-conda run --no-capture-output -n habitat python scripts/run_benchmark.py \
+conda run --no-capture-output -p "$ACTIVEBENCH_ENVS_DIR/habitat" \
+  python scripts/run_benchmark.py \
   --config outputs/tutorial/configs/van_gogh__d0__s0.yaml \
   --agent examples/methods/spin_agent.py:build_agent \
   --agent-python "$ACTIVEBENCH_ENVS_DIR/bencheval/bin/python" \
   --out outputs/tutorial/direct-spin
 ```
 
-For a GS config, use `-n habitat-gs`. `--agent-python` selects an isolated
-interpreter; `--agent-env myenv` selects a named environment. Omit both for an
+For a GS config, use `-p "$ACTIVEBENCH_ENVS_DIR/habitat-gs"`.
+`--agent-python` selects an isolated interpreter; `--agent-env myenv` selects a
+named environment. Omit both for an
 inline external agent. Built-in methods choose their own registered environments.
 The worker environment needs this package's core dependencies plus your method's
 own dependencies; it does not need Habitat. Install with

@@ -1,101 +1,54 @@
-# Phase 1 release acceptance
+# Validation and known limits
 
-The [2026-09-09 documentation audit](../validation/documentation-2026-09-09.json)
-aligned the report and platform guides on camera sampling, full-image PSNR and
-paired dynamic impact. All 115 result-table cells agree in Markdown and Word;
-375 plotted-data values and all eight archived evaluation catalogs were checked.
-Report figures are unchanged. Evaluator edits only clarify docstrings; this
-audit did not repeat acquisition, training or the earlier GPU model re-score.
+Validation covers the benchmark interfaces, short simulation/training runs,
+viewer playback and reproduction of the saved Phase 1 PSNR scores. Tests ran
+on Linux with an RTX 5090; [SYSTEM.md](SYSTEM.md) lists the software versions.
 
-Initial release verified on 2026-09-07; instruction validation completed on
-2026-09-08, Linux x86-64 and RTX 5090. This release separates
-replaying the Phase 1 evidence from running a new experiment.
+## Tested configurations
 
-| Check | Executed result | Evidence |
+| Component | Coverage | Record |
 |---|---|---|
-| Campaign selection | 64 planned cells, 60 retained models; missing/excluded cells explicit | `phase1/campaign.json` |
-| Frozen PSNR verification | All 60 primary and 24 cube model/catalog combinations rendered again; four extra raw-DC GLEAM checks | `phase1/verification/` |
-| Report comparison | New CLI checked all 84 PSNR scores and 115 numeric cells in the companion report; zero mismatches | `phase1/acceptance/instructions/` |
-| Table regeneration | Four generated files reproduce exactly from frozen JSON | `python scripts/phase1/report.py --check` |
-| Exported platform | 234 tests passed, six early-campaign data tests skipped; Python 3.9 compile and wheel installation passed | `phase1/acceptance/tests.xml` |
-| Fresh evaluator setup | New conda prefix created by setup.py, empty gsplat JIT build, GS and mesh report scores matched; pip check passed | `phase1/acceptance/instructions/` |
-| Scene/method interface | `--scene interior_0007 --method r3con-pano --condition d0` completed the 5 s / 20-iteration pipeline | `phase1/acceptance/instructions/one-run.json` |
-| Installed environments | Required imports passed in all eight isolated environments | `phase1/dependencies/runtime-check.json` |
-| New acquisition | Six GS adapters and mesh R3-RECON each completed a 5 s smoke episode | `phase1/acceptance/fresh-smoke.json` |
-| New common reconstruction | Mesh R3-RECON and GS Random were resampled to 1600 x 1200 and trained for 20 iterations, then scored and exported | `phase1/acceptance/fresh-smoke.json` |
-| Portable model re-score | Two actual models and references extracted from the archive scored from the relocated repository, without original-run paths; agreement within 1e-5 dB | `phase1/acceptance/portable-rescore/` |
-| Spark | Catalog contains all 60 retained models; browser checks passed for four representative mesh/GS static/dynamic records, playback, stepping, switching and comparison | `phase1/acceptance/spark-browser.json` |
-| Report | Updated MD, DOCX, HTML and PDF; 14 figures, 11 tables, no HTML table/document overflow | `phase1/acceptance/report-preview.json` |
+| Platform tests | 246 passed; six replay tests skipped because their run data was unavailable | [Integration record](../validation/platform-2026-09-09.json) |
+| Short tutorial | Van Gogh, Random, 6 s; acquisition, 20-step common training, 12 evaluation views and summary; resume checked | [Integration record](../validation/platform-2026-09-09.json) |
+| Additional scene and method API | InteriorGS `interior_0022_840117`, Random and the external spin factory, both static/dynamic; four complete short runs using RPC and common training | [Integration record](../validation/platform-2026-09-09.json) |
+| Method adapters | Random, R3-RECON, MAGICIAN, FisherRF, GAVIS and GLEAM each completed a 12 s GS acquisition through the general runner | [Integration record](../validation/platform-2026-09-09.json) |
+| Runtime setup | All eight environments passed import checks; a fresh evaluator environment and empty CUDA extension cache were tested with GS and mesh models | [Imports](../phase1/dependencies/runtime-check.json) · [Evaluator setup](../phase1/acceptance/instructions/) |
+| Phase 1 PSNR | 60 retained models, 84 model/catalog scores; saved tables regenerate exactly and all 115 numerical report cells match | [Model re-scores](../phase1/verification/) · [Table checks](../phase1/acceptance/instructions/) |
+| Portable data | Two models and their references were extracted and scored at relocated paths, agreeing within 0.00001 dB | [Re-scoring record](../phase1/acceptance/portable-rescore/) |
+| Viewer | Playback, stepping, selection and split comparison checked in a browser on four Phase 1 records; four additional-scene model/replay pairs prepared and served over HTTP | [Browser checks](../phase1/acceptance/spark-browser.json) · [Integration record](../validation/platform-2026-09-09.json) |
 
-The main PSNR tables now use one exported-model color-loading regime. One
-MP3D FisherRF score changes by +0.008679 dB; four GLEAM scores change by at most
-0.029512 dB in magnitude. Full precision and original values are retained in
-`phase1/score-changes.json`. All 17 mesh pairs still have negative regional
-contrast, now under the same scoring path. The ten non-GLEAM GS pairs also
-retain negative contrast. These corrections do not strengthen the evidence
-into a general method ranking or a multi-seed robustness result.
+## Limits
 
-A further table audit corrected GAVIS's mean path change from -1.0% to -0.9%:
-the mean of the two full-precision scene percentages is -0.9488263776%.
-PSNR and the interpretation are unchanged.
+Short runs check integration; they do not establish reconstruction quality or
+full-budget performance. Common training was checked separately from the
+six-method acquisition test. A fresh full-budget campaign and a clean rebuild
+of all eight environments have not been tested. Additional MP3D scenes use
+the same scene interface, but only the Phase 1 MP3D asset has been exercised.
 
-The release did **not** rerun the full 60-cell acquisition and 30,000-step
-training matrix, rebuild all eight environments on an empty machine, or
-remeasure SSIM, LPIPS and geometry. The initial seven acquisitions and two short reconstructions, plus the
-additional tutorial R3-RECON run, validate the integrated execution path;
-their scores are excluded from the paper tables. Spark browser testing sampled four
-records, while full PSNR verification covered every retained model.
+Model re-scoring recomputes PSNR. SSIM, LPIPS and geometry in the Phase 1 tables
+use recorded measurements. The provisional GS cube catalog retains its
+unresolved depth/height issue. See [PHASE1_PROTOCOL.md](PHASE1_PROTOCOL.md) for
+budget exceptions and limits on cross-method and dynamic-impact conclusions.
 
-Model and observation archives carry per-file byte counts and SHA-256 hashes.
-The evaluation archive was sampled through real extraction and re-scoring;
-the full release catalog was tested using identical bytes at relocated
-paths. Simulation data and external checkpoints retain their own distribution
-requirements and are identified by separate hashes.
+## Run checks locally
 
-For the browser checks, install Playwright and Chromium, start Spark, and run
-`node scripts/check_spark_viewer.cjs http://127.0.0.1:8090 outputs/spark-audit`.
-By default it visits the full catalog. `SPARK_TEST_SELECTIONS` can restrict
-the test to comma-separated `scene__difficulty__seed__method` identifiers;
-put two methods from the same scene/condition first for the comparison test.
+From an environment with the core development dependencies installed:
 
-One damaged working copy of the dynamic InteriorGS R3-RECON model was
-detected by CRC/SHA-256 checks. Identical frozen bytes were restored from the
-unchanged evaluation archive and both scores passed. The damaged copy was
-retained outside the release; no model was retrained or substituted. See
-`phase1/acceptance/instructions/artifact-recovery.json`.
+```bash
+python -m pytest
+python scripts/phase1/report.py --check
+```
 
-## Extensible platform verification — 2026-09-09
+Then follow the [short tutorial](RUNNING.md#a-short-real-end-to-end-run) to check
+simulation, training and evaluation on your installation.
 
-The delivery now includes the general campaign, scene/reference preparation,
-external method factories and standalone platform guides. The
-Phase 1 tables above are unchanged. [The machine-readable validation record](../validation/platform-2026-09-09.json)
-contains the actual run counts, settings, scores and artifact hashes.
+For browser checks, install Playwright and Chromium, start the viewer, and run:
 
-| Check | Executed result |
-|---|---|
-| Clean exported source tests | 246 passed; 6 existing run-data-dependent skips |
-| README-linked mesh tutorial | Van Gogh, Random, 6 s; actual acquisition, 160 × 120 resampling, 20-step gsplat training, 12 held-out 96 × 96 cube views, summary; repeated command resumes |
-| Additional non-campaign scene | InteriorGS `interior_0022_840117`; d0/dyn configs and clean references prepared from installed assets |
-| External method API/RPC | Supplied spin factory in `bencheval`; direct episode plus generic campaign; masked observation poses and camera-frame actions |
-| Additional-scene common pipeline | Random and external spin × d0/dyn: 4/4 complete; 6 s, 20 training steps; dynamic pixels actually recorded in the spin run |
-| Published adapters via general runner | Random, R3-RECON, MAGICIAN, FisherRF, GAVIS, GLEAM: 6/6 short acquisitions, each 12 s at 640 × 480, with shared coverage evaluation |
-| New-scene viewer | Four replay/model pairs prepared; live HTTP view and manifest served with all four selections, including the external method |
-| Phase 1 evidence | Four generated files verified; 115 numerical report cells checked, zero mismatches |
+```bash
+node scripts/check_spark_viewer.cjs http://127.0.0.1:8090 outputs/spark-audit
+```
 
-The new viewer check exposed an absent overall completeness field when a short
-model has no Gaussians above the geometry opacity cutoff. The summary now shows
-that metric as unavailable and continues to export; a regression test covers it.
-Stored geometry values and Phase 1 model/report files were not rewritten.
-
-These checks validate the documented integration path, not reconstruction quality
-or a fresh full-budget reproduction. Common training was smoke-checked separately
-from the six-method acquisition roster. Additional MP3D scenes are accepted through
-the same scene interface, but no additional MP3D asset was installed/run in this
-validation. The installed environments were reused; the earlier clean evaluator
-build does not establish a clean build of all eight environments.
-
-New summaries retain failed/unstarted cells, reject incompatible protocols and
-check both requested configs and recorded worlds. Resume rejects changed recipes,
-method file source and scene/reference identities. Full dataset distributions,
-external source revisions and checkpoints still need to be preserved alongside
-new experiments. [SYSTEM.md](SYSTEM.md) links the current software/hardware snapshot.
+The browser check visits the full catalog by default. Set
+`SPARK_TEST_SELECTIONS` to comma-separated `scene__difficulty__seed__method`
+identifiers to select a subset; put two methods from the same scene/condition
+first for the comparison check.

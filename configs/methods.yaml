@@ -1,5 +1,4 @@
-# Existing adapter recipes. Scene-specific Phase 1 overrides live only in
-# phase1/campaign.json; these defaults do not claim the historical results.
+# Default adapter settings. Phase 1 per-scene settings are in phase1/campaign.json.
 schema_version: 1
 methods:
   random: {agent: random, environment: inline, options: {}}

@@ -113,11 +113,14 @@ def build(root):
     gs = [p for p in pairs if p["group"] == "gs" and p["method"] != "gleam"]
     lines += ["", f"Negative contrasts: mesh {sum(p['regional_contrast']<0 for p in mesh)}/{len(mesh)}; GS excluding GLEAM {sum(p['regional_contrast']<0 for p in gs)}/{len(gs)}.",
         "These are single-seed descriptive observations. Different acquired trajectories prevent a direct-occlusion causal interpretation.", "",
-        "## Differences from historical scoring", "", "| Cell | Historical PSNR | Re-scored PSNR | Delta (dB) |", "|---|---:|---:|---:|"]
+        "## PSNR scoring consistency", "",
+        "The report uses one model-loading convention across all runs. The following",
+        "values differ from the original run logs after applying that convention.", "",
+        "| Cell | Recorded PSNR | Report PSNR | Delta (dB) |", "|---|---:|---:|---:|"]
     for d in discrepancies:
         lines.append(f"| {d['cell']} | {d['recorded']:.6f} | {d['artifact_legacy']:.6f} | {d['delta_db']:+.6f} |")
-    lines += ["", "Historical SSIM/LPIPS and geometric diagnostics in the CSV are named explicitly; this PSNR verification does not remeasure them.",
-              "Full metric evaluation is available through `retrain_eval.py`. Models and original JSON remain unchanged.", ""]
+    lines += ["", "CSV columns prefixed `historical_` contain the recorded SSIM, LPIPS and geometry measurements.",
+              "Use `scripts/retrain_eval.py` for the full metric suite; the re-scoring tool recomputes PSNR only.", ""]
     return {"results.csv": csv_text(rows), "pairs.csv": csv_text(pairs), "RESULTS.md": "\n".join(lines),
             "score-changes.json": json.dumps(discrepancies, indent=2) + "\n"}
 

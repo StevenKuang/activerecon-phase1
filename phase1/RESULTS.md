@@ -84,9 +84,12 @@ Mesh excludes two missing Skokloster GAVIS acquisitions and the two modified-rec
 Negative contrasts: mesh 17/17; GS excluding GLEAM 10/10.
 These are single-seed descriptive observations. Different acquired trajectories prevent a direct-occlusion causal interpretation.
 
-## Differences from historical scoring
+## PSNR scoring consistency
 
-| Cell | Historical PSNR | Re-scored PSNR | Delta (dB) |
+The report uses one model-loading convention across all runs. The following
+values differ from the original run logs after applying that convention.
+
+| Cell | Recorded PSNR | Report PSNR | Delta (dB) |
 |---|---:|---:|---:|
 | mesh/mp3d_17DRP5sb8fy__d0__s0/fisherrf | 19.872805 | 19.881484 | +0.008679 |
 | gs/interior_0007__d0__s0/gleam | 19.022975 | 18.993464 | -0.029511 |
@@ -94,5 +97,5 @@ These are single-seed descriptive observations. Different acquired trajectories 
 | gs/interior_0044__d0__s0/gleam | 20.855518 | 20.867676 | +0.012158 |
 | gs/interior_0044__dyn__s0/gleam | 18.539330 | 18.551116 | +0.011786 |
 
-Historical SSIM/LPIPS and geometric diagnostics in the CSV are named explicitly; this PSNR verification does not remeasure them.
-Full metric evaluation is available through `retrain_eval.py`. Models and original JSON remain unchanged.
+CSV columns prefixed `historical_` contain the recorded SSIM, LPIPS and geometry measurements.
+Use `scripts/retrain_eval.py` for the full metric suite; the re-scoring tool recomputes PSNR only.

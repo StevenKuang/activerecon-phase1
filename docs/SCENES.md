@@ -22,9 +22,8 @@ conda run --no-capture-output -p "$ACTIVEBENCH_ENVS_DIR/habitat" \
   --data-path "$HABITAT_SIM_ROOT/data"
 ```
 
-The downloader is an upstream tool; downloading every dataset is not part of the
-platform's local validation. Preserve dataset versions and licensed resources
-outside Git. Moving object templates must also be installed for dynamic scenes;
+Record dataset versions alongside each experiment. Moving object templates
+must also be installed for dynamic scenes;
 static runs do not need those templates.
 
 ## Discover installed scenes
@@ -72,9 +71,8 @@ conda run --no-capture-output -p "$ACTIVEBENCH_ENVS_DIR/habitat-gs" \
   --name interior_0022 --out-dir outputs/new-gs/configs --seeds 0 1 2
 ```
 
-`interior_0022` is outside the Phase 1 campaign and was used for the new
-platform integration check. Substitute another installed stage; use the matching
-split config. Preparation defaults to navmesh motion on both backends. Choosing
+Substitute another installed stage and use the matching split config.
+Preparation defaults to navmesh motion on both backends. Choosing
 `--collision none` changes the protocol and must be reported separately.
 
 ## Add dynamic distractors

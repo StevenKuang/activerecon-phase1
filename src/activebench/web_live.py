@@ -147,8 +147,8 @@ def live_catalog(
                         if allowed is not None:
                             reconstructions = [name for name in reconstructions if name in allowed]
                         elif "gsplat1600" in reconstructions:
-                            # v6: cube/uni are scoring aliases of the same model;
-                            # isolated older ablations are not deliverable choices.
+                            # cube/uni are scoring aliases of the same model.
+                            # Exclude these duplicates and isolated ablations.
                             # Explicit --reconstruction still opens an archive.
                             reconstructions = ["gsplat1600"]
                         for reconstruction in reconstructions or [""]:

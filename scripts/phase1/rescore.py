@@ -1,7 +1,7 @@
-"""Re-score frozen models without changing any historical model or result.
+"""Render saved Phase 1 models and compare their PSNR with the report.
 
-Only PSNR is recomputed here. Geometry, SSIM and LPIPS remain explicitly
-historical fields; retrain_eval.py provides the full metric suite.
+Geometry, SSIM and LPIPS use the recorded measurements; retrain_eval.py
+provides the full metric suite.
 """
 from __future__ import annotations
 

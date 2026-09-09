@@ -1,4 +1,4 @@
-# Benchmark contract
+# Benchmark protocol
 
 ActiveBench compares **camera acquisition policies** under an explicit episode
 configuration. A common reconstructor measures the utility of their collected
@@ -121,7 +121,7 @@ views; it does not require an absolute severe-class loss. Keep both static
 baselines and both deltas visible. The regional catalog deliberately emphasizes
 distractor exposure, so its overall PSNR is not the cube scene-quality score.
 Never pool the two catalogs. The generic cube summary does not generate regional
-contrasts; the report's verified class deltas are in [phase1/pairs.csv](../phase1/pairs.csv).
+contrasts; the Phase 1 class deltas are in [phase1/pairs.csv](../phase1/pairs.csv).
 
 These pairs measure the **combined acquisition and reconstruction response**.
 Distractors can change routes, observations and stopping time as well as pollute

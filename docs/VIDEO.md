@@ -17,11 +17,9 @@ with chapter markers.
 | 1080p | 1920 × 1080 | 287 MB | [MP4](https://github.com/StevenKuang/activerecon-phase1/releases/download/phase1-videos/ActiveBench-Phase1-All-Scenes-1080p.mp4) |
 | 4K | 3840 × 2160 | 1.09 GB | [MP4](https://github.com/StevenKuang/activerecon-phase1/releases/download/phase1-videos/ActiveBench-Phase1-All-Scenes-4K.mp4) |
 
-Open the [video release](https://github.com/StevenKuang/activerecon-phase1/releases/tag/phase1-videos)
-while signed into an account with access to this private repository. Download a
-version and open it in a video player. The README cover links to that release;
-it is a download entry point. The videos are stored outside Git, and the media
-tag `phase1-videos` is separate from the platform's `main` branch.
+Download either version from the
+[video release](https://github.com/StevenKuang/activerecon-phase1/releases/tag/phase1-videos)
+and open it in a video player. Downloads require an account with repository access.
 
 Alternatively, with an authenticated GitHub CLI, download and verify 1080p:
 
@@ -62,12 +60,10 @@ a 20 s synchronized final-3DGS camera tour, and a 1 s hold.
 - **Final tour:** the camera view of the common Tier-2 3DGS reconstruction,
   with the distractor and contamination overlays removed.
 
-The broader project title includes "Pose-Free"; this Phase 1 benchmark uses
-known simulator poses. Static and dynamic acquisitions can follow different
-trajectories, so this is a qualitative comparison. InteriorGS GAVIS uses 270 s
+Phase 1 uses known simulator poses and a common Tier-2 3DGS reconstruction;
+pose estimation is outside this experiment. Static and dynamic acquisitions
+can follow different trajectories, so this is a qualitative comparison.
+InteriorGS GAVIS uses 270 s
 and holds its final observation; the other displayed runs use 300 s. Skokloster
 shows four methods because the GAVIS acquisition is unavailable. Numerical
 results and protocol details are in [Phase 1 results](REPRODUCING.md).
-
-The published files preserve the delivered video bytes. Video-production code
-remains in the research workspace, outside the submitted platform source.

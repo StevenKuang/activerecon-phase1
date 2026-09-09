@@ -49,7 +49,7 @@ RPC reconstructs the same typed object there; method logs go to stderr while
 stdout is reserved for protocol messages. This transport currently assumes
 processes on the same host with access to the same files.
 
-## Output ownership
+## Run outputs
 
 `benchmark-run.json` identifies one new experiment; `manifest.json` records its
 actual acquisition. `reconstructions/<name>/eval.json` describes common training
@@ -60,8 +60,3 @@ assets and runs are outside Git by default.
 Phase 1 cells and exact overrides; its report script rebuilds saved tables.
 It calls the same stage helpers as the general runner but does not define the
 platform's allowed scenes or methods.
-
-The research checkout additionally contains revisit-policy/RL/UAV experiments.
-The delivery exports the shared platform and published adapters. The explicit
-export manifest records source and delivered hashes; research-only registrations
-and backends are the documented exclusions. See [SOURCE_SYNC.md](SOURCE_SYNC.md).

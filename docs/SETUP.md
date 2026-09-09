@@ -53,8 +53,8 @@ for env_name in habitat-gs r3con magician fisherrf gavis gleam; do
 done
 ```
 
-Keep sources separate from the code delivery. Configure their locations before
-launching runs so all workers inherit them:
+Keep upstream source checkouts in a separate directory. Configure their locations
+before launching runs so all workers inherit them:
 
 ```bash
 export HABITAT_SIM_ROOT="$ACTIVEBENCH_SOURCES/habitat-sim"
@@ -75,9 +75,8 @@ The setup recipe uses Linux conda artifact locks, pinned pip packages and
 source-built extensions. A compatible compiler, CUDA toolkit and GPU driver are
 required. The evaluator has been rebuilt at a fresh prefix and exercised with
 an empty CUDA extension cache. All eight installed environments have passed
-import checks, but a fresh rebuild of **all eight on an empty machine** has not
-been executed. These are the verified limits, not a universal one-command
-installation claim.
+import checks. A fresh rebuild of all eight environments on an empty machine
+has not been tested; see [validation](ACCEPTANCE.md).
 
 ## 3. Install weights and simulation data
 

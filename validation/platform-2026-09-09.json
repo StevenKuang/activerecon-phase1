@@ -1,11 +1,11 @@
 {
   "date": "2026-09-09",
   "purpose": "Platform integration smoke tests, not report-quality experiments or method rankings",
-  "execution": "Independent source export, using installed isolated environments",
+  "execution": "Isolated simulator, planner and evaluator environments on one host",
   "unit_tests": {
     "passed": 246,
     "skipped": 6,
-    "skips": "Legacy run-data dependent replay tests; campaign data is intentionally absent from the code delivery"
+    "skips": "Six replay tests require run data that is not included in the source repository"
   },
   "quickstart": [
     {
@@ -403,7 +403,7 @@
     "encoding": "PLY",
     "http_view_and_manifest": 200,
     "missing_geometry_summary_regression_fixed": true,
-    "scope": "Asset preparation and HTTP manifest; no new browser pixel-comparison claim"
+    "scope": "Asset preparation and HTTP manifest serving; browser pixel comparison was not tested"
   },
   "historical_checks": {
     "report_evidence_files": 4,

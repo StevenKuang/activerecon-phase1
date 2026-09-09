@@ -12,7 +12,7 @@ the generic reference builder's current defaults define a new experiment.
 
 Run commands from the repository root. There are three different operations:
 
-| Operation | Actually executed | Requirements |
+| Operation | What it does | Requirements |
 |---|---|---|
 | Verify/regenerate tables | Derive tables from saved evidence JSON | Python standard library |
 | Re-score retained models | Render stored Gaussians against archived targets | `bencheval`, GPU, evaluation archive |
@@ -32,7 +32,7 @@ For the supplied report, also check its 115 numerical cells:
 
 ```bash
 python scripts/phase1/check_report_tables.py \
-  --report ../../1/final/ActiveBench-Phase1-Report.md
+  --report /path/to/ActiveBench-Phase1-Report.md
 ```
 
 Use your actual report path. Expected: `115 numerical report cells; 0 mismatches`.
@@ -83,7 +83,7 @@ whole declared matrix:
 # Plan one cell.
 python scripts/phase1/run.py --scene interior_0007 --method r3con-pano --condition d0
 
-# Verified short acquisition + reconstruction recipe, in a separate output.
+# Short acquisition and reconstruction to check the pipeline.
 python scripts/phase1/run.py --scene interior_0007 --method r3con-pano --condition d0 \
   --smoke-seconds 5 --iterations 20 --out runs_phase1_smoke --execute
 
@@ -100,18 +100,19 @@ are `random`, `r3con-pano`, `magician`, `fisherrf`, `gavis`, `gleam`; Phase 1
 GLEAM cells are GS-only. Missing/excluded cells remain declared as such in the
 retained evidence even if a new attempt succeeds.
 
-The full new 60/64-cell training matrix has not been rerun for this delivery.
-Independent acquisition/training need not recover recorded floating-point
-scores exactly. Record new outcomes separately. The full method matrix also
-requires substantial disk space beyond the source repository.
+Fresh acquisition and training can produce different floating-point scores.
+Save those results in a new output directory. Validation covers short runs and
+re-scoring all retained models; a fresh full-budget matrix has not been tested.
+Allow substantial disk space for the acquired streams and trained models.
 
 ## Retained streams and visualization
 
 For fixed-stream retraining or Phase 1 playback, extract
 `activebench-phase1-streams.tar.gz` into `data/phase1`. Before verifying the
 stream manifest, apply the supplied one-frame repair in `artifacts/input-repair/`
-with `python ../artifacts/input-repair/apply_stream_repair.py data/phase1`. It repairs one undecodable archived GAVIS PNG using
-verified simulator replay; retained model bytes and scores are unchanged.
+with `python ../artifacts/input-repair/apply_stream_repair.py data/phase1`.
+It replaces one undecodable GAVIS PNG with an image from the recorded camera
+pose and timestamp, and updates the extracted stream manifest.
 Then verify `data/phase1/streams-manifest.json` with `scripts/phase1/data.py`.
 For Spark, also extract/verify `activebench-phase1-viewer-assets.tar.gz`.
 The optional replay archive contains additional planner decision captures.
@@ -127,5 +128,5 @@ python scripts/phase1/view.py --port 8090
 
 The Phase 1 viewer validates retained model identity. For new generic runs,
 use `scripts/export_web_demo.py --runs-dir ...` as described in
-[RUNNING.md](RUNNING.md). [ACCEPTANCE.md](ACCEPTANCE.md) records which checks were
-actually executed; [SYSTEM.md](SYSTEM.md) records the validated environment.
+[RUNNING.md](RUNNING.md). See [validation](ACCEPTANCE.md) for tested configurations
+and [hardware and software](SYSTEM.md) for the reference environment.

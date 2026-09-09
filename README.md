@@ -8,7 +8,7 @@ shared 3D Gaussian reconstruction and held-out reference views.
 The repository includes adapters for **R3-RECON, MAGICIAN, FisherRF, GAVIS and
 GLEAM**, plus Random. Add another scene through an episode YAML and another
 method through a Python factory; neither needs to belong to an existing campaign.
-Phase 1 results are retained as a documented reference experiment.
+The Phase 1 results provide a reference experiment across six scenes.
 
 ## Start here
 
@@ -19,7 +19,7 @@ Phase 1 results are retained as a documented reference experiment.
 | Use other scenes from the datasets | [Datasets and scenes](docs/SCENES.md) |
 | Connect a new method through the API/RPC | [Add a method](docs/adding-a-method.md) |
 | Understand evaluation cameras, PSNR and dynamic impact | [Protocol](docs/PROTOCOL.md) · [Architecture](docs/ARCHITECTURE.md) |
-| Reproduce the supplied report | [Phase 1 results](docs/REPRODUCING.md) |
+| Reproduce the Phase 1 results | [Reproduction guide](docs/REPRODUCING.md) |
 | View the six scenes and MP3D static/dynamic comparison | [Supplementary video](#supplementary-video) |
 
 ## Run the platform
@@ -56,7 +56,7 @@ The launcher accepts `package.module:factory` or `/path/agent.py:factory` and ca
 run it in its own environment. An [executable example](examples/methods/spin_agent.py)
 and [integration tutorial](docs/adding-a-method.md) are included.
 
-## What is versioned
+## Repository structure
 
 - `src/activebench/`: simulator interface, episode clock, policy API/RPC,
   acquisition, common reconstruction, metrics and replay.
@@ -64,12 +64,12 @@ and [integration tutorial](docs/adding-a-method.md) are included.
   environment setup/checking and Spark visualization.
 - `configs/`, `examples/`, `tests/`: dataset discovery, method recipes, extension
   examples and interface/protocol checks.
-- `phase1/`: the Phase 1 campaign, retained evidence, dependency snapshots
+- `phase1/`: the Phase 1 campaign, results, dependency snapshots
   and table/model verification tools.
 
-Datasets, checkpoints, acquired frames and trained models stay outside Git.
-[Hardware/software versions](docs/SYSTEM.md), [executed validation and limits](docs/ACCEPTANCE.md)
-and [research/delivery alignment](docs/SOURCE_SYNC.md) are recorded in the repository.
+Datasets, checkpoints, acquired frames and trained models are stored separately.
+See [hardware and software](docs/SYSTEM.md) for the reference environment and
+[validation](docs/ACCEPTANCE.md) for tested configurations and known limits.
 
 ## Phase 1 results
 
@@ -84,9 +84,7 @@ saved-model re-scoring and fresh reruns of that experiment.
 python scripts/phase1/report.py --check
 ```
 
-The general platform workflow above produces new results independently of these
-frozen tables. The GitHub repository is named `activerecon-phase1`; the benchmark
-package and API remain `activebench`.
+Use the general platform workflow above to benchmark additional scenes and methods.
 
 ## Supplementary video
 
@@ -99,6 +97,5 @@ five-method MP3D static/dynamic comparison. Click the cover to open the download
 · [Download 4K · 1.09 GB](https://github.com/StevenKuang/activerecon-phase1/releases/download/phase1-videos/ActiveBench-Phase1-All-Scenes-4K.mp4)
 · [Chapters and visualization guide](docs/VIDEO.md)
 
-The complete MP4s are Release attachments, so cloning the code stays small.
-Sign in with repository access to download them, then open them in a video player.
-`phase1-videos` identifies the media collection; use `main` for the platform code.
+Download either version from GitHub Releases and open it in a video player.
+Downloads require an account with access to this repository.

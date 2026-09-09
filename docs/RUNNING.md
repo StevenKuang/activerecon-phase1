@@ -108,7 +108,6 @@ The summary retains incomplete cells in denominators, reports per-scene seed
 mean/std, and records matched dynamic-minus-static deltas in JSON. It refuses
 mixed time/motion/camera/reference/reconstruction regimes. Select a compatible
 scene group with `--scenes`, or keep different protocols in different run roots.
-No fresh-run command rewrites frozen report tables.
 
 For this default cube workflow, `psnr` averages all six faces at each evaluation
 point; `dyn_minus_d0_psnr` in `summary.json` is the paired change on that same

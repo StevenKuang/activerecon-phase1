@@ -28,7 +28,7 @@ gradient threshold 0.0002, no Gaussian-count cap. The altered-recipe
 Van Gogh dynamic Random/FisherRF retries are excluded. Missing Skokloster
 GAVIS acquisitions are kept as missing entries.
 
-All release PSNR tables use reloaded exported models, reconstructing the DC
+All Phase 1 PSNR tables use saved models, reconstructing the DC
 band from stored RGB and retaining the higher SH bands. Original scores and
 the exact differences remain in the evidence. This standardizes the loading
 regime of older and newer model exports; it does not restore coefficients

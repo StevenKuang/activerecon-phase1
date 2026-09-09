@@ -1608,6 +1608,5 @@
       "source_cube_catalog": "eval_assets/cube_eval_gs_v6_1600/interior_0044__s0"
     }
   ],
-  "source_commit": "f076719d7eeb9399039e14920655d52219b31f1e",
-  "note": "Working-tree export includes the reviewed Spark changes; file hashes record the delivered code."
+  "source_commit": "f076719d7eeb9399039e14920655d52219b31f1e"
 }
