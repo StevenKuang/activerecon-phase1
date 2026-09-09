@@ -1,5 +1,12 @@
 # Phase 1 release acceptance
 
+The [2026-09-09 documentation audit](../validation/documentation-2026-09-09.json)
+aligned the report and platform guides on camera sampling, full-image PSNR and
+paired dynamic impact. All 115 result-table cells agree in Markdown and Word;
+375 plotted-data values and all eight archived evaluation catalogs were checked.
+Report figures are unchanged. Evaluator edits only clarify docstrings; this
+audit did not repeat acquisition, training or the earlier GPU model re-score.
+
 Initial release verified on 2026-09-07; instruction validation completed on
 2026-09-08, Linux x86-64 and RTX 5090. This release separates
 replaying the Phase 1 evidence from running a new experiment.

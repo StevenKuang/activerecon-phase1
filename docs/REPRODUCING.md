@@ -5,6 +5,11 @@ scene or method, start with [RUNNING.md](RUNNING.md); it does not require the
 Phase 1 archives. Exact Phase 1 settings and caveats are in
 [PHASE1_PROTOCOL.md](PHASE1_PROTOCOL.md).
 
+The report distinguishes shared severe/clean PSNR from provisional GS cube
+PSNR. Their [sampling and delta definitions](PROTOCOL.md#scene-quality-where-to-evaluate-and-why-six-views)
+explain what each measures. Restore the fixed catalogs for report reproduction;
+the generic reference builder's current defaults define a new experiment.
+
 Run commands from the repository root. There are three different operations:
 
 | Operation | Actually executed | Requirements |

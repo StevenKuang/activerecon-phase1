@@ -1,27 +1,17 @@
-"""Shared held-out eval sets: fixed poses reused across methods and difficulties.
+"""Fixed clean-target views shared across methods and dynamic conditions.
 
-Design (2026-07-15): the runner's per-method eval sets are jittered around each
-agent's own trajectory, which biases PSNR toward wherever that method happened
-to operate and makes cross-method numbers incomparable. A shared eval set fixes
-one pose list per (scene, seed) campaign group, reused by every method AND
-every difficulty. Clean GT renders are difficulty-invariant, so d0 -> dyn
-comparisons are paired on pixel-identical ground truth.
+The regional catalog deliberately samples both exposed and unaffected views.
+Severe views have at least 40% image-area exposure in the union of rendered
+occlusion masks at the configured capture times. Clean views require zero
+sampled occlusion and a bounding-sphere clearance check against sampled visible
+surfaces at finer temporal intervals. These are operational tests under the
+configured renderer, trajectories and margins, not all-time visibility proofs.
 
-Poses are sampled for whole-scene coverage (farthest-point over navmesh
-samples) and selected two-pole:
-
-- **severe**: at least ``severe_threshold`` (default 40%) of pixels saw a distractor in
-  front of the clean surface at one of the 1 Hz training times. Contamination
-  can enter any method's reconstruction stream only at those times, so the
-  render-based union mask over them is exact, not an approximation.
-- **clean**: certified never-disturbed. Certification is geometric and
-  region-based, not silhouette-based: no distractor bounding sphere (plus a
-  margin) ever comes near the 3D surface region visible from the pose, at a
-  fine time sampling. This also excludes poses whose visible region a
-  distractor may have occluded from *other* methods' camera angles.
-
-Mean PSNR over the severe class (d0 vs dyn) isolates damage where distractors
-lived; the clean class isolates collateral damage everywhere else.
+Masks choose view classes; PSNR still measures each complete RGB image against
+its clean target. Dynamic-minus-static class changes include altered planning,
+coverage and reconstruction contamination. Their contrast localizes relative
+change without isolating its cause. The independent uniform-cube catalog
+provides spatially distributed scene-appearance evaluation.
 """
 
 from dataclasses import dataclass, field

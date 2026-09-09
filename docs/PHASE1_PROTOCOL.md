@@ -35,16 +35,37 @@ regime of older and newer model exports; it does not restore coefficients
 already clipped in old artifacts. Rebuilding a new model can give a different
 score and is recorded as a new run.
 
-The provisional GS cube set has 24 standing points and six views each,
-1600 x 1600 and 90 degree FOV. Its unresolved downward-depth and camera-height
+## Evaluation catalogs and dynamic deltas
+
+The report's **shared PSNR** is the per-image dB mean over the severe/clean
+catalog in the table above, at 1600 × 1200. For MP3D, the overall mean weights
+the 19 severe and 20 clean views by their counts; it is not a 50/50 class mean.
+Labels come from the dynamic scenario and are reused for static runs. PSNR
+uses entire clean-target images, not only contaminated pixels.
+
+The separate **provisional GS cube PSNR** uses 24 spatially spread standing
+points × six square 90° views at 1600 × 1600, with evaluation seed 20260727.
+Selection uses 4,000 navmesh samples, estimated surface clearance and
+farthest-point spreading; every face must have at least 50% positive depth.
+Camera height uses a depth-based adjustment with a 1.0 m fallback. Current
+`prepare_evaluation.py` defaults instead to 1200 × 1200 and a 1.4 m fallback;
+restore archived cameras/targets to reproduce the report. The cube catalog
+has no severe/clean partition and is not used for the mesh tables.
+
+The [sampling rationale and formulas](PROTOCOL.md#scene-quality-where-to-evaluate-and-why-six-views)
+explain why six directions are used, how PSNR is averaged, and how regional
+labels are selected. The GS cube set's unresolved downward-depth and camera-height
 issue limits geometric and floor/ceiling interpretations. The selected GS
 assets have zero higher-order SH signal: this is not evidence for recovering
 view-dependent reflectance. Gaussian-center completeness is a diagnostic,
 not a physical fraction of room surface recovered.
 
 Dynamic-minus-static severe and clean deltas are paired within scene, method
-and seed. Negative severe-minus-clean contrast is relative regional damage;
-severe PSNR need not decrease absolutely. Trajectories may change, and two
+and seed in `phase1/pairs.csv`. Regional contrast is `Δsevere − Δclean`;
+negative means more loss or less gain in severe views. For example, GS FisherRF
+has mean `Δsevere = −0.56 dB`, `Δclean = +1.83 dB`, yet its overall shared PSNR
+improves by `+0.64 dB`: the aggregate conceals the regional loss. All means use
+full-precision per-scene deltas before rounding. Trajectories may change, and two
 GLEAM dynamic durations are shorter. These single-seed results do not isolate
 direct occlusion effects, establish significance or validate collision-free
 flight. MAGICIAN's adapter uses a reference surface in feasibility checks;

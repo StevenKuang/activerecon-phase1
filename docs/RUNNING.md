@@ -110,6 +110,11 @@ mixed time/motion/camera/reference/reconstruction regimes. Select a compatible
 scene group with `--scenes`, or keep different protocols in different run roots.
 No fresh-run command rewrites frozen report tables.
 
+For this default cube workflow, `psnr` averages all six faces at each evaluation
+point; `dyn_minus_d0_psnr` in `summary.json` is the paired change on that same
+catalog. See [camera selection and dynamic-impact interpretation](PROTOCOL.md#scene-quality-where-to-evaluate-and-why-six-views).
+The Phase 1 report's severe/clean regional contrasts use a separate catalog.
+
 ## View a new reconstruction
 
 Add `--export-spark` to a full campaign, or let the exporter prepare the model:

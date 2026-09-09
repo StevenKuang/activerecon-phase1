@@ -1,57 +1,22 @@
-"""Build a uniform cube eval set: N standing points x the 6 cube-face views.
+"""Build a clean cube catalog: spatially spread points x six square 90° views.
 
-A second, independent appearance metric alongside the severe/clean shared-eval
-catalog, which it does NOT replace. The two answer different questions:
+The separate severe/clean catalog targets distractor-exposed regions. This cube
+catalog instead samples navigable space independently of acquisition routes and
+distractor masks. Farthest-point spreading follows estimated surface clearance;
+each retained point contributes front/right/back/left/up/down views. Their frusta
+cover all directions, while per-image PSNR is not solid-angle-weighted and a
+finite set of positions cannot cover every scene surface.
 
-- ``build_shared_eval_set.py`` aims a third of its cameras AT the distractor
-  patrol routes, because unbiased views almost never see a distractor (measured
-  on campaign_v6: only 7% of the non-route views land in the severe class). It
-  is a *damage probe* and its severe class is, by construction, nearly the same
-  partition as its "route" stratum.
-- This set is the *map-quality* metric: positions are spread over the navigable
-  area with no knowledge of the distractors, and every point contributes a full
-  spherical view, so a method cannot hide a badly reconstructed direction.
+All six faces must pass the configured positive-depth fraction. This rejects
+mostly escaping views without dropping individual faces and changing point
+weights. Clearance and depth checks depend on the renderer and sampled geometry;
+they do not certify collision-free cameras or physically correct floor depths.
+The depth-based height adjustment needs separate validation on GS assets.
 
-Each point contributes the six cube-face directions -- four horizontal at
-90 deg spacing plus straight up and straight down -- rendered through a SQUARE
-90 deg frustum, which is the one configuration that tiles the whole sphere with
-neither gaps nor double-counted borders. The eval camera is deliberately not the
-planner camera: the planner runs at 75.18 deg HFOV (forced by a roster method's
-intrinsics) while ``retrain_eval`` reads ``fl_x`` from this set's own transforms,
-so the two are independent.
-
-A level-only ring was the earlier design. It was replaced because it cannot see
-ceilings or floors, which flatters any policy that surveys rooms from their
-thresholds instead of entering them.
-
-Standing points keep a clearance from geometry (``--min-clearance``), measured
-against the scene's GT surface samples, so cameras never start inside a wall or
-hard against furniture.
-
-Clearance alone is not enough, and pushing points away from surfaces actively
-makes the remaining failure *more* likely: a point can be perfectly clear and
-still have faces that look out of the scene into empty space. Such a view
-renders all-black GT with no valid depth, a reconstruction that also renders
-nothing matches it exactly, and ``psnr()`` returns its ``99.0``
-identical-images sentinel -- a constant that silently inflates every score
-computed against the set (two such views in a 12-view set added 16.5 dB; see
-``docs/results/2026-07-31-calibration-label-audit.md``). So every candidate
-point is *rendered* during selection and accepted only if **all** of its
-faces see geometry over at least ``--min-valid-depth-frac`` of the frame.
-Rejection is at point level, not view level, because uniformity is what gives
-this set its resolving power -- dropping individual views would leave points
-contributing different numbers of faces.
-
-Output is drop-in compatible with the shared-eval consumers: the directory
-holds ``transforms_eval_shared.json`` plus ``gt/`` RGB-D, so it can be passed
-straight to ``retrain_eval.py --shared-dir``.
-
-Run in the sim env (habitat-gs for .gs.ply scenes):
-
-    python scripts/build_uniform_eval_set.py \
-        --configs-dir configs/bench/campaign_v6 \
-        --out-dir eval_assets/uniform_eval_gs_v6 \
-        --points 24 --width 1200 --height 1200
+Output: transforms_eval_shared.json plus clean gt/ RGB-D, compatible with
+retrain_eval.py --shared-dir. For new campaigns, use prepare_evaluation.py to
+prepare this catalog and the reference surface together. The Phase 1 report
+uses its archived catalogs rather than the current default recipe.
 """
 
 import argparse
@@ -283,20 +248,12 @@ def mid_height_correction(
     height: float,
     limits=(0.4, 3.0),
 ) -> float:
-    """Height above the floor that puts the camera midway to the ceiling.
+    """Attempt to center camera height using rendered up/down depth probes.
 
-    A cube view samples up and down symmetrically only if the camera sits
-    halfway between them. At a fixed 1.0 m eye height the ``down`` face images
-    the floor from 1.0 m while ``up`` images the ceiling from roughly 1.7 m, so
-    the two faces sample at ranges differing by most of a metre and their
-    scores are not comparable.
-
-    The ceiling is measured by *rendering* rather than from the GT surface
-    samples: on GS stages those samples carry floaters metres above the room
-    (interior_0007 spans 18 m vertically), so the highest sample in a column is
-    a floater, not a ceiling. The renderer's own depth has no such problem.
-    Raising the camera by delta moves it delta closer to the ceiling and delta
-    further from the floor, so one correction is exact for a flat pair.
+    This assumes the probes measure a meaningful floor and ceiling. Missing or
+    out-of-range corrections fall back to the supplied height; plausible numeric
+    depths alone do not establish a physical midpoint. The archived GS catalogs
+    retain an unresolved depth/height issue and require independent validation.
     """
 
     probe = cube_poses(np.asarray([center]), height)

@@ -18,7 +18,7 @@ Phase 1 results are retained as a documented reference experiment.
 | Run one scene/method or a complete benchmark matrix | [Run a benchmark](docs/RUNNING.md) |
 | Use other scenes from the datasets | [Datasets and scenes](docs/SCENES.md) |
 | Connect a new method through the API/RPC | [Add a method](docs/adding-a-method.md) |
-| Understand inputs, fairness and metrics | [Protocol](docs/PROTOCOL.md) · [Architecture](docs/ARCHITECTURE.md) |
+| Understand evaluation cameras, PSNR and dynamic impact | [Protocol](docs/PROTOCOL.md) · [Architecture](docs/ARCHITECTURE.md) |
 | Reproduce the supplied report | [Phase 1 results](docs/REPRODUCING.md) |
 | View the six scenes and MP3D static/dynamic comparison | [Supplementary video](#supplementary-video) |
 
