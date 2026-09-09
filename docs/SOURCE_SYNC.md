@@ -14,7 +14,9 @@ metadata are sourced from `phase1/project/`; shared guides come directly from
 Intentional exclusions are research-only revisit-policy/RL/UAV integrations and
 experimental reconstruction backends. The delivery keeps the published Phase 1
 adapters and common gsplat backend. It also retains Phase 1 evidence/tools.
-Media-production scripts, large data, models and videos are excluded.
+Media-production scripts, large data, models and video binaries are excluded.
+The supplementary-video guide, small cover image and checksums are included;
+the complete MP4s are hosted as separate GitHub Release attachments.
 
 Every delivered source entry is recorded in `phase1/source-export.json`, with
 the research source path/hash and delivered hash. Selected research-only code

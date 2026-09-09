@@ -40,16 +40,24 @@
     "exported_sha256": "aeb48024ed17e70957307cedbebffcdec3ab6f8afddbffb6f95932505d1bff6a"
   },
   "docs/SOURCE_SYNC.md": {
-    "source_sha256": "3a6d70c666c0fdcd9b5a1233936e11bc6d787f0c7332d6cf5445020c59c596bc",
-    "exported_sha256": "3a6d70c666c0fdcd9b5a1233936e11bc6d787f0c7332d6cf5445020c59c596bc"
+    "source_sha256": "e88ed1f2ce60e9a0739732b16660088137fadd34920860212577157ea18532d6",
+    "exported_sha256": "e88ed1f2ce60e9a0739732b16660088137fadd34920860212577157ea18532d6"
   },
   "docs/SYSTEM.md": {
     "source_sha256": "10862f40eb798f3b9ae9980632606231d7a0d41d37db8e5258b0956e086160ac",
     "exported_sha256": "10862f40eb798f3b9ae9980632606231d7a0d41d37db8e5258b0956e086160ac"
   },
+  "docs/VIDEO.md": {
+    "source_sha256": "62906f690fb4032ed7ab631a496e5e490516fac1f35085283fe2c1f0ec54e939",
+    "exported_sha256": "62906f690fb4032ed7ab631a496e5e490516fac1f35085283fe2c1f0ec54e939"
+  },
   "docs/adding-a-method.md": {
     "source_sha256": "a17d41ac073eb29cadde1729606ee7062c126367351ca8cb8bcfc5851dd57ba6",
     "exported_sha256": "a17d41ac073eb29cadde1729606ee7062c126367351ca8cb8bcfc5851dd57ba6"
+  },
+  "docs/assets/phase1-video-poster.jpg": {
+    "source_sha256": "e4d73635ccc0dea2d2f25732c71afd3de2b2b41547f5af993a06c52229791628",
+    "exported_sha256": "e4d73635ccc0dea2d2f25732c71afd3de2b2b41547f5af993a06c52229791628"
   },
   "examples/methods/spin-method.yaml": {
     "source_sha256": "339a447c75bccb74ce7b253bc9cf818e9abfbf3a66818c7e6eca2640d885d1a6",
@@ -2255,6 +2263,10 @@
     "source_sha256": "060d72a73f8b83fa5e4057853de44df053e860c783a80f56d2ed74ecc9b44f91",
     "exported_sha256": "060d72a73f8b83fa5e4057853de44df053e860c783a80f56d2ed74ecc9b44f91"
   },
+  "phase1/video/SHA256SUMS": {
+    "source_sha256": "8a8deb8e6a7c80921983541db0bc449a82daab6c0cdf8bff934bb9bb07d01de8",
+    "exported_sha256": "8a8deb8e6a7c80921983541db0bc449a82daab6c0cdf8bff934bb9bb07d01de8"
+  },
   "scripts/build_shared_eval_set.py": {
     "source_sha256": "d85193dc781144d05b806a30ec0a561de0e66987e4f0c4d0ab0f9c94964c5cc4",
     "exported_sha256": "d85193dc781144d05b806a30ec0a561de0e66987e4f0c4d0ab0f9c94964c5cc4"
@@ -2714,8 +2726,8 @@
   },
   "README.md": {
     "source": "phase1/project/README.md",
-    "source_sha256": "ba40e8c901e73c06aa72e25e90cfce0ee8d236a50ef164c1911af1349a7c5c61",
-    "exported_sha256": "ba40e8c901e73c06aa72e25e90cfce0ee8d236a50ef164c1911af1349a7c5c61"
+    "source_sha256": "506d9650697ca2ca01a71ebcd4707c6cc0577d4089fd4a25e6bcfd37173ed8f1",
+    "exported_sha256": "506d9650697ca2ca01a71ebcd4707c6cc0577d4089fd4a25e6bcfd37173ed8f1"
   },
   ".gitignore": {
     "source": "phase1/project/.gitignore",

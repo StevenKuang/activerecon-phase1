@@ -20,6 +20,7 @@ Phase 1 results are retained as a documented reference experiment.
 | Connect a new method through the API/RPC | [Add a method](docs/adding-a-method.md) |
 | Understand inputs, fairness and metrics | [Protocol](docs/PROTOCOL.md) · [Architecture](docs/ARCHITECTURE.md) |
 | Reproduce the supplied report | [Phase 1 results](docs/REPRODUCING.md) |
+| View the six scenes and MP3D static/dynamic comparison | [Supplementary video](#supplementary-video) |
 
 ## Run the platform
 
@@ -86,3 +87,18 @@ python scripts/phase1/report.py --check
 The general platform workflow above produces new results independently of these
 frozen tables. The GitHub repository is named `activerecon-phase1`; the benchmark
 package and API remain `activebench`.
+
+## Supplementary video
+
+**ActiveBench Visualization · 4:54** — six static scenes, followed by a
+five-method MP3D static/dynamic comparison. Click the cover to open the downloads.
+
+[![ActiveBench Visualization — Phase 1 supplementary video](docs/assets/phase1-video-poster.jpg)](https://github.com/StevenKuang/activerecon-phase1/releases/tag/phase1-videos)
+
+[Download 1080p · 287 MB](https://github.com/StevenKuang/activerecon-phase1/releases/download/phase1-videos/ActiveBench-Phase1-All-Scenes-1080p.mp4)
+· [Download 4K · 1.09 GB](https://github.com/StevenKuang/activerecon-phase1/releases/download/phase1-videos/ActiveBench-Phase1-All-Scenes-4K.mp4)
+· [Chapters and visualization guide](docs/VIDEO.md)
+
+The complete MP4s are Release attachments, so cloning the code stays small.
+Sign in with repository access to download them, then open them in a video player.
+`phase1-videos` identifies the media collection; use `main` for the platform code.
