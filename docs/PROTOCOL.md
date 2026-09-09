@@ -9,13 +9,13 @@ RGB-D streams. A planner's internal map is not substituted for that common model
 The episode YAML defines the scene, seed, start pose, sensor, motion rates,
 collision policy, distractor trajectories and budgets. `prepare_scene.py`
 creates portable inputs for installed scenes; it does not select from the
-historical report roster.
+Phase 1 report roster.
 
 The default generated protocol uses a 640 × 480 camera with 75.17817894° HFOV,
 0.5 m/s translation, 60°/s yaw/pitch and navmesh-routed motion. A move costs the
 maximum of translation, yaw and pitch times; planning wall time is recorded
 separately. Episodes stop at their time/capture budget or an agent's `done()`.
-New InteriorGS scenes also default to navmesh routing. The historical GS
+New InteriorGS scenes also default to navmesh routing. The Phase 1 GS
 experiments used `collision: none`; those results belong to a separate protocol.
 
 Policies receive RGB, intrinsics, elapsed simulation time and optional depth

@@ -57,7 +57,7 @@ and evaluation. `summary/` derives fresh results from these outputs. Large
 assets and runs are outside Git by default.
 
 `phase1/` is the retained experiment/evidence package. Its runner selects
-historical cells and exact overrides; its report script rebuilds saved tables.
+Phase 1 cells and exact overrides; its report script rebuilds saved tables.
 It calls the same stage helpers as the general runner but does not define the
 platform's allowed scenes or methods.
 

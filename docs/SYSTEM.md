@@ -1,6 +1,6 @@
 # Hardware and software for reproduction
 
-This is the machine verified during the 2026-09-07 reproduction audit. Historical acquisition did not save a complete immutable software image; these versions describe the validated reproduction environment.
+This is the machine verified during the 2026-09-07 reproduction audit. Phase 1 acquisition did not save a complete immutable software image; these versions describe the validated reproduction environment.
 
 | Component | Verified value |
 |---|---|
@@ -36,4 +36,4 @@ python scripts/phase1/system_info.py --environment bencheval --out outputs/evalu
 The same hardware and the listed Python/PyTorch/CUDA versions were checked again
 for the 2026-09-09 extensible-platform smoke tests. The separate
 [current validation snapshot](../validation/system-2026-09-09.json) is recorded
-in Git; it does not replace the historical dependency/provenance records.
+in Git; it does not replace the Phase 1 dependency/provenance records.

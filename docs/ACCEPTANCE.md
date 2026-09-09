@@ -2,7 +2,7 @@
 
 Initial release verified on 2026-09-07; instruction validation completed on
 2026-09-08, Linux x86-64 and RTX 5090. This release separates
-replaying the historical evidence from running a new experiment.
+replaying the Phase 1 evidence from running a new experiment.
 
 | Check | Executed result | Evidence |
 |---|---|---|
@@ -60,7 +60,7 @@ retained outside the release; no model was retrained or substituted. See
 ## Extensible platform verification — 2026-09-09
 
 The delivery now includes the general campaign, scene/reference preparation,
-external method factories and standalone platform guides. The historical
+external method factories and standalone platform guides. The
 Phase 1 tables above are unchanged. [The machine-readable validation record](../validation/platform-2026-09-09.json)
 contains the actual run counts, settings, scores and artifact hashes.
 
@@ -73,12 +73,12 @@ contains the actual run counts, settings, scores and artifact hashes.
 | Additional-scene common pipeline | Random and external spin × d0/dyn: 4/4 complete; 6 s, 20 training steps; dynamic pixels actually recorded in the spin run |
 | Published adapters via general runner | Random, R3-RECON, MAGICIAN, FisherRF, GAVIS, GLEAM: 6/6 short acquisitions, each 12 s at 640 × 480, with shared coverage evaluation |
 | New-scene viewer | Four replay/model pairs prepared; live HTTP view and manifest served with all four selections, including the external method |
-| Historical evidence | Four generated files verified; 115 numerical report cells checked, zero mismatches |
+| Phase 1 evidence | Four generated files verified; 115 numerical report cells checked, zero mismatches |
 
 The new viewer check exposed an absent overall completeness field when a short
 model has no Gaussians above the geometry opacity cutoff. The summary now shows
 that metric as unavailable and continues to export; a regression test covers it.
-Stored geometry values and historical model/report files were not rewritten.
+Stored geometry values and Phase 1 model/report files were not rewritten.
 
 These checks validate the documented integration path, not reconstruction quality
 or a fresh full-budget reproduction. Common training was smoke-checked separately

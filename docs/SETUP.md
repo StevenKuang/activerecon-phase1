@@ -130,7 +130,7 @@ policy and four turning legs to approximate the original depth ring, with an
 observed-occupancy goal gate. These adaptations and early stopping must be
 reported with comparisons.
 
-The historical campaign's per-scene exceptions, including reduced-density GS
+The Phase 1 campaign's per-scene exceptions, including reduced-density GS
 GAVIS, are confined to `phase1/campaign.json`; the general defaults do not claim
 to reproduce those cells. Upstream code retains its original attribution and
 licenses; [sources.json](../phase1/dependencies/sources.json) records exact URLs

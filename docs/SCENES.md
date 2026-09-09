@@ -2,7 +2,7 @@
 
 The platform accepts installed Habitat-compatible stage files or scene-dataset
 handles. A scene does **not** have to appear in `phase1/campaign.json`. The
-historical six scenes are examples of platform use, not an allowlist.
+six Phase 1 scenes are examples of platform use, not an allowlist.
 
 | Dataset | Inputs | Simulator |
 |---|---|---|
@@ -36,7 +36,7 @@ python scripts/list_scenes.py --data-root "$HABITAT_GS_ROOT/data" --datasets int
 ```
 
 The editable catalog is [configs/datasets.yaml](../configs/datasets.yaml).
-Discovery scans the installation rather than historical result directories.
+Discovery scans the installation rather than Phase 1 result directories.
 Explicit catalog entries describe expected paths; check installation before
 using them. Change a dataset root/glob for another split or directory layout.
 You can also skip discovery and pass any installed scene directly.
@@ -72,7 +72,7 @@ conda run --no-capture-output -p "$ACTIVEBENCH_ENVS_DIR/habitat-gs" \
   --name interior_0022 --out-dir outputs/new-gs/configs --seeds 0 1 2
 ```
 
-`interior_0022` is outside the historical campaign and was used for the new
+`interior_0022` is outside the Phase 1 campaign and was used for the new
 platform integration check. Substitute another installed stage; use the matching
 split config. Preparation defaults to navmesh motion on both backends. Choosing
 `--collision none` changes the protocol and must be reported separately.

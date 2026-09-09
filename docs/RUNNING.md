@@ -56,7 +56,7 @@ outputs/tutorial/
 The campaign prints `Finished: 1 completed, 0 failed`. Omit `--execute` to inspect
 a plan. For collection alone, replace the asset/reconstruction options with
 `--acquisition-only`. A new scene requires reference preparation before common
-reconstruction; saved historical result archives are not needed for this workflow.
+reconstruction; saved Phase 1 result archives are not needed for this workflow.
 
 ## One scene/method, or the full method roster
 
@@ -76,7 +76,7 @@ python scripts/run_campaign.py --configs-dir outputs/my-study/configs \
 ```
 
 The matrix is **selected YAMLs × selected methods**, with no dependency on the
-old campaign roster. GLEAM's historical validation covers GS scenes; do not
+Phase 1 campaign roster. GLEAM's Phase 1 validation covers GS scenes; do not
 assume equivalent behavior on all other datasets. The general method settings
 are in [configs/methods.yaml](../configs/methods.yaml), and a custom method YAML
 can be selected with `--method-config`. Use `--method-options` for JSON option
@@ -125,4 +125,4 @@ The viewer displays the stored final reconstruction alongside recorded
 acquisition. It does not retrain Gaussians at every playback frame.
 
 [Add another scene](SCENES.md) · [Add a policy](adding-a-method.md) ·
-[Reproduce the historical report](REPRODUCING.md)
+[Reproduce the Phase 1 report](REPRODUCING.md)

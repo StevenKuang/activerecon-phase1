@@ -8,44 +8,44 @@
     "exported_sha256": "5eb6c218ec5fa70ca73ea9eefa3da13166ce9f9423402605e07a273c1bdf2f85"
   },
   "docs/ACCEPTANCE.md": {
-    "source_sha256": "6c31d0cd31f583dbf59bb3569d89b39562ae4d8ea8019529c0b40951693b65d7",
-    "exported_sha256": "6c31d0cd31f583dbf59bb3569d89b39562ae4d8ea8019529c0b40951693b65d7"
+    "source_sha256": "130058748ab9f2266c0106a3beefd75480d03a09b6da7d8b3c04fe45e7bb8f5a",
+    "exported_sha256": "130058748ab9f2266c0106a3beefd75480d03a09b6da7d8b3c04fe45e7bb8f5a"
   },
   "docs/ARCHITECTURE.md": {
-    "source_sha256": "c51d7bd2cfc7155f089e7b55f7b8df0580fff7446f9542c809cd7c9a829f1859",
-    "exported_sha256": "c51d7bd2cfc7155f089e7b55f7b8df0580fff7446f9542c809cd7c9a829f1859"
+    "source_sha256": "67640f842be44e7170170a9168b694e3c1d7bff565385230efc1074054c90567",
+    "exported_sha256": "67640f842be44e7170170a9168b694e3c1d7bff565385230efc1074054c90567"
   },
   "docs/PHASE1_PROTOCOL.md": {
-    "source_sha256": "ad5efab8dd284b9735724b5df2dc4df478ccd5abfecc7460369d1ff9de393c8d",
-    "exported_sha256": "ad5efab8dd284b9735724b5df2dc4df478ccd5abfecc7460369d1ff9de393c8d"
+    "source_sha256": "7a43a09a89d7e8a8ffd8e9277c59f556b291da6e72c3c6f8a12db0b12b66e82a",
+    "exported_sha256": "7a43a09a89d7e8a8ffd8e9277c59f556b291da6e72c3c6f8a12db0b12b66e82a"
   },
   "docs/PROTOCOL.md": {
-    "source_sha256": "a7c2816ec3377974f1eceb9a7fba7bbc84905fd044664bd955156e8e0b492d57",
-    "exported_sha256": "a7c2816ec3377974f1eceb9a7fba7bbc84905fd044664bd955156e8e0b492d57"
+    "source_sha256": "d46a9f5a0e2344496be26b1bdb25b6c71c1dd860f0fbb1def6786d1e3a9d4a67",
+    "exported_sha256": "d46a9f5a0e2344496be26b1bdb25b6c71c1dd860f0fbb1def6786d1e3a9d4a67"
   },
   "docs/REPRODUCING.md": {
-    "source_sha256": "13c8fab04005c56925f2166786c1576276b952cbb51e57f8bc74d5af3090ef59",
-    "exported_sha256": "13c8fab04005c56925f2166786c1576276b952cbb51e57f8bc74d5af3090ef59"
+    "source_sha256": "8efe792a4835e7ae70d51c9f87c3bfdae10f2823b47d54ddd00d70cb0ef4a376",
+    "exported_sha256": "8efe792a4835e7ae70d51c9f87c3bfdae10f2823b47d54ddd00d70cb0ef4a376"
   },
   "docs/RUNNING.md": {
-    "source_sha256": "649b400458d053415348db96de0f2748322c0aebcd2ebce77cc8d070a308b1c7",
-    "exported_sha256": "649b400458d053415348db96de0f2748322c0aebcd2ebce77cc8d070a308b1c7"
+    "source_sha256": "42274c7029f3235c67fdbda807ed49502f4afbd476cd4ef40ecd7ba75cbdfbc9",
+    "exported_sha256": "42274c7029f3235c67fdbda807ed49502f4afbd476cd4ef40ecd7ba75cbdfbc9"
   },
   "docs/SCENES.md": {
-    "source_sha256": "7d9f37fb18fc0fdc92d079f270d99925f9e5edb3a8a1b526375e7e1e4e60f1c7",
-    "exported_sha256": "7d9f37fb18fc0fdc92d079f270d99925f9e5edb3a8a1b526375e7e1e4e60f1c7"
+    "source_sha256": "55eb30ad9c2e2ffe67533a17e56359c499094b6caac345a66f7937a483ba4b1d",
+    "exported_sha256": "55eb30ad9c2e2ffe67533a17e56359c499094b6caac345a66f7937a483ba4b1d"
   },
   "docs/SETUP.md": {
-    "source_sha256": "2c4f15eae2cae7745adfb02e16f6d40cdf01e8416b77d3040cfa5961e20f54f7",
-    "exported_sha256": "2c4f15eae2cae7745adfb02e16f6d40cdf01e8416b77d3040cfa5961e20f54f7"
+    "source_sha256": "aeb48024ed17e70957307cedbebffcdec3ab6f8afddbffb6f95932505d1bff6a",
+    "exported_sha256": "aeb48024ed17e70957307cedbebffcdec3ab6f8afddbffb6f95932505d1bff6a"
   },
   "docs/SOURCE_SYNC.md": {
-    "source_sha256": "a6ab5de6b7492c27417907a37df6f91744bf8b2e091841dca9a7fab86fa6ffba",
-    "exported_sha256": "a6ab5de6b7492c27417907a37df6f91744bf8b2e091841dca9a7fab86fa6ffba"
+    "source_sha256": "3a6d70c666c0fdcd9b5a1233936e11bc6d787f0c7332d6cf5445020c59c596bc",
+    "exported_sha256": "3a6d70c666c0fdcd9b5a1233936e11bc6d787f0c7332d6cf5445020c59c596bc"
   },
   "docs/SYSTEM.md": {
-    "source_sha256": "7bce0c9c94896abdbab984d206c2c281a05f39b0f120da31c95f3a482370647a",
-    "exported_sha256": "7bce0c9c94896abdbab984d206c2c281a05f39b0f120da31c95f3a482370647a"
+    "source_sha256": "10862f40eb798f3b9ae9980632606231d7a0d41d37db8e5258b0956e086160ac",
+    "exported_sha256": "10862f40eb798f3b9ae9980632606231d7a0d41d37db8e5258b0956e086160ac"
   },
   "docs/adding-a-method.md": {
     "source_sha256": "a17d41ac073eb29cadde1729606ee7062c126367351ca8cb8bcfc5851dd57ba6",
@@ -2714,8 +2714,8 @@
   },
   "README.md": {
     "source": "phase1/project/README.md",
-    "source_sha256": "93fef0fe839c86cd7cbf51a9233f961924f680fda650bb62cb135f5181260c1e",
-    "exported_sha256": "93fef0fe839c86cd7cbf51a9233f961924f680fda650bb62cb135f5181260c1e"
+    "source_sha256": "ba40e8c901e73c06aa72e25e90cfce0ee8d236a50ef164c1911af1349a7c5c61",
+    "exported_sha256": "ba40e8c901e73c06aa72e25e90cfce0ee8d236a50ef164c1911af1349a7c5c61"
   },
   ".gitignore": {
     "source": "phase1/project/.gitignore",

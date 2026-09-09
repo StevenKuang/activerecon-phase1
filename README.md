@@ -19,7 +19,7 @@ Phase 1 results are retained as a documented reference experiment.
 | Use other scenes from the datasets | [Datasets and scenes](docs/SCENES.md) |
 | Connect a new method through the API/RPC | [Add a method](docs/adding-a-method.md) |
 | Understand inputs, fairness and metrics | [Protocol](docs/PROTOCOL.md) · [Architecture](docs/ARCHITECTURE.md) |
-| Reproduce the supplied report | [Historical reproduction](docs/REPRODUCING.md) |
+| Reproduce the supplied report | [Phase 1 results](docs/REPRODUCING.md) |
 
 ## Run the platform
 
@@ -30,7 +30,7 @@ installed scene → episode configs → clean references → selected methods �
 ```
 
 [The short tutorial](docs/RUNNING.md#a-short-real-end-to-end-run) runs real
-simulation, common reconstruction and evaluation. It does not require historical
+simulation, common reconstruction and evaluation. It does not require Phase 1
 model/result archives. Once configs and references are prepared, run a single
 method or all five published adapters plus Random:
 
@@ -63,14 +63,14 @@ and [integration tutorial](docs/adding-a-method.md) are included.
   environment setup/checking and Spark visualization.
 - `configs/`, `examples/`, `tests/`: dataset discovery, method recipes, extension
   examples and interface/protocol checks.
-- `phase1/`: the historical campaign, retained evidence, dependency snapshots
+- `phase1/`: the Phase 1 campaign, retained evidence, dependency snapshots
   and table/model verification tools.
 
 Datasets, checkpoints, acquired frames and trained models stay outside Git.
 [Hardware/software versions](docs/SYSTEM.md), [executed validation and limits](docs/ACCEPTANCE.md)
 and [research/delivery alignment](docs/SOURCE_SYNC.md) are recorded in the repository.
 
-## Historical Phase 1 results
+## Phase 1 results
 
 The reference experiment retains 60 reconstructions from 64 planned cells:
 four mesh scenes and two InteriorGS scenes, with separate protocols. Its exact

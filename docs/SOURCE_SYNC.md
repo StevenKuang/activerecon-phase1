@@ -13,7 +13,7 @@ metadata are sourced from `phase1/project/`; shared guides come directly from
 
 Intentional exclusions are research-only revisit-policy/RL/UAV integrations and
 experimental reconstruction backends. The delivery keeps the published Phase 1
-adapters and common gsplat backend. It also retains historical evidence/tools.
+adapters and common gsplat backend. It also retains Phase 1 evidence/tools.
 Media-production scripts, large data, models and videos are excluded.
 
 Every delivered source entry is recorded in `phase1/source-export.json`, with
@@ -29,5 +29,5 @@ python scripts/phase1/export_repo.py --check exports/new-platform-candidate
 
 Do not hand-copy one modified file into the independent repository and forget
 its source. Regenerate the candidate, test it, inspect the diff against the
-previous delivery, then update the existing delivery main branch. Historical
+previous delivery, then update the existing delivery main branch. The
 `phase1-v1` and `phase1-v1.1` tags remain unchanged; they identify earlier snapshots.

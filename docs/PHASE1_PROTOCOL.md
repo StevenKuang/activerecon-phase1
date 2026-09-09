@@ -24,7 +24,7 @@ increase the uniform-time reconstruction frame count.
 
 Common reconstruction: 30,000 iterations, seed 0, SH3, 10,000 initial RGB-D
 points per frame, RGB L1 + DSSIM, no depth loss, no dynamic mask, densification
-gradient threshold 0.0002, no Gaussian-count cap. Historical altered-recipe
+gradient threshold 0.0002, no Gaussian-count cap. The altered-recipe
 Van Gogh dynamic Random/FisherRF retries are excluded. Missing Skokloster
 GAVIS acquisitions are kept as missing entries.
 
