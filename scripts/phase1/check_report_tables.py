@@ -26,8 +26,8 @@ def audit(report, root):
     pairs = list(csv.DictReader((root / "pairs.csv").open()))
     tabs = tables(report.read_text())
     checks = []
-    def find(header):
-        found = [t for t in tabs if t[0] == header]
+    def find(header, *alternatives):
+        found = [t for t in tabs if t[0] in (header, *alternatives)]
         if len(found) != 1:
             raise ValueError(f"Expected one result table with header {header}")
         return found[0][1:]
@@ -47,7 +47,11 @@ def audit(report, root):
             raise ValueError(f"Wrong completion count: {m}")
         for j,key,spec,factor in [(2,"configured_budget_s",".0f",1),(3,"psnr_shared",".2f",1),(4,"psnr_cube_provisional",".2f",1),(5,"historical_completeness_5cm",".1f",100)]:
             check(m+" "+key,c[j],factor*mean(rs,key),spec)
-    for c in find(["Method", "0007 shared", "0044 shared", "0007 cube, provisional", "0044 cube, provisional"]):
+    for c in find(
+        ["Method", "0007 shared PSNR (dB)", "0044 shared PSNR (dB)",
+         "0007 cube PSNR (dB), provisional", "0044 cube PSNR (dB), provisional"],
+        ["Method", "0007 shared", "0044 shared", "0007 cube, provisional", "0044 cube, provisional"],
+    ):
         m = method(c[0]); rs = static(m)
         for j,(scene,key) in enumerate([("interior_0007","psnr_shared"),("interior_0044","psnr_shared"),("interior_0007","psnr_cube_provisional"),("interior_0044","psnr_cube_provisional")],1):
             check(m+" "+scene+" "+key,c[j],float(next(r for r in rs if r["scene"]==scene)[key]),".2f")
